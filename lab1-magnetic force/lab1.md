@@ -20,8 +20,9 @@ In this lab, we will be dealing with an external magnetic field from Neodymium m
 Before making any measurement, it’s crucial to calibrate the magnetometer. First, we need to find a magnetic free space where all experiments will be performed. This means that we need to find a place where magnetic noises are minimized, such as a room with minimal electronic devices, a wooden or non-metal table, and be sure to keep any magnet away from the area. Any metal will affect the magnetic field measurement.
 
 ::: Question
-Q 2.1: Why does metal interfere with the calculation of magnetic field?
+Why does metal interfere with the calculation of magnetic field?
 :::
+
 ####
 
 We will now describe the process you will  use to calibrate the iOLab device via the software.
