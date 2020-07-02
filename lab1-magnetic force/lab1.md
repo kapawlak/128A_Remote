@@ -1,6 +1,6 @@
 # Lab 1: Magnetic Force
 ---
-### Materials needed:
+### All Materials Needed:
 -  iOLab
 - Neodymium magnets
 - 3-D batteries with battery cage
@@ -17,7 +17,13 @@ In this lab, we will be dealing with an external magnetic field from Neodymium m
 
 ## 2. Calibration of iOLab magnetometer
 
-Before making any measurement, it’s crucial to calibrate the magnetometer. First, we need to find a magnetic free space where all experiments will be performed. This means that we need to find a place where magnetic noises are minimized, such as a room with minimal electronic devices, a wooden or non-metal table, and be sure to keep any magnet away from the area. Any metal will affect the magnetic field measurement.
+### Materials needed:
+-  iOLab
+![](imgs/iolab.jpg)
+
+
+  
+Before making any measurements, it’s crucial to calibrate the magnetometer! First, we need to find a magnetic free space where all experiments will be performed. This means that we need to find a place where magnetic noises are minimized, such as a room with minimal electronic devices, a wooden or non-metal table, and be sure to keep any magnet away from the area. Any metal will affect the magnetic field measurement.
 
 ::: Question
 Why does metal interfere with the calculation of magnetic field?
@@ -27,7 +33,11 @@ Why does metal interfere with the calculation of magnetic field?
 
 We will now describe the process you will  use to calibrate the iOLab device via the software.
 
-1. Open the software, go to the “setting” icon--calibration--Accel-magn-gyro, and follow the instructions shown on the screen. 
+:::Figure:Figure
+   ![](imgs/calibration.gif)
+:::
+
+1. Open the software, click on the “setting” icon (![](imgs/settingicon.png) ), and highlight the "Calibration" menu. Select "Accel-magn-gyro" from the list and follow the instructions shown on the screen. 
 2. Perform the calibration for the iOLab device’s x, y, z axis separately. Note that the longest side is the x axis, the second longest side is the y axis, and the shortest side is the z axis. 
 3. After calibrating the three axes, press the “save” button.
 ####
@@ -36,8 +46,14 @@ After completing the above steps, you must now verify your calibration. We will 
 Here we will check that the axes have been correctly identified by rotating the probe and viewing the response
 1. Select “magnetometer” from the list on the left, and you will see $B_x$, $B_y$, and $B_z$ are checked. Uncheck $B_z$ and be prepared to rotate the iOLab along its centered z axis (ie, spin it on the table with the front facing up). 
 2. Hit the “record” button to start recording, and rotate the iOLab for about three complete cycles (~360 degress for 3 times). You should see two trajectories with some repeated pattern on the plot. When you have three complete rotations, stop recording.
-3. Go to the “parametric plot mode” icon located in the middle of the top panel. On the lower panel, select the whole range of the data with your cursor. The default is plotting magnetometer (y) vs. magnetometer (x). Note that y vs. x means that y is plotted on y axis. 
-4. Click on the “tool bar” icon (an arrow with a box) in the lower left region, change the first setting to “$B_y$” and the second setting to “$B_x$”. Now you should see an elliptical trajectory on the plot. Make sure that (1) the ellipse is centered around (0, 0). Note that the plot should be circular, but not appear to be a circle due to that x and y axes have different scales. Also, check (2) Δx and Δy are equal on the ellipse. If these two criteria are met, let’s move on to the next step. Otherwise, redo the calibration and repeat this step until the results are good.
+   :::Figure:Figure
+   ![](imgs/magverifyx.png)
+   :::
+3. Go to the “parametric plot mode” icon ( ![](imgs/parametricplotmodebutton.png) ) located in the middle of the top panel. On the lower panel, select the whole range of the data with your cursor. The default is plotting magnetometer (y) vs. magnetometer (x). Note that y vs. x means that y is plotted on y axis. 
+4. Click on the “tool bar” icon ( ![](imgs/toolbaricon.png) ) in the lower left region, change the first setting to “$B_y$” and the second setting to “$B_x$”. Now you should see an elliptical trajectory on the plot. Make sure that (1) the ellipse is centered around (0, 0). Note that the plot should be circular, but not appear to be a circle due to that x and y axes have different scales. Also, check (2) Δx and Δy are equal on the ellipse. If these two criteria are met, let’s move on to the next step. Otherwise, redo the calibration and repeat this step until the results are good.
+:::Figure:Figure
+   ![](imgs/xverfiyplot.png)
+:::
 #### Steps for Verification 2
 For the second verification of calibration, we will repeat the same procedure with a different axis of rotation. 
 1. Click the “reset” button and go back to “chart mode”. 
