@@ -31,7 +31,7 @@ $$
 $$
 
 :::Figure:Figure
-  AVOCADO: Right hand rule/cross product simulation
+ AVOCADO: Right hand rule/cross product simulation
 :::
 
 This equation gives us two separate and important pieces of information, namely the *direction* and *magnitude* of the resulting force. We can see this by taking the magnitude of both sides of the above equation and applying a formula from vector analysis:
@@ -39,9 +39,11 @@ This equation gives us two separate and important pieces of information, namely 
 $$
 |\vec F| = q |\vec v||\vec B| \sin (\theta)
 $$
+
 which gives you the magnitude of the force in terms of the magnitudes and angle $\theta$ between the velocity and magnetic field vectors. AVOCADO: simple explanation of how to get direction by dividing the equations.
 
-Vector equations, if they are new to you, take some getting used to. In plain english, the Lorenz force  law is telling us the following: A charged particle moving with a velocity $\vec v$ in the presence of a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to  both of these vectors, and has a magnitude proportional to their product. To get a feeling for how this works, the simulation below shows the motion of an electron in the $xy-$plane when  subjected to a magnetic field along the $z-$Vector equations, if they are new to you, take some getting used to. In plain english, the Lorenz force  law is telling us the following: A charged particle moving with a velocity $\vec v$ in the presence of a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to  both of these vectors, and has a magnitude proportional to their product. To get a feeling for how this works, the simulation below shows the motion of an electron in the $xy-$plane when  subjected to a magnetic field along the $z-$axis
+
+Vector equations, if they are new to you, take some getting used to. In plain english, the Lorenz force  law is telling us the following: A charged particle moving with a velocity $\vec v$ in the presence of a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to  both of these vectors, and has a magnitude proportional to their product. To get a feeling for how this works, the simulation below shows the motion of an electron in the $xy-$plane when  subjected to a magnetic field along the $z-$axis
 
 
 :::Figure:Figure
