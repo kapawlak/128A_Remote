@@ -22,7 +22,8 @@ $$
 B = \frac{\mu_0 I}{2 \pi R} 
 $$
 :::
-where $\mu_0$ = $4 \pi \times 10^{-7} \frac{T \cdot m}{A}$
+where $\mu_0 = 4\pi\times 10^{-7}$ T kg/A
+
 
 ::: Figure:Figure
 ![loop  wire setup](imgs/2.png)
