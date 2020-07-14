@@ -8,7 +8,8 @@
 - One 100μF capacitor
 - One 56μF capacitor
 ---
-## 1. Resistors and Ohm’s Law
+# Part I: Circuit Elements
+##1. Resistors and Ohm’s Law
 If there is a potential difference, eletrons (negatively charged) will move from low potential to high potential. The movement of electrons forms current. Current is defined as the rate at which changes move:
 
 ::: Figure:Equation
@@ -150,7 +151,8 @@ $$
 C_{eq} =  C_1+C_2
 $$
 :::
-## 3. RC circuits
+# Part II: Experiment
+## 1. RC Circuits
 ---
 Materials needed:
 - iOLab

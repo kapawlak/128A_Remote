@@ -52,7 +52,10 @@ Vector equations, if they are new to you, take some getting used to. In plain en
 
 # Part II: Experiments
 ## 1. Overview
-In this lab, we will be dealing with an external magnetic field from Neodymium magnets. Use the right-hand rule to determine the direction of the magnetic force due to the presence of a magnetic field. Match the predictions of the magnetic force direction to observations.
+In this lab, we will be dealing with an external magnetic field from Neodymium magnets. We have the following goals:
+ - Use the right-hand rule to determine the direction of the magnetic force due to the presence of a magnetic field. 
+ - Match the predictions of the magnetic force direction to observations.
+ -  Demonstrate that magnetic force can be converted into mechanical work by constructing a simple motor
 
 ## 2. Calibration of iOLab magnetometer
 
@@ -62,7 +65,7 @@ In this lab, we will be dealing with an external magnetic field from Neodymium m
 
 
   
-Before making any measurements, it’s crucial to calibrate the magnetometer! First, we need to find a magnetic free space where all experiments will be performed. This means that we need to find a place where magnetic noises are minimized, such as a room with minimal electronic devices, a wooden or non-metal table, and be sure to keep any magnet away from the area. Any metal will affect the magnetic field measurement.
+Before making any measurements, it’s crucial to calibrate the magnetometer! During calibration, the magnetometer will use the Earth's magnetic field in conjunction with its gyroscope to determine its relative orientation. During this step (and in subsequent labs), it is important that we find an open space, free of electric and magnetic fields, that can skew the calibration step. An appropriate place may be a room with minimal electronic devices or on top of a wooden/nonmetallic table. Be sure to remove any magnets and metals from the experiment area, especially during calibration.
 
 ::: Question
 Why would metal interfere with the calculation of magnetic field?
@@ -79,7 +82,7 @@ We will now describe the process you will  use to calibrate the iOLab device via
    ![](imgs/calibration_step1.gif)
 :::
 
-2. Perform the calibration for the iOLab device’s x, y, z axis separately. The image of the appropriate orientation is shown in the lower right corner of the Calibration window. Note that the longest side is the x axis, the second longest side is the y axis, and the shortest side is the z axis. 
+2. Perform the calibration for the iOLab device’s $x, y, z$ axis separately. The image of the appropriate orientation is shown in the lower right corner of the Calibration window. Note that the longest side is the x axis, the second longest side is the y axis, and the shortest side is the z axis. 
 3. After calibrating the three axes, press the “save” button.
 ####
 After completing the above steps, you must now verify your calibration. We will do this in two ways to ensure high-quality data for the analysis porition of your lab:
@@ -93,7 +96,9 @@ Here we will check that the axes have been correctly identified by rotating the 
 :::
 	 
 3. Go to the “parametric plot mode” icon ( ![](imgs/parametricplotmodebutton.png) ) located in the middle of the top panel. On the lower panel, select the whole range of the data with your cursor. The default is plotting magnetometer (y) vs. magnetometer (x). Note that $y$ vs. $x$ means that $y$ is plotted on $y$ axis. 
-4. Click on the “tool bar” icon ( ![](imgs/toolbaricon.png) ) in the lower left region, change the first setting to “$B_y$” and the second setting to “$B_x$”. Now you should see an elliptical trajectory on the plot. Make sure that (1) the ellipse is centered around (0, 0). Note that the plot should be circular, but not appear to be a circle due to that x and y axes have different scales. Also, check (2) Δx and Δy are equal on the ellipse. If these two criteria are met, let’s move on to the next step. Otherwise, redo the calibration and repeat this step until the results are good.
+4. Click on the “tool bar” icon ( ![](imgs/toolbaricon.png) ) in the lower left region, change the first setting to “$B_y$” and the second setting to “$B_x$”. Now you should see an elliptical trajectory on the plot. Make sure that 
+- - the ellipse is centered around (0, 0). Note that the plot should be circular, but not appear to be a circle due to that $x$ and $y$ axes have different scales. 
+- - $\Delta x$ and $\Delta y$ are equal on the ellipse. If these two criteria are met, let’s move on to the next step. Otherwise, redo the calibration and repeat this step until the results are good.
 
 :::Figure:Figure
   ![](imgs/xverfiyplot.png)
@@ -106,7 +111,8 @@ For the second verification of calibration, we will repeat the same procedure wi
 4. In “tool bar”, change the first setting to “$B_y$” and the second setting to “$B_z$”. You should see a similar ellipse. Check if the two criteria are satisfied. 
 
 ::: Question
-Assume the iOLab is functional. If the ellipse is off-center, what might be a possible reason?
+(a) Assume the iOLab is functional. If the ellipse is off-center, what might be a possible reason?
+(b) Why do you think the ellipse is not perfectly "smooth" ? Give some possible explanations.
 :::
 
 ####
