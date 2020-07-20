@@ -2,14 +2,12 @@
 ---
 ### All Materials Needed:
 -  iOLab
-- Neodymium magnets
-- 3-D batteries with battery cage
-- Wire Leads
-- One AAA battery
+- Neodymium magnet
+- 20 cm long wires (x2)
+- One AA battery
 - One screw
-- 12-feet-long wire
-- Two 0.5Ω high wattage resistors
-- Tape
+- Aluminum foil
+- Tape and Clothespins
 
 ---
 
@@ -31,6 +29,7 @@ $$
 $$
 
 :::Figure:Figure
+![](imgs/crossproduct.png)
  AVOCADO: Right hand rule/cross product simulation
 :::
 
@@ -52,7 +51,10 @@ Vector equations, if they are new to you, take some getting used to. In plain en
 
 # Part II: Experiments
 ## 1. Overview
-In this lab, we will be dealing with an external magnetic field from Neodymium magnets. Use the right-hand rule to determine the direction of the magnetic force due to the presence of a magnetic field. Match the predictions of the magnetic force direction to observations.
+In this lab, we will get familiar with the iOlab by investigating the external magnetic field of a Neodymium magnet. After learning how to use the iOlab, we will study the force experienced by moving electrons in a magnetic field. We have the following goals:
+ - Use the right-hand rule to determine the direction of the magnetic force due to the presence of a magnetic field. 
+ - Match the predictions of the magnetic force direction to observations.
+ -  Demonstrate that the Lorenz force can be converted into mechanical work by constructing a simple motor
 
 ## 2. Calibration of iOLab magnetometer
 
@@ -62,7 +64,7 @@ In this lab, we will be dealing with an external magnetic field from Neodymium m
 
 
   
-Before making any measurements, it’s crucial to calibrate the magnetometer! First, we need to find a magnetic free space where all experiments will be performed. This means that we need to find a place where magnetic noises are minimized, such as a room with minimal electronic devices, a wooden or non-metal table, and be sure to keep any magnet away from the area. Any metal will affect the magnetic field measurement.
+Before making any measurements, it’s crucial to calibrate the magnetometer! During calibration, the magnetometer will use the Earth's magnetic field in conjunction with its gyroscope to determine its relative orientation. During this step (and in subsequent labs), it is important that we find an open space, free of electric and magnetic fields, that can skew the calibration step. An appropriate place may be a room with minimal electronic devices or on top of a wooden/nonmetallic table. Be sure to remove any magnets and metals from the experiment area, especially during calibration.
 
 ::: Question
 Why would metal interfere with the calculation of magnetic field?
@@ -79,7 +81,7 @@ We will now describe the process you will  use to calibrate the iOLab device via
    ![](imgs/calibration_step1.gif)
 :::
 
-2. Perform the calibration for the iOLab device’s x, y, z axis separately. The image of the appropriate orientation is shown in the lower right corner of the Calibration window. Note that the longest side is the x axis, the second longest side is the y axis, and the shortest side is the z axis. 
+2. Perform the calibration for the iOLab device’s $x, y, z$ axis separately. The image of the appropriate orientation is shown in the lower right corner of the Calibration window. Note that the longest side is the x axis, the second longest side is the y axis, and the shortest side is the z axis. 
 3. After calibrating the three axes, press the “save” button.
 ####
 After completing the above steps, you must now verify your calibration. We will do this in two ways to ensure high-quality data for the analysis porition of your lab:
@@ -93,20 +95,23 @@ Here we will check that the axes have been correctly identified by rotating the 
 :::
 	 
 3. Go to the “parametric plot mode” icon ( ![](imgs/parametricplotmodebutton.png) ) located in the middle of the top panel. On the lower panel, select the whole range of the data with your cursor. The default is plotting magnetometer (y) vs. magnetometer (x). Note that $y$ vs. $x$ means that $y$ is plotted on $y$ axis. 
-4. Click on the “tool bar” icon ( ![](imgs/toolbaricon.png) ) in the lower left region, change the first setting to “$B_y$” and the second setting to “$B_x$”. Now you should see an elliptical trajectory on the plot. Make sure that (1) the ellipse is centered around (0, 0). Note that the plot should be circular, but not appear to be a circle due to that x and y axes have different scales. Also, check (2) Δx and Δy are equal on the ellipse. If these two criteria are met, let’s move on to the next step. Otherwise, redo the calibration and repeat this step until the results are good.
+4. Click on the “tool bar” icon ( ![](imgs/toolbaricon.png) ) in the lower left region, change the first setting to “$B_y$” and the second setting to “$B_x$”. Now you should see an elliptical trajectory on the plot. Make sure that 
+- - the ellipse is centered around (0, 0). Note that the plot should be circular, but not appear to be a circle due to that $x$ and $y$ axes have different scales. 
+- - $\Delta x$ and $\Delta y$ are equal on the ellipse. If these two criteria are met, let’s move on to the next step. Otherwise, redo the calibration and repeat this step until the results are good.
 
 :::Figure:Figure
   ![](imgs/xverfiyplot.png)
 :::
 #### Steps for Verification 2
 For the second verification of calibration, we will repeat the same procedure with a different axis of rotation. 
-1. Click the “reset” button and go back to “chart mode”. 
+1. Click the “reset” button and go back to chart mode (  ![](imgs/chartmodebutton.png)). 
 2. This time, unselect $B_x$ and put iOLab on its x axis (ie, the face of iOLab should be perpendicular to the table and the bottom should be pointing to the side).
 3. Repeat the steps 2-3 of Verification 1. 
 4. In “tool bar”, change the first setting to “$B_y$” and the second setting to “$B_z$”. You should see a similar ellipse. Check if the two criteria are satisfied. 
 
 ::: Question
-Assume the iOLab is functional. If the ellipse is off-center, what might be a possible reason?
+(a) Assume the iOLab is functional. If the ellipse is off-center, what might be a possible reason?
+(b) Why do you think the ellipse is not perfectly "smooth" ? Give some possible explanations.
 :::
 
 ####
@@ -127,10 +132,10 @@ The neodymium magnets, composed of various neodynium alloys, are permanent rare-
  To measure the direction of magnetic field from the Neodymium magnet we will use use the Magnetometer Probe located on the upper left corner of iOLab (next to the “M” label) and the Sensor in the software. 
 
 ::: Exercise
-Open the software, go to “chart mode”. We can uncheck the $B_x$ and $B_y$ boxes on the plot, and keep only the $z-$component in this experiment. Start recording. You should see a horizontal line on the plot. Hold the magnet with one side facing up, and move it up and down above the magnetometer.
+Open the software, go to “chart mode”(  ![](imgs/chartmodebutton.png)). We can uncheck the $B_x$ and $B_y$ boxes on the plot, and keep only the $z-$component in this experiment. Start recording. You should see a horizontal line on the plot. Hold the magnet with one side facing up, and move it up and down above the magnetometer.
 
 ::: Question
-Why does $B_z$ changing when you move the magnet vertically? 
+Why does $B_z$ change when you move the magnet vertically? 
 :::
 ####
 
@@ -155,19 +160,57 @@ Theoretically, how should the strength of the magnetic field depend on distance 
 :::
 :::
 
-
-## 3. Force on current-carrying wire near a magnet
+## 4. Measure the field around a magnetic source
 ### Materials needed:
-- Three Neodymium magnets
-- 3-D batteries with battery cage
-- Wire Leads
-- 12-feet-long wire
-- Two 0.5Ω high wattage resistors
+-  iOLab
+- Neodymium magnet
+- Steel Screw
+- Ruler and Tape
+
+In the last question, we asked you to sketch a graph of how you expect the magnetic field strength to change with distance. As your final exercise in getting familiar with the iOLab, you will attempt to  verify this prediction quantitatively. 
+
+::: Exercise
+Magnetic force behaves similar to the Coulomb law --- it should fall off with $1/r^2$ in an ideal situation. We will test how accurately the inverse-square law captures real the behavior of a real magnet and sensor.
+
+:::Question 
+If magnetic force falls off with the inverse square of distance, how should the magnitude of the force $F(r)$ measured at a point change after doubling the distance to the magnet?
+:::
+
+Use the reset button to clear all measurements, and follow the instructions below. 
+
+:::Figure:Figure
+  ![](imgs/magsetup.jpg)
+:::
+
+1. On the magnetometer graph panel, uncheck all data except for $B_z$
+2. Tape the ruler to the edge of a table and align the iOLab, with the $x-axis$ pointing up, such that the $M$ symbol is  aligned with the 0 cm mark. 
+3. Attach your magnet to the flat end of a steel screw to make handling easier. Align the magnet with the 1cm mark on the ruler.
+5. Record about 1 second of data and stop.
+6. Double the distance to 2cm, 4cm, 8cm and record 1 second of data each.
+7. For each measurement made above, highlight the 1 second interval that data was taken and record the average and the distance of the measurement in a table.
+
+AVOCADO: gifs demonstrating these steps
+
+:::Question 
+For each doubling, calculate the ratio of the magnetic force. Do the ratios match your expectations from Question 7? Do some ratios match better than others? Why do you think this is the case?
+:::
+:::
+
+## 5. Force on current-carrying "wire" near a magnet
+### Materials needed:
+- Neodymium magnet
+- 1 wire lead
+- One AA battery
+- Steel screw
+- Thin strip of Aluminum foil, approximately 15 cm long
 - Tape
+- Paper towel roll or similar, cut into a 1in and 2in section
+- Piece of paper (optional)
 
-Most of us don't have access to beams of charged  particles in free space (or methods to observe them easily), making a demonstration of Lorenz's force law similar to the simulation quite impossible. Luckily for us, the force law is ubiquitous, and equally applies to the moving electrons in *materials* such as current-carrying wires. 
 
-In a wire, a current is carried by many electrons moving along its length due to the voltage difference between its ends. When a current-carrying wire is brought close to a magnetic field source, these electrons will be subject to the Lorenz force, whose magnitude and direction is determined by the electron velocities and the external magnetic field. In the following experiment, you will demonstrate and verify the Lorenz force by generating a current though a wire and observing the effect of a magnetic field. 
+Most of us don't have access to beams of charged  particles in free space (or methods to observe them easily), making a demonstration of Lorenz's force law similar to the simulation above quite impossible. Luckily for us, the force law is ubiquitous, and equally applies to the moving electrons in *materials* --- such as current-carrying wires. 
+
+In a wire, a current is carried by many electrons moving along its length due to the voltage difference between its ends --- recall that, in this case, $\vec I = q \vec v$. When a current-carrying wire is brought close to a magnetic field source, these electrons will be subject to the Lorenz force, whose magnitude and direction is determined by the electron velocities and the external magnetic field. In the following experiment, you will demonstrate and verify the Lorenz force by generating a current though a wire and observing the effect of a magnetic field. 
 
 :::Question
 Sketch a picture of a simple wire with a voltage difference across its length. What direction does the velocity vector, $\vec v$, point? 
@@ -179,47 +222,50 @@ Sketch a picture of a simple wire with a voltage difference across its length. W
 
 
 ::: Exercise
-In this experiment, we will tape a wire so that it runs perpendicular to the field generated by our magnet. When connecting the wire to the terminals of a battery, such that a current is generated, you will observe and record the effects of the Lorenz force, and explain if it matches your expectations based on the "right hand rule".
-
-To set up the circuit, use the wire leads to connect either end of the battery source to one of the resistors. We will use the long wire to connect two resistors later.
+In this experiment, we will tape a strip of aluminum foil, which behaves as a "wire",  so that it runs perpendicular to the field generated by our magnet. When connecting the foil to the terminals of a battery, such that a current is generated, you will observe and record the effects of the Lorenz force, and explain if it matches your expectations based on the "right hand rule". The reason for using foil is its thickness --- it is much easier to observe "bending" in foil vs stiffer wire. 
+:::Figure:Figure
+  ![](imgs/foilsetup.jpg)
+:::
+1. Tape the aluminum foil strip to the 1 in roll section so that it runs across the diameter. The foil should have minimal tension so that it can bend slightly.
+2. Place this with the foil up on a piece of paper (or table) and use tape to fasten the aluminum foil to the paper on either side, being sure to leave an expose region.
+3. On one side, tape the exposed wire lead to the aluminum foil.
+4. Attach the magnet to the flat end of the screw
+5. Place the 2in tube parallel to the foil and push the screw through it so that magnet sits just perpendicular to the foil strip.
+6. Hold the battery on the exposed foil, and gently touch the opposite terminal with the wire to close the circuit
+7. Note the orientations of the magnet and direction of current and record the direction of motion of the foil
 ######
-Put three Neodymium magnets on your wooden table. They should stick together with the rounded side on the table. Give it a light spin, and you will see it tends to point to one side. If you put it facing the opposite side and roll it, it will flip itself automatically.
-
-::: Question
-Why does the magnets trio prefer one orientation?
-:::
-
-After the magnet is aligned by itself, tape the back two magnets to the table and keep the front one free from tape. Straighten up the middle part of the 12-feet-long wire and keep this part in front of the magnet. Tape two sides of the wire to the table and leave a ~30cm segment near the middle of the magnet. Make sure the wire is not too tight so that it can move up or down in the presence of a magnetic field.
-
-::: Question
-In this setup, why would the magnetic force point along the vertical direction?
-:::
-
-Now we want to complete the circuit. Plug one end of the wire into the line on the breadboard where one resistor is in. Do the other end for the other resistor. While the current starts to run in the wire, note the motion of the wire.
 
 ::: Question
 Write down the direction of the magnetic field from the magnets, the current, and the magnetic force. Verify that they are consistent with the right hand rule.
 :::
 
-Switch leads of the long wire. Note that now the current flows in the opposite direction of the previous case.
+Repeat this experiment for all four combinations of magnet orientation and battery orientation. Make a table simlar to the following to record your results for each magnet and battery orientation, the prediction for the force direction given by the right hand rule and the observed direction of foil movement:
+:::Figure:Table
+| Magnet Orienation | Battery Oreintation | RHR |Foil Direction |
+| --------  | --------      | --------     |--------     |
+| (N/S) toward foil  |    (+/-) up   |  (up/down)    |           (up/down)    |               
+| "         |               |              |          |
+| "         |               |              |           |
+| "         |               |              |           |
+:::
 
 ::: Question
-How does the motion of the wire change after switching leads?
+How does the motion of the wire change after switching battery orientation? Why?
 :::
-:::
+
 
 :::Question
-The Lorenz force acts on the electrons in the wire. Try to explain why the *entire* wire moves, and not just the electrons.
+The Lorenz force acts on the electrons in the foil. Try to explain why the *entire* foil moves, and not just the electrons.
 :::
-
-## 4. The Rotating Motor
+:::
+## 6. The Rotating Motor
 ### Materials needed:
 - Neodymium magnets
 - Wire Leads (stripped)
 - One AAA battery
 - One screw
 
-In this set-up, we will be creating a simple homopolar motor. Homopolar motors, first contructed by Michael Faraday in 1821, prior to the discovery of electromagnetism, operate based on the Lorenz force: A conductor with a current flowing through it when placed in a magnetic field, which is perpendicular to the current, feels a force in the direction perpendicular to both the magnetic field and the current. This force provides a torque around the axis of rotation
+In this set-up, we will be creating a simple homopolar motor. Homopolar motors, first constructed by Michael Faraday in 1821, prior to the discovery of electromagnetism, operate based on the Lorenz force: A conductor with a current flowing through it when placed in a magnetic field, which is perpendicular to the current, feels a force in the direction perpendicular to both the magnetic field and the current. This force provides a torque around the axis of rotation
 
 
 
@@ -236,7 +282,7 @@ By noting the direction the current is flowing, as well as the direction of the 
 
 
 ::: Exercise
-With the knowledge of the magnet's orientation from the previous excersie, we will now construct a simple homopolar motor by following the these steps:
+With the knowledge of the magnet's orientation from the previous exercise, we will now construct a simple homopolar motor by following the these steps:
 
 1. Strip the plastic from both ends of the wire, exposing the copper strands, allowing the wire to conduct. 
 2. Place the flat head of your screw on top of the neodynium magnet, with the north (⨀) pole facing upward. The screw should now also be magnetized so that picking it up also picks up the magnet beneath it.
@@ -250,15 +296,15 @@ With the knowledge of the magnet's orientation from the previous excersie, we wi
 :::
 ######
 
-You have now completed the motor set up for one of four possible orientations of the magnet and battery. Make a table like the one below and record your results for all four possible combinations of your battery and magnet orientations:
+You have now completed the motor set up for one of four possible orientations of the magnet and battery. Make a table like the one below and record your results for all four possible combinations of your battery and magnet orientations, prediction based on the right hand rule, and the observered direction:
 
 :::Figure:Table
-| Magnet Orienation | Battery Oreintation | Rotation Direction |
-| --------  | --------      | --------     |
-| (N/S) up  |    (+/-) up   |  (CW/CCW)    |                    
-| "         |               |              |  
-| "         |               |              | 
-| "         |               |              | 
+| Magnet Orienation | Battery Oreintation | RHR|Rotation Direction |
+| --------  | --------      | --------     |--------     |
+| (N/S) up  |    (+/-) up   | (CW/CCW)  | (CW/CCW)    |                    
+| "         |               |              |  |
+| "         |               |              | |
+| "         |               |              | |
 :::
 Note that flipping the magnet changes the field, and flipping the battery changes the current. In each case, you should note the direction of the current and the magnetic field to find the direction of the magnetic force. You can then explain if this magnetic force would cause the rotation in the direction of which you are observing.
 
