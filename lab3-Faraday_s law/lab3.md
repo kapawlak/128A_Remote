@@ -84,11 +84,11 @@ Make a table to record all your data. Include (1) orientation of the magnet, (2)
 
 ### Materials needed:
 -  iOLab
-- 12-feet-long wire
+- 12-foot-long wire
 - Hook and spring
 - Measuring tape/stick
 
-We will now use the iOLab coil to verify Faraday’s Law, earth's magnetic field. By spinning the iOLab iand measuring the the voltage as a function of rotational velocity, we can verify Faraday's law and estimate the streagth of earth's magnetic field. The iOLab’s Gyroscope, High Gain sensor, and Magnetometer sensor will gather the data. Make sure that the magnets from previous labs are moved far away from the experimental area.
+We will now use the iOLab coil to verify Faraday’s Law using earth's magnetic field. By spinning the iOLab iand measuring the the voltage as a function of rotational velocity, we can verify Faraday's law and estimate the streagth of earth's magnetic field. The iOLab’s Gyroscope, High Gain sensor, and Magnetometer sensor will gather the data. Make sure that the magnets from previous labs are moved far away from the experimental area.
 ######
 We want to use the Earth’s magnetic field to generate an induced emf. An emf will be induced if flux is changing, implying either the field strength or the effective area is changing. Since the field strength is constant, we will change the effective area. 
 

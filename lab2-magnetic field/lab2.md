@@ -3,7 +3,7 @@
 ### Materials needed for entire lab:
 -  iOLab
 - A ~1m long wire
-- A AAA or AA battery
+- AAA or AA battery
 - Two wires with clips at one end
 - Some vertical support (eg, paper, tape, a book…)
 - Paper and ruler
@@ -22,9 +22,9 @@ $$
 $$
 
 
-AVOCADO: Simulation showing how integral is done
+AVOCADO: Simulation showing how integral is done?
 
-AVOCADO: Smoother transition into specialized situations below
+AVOCADO: Smoother transition into specialized situations below/ replace images
 
 In this lab, we will explore the Biot-Savart law by indirectly determining *the current* in a wire by *measuring the magnetic field*  it produces. We will focus on two simple set-ups, a long straight wire and a loop of current,  whose integrals result in a simple expression for the magnetic field.
 
@@ -64,7 +64,7 @@ AVOCADO: Should I show how to calculate these explicitly? Maybe in an appendix?
 
 ## 1. Prelab setup
 
-Since we are making direct and quantitative measurements of a magnetic field in this lab, it is critical to know the exact location of the magnetometer on iOLab. We know from the previous lab that the magnetometer is more or less under the “M” label printed on the top left corner. Figure 3 shows an image of the iOLab without the top cover.
+Since we are making direct and quantitative measurements of a magnetic field in this lab, it is important to know the exact location of the magnetometer on iOLab --- recall that an offset of your measurment point resulted in a deviation from expected behavior when doubling your magnet distance in the previous lab! We know from the previous lab that the magnetometer is more or less under the “M” label printed on the top left corner. Figure 3 shows an image of the iOLab without the top cover.
 
 ::: Figure:Figure
 ![iOLab](imgs/3and4.png)
@@ -88,7 +88,7 @@ Similar to the previous lab, we must calibrate the magnetometer to verify the ac
 ### Materials needed:
 - iOLab
 - A ~1m long wire
-- A AAA or AA battery
+- AAA or AA battery
 - Two wires with clips at one end
 - Some vertical support (eg, paper, tape)
 
@@ -111,17 +111,21 @@ Make a table with (1) horizontal offset y in cm, (2) distance between the wire a
 :::
 
 ::: Question
-Plot B vs 1/R. Determine the current I from the slope.
+Plot B vs 1/R. Determine the current I from the slope. Why should the slope of this curve give you a measure of the current?
 :::
 
 ::: Question
-Assuming that you performed the experiment correctly, name one biggest uncertainty.
+From Ohm's law and the voltage of your battery, estimate the resistance of your setup. Does it seem reasonable?
+:::
+
+::: Question
+Assuming that you performed the experiment correctly, what do you think is your largest source of uncertainty? How much might it affect your results?
 :::
 :::
 
 
 ::: Exercise
-Now we will repeat the procedure for a similar setup. In this geometry, the wire is parallel to the iOLab x-axis, but it is raised in the z-direction so that it is at the same height as the magnetometer. In this case, the magnetic field will only have the z component. 
+Now we will repeat the procedure for a similar setup. In this geometry, the wire is parallel to the iOLab $x-$axis, but it is raised in the $z-$direction so that it is at the same height as the magnetometer. In this case, the magnetic field should only have a an appreciable $z-$component. 
 
 ::: Figure:Figure
 ![geometry#1-2](imgs/8and9.png)
@@ -129,11 +133,11 @@ Now we will repeat the procedure for a similar setup. In this geometry, the wire
 
 Repeat the experiment, and you will have a second measurement for the current.
 ::: Question
-Make a table with (1) horizontal offset y in cm, (2) distance between the wire and the magnetometer R in m (be sure to take the magnetometer offset from wire into account), (3) 1/R, (4) Bz signal in uT, (5) Bz baseline in uT, (6) net Bz in uT, and (7) magnetic field strength B in T.
+Make a table with (1) horizontal offset $y$ in cm, (2) distance between the wire and the magnetometer R in m (be sure to take the magnetometer offset from wire into account), (3) $1/R$, (4) Bz signal in $\mu$T, (5) $B_z$ baseline in $\mu$T, (6) net $B_z$ in $\mu$T, and (7) magnetic field strength $B$ in T.
 :::
 
 ::: Question
-Plot B vs 1/R. Determine the current I from the slope.
+Plot $B$ vs $1/R$. Determine the current, $I$, from the slope.
 :::
 
 :::
@@ -161,6 +165,6 @@ Make a table with (1) loop radius R in m, (2) magnetometer height z in m, (3) $\
 We measured the magnetic field in two basic geometries: a long straight wire and a planar loop. Now you have 4 current measurements. Check if they are consistent.
 
 ::: Question
-Calculate the variance. Comment on source of errors.
+By how much do your results differ? Propose sources of this *discrepancy* between your measured values. How could you improve these experiments to minimize the discrepancy in the future?
 :::
 :::
