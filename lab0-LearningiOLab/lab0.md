@@ -43,7 +43,9 @@ In each experiment in this course, it's crucial to calibrate the iOLab magnetome
 Define calibration in the context of a physics experiment. List a few reasons why calibration of all measuring devices is critical to *any* physics experiment.
 :::
 
-During calibration, the magnetometer will use the Earth's magnetic field in conjunction with its gyroscope to determine its relative orientation. During this step, it is important that we find an open space, free of electric and magnetic fields--- these can skew the calibration step and ultimately affect your data.
+During calibration, the magnetometer will use the Earth's magnetic field in conjunction with its gyroscope to determine the relative orientation of its sensors. Since the $x, y$ and $z$ directions are mutually orthogonal, it will analyze how rotation along each of these axes affects the senor measurement to determine how these axes are aligned relative to the device. 
+
+During this step, it is important that we find an open space, free of electric and magnetic fields--- these can skew the calibration step and ultimately affect your data.
 
 For calibration and experiments, an appropriate location may be a room with minimal electronic devices or on top of a wooden/nonmetallic table. Be sure to remove any magnets and metals from the experiment area.
 
@@ -55,7 +57,7 @@ Why would metal interfere with the calculation of magnetic field?
 ::: Exercise 
 Instructions for labs in this course will be in "excercise" boxes such as this one, with numbered steps to help you navigate the procedure. The easiest way to successfully complete these labs to  tackle each step in order, taking observational notes on each numbered step so that you have a record of what you've done for your final write-up.
 
-We will now describe the process you will  use to calibrate the iOLab device via the software. If you have not installed the iOLab software, please do so now.
+We will now describe the process you will  use to calibrate the iOLab device via the software. If you have not installed the iOLab software, please do so now. The software can be downloaded from their [website](http://www.iolab.science/running-application.html). After installation, plugging in the USB dongle and pressing the power button on the iOLab should connect it to your computer.
 
 ####
 
@@ -73,7 +75,7 @@ After completing the above steps, you must now verify your calibration. We will 
 #### 
 **Steps for Verification 1:**
 
-Here we will check that the axes have been correctly identified by rotating the probe and viewing the response
+Here we will check that the axes have been correctly identified by rotating the device and viewing the response
 1. Select “magnetometer” from the list on the left, and you will see $B_x$, $B_y$, and $B_z$ are checked. Uncheck $B_z$ and be prepared to rotate the iOLab along its centered z axis (ie, spin it on the table with the front facing up). 
 2. Hit the “record” button to start recording, and rotate the iOLab for about three complete cycles (~360 degress for 3 times). You should see two trajectories with some repeated pattern on the plot. When you have three complete rotations, stop recording.
 
@@ -97,9 +99,10 @@ Here we will check that the axes have been correctly identified by rotating the 
 For the second verification of calibration, we will repeat the same procedure with a different axis of rotation. 
 1. Click the “reset” button and go back to chart mode (  ![](imgs/chartmodebutton.png)). 
 2. This time, unselect $B_x$ and put the iOLab on its x axis (ie, the face of iOLab should be perpendicular to the table and the bottom should be pointing to the side).
-3. Repeat the steps 2-3 of Verification 1. 
-4. Click the “tool bar” icon ( ![](imgs/toolbaricon.png) ), change the first setting to “$B_y$” and the second setting to “$B_z$”. You should see a similar ellipse. 
-5. Check that the two criteria are satisfied. If not, return to the calibration procedure and recalibrate your device, being sure that the area is clear of metal and magnetic objects.
+3. Hit the “record” button to start recording, and rotate the iOLab for about three complete cycles (~360 degress for 3 times). You should see two trajectories with some repeated pattern on the plot. When you have three complete rotations, stop recording.
+4. Go to the “parametric plot mode” icon ( ![](imgs/parametricplotmodebutton.png) ) located in the middle of the top panel. On the lower panel, select the whole range of the data with your cursor. 
+5. Click the “tool bar” icon ( ![](imgs/toolbaricon.png) ), change the first setting to “$B_y$” and the second setting to “$B_z$”. You should see a similar ellipse to the previous verification. 
+6. Check that the two criteria are satisfied. If not, return to the calibration procedure and recalibrate your device, being sure that the area is clear of metal and magnetic objects.
 
 ::: Question
 (a) Why is verification an important step of calibration?
@@ -135,8 +138,8 @@ The neodymium magnets, composed of various neodynium alloys, are permanent rare-
 
 1. Open the software, go to “chart mode”(  ![](imgs/chartmodebutton.png)). We can uncheck the $B_x$ and $B_y$ boxes on the plot, and keep only the $z-$component in this experiment.
 2.  Start recording. You should see a horizontal line on the plot. 
-3.  Hold the magnet above the "M" symbol, with one side facing up. Move it up and down above the magnetometer.
-4.  Now flip the orientation of the magnet and repeat the motion.
+3.  Hold the magnet above the "M" symbol, with one flat side facing up. Move it up and down above the magnetometer.
+4.  Now flip the magnet over so and repeat the motion.
 5.  Stop recording to view the collected data. You may need to use the zoom feature or change the axis scaling to see all of the data.
 
 ::: Question
