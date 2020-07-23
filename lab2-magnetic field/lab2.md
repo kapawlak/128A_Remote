@@ -58,7 +58,7 @@ B = \frac{\mu_0 I}{2} \frac{R^2}{(R^2+z^2)^{3/2}}
 $$
 :::
 
-AVOCADO: Should I show how to calculate these explicitly? Maybe in an appendix?
+AVOCADO: Show how to calculate these explicitly in the appendix?
 # Part II: Experiment
 
 
@@ -95,33 +95,57 @@ Similar to the previous lab, we must calibrate the magnetometer to verify the ac
 
 
 ::: Exercise
-In this geometry, the wire is sitting flat on the desk, parallel to the iOLab x-axis. It is displaced from the magnetometer in both the y and the z direction. This means that the magnetic field at the magnetometer will have both y and z components. Therefore, you will need to turn on both Bz and By on the plot.
+In this geometry, the wire is sitting flat on the desk, parallel to the iOLab $x$-axis. It is displaced from the magnetometer in both the $y$ and the $z$ direction. This means that the magnetic field at the magnetometer will have both $y$ and $z$ components. Therefore, you will need to turn on both $B_z$ and $B_y$ on the plot.
 
 ::: Figure:Figure
 ![geometry#1-1](imgs/6and7.png)
 :::
-On a piece of paper, draw 10 iOLab locations spaced 1cm apart in the y direction. You will then measure the B field strength at 10 different y locations. It would be easier to align the iOLab and take the magnetometer offset from wire later in your calculation. 
+1. On a piece of paper, draw 10 iOLab locations spaced 1cm apart in the $y$ direction. These will be the locations you will measure the $B$ field strength. Note that it is easier to align the iOLab and correct your distances for the magnetometer offset after collecting data --- the correction will be the same for each distance measurement.  Once everything is set up correctly, as shown, you may begin taking data. 
+3. Align the iOLab to a given measurement line.  
+4. Make sure that the software is open, your device is calibrated (see Lab 0).
+5. Begin recording data from your magnetometer
+6. Briefly touch the wires to the battery terminals for no more than 1 second. This prevents overheating and battery drain. 
+7. Stop recording
+8. You should see a narrow dip on both of the components.
+9. Repeat steps 5-8 for the remaining 9 measurement lines.
 ######
-Once everything is set up correctly as shown above, you are ready to take data. To avoid heating and battery drain, we want to touch the wires to the battery terminals for under a second each time. For each measurement, you should see a narrow dip on both of the components.
-######
-Notice that if you are doing the experiment on a desk with a steel frame, the baseline B field will shift since the iOLab is moved over different regions of the desk. This is corrected for by measuring the B field components both before and during each current pulse, and then finding the difference. This difference will be the field due to just the current. 
 
-::: Question
-Make a table with (1) horizontal offset y in cm, (2) distance between the wire and the magnetometer R in m (be sure to take the magnetometer offset from wire into account), (3) 1/R, (4) By signal in uT, (5) By baseline in uT, (6) net By in uT, (7) Bz signal in uT, (8) Bz baseline in uT, (9) net Bz in uT, and (10) magnetic field strength B in T.
-:::
+**Note**: If you are doing the experiment on a desk with a steel frame, the baseline $B$ field will shift as the iOLab is moved over different regions of the desk (why?).  If you are unable to find an alternate location to perform the experiment, it is possible to correct for the error by measuring the $B$ field components both before and during each current pulse, and then finding the difference. This difference will be the field due to just the current. 
 
-::: Question
-Plot B vs 1/R. Determine the current I from the slope. Why should the slope of this curve give you a measure of the current?
-:::
+10. Review your data and make a table like the one below with appropriate units
 
-::: Question
-From Ohm's law and the voltage of your battery, estimate the resistance of your setup. Does it seem reasonable?
+:::Figure:Table
+
+|Offset  $y$  | $R$ | $1/R$  |Measured $B_y$  |Measured $B_z$  | Field strength $B$ |
+| ------| ------| ------ |------|------| ------|
+| "        |    "    | "        | "       | "      | "         |           
+
 :::
 
+:::
+
+
 ::: Question
-Assuming that you performed the experiment correctly, what do you think is your largest source of uncertainty? How much might it affect your results?
+(a) Plot B vs 1/R. 
+
+(b) Why should the slope of this curve give you a measure of the current, I?
+
+(c) Determine the current $I$ from this slope. Report it in the correct units and to a reasonable number of signifigant figures.
+
+(d) From Ohm's law and the voltage of your battery, estimate the resistance of your setup. 
+
+(e) Does it seem reasonable? Why or why not?
 :::
+
+
+::: Question
+(a) Assuming that you performed the experiment correctly, what do you think is your largest source of *uncertainty*? 
+
+(b) Estimate much might it affect your results.
 :::
+
+
+
 
 
 ::: Exercise
@@ -131,16 +155,22 @@ Now we will repeat the procedure for a similar setup. In this geometry, the wire
 ![geometry#1-2](imgs/8and9.png)
 :::
 
-Repeat the experiment, and you will have a second measurement for the current.
-::: Question
-Make a table with (1) horizontal offset $y$ in cm, (2) distance between the wire and the magnetometer R in m (be sure to take the magnetometer offset from wire into account), (3) $1/R$, (4) Bz signal in $\mu$T, (5) $B_z$ baseline in $\mu$T, (6) net $B_z$ in $\mu$T, and (7) magnetic field strength $B$ in T.
+Repeat Exercise 1 with the raised wire to produce a second measurement for the current. Record your results in a second table. Be sure to take the magnetometer offset from wire into account when calculating $R$
 :::
 
 ::: Question
-Plot $B$ vs $1/R$. Determine the current, $I$, from the slope.
+(a) Plot B vs 1/R for your second set of data. 
+
+(b) Determine the current $I$ from this slope. Report it in the correct units and to a reasonable number of signifigant figures.
+
+(c) From Ohm's law and the voltage of your battery, estimate the resistance of your setup. 
+
+(d) Does it seem reasonable? Why or why not?
+
+(e) Do your two measurements agree? Why or why not?
 :::
 
-:::
+
 
 ## 3. Loop of wire
 
@@ -152,19 +182,55 @@ Plot $B$ vs $1/R$. Determine the current, $I$, from the slope.
 - Some vertical support (eg, a book)
 
 ::: Exercise
-Now we will place the wire in a loop of radius R in the x-y plane. Put the magnetometer at the center of the loop (x = y = 0) so that the magnetic field is parallel to the z-axis. We will make measurements for two different z values while keeping R constant. Add something under the iOLab to get a larger z for the second measurement. 
+We will now measure the magnetic field induced by a loop of current.
 ::: Figure:Figure
 ![geometry#2](imgs/10and11.png)
 :::
+
+1. Tape your long wire to a table so that it forms a closed loop. Try to make the loop as circular as possible. Record the radius of the loop.
+2. Align your iOLab such that the magnetometer is centered within the loop.
+3.  Make sure your iOLab software is running and that the device is calibrated
+4.  Start recording
+5.  Briefly touch the wires to the battery terminals for no more than 1 second. This prevents overheating and battery drain. 
+7. Stop recording
+8. Change the $z-$coordinate of your magnetometer by placing a book or similar object beneath it.
+9. Record the height of this object and repeat steps 4-7.
+
+
 Similarly, the wires are touched to the battery terminals for under a second each time to avoid heating and battery drain. You can make two measurements at the same time. You should see two step pulses with different magnitudes. Then use equation 2 to calculate the current from the measured B field.
 
-::: Question
-Make a table with (1) loop radius R in m, (2) magnetometer height z in m, (3) $\frac{R^2}{(R^2+z^2)^{3/2}}$  , and (4) current I in A.
+
+10 . Make a table with the loop radius R , magnetometer height z , $\frac{R^2}{(R^2+z^2)^{3/2}}$  , and the measure field strength in the $z$ direction, with appropriate units. 
+
+:::Figure:Table
+ 
+| $R$|$z$ | $\frac{R^2}{(R^2+z^2)^{3/2}}$ | $B_z$|
+| ------| ------| ------ |------| 
+| "        |    "    | "        | "       |
+
 :::
 
-We measured the magnetic field in two basic geometries: a long straight wire and a planar loop. Now you have 4 current measurements. Check if they are consistent.
+::: Question
+(a) Calculate the current for both heights using the formula for the magnetic field due to a loop of wire.
+
+(b) Do they agree? If yes, explain why you think this. If no, try to identify the cause of the *discrepancy*.
+
+:::
+
+:::
 
 ::: Question
-By how much do your results differ? Propose sources of this *discrepancy* between your measured values. How could you improve these experiments to minimize the discrepancy in the future?
+(a) By how much do your results differ in these two exercises? 
+
+(b) Propose sources of the *discrepancy* between your measured values. 
+
+(c) How could you improve these experiments to minimize the discrepancy in the future?
 :::
-:::
+
+## Part III: Write Up
+ - For Part I, give a short summary of the Biot-Savart Law and describe how a current generates a magnetic field.
+ - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results and reasons why you believe your data is precise and accurate. If you do not think your data is accurate, explain why and how it could be fixed in a future lab.
+ - You are encouraged to attach images of your plots,  data, and setup --- doing so may allow you to regain partial or full credit even if your experiment fails.
+ - At the end of your write up, please include the answers to all questions, clearly numbered. Show your work if applicable.
+
+## Part IV: Appendix
