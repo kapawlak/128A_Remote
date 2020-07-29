@@ -3,7 +3,7 @@
 ### All Materials needed:
 -  iOLab
 - Neodymium magnet
-- 12-feet-long wire
+- 12-foot-long wire
 - Hook and spring
 - Measuring tape/stick
 ---
@@ -42,21 +42,28 @@ This lab will involve the study of Faraday’s Law and Lenz’ Law acting upon a
 ### Materials needed:
 - iOLab
 - Neodymium magnet
-- 12-feet-long wire
+- 12-foot-long wire
 - Hook and spring
 
 
-In this exercise, we will make a coil by winding a long wire around the iOLab device and verify Lenz’s Law. Before we wrap on the long wire, make sure that you complete the calibration steps. 
+In this exercise, we will make a coil by winding a long wire around the iOLab device and verify Lenz’s Law. As always, make sure that you complete the calibration steps prior to starting this lab. 
 
 ::: Exercise
-We will wind the coil around with the two ends put into “G+” and “G-” on the lower left part of iOLab such that if the current in the loop moves counterclockwise, it will flow into G+ making a positive signal, and vice versa. We use this configuration ensure that the iOLab coordinate system is consistent with the right-hand rule.
+We will wind the coil around with the two ends inserted into the “G+” and “G-” inputs of the iOLab. These should be inserted such that if the current in the loop moves counterclockwise, it will flow into G+ making a positive signal, and vice versa. This configuration is used to ensure that the iOLab coordinate system is consistent with the right-hand rule.
 
+:::Figure:Figure
 AVOCADO: Image of setup
+:::
 
-1.  Plug one end of the wire into “G+”, extend the wire to the side and tape it there so that we can continue the winding process. 
-2.  Attach the hook and spring to the force probe in the bottom of the iOLab --- we will use it later. 
-3.  Wrap the wire in the clockwise direction for 8 turns. Try to make it in order and as tight as possible, finishing by plugging the other end into “G-”. 
-4.  Use some tape to keep the coil in place.
+
+**Set-up:**
+
+1.   Attach the hook and spring to the force probe in the bottom of the iOLab --- we will use it later.
+2.  Plug one end of the wire into “G+”
+3.  Extend the wire to the side and secure it with tape so that we can continue the winding process.  
+4.  Wrap the wire in the clockwise direction for 8 turns. Try to keep the winding orderly, like a coild, and as tight as possible.
+5.  Finishing by plugging the remaining end into “G-”. 
+6.  Use tape as necessary to secure the wire.
 
 ######
 We will now attempt to verify Lenz’ Law by moving a magnet suddenly toward or away from the face of the coil and observing the direction of induced current. The High Gain (AVOCADO: PICTURE) sensor in the software will acquire the data. During this experiment, we have three variables to control: 
@@ -64,20 +71,27 @@ We will now attempt to verify Lenz’ Law by moving a magnet suddenly toward or 
 -  Whether the motion is toward or away from the coil
 -   The orientation of the iOLab --- i.e. whether it is in the "face-up" or "face-down" position. 
 
-There are eight possibilities in total, each will either induce a clockwise or a counterclockwise current in the loop. 
+There are eight possibilities in total. Each will either induce a clockwise or a counterclockwise current in the loop. 
 ######
 
-1. Open the software and select the “High Gain” sensor from the left column. 
-2. When recording, move the magnet close or away toward the coil fast. Make sure the magnet is accelerating down or up. 
-3. You will see a positive or a negative signal on the plot. 
-4. Perform all eight of these experiments and take notes on the set up and the direction of the current induced in the coil.
+7. Be sure your software is open and the iOLab is turned on.
+8. Select the “High Gain” sensor from the left column. 
+9. Press Record
+10. Move the magnet toward or away from the coil quickly. Make sure the magnet is accelerating down or up. 
+11. You will see a positive or a negative signal on the plot. 
+12. Stop Recording
+13. Make a table to record all your data. Include (1) orientation of the magnet, (2) motion toward or away from the coil, (3) iOLab in face up or face down position, and (4) the direction of the induced current in the coil.
 
-::: Question
-Make a table to record all your data. Include (1) orientation of the magnet, (2) motion toward or away from the coil, (3) iOLab in face up or face down position, and (4) the direction of the induced current in the coil.
-:::
+:::Figure:Table 
+
 | Magnet Orientation    | Motion Direction | iOLab Orentation | Current direction|
 | ------                | ------                             | ------                     | -----|
 |      (+/-) up     | (toward/away)           |  (up/down)          | "|
+
+:::
+
+14. Repeat steps 9-12 for all eight configurations. 
+
 :::
 
 ## 2. Faraday’s Law
@@ -88,17 +102,64 @@ Make a table to record all your data. Include (1) orientation of the magnet, (2)
 - Hook and spring
 - Measuring tape/stick
 
-We will now use the iOLab coil to verify Faraday’s Law using earth's magnetic field. By spinning the iOLab iand measuring the the voltage as a function of rotational velocity, we can verify Faraday's law and estimate the streagth of earth's magnetic field. The iOLab’s Gyroscope, High Gain sensor, and Magnetometer sensor will gather the data. Make sure that the magnets from previous labs are moved far away from the experimental area.
+We will now use the iOLab coil to verify Faraday’s Law using earth's magnetic field. By spinning the iOLab and measuring the the voltage as a function of rotational velocity, we can verify Faraday's law and estimate the strength of earth's magnetic field. The iOLab’s Gyroscope, High Gain sensor, and Magnetometer sensor will gather the data. Make sure that the magnets from previous labs are moved far away from the experimental area.
 ######
 We want to use the Earth’s magnetic field to generate an induced emf. An emf will be induced if flux is changing, implying either the field strength or the effective area is changing. Since the field strength is constant, we will change the effective area. 
 
 ::: Exercise
-To set up, hang the iOLab device from the spring at the edge of the table. You could attach the spring to a binder clip on a textbook. Any other way to keep the iOLab hanging securely will work. Let it rest for a while until its orientation is relatively still. Open the software, go to “chart mode” and select “Gyroscope”, “High Gain”, and “Magnetometer” from the “sensors” column. Note the orientation of the device and rotate it for three full revolutions. Start recording and let go of the iOLab. You should see that the gyroscope y component is oscillating and the high gain x component is making small peaks on the plot. Let the device rotate for at least five cycles.
+**Set-up**:
+1. Hang the iOLab device from the spring at the edge of the table. You could attach the spring to a binder clip on a textbook. Any way to keep the iOLab hanging securely will work. 
+2. Let it rest for a while until its orientation is relatively still. 
+3. Open the software, go to “chart mode” and select “Gyroscope”, “High Gain”, and “Magnetometer” from the “sensors” column.
+4.  Note the orientation of the device and rotate it for three full revolutions. 
+5.  Start recording and let go of the iOLab. 
+6.  You should see that the gyroscope $y$ component is oscillating and the high gain $x$ component is making small peaks on the plot. 
+7.  Let the device rotate for at least five cycles.
+8.  Now switch to “parametric plot mode”, and change gyroscope to “$Ω_y$”. 
+9.  The plot should be gyroscope vs. high gain. Highlight all data, and you should see a bow shape on the plot. 
+10.  Using the “zoom” mode, record 8 extrema on one straight line along the edge of the bow. By symmetry, you can choose either the increasing line or the decreasing line. 
+11.  These measurements correspond to the maximum voltage during rotation. Note that the x-axis has unit radian/second (rad/s) and y-axis has unit millivolt (mV).
 ######
-Now switch to “parametric plot mode”, change gyroscope to “$Ω_y$”. The plot should be gyroscope vs. high gain. Highlight all data, and you should see a bow shape on the plot. Using the “zoom” mode, record 8 extrema on one straight line along the edge of the bow. By symmetry, you can choose either the increasing line or the decreasing line. These measurements correspond to the maximum voltage during rotation. Note that the x-axis has unit radian/second (rad/s) and y-axis has unit millivolt (mV).
+After the experimental data is obtained, we want to compare the measured slope to the prediction from Faraday’s Law,  as derived in the Appendix:
+
+:::Figure:Equation
+$V_{coil} = \omega N B A \space \sin(\omega t)$
+:::
+
 ######
-After the experimental data is obtained, we want to compare the measured slope to the prediction from Faraday’s Law (Equation 2).
-######
+We can find B measurement using the magnetometer:
+
+12. Click on “Magnetometer” and unclick “High Gain” and “Gyroscope”. 
+13. Go to “parametric plot mode”, plot $B_x$ on one axis and $B_z$ on the other axis since the iOLab was rotating along the y-axis. 
+
+::: Question
+Why are we not interested in $B_y$?
+:::
+
+14. When you highlight all data, you should see an ellipse (due to axis scaling) on the plot. Use the “zoom mode” to find the maximum and minimum value on both axes. Note that they should be identical. 
+15. Use the average to get the diameter of the circle. 
+16. Divide the diameter by 2 to obtain the magnitude of the magnetic field.
+17
+18. To get the area of the coil, simply use a measuring tape/stick to measure the $x$ and $y$ dimensions of the iOLab. 
+
+After completing these steps, you should have all values needed to calculate the slope from Faraday’s Law.
+
+::: Question
+(a) Calculate the slope predicted by Faraday’s Law, giving the correct units.
+
+(b) Compare this result to the slope from the gyroscope vs. high gain plot, noting the discrepancy and the percent difference. 
+:::
+
+Now, instead of rotation, pull the iOLab a little bit to the side, let it move back and forth like a pendulum, with the face of the coil pointing to the same direction (ie, no rotation). If it’s hard to keep it facing the same direction, you could hold the iOLad and do the motion against a smooth surface. Repeat the experiment and look at the gyroscope vs. high gain plot.
+
+::: Question
+Do you see signals of emf? How does Faraday’s law explain the observation? If your data appears to be inconsistent with Faraday’s law, comment on the source of errors in this experiment.
+:::
+
+:::
+# Part III: Write-up
+# Part IV: Appendix
+## Exercise 2: 
 The voltage is measured by the iOLab, and we know the number of turns is 8. We need to figure out the change of flux during rotation. Since we are using the earth’s magnetic field, we know that the field is uniform around the loop. So we have:
 
 ::: Figure:Equation
@@ -123,25 +184,3 @@ $$
 :::
 
 Note that $\sin(\omega t)$ oscillates between +1 and -1 and the flux reaches maxima when the angle is 90 degrees because sin 90 = 1. Therefore, in the voltage vs. rotational frequency plot, we expect that the slope of the edge, where it corresponds to the largest area and thus the largest change of flux, will be NBA. 
-######
-We can find B measurement from the magnetometer. Click on “Magnetometer” and unclick “High Gain” and “Gyroscope”. Go to “parametric plot mode”, plot $B_x$ on one axis and $B_z$ on the other axis since the iOLab was rotating along the y-axis. 
-
-::: Question
-Why are we not interested in $B_y$?
-:::
-
-When you highlight all data, you should see an ellipse (due to axis scaling) on the plot. Use the “zoom mode” to find the maximum and minimum value on both axes. Note that they should be identical. Then use the average to get the diameter of the circle. Finally, divide the diameter by 2 to obtain the magnitude of the magnetic field.
-######
-To get the area of the coil, simply use a measuring tape/stick to measure the x and y dimension of the iOLab. By now, you should have all values needed to calculate the slope from Faraday’s Law.
-
-::: Question
-Calculate the slope predicted by Faraday’s Law and compare it to the slope from the gyroscope vs. high gain plot. Calculate percent difference. What’s the unit of the slope?
-:::
-
-Now, instead of rotation, pull the iOLab a little bit to the side, let it move back and forth like a pendulum, with the face of the coil pointing to the same direction (ie, no rotation). If it’s hard to keep it facing the same direction, you could hold the iOLad and do the motion against a smooth surface. Repeat the experiment and look at the gyroscope vs. high gain plot.
-
-::: Question
-Do you see signals of emf? How does Faraday’s law explain the observation? If your data appears to be inconsistent with Faraday’s law, comment on the source of errors in this experiment.
-:::
-
-:::
