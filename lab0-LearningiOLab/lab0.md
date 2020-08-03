@@ -27,7 +27,7 @@ You are encouraged to play with this device, and take creative license to your i
 ## 1. Overview
 In this lab, we will get familiar with the iOlab by investigating the external magnetic field of a Neodymium magnet. Our first step will be to calibrate the device: you will have to do this for each lab, so be sure to take notes as you go. 
 
-After calibration, we will explore how the iOLab allows us to take *qualitative* and *quantitative* measurements. Our first project will be exploring the field of permanant magnets, and getting comfortable with using the magnetometer to aquire data. You will use the magnetometer throughout this course.
+After calibration, we will explore how the iOLab allows us to take *qualitative* and *quantitative* measurements. Our first project will be exploring the field of permanent magnets, and getting comfortable with using the magnetometer to acquire data. You will use the magnetometer throughout this course.
 
 ## 2. Calibration of iOLab magnetometer
 
@@ -55,9 +55,9 @@ Why would metal interfere with the calculation of magnetic field?
 
 ####
 ::: Exercise 
-Instructions for labs in this course will be in "excercise" boxes such as this one, with numbered steps to help you navigate the procedure. The easiest way to successfully complete these labs is to  tackle each step in order, taking observational notes on each numbered step so that you have a record of what you've done for your final write-up.
+Instructions for labs in this course will be in "exercise" boxes such as this one, with numbered steps to help you navigate the procedure. The easiest way to successfully complete these labs is to tackle each step in order, taking observational notes on each numbered step so that you have a record of what you've done for your final write-up.
 
-We will now describe the process you will  use to calibrate the iOLab device via the software. If you have not installed the iOLab software, please do so now. The software can be downloaded from the iOLab [website](http://www.iolab.science/running-application.html). After you have installed the sofware, plugging in the USB dongle and pressing the power button on the iOLab should connect it to your computer.
+We will now describe the process you will  use to calibrate the iOLab device via the software. If you have not installed the iOLab software, please do so now. The software can be downloaded from the iOLab [website](http://www.iolab.science/running-application.html). After you have installed the software, plugging in the USB dongle and pressing the power button on the iOLab should connect it to your computer.
 
 ####
 
@@ -68,10 +68,10 @@ We will now describe the process you will  use to calibrate the iOLab device via
    ![](imgs/calibration_step1.gif)
 :::
 
-2. Perform the calibration for the iOLab device’s $x, y, z$ axes separately. The image of the appropriate iOLab orientation is shown in the lower right corner of the Calibration window. Note that the longest side is the $x$-axis, the second longest side is the $y$-axis, and the shortest side is the $z$-axis. 
+2. Perform the calibration for the iOLab device’s $x, y, z$ axes separately. The image of the appropriate iOLab orientation is shown in the lower right corner of the Calibration window. Note that the longest side is the $y$-axis, the second longest side is the $x$-axis, and the shortest side is the $z$-axis, as shown in the center of the iOLab between the wheels. 
 3.  After calibrating the three axes, press the “save” button.
 ####
-After completing the above steps, you must now verify your calibration. We will do this in two ways, to ensure high-quality data for the analysis porition of your lab:
+After completing the above steps, you must now verify your calibration. We will do this in two ways, to ensure high-quality data for the analysis portion of your lab:
 #### 
 **Steps for Verification 1:**
 
@@ -170,15 +170,21 @@ By observing how $B_z$ changes with the vertical motion of the magnet, you shoul
 - Steel Screw
 - Ruler and Tape
 
-In the last exercise, we asked you to identify the poles of your permenant magnet and make some qualitative observations about how field strength behaves as you move the magnet above the iOLab sensor. We will now make a more quantitative measurement of the field surrounding the magnet.
+In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the iOLab sensor. We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
+
+:::Figure:Figure
+  ![](imgs/BarMagnetFieldFRONT.png)
+:::
+
+However, despite the "dipole" (and higher order, e.g. "quadrupole") contributions to the field's shape, along the axis that runs through the poles of a magnet, the field field behaves much like a "monopole"--- similar to the electric field of a single electric charge. In this experiment, we will investigate how the magnetic field along the axis running through the center of your neodymium magnet disk behaves as a function of distance.
 
 ::: Question
 
-(a) Theoretically, how should the strength of the magnetic field depend on distance from the source? Your answer should be written in terms of an equation $F(r)=...$
+(a) Theoretically, how might the strength of the magnetic field (along your magnet's $z$-axis) depend on distance from the source? Your answer should be written as a proportionality $B(r)\propto...$  (you don't need to specify the proportionality constant) .
 
 (b) Devise a quick experiment that could verify this, and sketch a plot of the expected result. 
 
-(c) Based on the relationship between strength and distance proposed in (a), say that you doubled the distance from $r$ to $2 r$.  How would this change the resulting force?
+(c) Based on the relationship between strength and distance proposed in (a), say that you doubled the distance from $r$ to $2 r$.  How would this change the resulting field strength?
 :::
 
 
@@ -203,13 +209,14 @@ As your final exercise in getting familiar with the iOLab, you will attempt to v
 
 
 :::Question 
-For each doubling, calculate the ratio of the magnetic force $F(2r)/F(r)$.  For example, calculate $F(2\:cm)/F(1\:cm)$
+For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$.  For example, calculate $B(2\:cm)/
+B(1\:cm)$
 
 (a) Do the ratios match your expectations from Question 6c? 
 
 (b) Do some ratios match better than others?
 
-(c) Propose an explanation for part (b)
+(c) Propose an explanation for part (b). Consider things such as the nature of the magnetic field (Should the measurement be more accurate closer to or farther from the device?) as well as experimental corrections like the exact location of the magnetometer (Is it exactly at the 'M' symbol? What effect might an offset have on your data? Can you estimate the offset? )
 :::
 :::
 ## Part III: Write-up
