@@ -31,7 +31,6 @@ $$
 
 :::Figure:Figure
 ![](imgs/crossproduct.png)
- AVOCADO: Right hand rule/cross product simulation?
 :::
 
 This equation gives us two separate and important pieces of information, namely the *direction* and *magnitude* of the resulting force. The direction can be determined by using the so called &ldquo;right-hand rule:&rdquo; if you extend your index and middle finger in the directions of these vectors, in order, your thumb will point in the resultant direction.
@@ -45,8 +44,10 @@ The magnitude of the product depends on the angle between the two vectors. When 
 Vector equations, if they are new to you, take some getting used to. In plain English, the Lorentz force  law tells us the following: A charged particle moving with a velocity $\vec v$ perpendicular to a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to both of these vectors, and has a magnitude proportional to their product. So you can get a feeling for how this works, the simulation below shows the motion of an electron in the $xy-$plane when  subjected to a magnetic field along the $z-$axis
 
 
-:::Figure:Figure
- AVOCADO: Free electron in magnetic field simulation
+:::Figure: Simulation
+
+`<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html" width= "100%" height="650" style="border:none;"></iframe>`
+
 :::
 
 # Part II: Experiments
@@ -101,7 +102,7 @@ In this experiment, we will tape a strip of aluminum foil, which behaves as a &l
 7. Note the orientation of the magnet and the direction of current and record these and the direction of motion of the foil. (See the next step.)
 8. Repeat this experiment for all four combinations of magnet orientation and battery orientation. Make a table similar to the following to record your results for each magnet and battery orientation, the prediction for the force direction given by the right hand rule and the observed direction of foil movement:
 :::Figure:Table
-| Magnet Orienation | Battery Oreintation | RHR |Foil Direction |
+| Magnet Orientation | Battery Orientation | RHR |Foil Direction |
 | --------  | --------      | --------     |--------     |
 | (N/S) toward foil  |    (+/-) up   |  (up/down)    |           (up/down)    |               
 |$\:$         |               |              |          |
@@ -152,7 +153,7 @@ With the knowledge of the magnet&rsquo;s orientation from the previous lab, we w
 
 ***Homopolar Motor Construction:***
 1. Strip the plastic from both ends of the wire, exposing the copper strands, allowing the wire to conduct. 
-2. Place the flat head of your screw on top of the neodynium magnet, with the north (⨀) pole facing upward. The screw should now also be magnetized so that picking it up also picks up the magnet beneath it.
+2. Place the flat head of your screw on top of the neodymium magnet, with the north (⨀) pole facing upward. The screw should now also be magnetized so that picking it up also picks up the magnet beneath it.
 3. Holding the battery in the air with the positive terminal facing up, touch the negative terminal to the pointed end of the screw. The magnetization should allow you to pick up the screw + magnet by lifting the battery.
 4. Hold one end of your exposed wire against the battery’s positive terminal.
 5. Once everything is connected, gently touch the other end of the wire lead to the side of the magnet (ie, perpendicular to the magnet’s surface)
@@ -166,7 +167,7 @@ With the knowledge of the magnet&rsquo;s orientation from the previous lab, we w
 You have now completed the motor setup for one of four possible orientations of the magnet and battery. Make a table like the one below and record your results for all four possible combinations of your battery and magnet orientations, prediction based on the right hand rule, and the observed direction of rotation:
 
 :::Figure:Table
-| Magnet Orienation | Battery Oreintation | RHR|Rotation Direction |
+| Magnet Orientation | Battery Orientation | RHR|Rotation Direction |
 | --------  | --------      | --------     |--------     |
 | (N/S) up  |    (+/-) up   | (CW/CCW)  | (CW/CCW)    |                    
 |$\:$         |               |              |  |
