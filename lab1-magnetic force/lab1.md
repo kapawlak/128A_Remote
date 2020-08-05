@@ -45,8 +45,8 @@ The magnitude of the product depends on the angle between the two vectors. When 
 Vector equations, if they are new to you, take some getting used to. In plain English, the Lorentz force  law tells us the following: A charged particle moving with a velocity $\vec v$ perpendicular to a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to both of these vectors, and has a magnitude proportional to their product. So you can get a feeling for how this works, the simulation below shows the motion of an electron in the $xy-$plane when  subjected to a magnetic field along the $z-$axis
 
 
-:::Figure:Figure
- AVOCADO: Free electron in magnetic field simulation
+:::Figure: iframe
+https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html
 :::
 
 # Part II: Experiments
