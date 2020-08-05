@@ -1,7 +1,6 @@
 # Lab 1: Magnetic Force
 ---
 ### All Materials Needed:
--  iOLab
 - Neodymium magnet
 - Wire lead 
 - One AA battery
@@ -111,6 +110,8 @@ In this experiment, we will tape a strip of aluminum foil, which behaves as a &l
 :::
 ######
 
+**(! IF YOU HAVE NOT RECEIVED YOUR IOLAB YET AND DON'T KNOW THE ORIENTATION OF YOUR MAGNET FROM LAB 0, PLEASE LABEL THE MAGNET SIDES 'A' AND 'B' AND VERIFY AFTER YOUR DEVICE HAS ARRIVED !)**
+
 ::: Question
 (a) Are your observations consistent with the right hand rule?
 
@@ -174,6 +175,10 @@ You have now completed the motor setup for one of four possible orientations of 
 |$\:$         |               |              | |
 |$\:$         |               |              | |
 :::
+
+**(! IF YOU HAVE NOT RECEIVED YOUR IOLAB YET AND DON'T KNOW THE ORIENTATION OF YOUR MAGNET FROM LAB 0, PLEASE LABEL THE MAGNET SIDES 'A' AND 'B' AND VERIFY AFTER YOUR DEVICE HAS ARRIVED !)**
+
+
 Note that flipping the magnet changes the field, and flipping the battery changes the current. In each case, you should note the direction of the current and the magnetic field to find the direction of the magnetic force. You can then explain if this magnetic force would cause the rotation in the direction that you observe.
 
 
