@@ -5,11 +5,11 @@
 - Wire Leads
 - One 10kΩ resistor
 - One 2kΩ resistor
-- One 100μF capacitor
+- One 220μF capacitor
 - One 56μF capacitor
 ---
 # Part I: Circuit Elements
-##1. Resistors and Ohm’s Law
+## 1. Resistors and Ohm’s Law
 If there is a potential difference, eletrons (negatively charged) will move from low potential to high potential. The movement of electrons forms current. Current is defined as the rate at which changes move:
 
 ::: Figure:Equation

@@ -17,24 +17,23 @@ As you may know, moving charges not only have electric fields, $\vec E$ associat
 
 It turns out, however, that a *line* of moving charges, such as a current-carrying wire, is much simpler to work with: the resulting magnetic field has a static and well-defined description in terms of the Biot-Savart Law:
 
+:::Figure:Equation
+
 $$
 \vec B = -\frac{\mu_0 I}{4\pi} \int_C    \frac{\vec r \times d\vec\ell }{|\vec r|^3}
 $$
 
+:::
 
-AVOCADO: Simulation showing how integral is done?
 
-AVOCADO: Smoother transition into specialized situations below/ replace images
 
 In this lab, we will explore the Biot-Savart law by indirectly determining *the current* in a wire by *measuring the magnetic field*  it produces. We will focus on two simple setups, a long straight wire and a loop of current,  whose integrals result in a simple expression for the magnetic field.
 
 ::: Figure:Figure
-![long straight wire setup](imgs/1.png)
-
-AVOCADO:replace with gif
+`<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>`
 :::
 
-For a long straight wire, the magnetic field around it is given by
+Recall that for a long straight wire, the magnetic field around it is given by
 
 ::: Figure:Equation
 $$
@@ -45,9 +44,7 @@ where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&
 
 
 ::: Figure:Figure
-![loop  wire setup](imgs/2.png)
-
-AVOCADO:replace with gif
+`<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>`
 :::
 
 For a loop of wire, the relation between the current and the magnetic field is
@@ -58,13 +55,13 @@ B = \frac{\mu_0 I}{2} \frac{R^2}{(R^2+z^2)^{3/2}}
 $$
 :::
 
-AVOCADO: Show how to calculate these explicitly in the appendix?
+
 # Part II: Experiment
 
 
 ## 1. Prelab setup
 
-Since we are making direct and quantitative measurements of a magnetic field in this lab, it is important to know the exact location of the magnetometer on iOLab -- recall that an offset of your measurement point resulted in a deviation from expected behavior when you were doubling your magnet distance in the previous lab! We know from the previous lab that the magnetometer is more or less under the “M” label printed on the top left corner. Figure 3 shows an image of the iOLab without the top cover.
+Since we are making direct and quantitative measurements of a magnetic field in this lab, it is important to know the exact location of the magnetometer in the iOLab device -- recall that in Lab 0, this offset resulted in a deviation from expected behavior when you were doubling the distance to your magnet! We know from the previous lab that the magnetometer is more or less under the “M” label printed on the top left corner. Figure 3 shows an image of the iOLab without the top cover.
 
 ::: Figure:Figure
 ![iOLab](imgs/3and4.png)
@@ -72,14 +69,22 @@ Since we are making direct and quantitative measurements of a magnetic field in 
 
 These diagrams  illustrate the exact location of the magnetometer. As you conduct the experiment, you will need to use the coordinates ($x, y, z$) of its position. Keep these measurements in mind while performing the experiment and doing the calculation. 
 ######
-As in the previous lab, we must calibrate the magnetometer to verify the accuracy of the measurements. As emphasized in the previous lab, be sure to do the calibration away from steel objects (e.g., the frame under many desks) since these will distort the Earth’s magnetic field, whose vertical component is used in the calibration process.
-(AVOCADO: do we need to mention this?) Some of the original devices were assembled with steel screws that can slightly distort external magnetic fields. You can test it by using a magnet: If a magnet is attracted to the assembly screw closest to the magnetometer of your device, just remove that screw for these experiments to eliminate this issue. 
+As in Lab 0, we must calibrate the magnetometer to verify the accuracy of the measurements. As emphasized in the previous lab, be sure to do the calibration away from steel objects (e.g., the frame under many desks) since these will distort the Earth’s magnetic field, whose vertical component is used in the calibration process.
 
-::: Figure:Figure
-![iOLab](imgs/5.png)
+####
+
+:::Note
+
+**Note**: The long wire provided in your iOLab kit is *enameled*. This enamel must be scraped off at the contact points, else the circuit will **NOT** conduct. The safest way to do this is to grip the ends of each wire with the alligator clips, squeeze them closed, and pull. Doing this a few times should scrape off enough enamel to allow sufficient conduction.
+
+:::Figure:Figure
+
+![iOLab](imgs/stripwire_small.gif)
+
 :::
 
 
+:::
 
 
 
@@ -100,13 +105,20 @@ In this geometry, the wire is sitting flat on the desk, parallel to the iOLab $x
 ::: Figure:Figure
 ![geometry#1-1](imgs/6and7.png)
 :::
-1. On a piece of paper, draw 10 iOLab locations spaced 1 cm apart in the $y$ direction. These will be the locations at which you will measure the $B$ field strength. Note that it is easier to align the iOLab and correct your distances for the magnetometer offset after collecting data -- the correction will be the same for each distance measurement.  Once everything is set up correctly, as shown, you may begin taking data. 
+1. On a piece of paper, draw 10 iOLab locations spaced 1 cm apart in the $y$ direction. These will be the locations you will measure the $B$ field strength. Note that it is easier to align the iOLab and correct your distances for the magnetometer offset after collecting data -- the correction will be the same for each distance measurement.  Once everything is set up correctly, as shown, you may begin taking data. 
 3. Align the iOLab to a given measurement line.  
 4. Make sure that the software is open, and your device is calibrated (see Lab 0).
 5. Begin recording data from your magnetometer.
 6. Briefly touch the wires to the battery terminals for no more than 1 second. This prevents overheating and battery drain. 
 7. Stop recording.
-8. You should see a narrow dip on both of the components.
+8. You should see a narrow dip on both of the components, similar to the following clip:
+
+:::Figure:Figure
+
+![](imgs/dip_gif_small_cropped.gif)
+
+:::
+
 9. Repeat steps 5-8 for the remaining 9 measurement lines.
 ######
 
@@ -122,7 +134,7 @@ In this geometry, the wire is sitting flat on the desk, parallel to the iOLab $x
 
 :::
 
-:::
+
 
 
 ::: Question
@@ -145,7 +157,7 @@ In this geometry, the wire is sitting flat on the desk, parallel to the iOLab $x
 :::
 
 
-
+:::
 
 
 ::: Exercise
@@ -156,7 +168,6 @@ Now we will repeat the procedure for a similar setup. In this geometry, the wire
 :::
 
 Repeat Exercise 1 with the raised wire to produce a second measurement for the current. Record your results in a second table. Be sure to take the magnetometer offset from the wire into account when calculating $R$.
-:::
 
 ::: Question
 (a) Plot B vs. 1/R for your second set of data. 
@@ -169,6 +180,9 @@ Repeat Exercise 1 with the raised wire to produce a second measurement for the c
 
 (e) Do your two measurements agree? Why or why not?
 :::
+
+:::
+
 
 
 
@@ -201,11 +215,11 @@ AVOCADO -- The first two sentences of this paragraph don't really make sense.
 Similarly, the wires are touched to the battery terminals for under a second each time to avoid heating and battery drain. You can make two measurements at the same time. You should see two step pulses with different magnitudes. Then use equation 2 to calculate the current from the measured B field.
 
 
-9. Make a table with the loop radius $R$ , magnetometer height $z$ , $\frac{R^2}{(R^2+z^2)^{3/2}}$  , and the measured field strength in the $z$ direction, with appropriate units. 
+9. Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{(R^2+z^2)^{3/2}}$  , and the measured field strength in the $z$ direction, with appropriate units. 
 
 :::Figure:Table
  
-| $R$|$z$ | $\frac{R^2}{(R^2+z^2)^{3/2}}$ | $B_z$|
+| $R$|$z$ | $r$ | $B_z$|
 | ------| ------| ------ |------| 
 |$\:$       |        |         |        |
 |$\:$       |        |         |        |
@@ -222,9 +236,9 @@ Similarly, the wires are touched to the battery terminals for under a second eac
 :::
 
 ::: Question
-(a) By how much do your results differ in these two exercises? AVOCADO -- Between the two?  Which two -- Exercise 2 and Exercise 3?
+(a) By how much do your results for the current differ between exercises 2 and 3? 
 
-(b) Propose sources of the *discrepancy* between your measured values. AVOCADO -- Which measured values?
+(b) Propose sources of the *discrepancy* between your measured values of the current in the previous question.
 
 (c) How could you improve these experiments to minimize the discrepancy in the future?
 :::
@@ -235,4 +249,4 @@ Similarly, the wires are touched to the battery terminals for under a second eac
  - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
  - At the end of your write-up, please include the answers to all questions, clearly numbered. Show your work if applicable.
 
-## Part IV: Appendix
+ 
