@@ -29,11 +29,18 @@ $$
 
 In this lab, we will explore the Biot-Savart law by indirectly determining *the current* in a wire by *measuring the magnetic field*  it produces. We will focus on two simple setups, a long straight wire and a loop of current,  whose integrals result in a simple expression for the magnetic field.
 
-::: Figure:Figure
+### Long Straight Wire
+
+::: Figure:Simulation
 `<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>`
 :::
 
-Recall that for a long straight wire, the magnetic field around it is given by
+Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right- hand rule:
+
+:::Figure:Figure
+![](imgs/RHR.png)
+:::
+Analyzing the integral of the Biot Savart Law,  it can be shown that the strength of the magnetic field at a distance $R$ from the wire is given by the equation:
 
 ::: Figure:Equation
 $$
@@ -42,12 +49,12 @@ $$
 :::
 where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&middot;kg/A
 
-
-::: Figure:Figure
+### Loop of Wire
+::: Figure:Simulation
 `<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>`
 :::
 
-For a loop of wire, the relation between the current and the magnetic field is
+For a  loop of wire, the magnetic field looks very similar to that of a dipolar magnet. When the loop is large, the mangnetic field in the center of the loop looks approximately like a straight line piercing the loop, with a direction determined by the right hand rule. The strength of this field depends on the radius of the loop and the height, given by the relation:
 
 ::: Figure:Equation
 $$
@@ -124,18 +131,22 @@ In this geometry, the wire is sitting flat on the desk, parallel to the iOLab $x
 
 **Note**: If you are doing the experiment on a desk with a steel frame, the baseline $B$ field will shift as the iOLab is moved over different regions of the desk (why?).  If you are unable to find an alternate location to perform the experiment, it is possible to correct for the error by measuring the $B$ field components both before and during each current pulse, and then finding the difference. This difference will be the field due to just the current. 
 
-9. Review your data and make a table like the one below with appropriate units.
+
+
+
+::: Question
+Review your data and make a table like the one below with appropriate units.
 
 :::Figure:Table
 
-|Offset  $y$  | $\:R\:$ | $1/R$  |Measured $B_y$  |Measured $B_z$  | Field strength $B$ |
+|Offset  $y$  | $\:R\:$ |$1/R$  |Measured $B_y$  |Measured $B_z$  | Field strength $B$ |
 | ------|------|------|------|------|------|
 |$\:$        |         |          |          |        |           |           
 
 :::
 
-
-
+Hint: Don't forget to consider the height of the magnetometer in your calculation of $R$!
+:::
 
 ::: Question
 (a) Plot B vs. 1/R. 
@@ -167,8 +178,19 @@ Now we will repeat the procedure for a similar setup. In this geometry, the wire
 ![geometry#1-2](imgs/8and9.png)
 :::
 
-Repeat Exercise 1 with the raised wire to produce a second measurement for the current. Record your results in a second table. Be sure to take the magnetometer offset from the wire into account when calculating $R$.
+Repeat Exercise 1 with the raised wire to produce a second measurement for the current. 
 
+:::Question
+Review your data for this run and make a table like the one below with appropriate units.
+
+:::Figure:Table
+
+|$\:R\:$ | $1/R$    |Measured $B_z$  | Field strength $B$ |
+| ------|------|------|------|
+|$\:$        |         |          |          |        |  
+
+:::
+:::
 ::: Question
 (a) Plot B vs. 1/R for your second set of data. 
 
@@ -178,12 +200,13 @@ Repeat Exercise 1 with the raised wire to produce a second measurement for the c
 
 (d) Does it seem reasonable? Why or why not?
 
-(e) Do your two measurements agree? Why or why not?
 :::
 
 :::
 
-
+:::Question
+Do your two measurements of the current (from exercises 1& 2) agree? Why or why not?
+:::
 
 
 ## 3. Loop of wire
@@ -205,17 +228,14 @@ We will now measure the magnetic field induced by a loop of current.
 2. Align your iOLab such that the magnetometer is centered within the loop.
 3.  Make sure your iOLab software is running and that the device is calibrated.
 4.  Start recording.
-5.  Briefly touch the wires to the battery terminals for no more than 1 second. This prevents overheating and battery drain. 
+5.  Briefly touch the wires to the battery terminals for no more than 1 second. This prevents overheating and battery drain.  You should see two step pulses with different magnitudes. Then use equation 2 to calculate the current from the measured B field.
 7. Stop recording.
 8. Change the $z-$coordinate of your magnetometer by placing a book or similar object beneath it.
 9. Record the height of this object and repeat steps 4-7.
 
 
-AVOCADO -- The first two sentences of this paragraph don't really make sense.
-Similarly, the wires are touched to the battery terminals for under a second each time to avoid heating and battery drain. You can make two measurements at the same time. You should see two step pulses with different magnitudes. Then use equation 2 to calculate the current from the measured B field.
-
-
-9. Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{(R^2+z^2)^{3/2}}$  , and the measured field strength in the $z$ direction, with appropriate units. 
+::: Question
+Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{(R^2+z^2)^{3/2}}$  , and the measured field strength in the $z$ direction, with appropriate units. 
 
 :::Figure:Table
  
@@ -224,6 +244,7 @@ Similarly, the wires are touched to the battery terminals for under a second eac
 |$\:$       |        |         |        |
 |$\:$       |        |         |        |
 
+:::
 :::
 
 ::: Question
@@ -236,7 +257,7 @@ Similarly, the wires are touched to the battery terminals for under a second eac
 :::
 
 ::: Question
-(a) By how much do your results for the current differ between exercises 2 and 3? 
+(a) By how much do your results for the current differ between exercises 1, 2 and 3? 
 
 (b) Propose sources of the *discrepancy* between your measured values of the current in the previous question.
 
