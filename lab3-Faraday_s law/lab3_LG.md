@@ -16,7 +16,7 @@
 
 Now that we have completed two projects focusing on the physics of moving charges -- their behavior in external magnetic fields and the magnetic fields they themselves generate -- we now move on to talk about moving *magnets*.
 
-As you may have learned by now, similarly to the way a moving charge (and, hence, a changing electric field) can generate a magnetic field, a changing magnetic field also induces an electric field. This electric field, like any, has the ability to do *work*. Specifically, we will be interested in how it can do work to generate current in a wire. In this lab, we will investigate the current induced in a loop of wire in the vicinity of a moving magnetic source.
+As you may have learned by now, similarly to the way a moving charge (and, hence, a changing electric field) can generate a magnetic field, a changing magnetic field also induces an electric field. This electric field, like any, has the ability to do *work* (&#9733 see footnote) . Specifically, we will be interested in how it can do work to generate current in a wire. In this lab, we will investigate the current induced in a loop of wire in the vicinity of a moving magnetic source.
 
 
 The equation that describes the creation of an electric field by a changing magnetic field is Faraday’s Law. It states that if any open surface experiences a time-varying magnetic *flux*, then a net voltage (or emf) exists around the perimeter of that surface. Here, flux refers to the net magnitude and direction of magnetic field lines penetrating the area enclosed by a loop of wire, or 
@@ -61,6 +61,9 @@ $$
 :::
 The effect of these loops is essentially to amplify the emf by a factor of $N$. In this experiment we will have a coil with 4-5 loops, with which we will be able to measure earth&rsquo;s magnetic field.
 
+####
+
+ (&#9733) Footnote: Magnetic fields themselves cannot do work, but when energy is expended (e.g. by pushing a magnet) to cause a change of magnetic field or flux in some region, the resulting electric field can do work. 
 # Part II: Experiments
 
 This lab will involve the study of Faraday’s Law and Lenz’s Law acting upon a coil, which we  create by winding a wire around the iOLab device. We will measure Lenz’s Law by moving a magnet suddenly toward or away from the coil, and observing the direction of current. We will measure Faraday’s Law by spinning the iOLab in the earth’s magnetic field, and measuring the voltage as a function of rotational velocity.
@@ -178,7 +181,7 @@ Let&rsquo;s be more concrete about this now: A controlled way of changing the an
 
 
 :::Figure:Simulation
-AVOCADO: simulation for flux function
+`<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/Faradays_Law_osc/Faradays_Law_osc.html" width= "100%" height="750" style="border:none;"> </iframe>`
 :::
 
 
@@ -299,24 +302,24 @@ If the answer to the first part of Question 7 is, &ldquo;No,&rdquo; and therefor
 This section is optional to read: here I am just recounting my own experience with this lab and my error analysis. 
 
 In a first attempt at this lab I measured the following values: 
-- $A =$
-- $S =$
+- $A =0.00975$ m$^2$
+- $S =5.4\times 10^{-7}$ V$\cdot$ s
 - $N= 5$
 
-This resulted in a Magnetic field strength of $B = 13 \mu$ T. Using NOAA&rsquo;s website, I found that the horizontal $B$ field at my location was $24 \mu$T, such that my discrepancy was $11 \mu$T
+This resulted in a Magnetic field strength of $B = 11.1 \mu$ T. Using NOAA&rsquo;s website, I found that the horizontal $B$ field at my location was $24 \mu$T, such that my discrepancy was $13 \mu$T -- more than double my measurement!
 ####
 
 Going back, I proceeded to calculate my error bounds on $A$. I assumed my accuracy  (using a poorly marked meter stick) was about $\delta A=1$cm$^2$. I then calculated the magnetic field for the upper and lower bounds on my Area and found:
 $$
-B = (13 \pm )
+B = (11.1 \pm 0.1 ) \mu T
 $$
 
 The comparison between my value and NOAA&rsquo;s value was still *way off*. Because my value was *less than* the accepted one, and I was fairly confident in my values for S and N, I reasoned that the $B$ field in the room must be much weaker than outside.
 
-I went back and repeated the experiment outside (you are not required to do this, of course, as long as you give an explanation of your discrepancy), and indeed: Broida hall, with its thick walls and metal beams, was acting like a weak Faraday cage. My new slope came out to $53$ mV$\cdot$ s, giving me $B = (22 \pm )\mu$T. 
+I went back and repeated the experiment outside (you are not required to do this, of course, as long as you give an explanation of your discrepancy), and indeed: Broida hall, with its thick walls and metal beams, was screening the strength of the magnetic field! My new slope came out to $1.1 \times 10^{-6}$ V$\cdot$ s, giving me $B = (22.6 \pm 0.3 )\mu$T. 
 
 ####
-The accepted value is not in these bounds, but it is **significantly** closer.  The remaining error, I reasoned, was probably due to the buildings and specific geography of my location, or some slight wobbling of my iOLab since I was holding it with my hand, exposed to the wind.
+The accepted value is not in these bounds, but it is **significantly** closer.  The remaining error, I reasoned, was probably due to the buildings and specific geography of my location, slight miscalibration of the gyroscope, or some slight wobbling of my iOLab since I was holding it with my hand, exposed to the wind.
 
 
 ## Part III: Write-up
