@@ -182,31 +182,46 @@ There are two ways you can use the colors to assign values -- either by using th
 
 :::
 
-Prior to starting the experiments, you should use the color bands on each packet of resistors to identify and label their values. In total, you should have:
+Prior to starting the experiments, you should use the color bands on each packet of resistors to identify and label their values. In total, you should have packs containing resistors with values:
 
-- this
-- this
-- this
-- this
+- 1Ω
+- 100Ω
+- 1-kΩ
+- 2-kΩ
+- 4.7-kΩ
+- 10-kΩ
 
 
 ### Capacitors
 
-The capacitors, which are black cylindrical elements with wires coming from the bottom, are much easier to identify: simply read off the values printed on the side. You should find:
+The capacitors, which are black cylindrical elements with wires coming from the bottom, are much easier to identify: simply read off the values printed on the side. For the tolerance, find the letter in parenthesis and write down the corresponding tolerance form the look up table:
 
-- this
-- this
+:::Figure:Figure
+
+![](imgs/LetterCode.png)
+
+:::
+
+In total, you should find:
+
+- 22$\mu$F
+- 56$\mu$F
+- 220$\mu$F
 
 :::Question:
 In the following exercises, we will need:
-- One 10-kΩ resistor
 - One 2-kΩ resistor
+- One 10-kΩ resistor
+- One 56-$\mu$F resistor
+- One 220-$\mu$F resistor
 
 Using the tolerance band, write down the values of these resistors with their uncertainty in the form:
-- ($10 \pm \delta_R$) kΩ
 - ($2.0 \pm \delta_R$) kΩ
+- ($10 \pm \delta_R$) kΩ
+- ($56 \pm \delta_C$) $\mu$F
+- ($220 \pm \delta_C$) $\mu$F
 
-Here $\delta_R$ should be an *absolute* uncertainty, not a percent. For example, if your tolerance was 1% on your 10-kΩ resistor, you would record the value as  ($10 \pm 0.1$) kΩ. We will use this later for error analysis.
+Here $\delta$ should be an *absolute* uncertainty, not a percent. For example, if your tolerance was 1% on your 10-kΩ resistor, you would record the value as  ($10 \pm 0.1$) kΩ. We will use this later for error analysis.
 :::
 
 Now let’s set up 4 RC circuits. For each setup, you will measure the time constant and compare it to the theoretical value.
@@ -230,9 +245,28 @@ For the first exercise, we are going to place a 220-μF capacitor in series with
 
 
 ::: Question
-a) Calculate the theoretical value of the time constant for this RC circuit. 
+a) Calculate the theoretical value of the time constant, $\tau$ for this RC circuit. 
+####
+b) Using the uncertainty bounds of you capacitor and resistor calculate the error bound $\delta_\tau$, of this measurement. To calculate the total uncertainty of a product of two values with independent error bounds, use the formula:
 
-b) Using the uncertainty bounds of you capacitor and resistor AVOCADO: teach them to propagate uncertainty in a product 
+:::Figure:Equation
+For a product
+$$
+\tau = RC
+$$
+
+The error bound, $\delta_\tau$ of $\tau$ may be calculated as:
+
+$$
+\frac{\delta_\tau}{\tau} \approx \Big|\frac{\delta_R}{R}\Big| + \Big|\frac{\delta_C}{C}\Big|
+$$
+
+:::
+
+You are not required to know how to derive this, but interested students can learn more about this formula in Taylor's excellent [Error Analysis Textbook](http://hep.ucsb.edu/courses/ph128_18f/Taylor.pdf). (The formula is derived in section 2.9)
+####
+c) Write your final result as $(\tau \pm \delta_\tau)$ as usual.
+
 :::
 
 ::: Exercise
@@ -272,18 +306,21 @@ Once you have wired the circuit, you are ready to open the software and collect 
 ::: Figure:Figure
 ![capacitor charge/discharge](imgs/tplot.png)
 :::
-Now use “zoom mode” to zoom in horizontally on the discharge curve, and then change back to “analysis mode” and pick two points on the curve. Note that we want to avoid picking up points very close to the two ends, which may not be as accurate as the data in the middle region.
-######
-Once you have chosen your two points, plug them into equation (9) and solve for 𝛕. Repeat the procedure for the charge curve. Note that you will use your answer for Q7 for the charging process.
+
+We now want to collect some data from this curve to calculate $\tau$:
+1. Choose two points on the discharging curve and record the times and voltages of each point. Be sure that the points are not too close to 0.0V or 3.3V --- these areas near the start and end of discharging are more prone to error.
+2. Using Equation 9, we can write $V_2(t_2) =V_1(t_1) e^{-(t_2-t_1)/\tau}$. Plug in your values and solve for $\tau$
+3. Repeat steps 1-2 with the charging portion or your curve (here the equation will be $V_2(t_2) =V_1(t_1) e^{(t_2-t_1)/\tau}$)
+4.  
 ::: Question
 What are the values calculated from charge and discharge curves? Are they close? Is it sufficient to measure 𝛕 from only one of the curves? Explain your reasoning.
 :::
 ::: Question
-(a) What is the experimental value of 𝛕 measured? 
+(a) What is the experimental value of 𝛕 measured? (Use the average)
 
 (b) Calculate the discrepancy with the theoretical value.
 
-(c) Is the discrepancy within your error bounds? If not, propose some reasons for this. (Name possible sources of systematic error, *e.g.*, external factors like humidity or poor contact, that might lead to shorter discharge times, dying batteries, etc.)
+(c) Is the discrepancy much larger than $\delta_\tau$? If so, propose some reasons for this. (Name possible sources of systematic error, *e.g.*, external factors like humidity or poor contact, that might lead to shorter discharge times, dying batteries, etc.)
 
 :::
 :::
@@ -293,19 +330,27 @@ What are the values calculated from charge and discharge curves? Are they close?
 ::: Figure:Figure
 ![setup](imgs/C2.png)
 :::
+
+::: Question
+Calculate the theoretical value of the time constant and error bounds, $(\tau \pm \delta_\tau)$, for this RC circuit. 
+:::
+
 ::: Exercise
 Repeat the procedure described in exercise 1 with a 2-kΩ resistor instead. This is now a new circuit with a new time constant.
 
+
+
 ::: Question
-Calculate the theoretical value of the time constant for this RC circuit.
+(a) What is the experimental value of 𝛕 measured? 
+
+(b) Calculate the discrepancy with the theoretical value.
+
+(c) Is the discrepancy much larger than $\delta_\tau$? If so, propose some reasons for this. 
+
 :::
 
 ::: Question
-Compare the experimental value of 𝛕 to the theoretical value.
-:::
-
-::: Question
-How is the discharge process different compared to that for the setup in 3.1?
+How is the discharge process qualitatively different compared to that for the setup in 3.1?
 :::
 :::
 
@@ -314,19 +359,41 @@ How is the discharge process different compared to that for the setup in 3.1?
 ::: Figure:Figure
 ![setup](imgs/C3.png)
 :::
+
+::: Question
+
+(a) Calculate equivalent capacitance of the two capacitors in series. 
+
+(b) Calculate theoretical value of the time constant and the error bounds. Hint: The error of a sum of values has the formula
+
+:::Figure:Equation
+
+$$
+\delta_{C_{eq}} = \sqrt{(\delta_{C_1})^2 + (\delta_{C_2})^2}
+$$
+
+:::
+
+
+:::
+
+
+
 ::: Exercise
-Repeat the procedure in 3.1 by adding a 56-μF capacitor in series in the circuit. You need to make sure that the voltmeter will be measuring the voltage across both capacitors.
+Repeat the procedure in 3.1 by adding a 56-μF capacitor in series in the circuit. You need to make sure that the voltmeter is probing across both capacitors.
+
 
 ::: Question
-Calculate equivalent capacitance and the theoretical value of the time constant.
+(a) What is the experimental value of 𝛕 measured? 
+
+(b) Calculate the discrepancy with the theoretical value.
+
+(c) Is the discrepancy much larger than $\delta_\tau$? If so, propose some reasons for this. 
+
 :::
 
 ::: Question
-Compare the experimental value of 𝛕 to the theoretical value.
-:::
-
-::: Question
-How is the discharge process different compared to that for the setup in 3.1?
+How is the discharge process qualitatively different compared to that for the setup in 3.1?
 :::
 :::
 
@@ -335,20 +402,44 @@ How is the discharge process different compared to that for the setup in 3.1?
 ::: Figure:Figure
 ![setup](imgs/C4.png)
 :::
+
+::: Question
+
+(a) Calculate equivalent capacitance 
+
+(b) Calculate theoretical value of the time constant and the error bounds, $(\tau +\delta_{\tau})$. Hint: The error of a sum of values has the forumula
+
+:::Figure:Equation
+
+$$
+\delta_{C_{eq}} = \sqrt{(\delta_{C_1})^2 + (\delta_{C_2})^2}
+$$
+
+:::
+
+
+:::
+
 ::: Exercise
 Repeat the procedure in 3.1 by adding a 56-μF capacitor in parallel in the circuit. Again, the voltmeter should be measuring the voltage across both capacitors.
 
-::: Question
-Calculate equivalent capacitance and the theoretical value of the time constant.
-:::
+
 
 ::: Question
-Compare the experimental value of 𝛕 to the theoretical value.
+(a) What is the experimental value of 𝛕 measured? 
+
+(b) Calculate the discrepancy with the theoretical value.
+
+(c) Is the discrepancy much larger than $\delta_\tau$? If so, propose some reasons for this. 
+
+:::
+::: Question
+How is the discharge process different compared to that for the setup in 3.3?
+:::
 :::
 
-::: Question
-How is the discharge process different compared to that for the setup in 3.3? What can you infer about the equivalent capacitance in both circuits?
-:::
+:::Question
+If you wanted to decrease the time to charge a pair of capacitors, based on your experiment, should you connect them in series or in parallel?
 :::
 
 
