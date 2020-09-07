@@ -20,7 +20,7 @@ The iOLab remote device transmits coherent waves in all directions. The dongle t
 ![figure showing in/out of phase](imgs/1.png)
 :::
 ::: Question
-What are the requirements of the set up in order to see interference patterns? If you cut two holes in a piece of paper and shine a light through it, will you see it?
+What are the requirements of the setup in order to see interference patterns? If you cut two holes in a piece of paper and shine a light through it, will you see it?
 :::
 
 ::: Question
@@ -28,22 +28,22 @@ Can we use a piece of wood as the reflector? Explain.
 :::
 
 ::: Question
-If the surface of the aluminum foil is very uneven (i.e., waves will reflect off random directions), will this affect the experiment? Why or why not?
+If the surface of the aluminum foil is very uneven (i.e., waves will reflect in random directions), will this affect the experiment? Why or why not?
 :::
 
 
-By only moving the reflector to change distance d, we can measure the strength of the signal received by the dongle as a function of d. Recall that constructive interference happens when path difference is an integer multiple of the wavelength. This implies that we should see adjacent minima when R changes by one wavelength (λ), corresponding to d changes by λ/2.
+By moving only the reflector to change distance d, we can measure the strength of the signal received by the dongle as a function of d. Recall that constructive interference happens when the path difference is an integer multiple of the wavelength. This implies that we should see adjacent minima when R changes by one wavelength (λ), corresponding to d changing by λ/2.
 
 ::: Figure:Figure
 ![setup](imgs/2.png)
 :::
 
 ::: Question
-Examine the set up closely. You will find that the path difference is not exactly 2d. Explain why we can make this approximation in the calculation.
+Examine the setup closely. You will find that the path difference is not exactly 2d. Explain why we can make this approximation in the calculation.
 :::
 ## 2. Experimental setup
 
-Note that we need 1.77.1579(or later) of the iOLab application in order to plot the signal strength (called RSSI in sensor list). Make sure you get the version with RSSI.
+Note that we need version 1.77.1579 (or later) of the iOLab application in order to plot the signal strength (called RSSI in sensor list). Make sure you get the version with RSSI.
 
 ::: Exercise
 As shown in the figure below, the antenna icon on the iOLab device indicates the general location of the antenna on the internal circuit board. The actual location is a bit further forward. Try to put the antenna at the same level as the dongle.
@@ -51,7 +51,7 @@ As shown in the figure below, the antenna icon on the iOLab device indicates the
 ::: Figure:Figure
 ![antenna location](imgs/3.png)
 :::
-Begin with d = 5cm, move the reflector back by 5mm at a time, let it record data for about a second, and repeat this about 30 times.
+Begin with d = 5 cm. Move the reflector back by 5 mm at a time, let it record data for about a second, and repeat this about 30 times.
 
 ::: Figure:Figure
 ![setup](imgs/4.png)
@@ -59,7 +59,7 @@ Begin with d = 5cm, move the reflector back by 5mm at a time, let it record data
 :::
 ## 3. Analysis
 ::: Exercise
-You should see a periodic pattern on the plot. Recall that distance between two adjacent minima corresponds to λ/2. So you can infer about the wavelength from the number of steps and location of minima.
+You should see a periodic pattern on the plot. Recall that the distance between two adjacent minima corresponds to λ/2. So you can infer information about the wavelength from the number of steps and locations of minima.
 
 ::: Figure:Figure
 ![plot](imgs/5.png)
