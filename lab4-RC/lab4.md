@@ -9,8 +9,14 @@
 - One 56-μF capacitor
 ---
 # Part I: Circuit Elements
-In this Part of the lab, we will review the concepts and mathematical descriptions of some common circuit elements.
+In this Part of the lab, we will review the concepts and mathematical descriptions of some common circuit elements. You need two separate bits of information from this section:
 
+- The equation that gives you **equivalent capacitance**/equivalent resistance for elements in series or parallel
+- The equation that describes the voltage across the capacitive element of a **charging or discharging RC circuit **over time.
+
+You will be making four circuits and using the equivalent capacitance (bit 1) to calculate the time constant of the RC circuit (bit 2) in this lab. This lab might seem long, but you are doing the same short experiment, with slight changes, four times in a row! 
+####
+The longest part of this lab is the theory, which you should have covered in the corresponding PHYS4 lectures.If you are struggling with this part, please reach out to your TAs. 
 
 ## 1. Resistors and Ohm’s Law
 If there is a potential difference, electrons (negatively charged) will move from low potential to high potential. The movement of electrons forms current. Current is defined as the rate at which charges move:
@@ -78,7 +84,7 @@ $$
 which relates the current into a capacitor to the rate of change of the voltage. Note that it takes some time to build up charges. So the voltage across a capacitor cannot instantaneously increase.
 
 ::: Question
-A 0.1-μF capacitor has 16 V across its terminals. How much change does it hold?
+A 0.1-μF capacitor has 16 V across its terminals. How much charge does it hold?
 :::
 
 ::: Question
@@ -88,11 +94,19 @@ What is the current flowing into a 0.01-μF capacitor if the voltage across its 
 ::: Figure:Figure
 ![capacitor charge/discharge plot](imgs/2.png)
 :::
-Before the switch is closed, the capacitor initially begins without charge and thus carries 0 voltage. At the instant the switch is closed, the charging process begins, and charges start to build up on the plates. The voltage, however, cannot change instantaneously. At this moment, because there is no charge on the plates, it is easy for charges to pass through. Therefore, the greatest amount of current flows at this first instant.
-######
-As the current flows, the capacitor becomes charged, and its voltage builds up gradually. As the capacitor’s voltage increases, the voltage on the resistor decreases.  By  Ohm&rsquo;s Law, this means that less current flows through the resistor. Recall that the same current goes through all elements in series. Thus, less current through the resistor results in slower charging of the capacitor.
-######
+Before the switch is closed, the capacitor initially begins without charge and thus carries no voltage. At the instant the switch is closed, the charging process begins, and charge begins to build up on the plates. The voltage, however, cannot change instantaneously! 
+
+At this moment, because there is no charge on the plates, it is easy for charge to accumulate. The greatest amount of current flows at this first instant. As the current flows, the capacitor becomes charged, and its voltage builds up gradually. As the capacitor’s voltage increases, and hence has more charge, it becomes harder to add charge: gradually the current slows. Consequently, by Ohm's law, the voltage across the resistor decreases --- recall that the same current goes through all elements in series. 
+####
+
 The charging process continues as the voltage on the capacitor asymptotically approaches that of the power source. At this point, the current decreases to 0, and voltage on the resistor goes to 0 as shown on the figure above.
+######
+
+**As a rough analogy**, this entire process is much like  people walking down a hallway and packing into an elevator--- it's easiest to board the elevator when it is nearly empty. As it fills up, people have to move around and squeeze together to fit new people, slowing and eventually stopping the boarding process. At this point, the flow of people down the hallway stops once the elevator is full, as the queue for the next one.
+
+
+######
+
 
 ::: Question
 Why does the greatest amount of current flow initially? Why does it decrease as time passes?
@@ -212,8 +226,8 @@ In total, you should find:
 In the following exercises, we will need:
 - One 2-kΩ resistor
 - One 10-kΩ resistor
-- One 56-$\mu$F resistor
-- One 220-$\mu$F resistor
+- One 56-$\mu$F capacitor
+- One 220-$\mu$F capacitor
 
 Using the tolerance band, write down the values of these resistors with their uncertainty in the form:
 - ($2.0 \pm \delta_R$) kΩ
@@ -278,6 +292,12 @@ Set-up:
 
 1. First, let&rsquo;s set up the iOLab software. To enable turning the power supply on and off, we will use the D6 digital output pin from the lower right corner of the iOLab. To get to this functionality, go to “settings” on the top toolbar and select “expert mode” then “output configurations.” On the left side of the software, below all the sensors, will be a new heading “Output.” You will find the D6 output underneath that with an “on/off” button. You will make the voltmeter by using the analog input pin A7 and the Analog 7 Sensor.
 2. Insert your resistor and capacitor into the breadboard. Note that rows (horizontal) within a given column are connected to each other, so the resistor should end in the same row in which the capacitor starts, to ensure they are connected together.
+
+:::Figure:Figure
+
+![](imgs/breadboard.jpg)
+:::
+####
 3. The D6 output a will be the positive lead of this circuit: connect D6 to your resistor by using the alligator clip
 4. The D6 output and the Ground (GND) on the iOLab will be the  negative lead of this circuit: connect GND to the capacitor by using the alligator clip, similarly.
 5. Finally, in order to use the voltmeter functionality of the iOLab, we need to probe the voltage (relative to ground) of the circuit between the resistor and capacitor elements, using the A7 input: Connect A7 to the internal wire of either the resistor or the capacitor.
@@ -311,7 +331,6 @@ We now want to collect some data from this curve to calculate $\tau$:
 1. Choose two points on the discharging curve and record the times and voltages of each point. Be sure that the points are not too close to 0.0V or 3.3V --- these areas near the start and end of discharging are more prone to error.
 2. Using Equation 9, we can write $V_2(t_2) =V_1(t_1) e^{-(t_2-t_1)/\tau}$. Plug in your values and solve for $\tau$
 3. Repeat steps 1-2 with the charging portion or your curve (here the equation will be $V_2(t_2) =V_1(t_1) e^{(t_2-t_1)/\tau}$)
-4.  
 ::: Question
 What are the values calculated from charge and discharge curves? Are they close? Is it sufficient to measure 𝛕 from only one of the curves? Explain your reasoning.
 :::
@@ -350,7 +369,7 @@ Repeat the procedure described in exercise 1 with a 2-kΩ resistor instead. This
 :::
 
 ::: Question
-How is the discharge process qualitatively different compared to that for the setup in 3.1?
+How is the discharge process qualitatively different compared to that for the setup in Exercise 1?
 :::
 :::
 
@@ -364,12 +383,12 @@ How is the discharge process qualitatively different compared to that for the se
 
 (a) Calculate equivalent capacitance of the two capacitors in series. 
 
-(b) Calculate theoretical value of the time constant and the error bounds. Hint: The error of a sum of values has the formula
+(b) Calculate theoretical value of the time constant and the error bounds. Hint: The error for the this formula is more complicated, and is given by
 
 :::Figure:Equation
 
 $$
-\delta_{C_{eq}} = \sqrt{(\delta_{C_1})^2 + (\delta_{C_2})^2}
+\Big(\frac{\delta_{C_{eq}}}{C_{eq}^2}\Big)^2 = \Big(\frac{\delta_{C_{1}}}{C_{1}^2}\Big)^2+\Big(\frac{\delta_{C_{2}}}{C_{2}^2}\Big)^2
 $$
 
 :::
@@ -393,7 +412,7 @@ Repeat the procedure in 3.1 by adding a 56-μF capacitor in series in the circui
 :::
 
 ::: Question
-How is the discharge process qualitatively different compared to that for the setup in 3.1?
+How is the discharge process qualitatively different compared to that for the setup in Exercise 1?
 :::
 :::
 
@@ -434,7 +453,7 @@ Repeat the procedure in 3.1 by adding a 56-μF capacitor in parallel in the circ
 
 :::
 ::: Question
-How is the discharge process different compared to that for the setup in 3.3?
+How is the discharge process different compared to that for the setup in Exercise 3?
 :::
 :::
 
@@ -443,6 +462,11 @@ If you wanted to decrease the time to charge a pair of capacitors, based on your
 :::
 
 
+## Part III: Write-up
+ - For Part I, give a short summary of what happens in an RC circuit once the switch is closed.
+ - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results, and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how it could be fixed in a future lab.
+ - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
+ - At the end of your write-up, please include the answers to all questions, clearly numbered. Show your work if applicable.
 
 
 
