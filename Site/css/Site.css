@@ -76,3 +76,10 @@ h1{
     content: "Figure " counter(figure);
     font-weight: bold;
 }
+
+#part0{
+    color:black!important;
+    font-size: 24pt;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
