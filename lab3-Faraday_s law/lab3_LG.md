@@ -291,7 +291,7 @@ If the answer to the first part of Question 7 is, &ldquo;No,&rdquo; and therefor
 
 - If the accepted value comes close to these bounds, say within $(B \pm 2\delta B)$ you can likely consider your experiment a success. 
 
-- If the accepted value is very far from your bounds, you likely have either made a math/units mistake, or have a large source of *systematic* error that is affecting your results. Some examples of this could be objects or walls that are distorting or blocking the magnetic field where you are working (would this lead to a larger or smaller B value?), or your having forgotten to put away magnets.
+- If the accepted value is very far from your bounds, you likely either have made a math/units mistake, or have a large source of *systematic* error that is affecting your results. Some examples of this could be objects or walls that are distorting or blocking the magnetic field where you are working (would this lead to a larger or smaller B value?), or your having forgotten to put away magnets.
 
 :::Question:
  If your result is not consistent with the accepted value, even with error bounds, propose a reason why. Make sure your explanation makes sense!

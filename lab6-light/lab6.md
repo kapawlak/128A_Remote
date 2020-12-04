@@ -29,7 +29,10 @@ When the iOLab device transfers data to the dongle, it transmits coherent waves 
 In this lab, we will use ordinary aluminum foil as a reflector. When light hits a reflector, it reverses direction while maintaining its phase. By positioning the reflector at various distances behind the iOLab antenna, we can force the signal to interfere with itself --- in simpler terms, the reflected signal will be $\pi$ out of phase in a given location and cancel out the non-reflected signal . The basic idea is captured in Figure 1: the direct (Path 1) and reflected (Path 2) waves will interfere either constructively or destructively at the dongle, depending on the relative path difference R. 
 
 ::: Figure:Figure
-![setup](imgs/2.png)
+![figure showing in/out of phase](imgs/1.png)
+:::
+::: Question
+What are the requirements of the setup in order to see interference patterns? If you cut two holes in a piece of paper and shine a light through it, will you see it?
 :::
 
 ::: Question
@@ -39,10 +42,11 @@ b) Examine the set up closely. You will find that the path difference is not exa
 :::
 
 ::: Question
-Can we use a piece of wood as the reflector? Explain why or why not.
+If the surface of the aluminum foil is very uneven (i.e., waves will reflect in random directions), will this affect the experiment? Why or why not?
 :::
 
 
+By moving only the reflector to change distance d, we can measure the strength of the signal received by the dongle as a function of d. Recall that constructive interference happens when the path difference is an integer multiple of the wavelength. This implies that we should see adjacent minima when R changes by one wavelength (λ), corresponding to d changing by λ/2.
 
 
 
@@ -76,17 +80,19 @@ The setup for this lab is extremely easy: we need to construct a vertical reflec
 4. Once the paper is lined up, tape it down to the table you are working on so it doesn't move. 
 5. Your final setup should look something like the image below (I ran out of tape so I used stickers). 
 
-::: Figure:Figure
-![setup](imgs/setup.png)
-:::
+::: Question
+Examine the setup closely. You will find that the path difference is not exactly 2d. Explain why we can make this approximation in the calculation.
 :::
 
-:::Note
-Note: As shown in the figure below, the antenna icon on the iOLab device indicates the general location of the antenna on the internal circuit board. The actual location is a bit further forward.  Try to align the center of this green highlighted area with your line to the dongle.
+Note that we need version 1.77.1579 (or later) of the iOLab application in order to plot the signal strength (called RSSI in sensor list). Make sure you get the version with RSSI.
+
+::: Exercise
+As shown in the figure below, the antenna icon on the iOLab device indicates the general location of the antenna on the internal circuit board. The actual location is a bit further forward. Try to put the antenna at the same level as the dongle.
 
 ::: Figure:Figure
 ![antenna location](imgs/3.png)
 :::
+Begin with d = 5 cm. Move the reflector back by 5 mm at a time, let it record data for about a second, and repeat this about 30 times.
 
 Also you should try to keep the antenna and dongle at the same height. Notice that I raised the laptop on a book in later images to make sure that the dongle was coplanar with the position of the iOLab antenna
 
@@ -116,6 +122,7 @@ Note: You will need 1.77.1579(or later) of the iOLab application in order to plo
 :::
 
 ::: Exercise
+You should see a periodic pattern on the plot. Recall that the distance between two adjacent minima corresponds to λ/2. So you can infer information about the wavelength from the number of steps and locations of minima.
 
 1. Place your iOLab at the edge of the paper with the antenna centered on the line if possible.
 2. Starting at the 1 cm mark, place your reflector, carefully ensuring that the face is pointing thorugh the iOLab, directly toward the dongle.
