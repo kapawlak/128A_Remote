@@ -11,6 +11,6 @@
 
 ####
 test
-inline 
+inline $\int x, y , B_z$
 
-\(\int x, y , B_z\)
+$$\int x, y , B_z$$

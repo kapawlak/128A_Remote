@@ -6,11 +6,10 @@
   <link rel="stylesheet" href="css\katex\katex.min.css">
 
   <!-- The loading of KaTeX is deferred to speed up page rendering -->
-  <script defer src="css\katex\katex.min.js" ></script>
+  <script src="css\katex\katex.min.js" ></script>
 
   <!-- To automatically render math in text elements, include the auto-render extension: -->
-  <script defer src="css\katex\contrib\auto-render.min.js" 
-      onload='renderMathInElement(document.body);'></script>
+  <script src="css\katex\contrib\auto-render.min.js"></script>
 </head>
 
 
@@ -74,10 +73,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <i class="fa fa-remove"></i>
   </a>
   <h4 class="w3-bar-item"><b>Jump To</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#MAT">Materials</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#INT">Introduction</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#EX">Exercises</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#WU">Write Up</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#part1">Materials</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#part2">Introduction</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#part3">Exercises</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#part4">Write Up</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -92,33 +91,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   </span>
 
   <div class="w3-row w3-padding-64" id="MAT">
-    <div class="w3-twothird w3-container" >
-      <h1 class="w3-text-teal" >Materials and Overview</h1>
+    <div class="w3-threequarter w3-container" >
       
-      <div w3-include-html="Lab0_Materials.md" ></div> 
+      <div w3-include-html="Lab0.md" onload="idheaders()" ></div> 
     </div>
   </div>
 
-  <div class="w3-row w3-padding-64" id="INT">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Introduction</h1>
-      <div w3-include-html="Lab0_Intro.md" ></div> 
-    </div>
-  </div>
-
-  <div class="w3-row w3-padding-64" id="EX">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal" >Exercises</h1>
-      <div w3-include-html="Lab0_Exercises.md" ></div> 
-    </div>
-  </div>
-
-  <div class="w3-row w3-padding-64" id="WU">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal" >Write Up</h1>
-      <div w3-include-html="Lab0_Writeup.md" ></div> 
-    </div>
-  </div>
+  
 
   <!-- Pagination -->
  
@@ -169,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
-<script defer>movefig()</script>
 </body>
 </html>
 

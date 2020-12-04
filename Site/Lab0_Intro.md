@@ -1,5 +1,5 @@
 
-# Part I: The iOLab Device
+# The iOLab Device
 In this intro lab, we will learn how to use the iOLab device to take useful data. Your iOLab is essentially a microcomputer with a number of sensors suited for measuring quantities such as force, velocity, acceleration, magnetic fields, etc. Your iOLab processes information from these sensors and relays it to the dongle attached to your computer. When the software is running, these data can be recorded and displayed in a graph.
 
 ::: Figure :Figure

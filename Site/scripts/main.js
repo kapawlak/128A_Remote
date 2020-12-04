@@ -20,7 +20,23 @@ var container = window.markdownitContainer;
 //     }
 //   }
 // });
-md.use(container , 'Figure');
+md.use(container , 'Figure',{
+
+  validate: function(params) {
+    return params.trim().match(/^Figure(.)+(.*)$/);
+  },
+
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^Figure+(.*)$/);
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="Figure w3-border w3-padding-large w3-padding-32 w3-center">';
+
+    }else{
+      return '</div>'
+    }
+  }
+});
 md.use(container , 'Question');
 md.use(container , 'Exercise');
 
@@ -59,12 +75,27 @@ function includeHTML() {
         xhttp.send();
         /*exit the function:*/
         movefig()
-
+        renderMathInElement(document.body, {
+          delimiters:[
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+            {left: "\\[", right: "\\]", display: true}
+          ]})
+        idheaders()
         return;
         
       }
     }
-    
+    idheaders()
+    renderMathInElement(document.body, {
+      delimiters:[
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ]})
+
   };
 
 
@@ -85,13 +116,30 @@ function includeHTML() {
   };
 
 
-  // function doLaTeX(){
-  //   renderMathInElement(document.body, {
-  //     delimeters:[
-  //             {left: "$$", right: "$$", display: true},
-  //             {left: "$", right: "$", display: false},
-  //             {left: "\\(", right: "\\)", display: false},
-  //             {left: "\\[", right: "\\]", display: true}
-  //           ]
-  // });
-  // }
+function idheaders() {
+  headers=document.getElementsByTagName("h1");
+  for (i = 0; i < headers.length; i++) {
+    elmnt = headers[i];
+    if (i>0){
+    elmnt.innerHTML= "Part " + romanize(i) +": "+elmnt.innerHTML
+    }
+   
+    elmnt.id = "part" +i ;
+   
+  }
+
+}
+
+
+75
+
+function romanize(num) {
+  var lookup = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1},roman = '',i;
+  for ( i in lookup ) {
+    while ( num >= lookup[i] ) {
+      roman += i;
+      num -= lookup[i];
+    }
+  }
+  return roman;
+}

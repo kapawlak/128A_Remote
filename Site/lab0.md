@@ -1,7 +1,9 @@
 # Lab 0: Learning to use iOLab
+
+# Materials
 ---
 ### All Materials Needed:
--  iOLab
+- iOLab
 - Neodymium magnet
 - Ruler
 - Steel Screw
@@ -9,10 +11,10 @@
 
 ---
 
-# Part I: The iOLab Device
+# The iOLab Device
 In this intro lab, we will learn how to use the iOLab device to take useful data. Your iOLab is essentially a microcomputer with a number of sensors suited for measuring quantities such as force, velocity, acceleration, magnetic fields, etc. Your iOLab processes information from these sensors and relays it to the dongle attached to your computer. When the software is running, these data can be recorded and displayed in a graph.
 
-:::Figure:Figure
+::: Figure:Figure
 ![](imgs/iolab.jpg)
 
 The device
@@ -23,7 +25,7 @@ The device
 
 You are encouraged to play with this device, and take creative license to your investigations throughout the course. The instructions provided in each lab can be seen as a "minimum" requirement -- the features of the iOLab go far beyond these suggestions and, when used creatively, can let you explore the concepts of electromagnetism quite deeply. Some things you may want to play with are the force meter, wheels (for distance, velocity and acceleration), sound and light sensors, as well as the digital and analog circuit inputs (if you are experienced -- please see the documentation to prevent damage to your device). 
 
-# Part II: Experiments
+# Experiments
 ## 1. Overview
 In this lab, we will get familiar with the iOlab by investigating the external magnetic field of a Neodymium magnet. Our first step will be to calibrate the device: you will have to do this for each lab, so be sure to take notes as you go. 
 
@@ -54,7 +56,7 @@ Why would metal interfere with the calculation of magnetic field?
 :::
 
 ####
-::: Exercise 
+:::::: Exercise 
 Instructions for labs in this course will be in "exercise" boxes such as this one, with numbered steps to help you navigate the procedure. The easiest way to successfully complete these labs is to tackle each step in order, taking observational notes on each numbered step so that you have a record of what you've done for your final write-up.
 
 We will now describe the process you will  use to calibrate the iOLab device via the software. If you have not installed the iOLab software, please do so now. The software can be downloaded from the iOLab [website](http://www.iolab.science/running-application.html). After you have installed the software, plugging in the USB dongle and pressing the power button on the iOLab should connect it to your computer.
@@ -79,7 +81,7 @@ Here we will check that the axes have been correctly identified, by rotating the
 1. Select “magnetometer” from the list on the left, and you will see that $B_x$, $B_y$, and $B_z$ are checked. Uncheck $B_z$ and be prepared to rotate the iOLab along its centered $z$-axis (*i.e.*, spin it on the table with the front facing up). 
 2. Hit the “record” button to start recording, and rotate the iOLab for about three complete cycles (~360 degress for 3 times). You should see two trajectories with some repeated pattern on the plot. When you have three complete rotations, stop recording.
 
-:::Figure:Figure
+::: Figure:Figure
    ![](imgs/magverifyx.png)
 :::
 	 
@@ -89,7 +91,7 @@ Here we will check that the axes have been correctly identified, by rotating the
 - - $\Delta x$ and $\Delta y$ (the width and height) are equal on the ellipse.
 5. If these two criteria are met, you may move on to the next step. Otherwise, make a note of your issue, return to the calibration procedure and recalibrate your device, being sure that the area is clear of metal and magnetic objects.
 
-:::Figure:Figure
+::: Figure:Figure
   ![](imgs/xverfiyplot.png)
 	
 	Does this calibration satisfy the verification requirements?
@@ -112,7 +114,7 @@ For the second verification of the calibration, we will repeat the same procedur
 
 (c) Why do you think the ellipse is not perfectly "smooth" ? Give some possible explanations.
 :::
-:::
+::::::
 
 ####
 
@@ -131,7 +133,7 @@ The neodymium magnets, composed of various neodymium alloys, are permanent rare-
 
 
 
-::: Exercise
+:::::: Exercise
  To measure the direction of magnetic field from the Neodymium magnet we will use use the Magnetometer Probe located on the upper left corner of iOLab (next to the “M” label) and the Sensor in the software. 
 ####
 
@@ -161,7 +163,7 @@ By observing how $B_z$ changes with the vertical motion of the magnet, you shoul
 :::
 
 
-:::
+::::::
 
 ## 4. Measure the field around a magnetic source
 ### Materials needed:
@@ -172,7 +174,7 @@ By observing how $B_z$ changes with the vertical motion of the magnet, you shoul
 
 In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the iOLab sensor. We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
 
-:::Figure:Figure
+::: Figure:Figure
   ![](imgs/BarMagnetFieldFRONT.png)
 :::
 
@@ -189,12 +191,13 @@ However, despite the "dipole" (and higher order, e.g. "quadrupole") contribution
 
 
 
-::: Exercise
+:::::: Exercise
 As your final exercise in getting familiar with the iOLab, you will attempt to verify your prediction quantitatively. 
 
 
 ::: Figure:Figure
   ![](imgs/magsetup.jpg)
+  ####
 	Example of Magnetic Field Measurement setup
 :::
 ####
@@ -208,7 +211,7 @@ As your final exercise in getting familiar with the iOLab, you will attempt to v
 7. For each measurement made above, highlight the 1-second interval over which you took data, and record the average and the distance of the measurement in a table.
 
 
-:::Question 
+::: Question 
 For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$.  For example, calculate $B(2\:cm)/
 B(1\:cm)$
 
@@ -218,8 +221,9 @@ B(1\:cm)$
 
 (c) Propose an explanation for part (b). Consider things such as the nature of the magnetic field (Should the measurement be more accurate closer to or farther from the device?) as well as experimental corrections like the exact location of the magnetometer (Is it exactly at the 'M' symbol? What effect might an offset have on your data? Can you estimate the offset? )
 :::
-:::
-## Part III: Write-up
+::::::
+
+# Write-up
  - For Part I, give a short summary of the iOLab device. 
  - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how this could be fixed in a future lab.
  - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.

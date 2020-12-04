@@ -1,41 +1,46 @@
 body {
-    counter-reset: question exercise;  
+    counter-reset: question exercise figure;  
 }
 
 img{
+
     max-width: 100%;
+    max-height: 400px;
 }
 
-
 .Question{
-    background-color: teal;
+    background-color: #009688!important;
     color: white;
 
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 100%;
+    width: 100%!important;
     margin: auto;
     margin-bottom: 10px;
+    border-radius: 2px;
+    border: white thin;
+    font-size: large;
 }
 .Question::before {
-    padding: 10px;
+    padding: 15px;
+    width: 100%;
     counter-increment: question;
     content: "\AQuestion "  counter(question)": ";
     font-weight: bolder;
     font-size: larger;
     font-family: "Segoe UI",Arial,sans-serif;
+    background-color:#4fa199!important;
+    margin-left: -7px;
+    margin-top:-10px;
 
   }
-
-
-
 .Question p{
   
     padding: 10px;
-    text-align: center;
+    text-align: justify;
+  text-justify: inter-word;
 
 }
-
 .Exercise::before {
     padding: 0px;
     counter-increment: exercise;
@@ -45,11 +50,29 @@ img{
     font-family: "Segoe UI",Arial,sans-serif;
   }
 
-
 .Exercise{
-    background-color: rgb(221, 221, 221);
+    background-color:#f0f0f0 !important;
     color: rgb(0, 0, 0);
+    border-radius: 2px;
 
     padding: 10px;
     
+}
+
+h1{
+    color: #009688!important;
+    padding-top:50px;
+}
+
+.Figure{
+    background-color:#ccc!important;
+    padding:5px!important;
+    border-radius: 2px!important;
+}
+
+
+.Figure::after{
+    counter-increment: figure;
+    content: "Figure " counter(figure);
+    font-weight: bold;
 }
