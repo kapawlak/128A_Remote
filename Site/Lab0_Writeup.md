@@ -1,4 +1,0 @@
-- For Part I, give a short summary of the iOLab device. 
- - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how this could be fixed in a future lab.
- - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
- - At the end of your write-up, please include the answers to all questions, clearly numbered. Show your work if applicable.

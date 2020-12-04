@@ -1,4 +1,6 @@
-var md = window.markdownit();
+var md = window.markdownit()
+md.set({ html: true})
+
 var container = window.markdownitContainer;
 
 // md.use('container' , 'Figure', {
@@ -20,17 +22,33 @@ var container = window.markdownitContainer;
 //     }
 //   }
 // });
+
+md.use(container , 'Equation',{
+ 
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^Equation+(.*)$/);
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="Equation w3-padding-large w3-padding-32 w3-center">';
+
+    }else{
+      return '</div>'
+    }}}
+  )
+
+
+
 md.use(container , 'Figure',{
 
   validate: function(params) {
-    return params.trim().match(/^Figure(.)+(.*)$/);
+    return params.trim().match(/^Figure+(.*)$/);
   },
 
   render: function (tokens, idx) {
     var m = tokens[idx].info.trim().match(/^Figure+(.*)$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="Figure w3-border w3-padding-large w3-padding-32 w3-center">';
+      return '<div class="Figure w3-padding-large w3-padding-32 w3-center">';
 
     }else{
       return '</div>'
@@ -39,6 +57,7 @@ md.use(container , 'Figure',{
 });
 md.use(container , 'Question');
 md.use(container , 'Exercise');
+md.use(container,'Simulation')
 
 
 console.log(md.render(':::Figure click me\n*content*\n:::\n'));
@@ -135,7 +154,7 @@ function includeHTML() {
     for (i = 0; i < z.length; i++) {
       elmnt = z[i];
 
-      elmnt.className = "Figure w3-border w3-padding-large w3-padding-32 w3-center";
+      elmnt.className = "Figure w3-padding-large w3-padding-32 w3-center";
      
     }
 

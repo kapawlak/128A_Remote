@@ -17,7 +17,7 @@ By this point in your physics career, you are probably comfortable with the idea
 
 Perhaps the most important equation you will encounter in this course will be the Lorentz force law:
 
-::: Figure:Equation
+::: Equation
 $$
 \vec F = q (\vec E+\vec v \times \vec B)
 $$
@@ -28,11 +28,13 @@ which describes the force, $\vec F$, that acts on a charge, $q$, moving with a v
 
 For the purpose of this laboratory experiment, we are concerned with the force in the absence of an external electric field, $\vec E = 0$, so our equation will read:
 
-::: Figure:Equation
+::: Equation
 $$
 \vec F = q (\vec v \times \vec B)
 $$
 :::
+
+####
 
 ::: Figure:Figure
 ![](imgs/crossproduct.png)
@@ -46,7 +48,7 @@ What happens if you reverse the order of the product?
 
 The magnitude of the product depends on the angle between the two vectors:
 
-::: Figure:Equation
+::: Equation
 $$
 |F|= q |v||B|\sin(\theta)
 $$
@@ -57,11 +59,10 @@ When they are completely perpendicular, the result is simply $|F| = q |v||B|$.
 Vector equations, if they are new to you, take some getting used to. In plain English, the Lorentz force  law tells us the following: A charged particle moving with a velocity $\vec v$ perpendicular to a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to both of these vectors, and has a magnitude proportional to their product. So you can get a feeling for how this works, the simulation below shows the motion of a charged particle in the $xy-$plane when  subjected to a magnetic field along the $z-$axis
 
 
-::: Figure: Simulation
-
-`<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html" width= "100%" height="650" style="border:none;"></iframe>`
-<embed src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html">
+::: Simulation
+<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html" width= "100%" height="1200" style="border:none;"></iframe>
 :::
+
 
 # Experiments
 ## 1. Overview
@@ -89,7 +90,7 @@ Most of us don&rsquo;t have access to beams of charged  particles in free space 
 
 In a wire, a current is carried by many electrons moving along its length due to the voltage difference between its ends -- recall that, in this case,
 
-:::Figure: Equation
+::: Equation
 $$
 \vec I = q_e n A\vec v 
 $$
@@ -171,7 +172,7 @@ By noting the direction in which the current is flowing, as well as the directio
 
 
 
-::: Exercise
+:::::: Exercise
 With the knowledge of the magnet&rsquo;s orientation from the previous lab, we will now construct a simple homopolar motor by following these steps:
 
 ***Homopolar Motor Construction:***
@@ -206,7 +207,7 @@ Make a table like the one below and record your results for all four possible co
 ::: Question
 Sketch an illustration showing each of the 4 possibilities. Include arrows to show the direction of the magnetic force from the right-hand rule, and labels to indicate the direction of current flow. 
 :::
-:::
+::::::
 
 # Write-up
  - For Part I, give a short summary of the Lorentz Force and the Right-Hand Rule. 
