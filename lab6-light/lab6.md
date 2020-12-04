@@ -162,3 +162,11 @@ c) Which of these has the highest discrepancy with the accepted value? Why do yo
 
 d) List at least three sources of error in this experiment, and a way you might improve it if you had access to better tools and equipment in the future. An example might be that your reflector was not perfectly vertical, changing the distance the signal traveled (would your measurement of $d$ be larger or smaller in this case :) ? )
 :::
+
+
+
+# Part III: Write-up
+- For Part I, summarize how we can use the wifi strength in conjuction with a reflector to measure the signal wavelength.
+- For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results, and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how it could be fixed in a future lab.
+- You are encouraged to attach images of your plots, data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
+- At the end of your write-up, please include the answers to all questions, clearly numbered. Show your work if applicable.

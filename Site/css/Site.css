@@ -1,0 +1,55 @@
+body {
+    counter-reset: question exercise;  
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.Question{
+    background-color: teal;
+    color: white;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.Question::before {
+    padding: 10px;
+    counter-increment: question;
+    content: "\AQuestion "  counter(question)": ";
+    font-weight: bolder;
+    font-size: larger;
+    font-family: "Segoe UI",Arial,sans-serif;
+
+  }
+
+
+
+.Question p{
+  
+    padding: 10px;
+    text-align: center;
+
+}
+
+.Exercise::before {
+    padding: 0px;
+    counter-increment: exercise;
+    content: "Exercise "  counter(exercise)": ";
+    font-weight: bolder;
+    font-size: larger;
+    font-family: "Segoe UI",Arial,sans-serif;
+  }
+
+
+.Exercise{
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+
+    padding: 10px;
+    
+}
