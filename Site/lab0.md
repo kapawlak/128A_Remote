@@ -1,124 +1,76 @@
 # Lab 0: Learning to use iOLab
-
-# Materials
 ---
 ### All Materials Needed:
-- iOLab
-- Neodymium magnet
+- Your phone with the phyphox App installed
+- A magnet
 - Ruler
-- Steel Screw
-- Tape
+- Steel screw
 
 ---
 
-# The iOLab Device
-In this intro lab, we will learn how to use the iOLab device to take useful data. Your iOLab is essentially a microcomputer with a number of sensors suited for measuring quantities such as force, velocity, acceleration, magnetic fields, etc. Your iOLab processes information from these sensors and relays it to the dongle attached to your computer. When the software is running, these data can be recorded and displayed in a graph.
+# The Phyphox App
+In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/).
+Phyphox allows you to use the sensors in your phone to measure quantities such as frequency, acceleration, magnetic fields, etc. Data can be exported in many common formats for later analysis.
 
-::: Figure:Figure
-![](imgs/iolab.jpg)
-
-The device
+:::Figure:Figure
+![](imgs/phyphox.png)
 :::
 
 ####
 
-
-You are encouraged to play with this device, and take creative license to your investigations throughout the course. The instructions provided in each lab can be seen as a "minimum" requirement -- the features of the iOLab go far beyond these suggestions and, when used creatively, can let you explore the concepts of electromagnetism quite deeply. Some things you may want to play with are the force meter, wheels (for distance, velocity and acceleration), sound and light sensors, as well as the digital and analog circuit inputs (if you are experienced -- please see the documentation to prevent damage to your device). 
+You are encouraged to play with phyphox,  explore its capabilities and experiment ideas on the website, and take creative license to your investigations throughout the course. The instructions provided in each lab can be seen as a "minimum" requirement -- the features of phyphox go far beyond these suggestions
 
 # Experiments
 ## 1. Overview
-In this lab, we will get familiar with the iOlab by investigating the external magnetic field of a Neodymium magnet. Our first step will be to calibrate the device: you will have to do this for each lab, so be sure to take notes as you go. 
+In this lab, we will get familiar with phyphox by investigating the external magnetic field of a magnet. Our first step will be to find the location of the magnetometer on your phone. It's crucial to know where the sensor is before making a measurement. Feel free to mark the true location for future labs.
 
-After calibration, we will explore how the iOLab allows us to take *qualitative* and *quantitative* measurements. Our first project will be exploring the field of permanent magnets, and getting comfortable with using the magnetometer to acquire data. You will use the magnetometer throughout this course.
+After we find the exact location of the magnetometer, we will explore how phyphox allows us to take *calibrated* and *uncalibrated* data and which one to use in our experiments. Lastly, remember to subtract the background noise from the measurements before you move on to the data analysis.
 
-## 2. Calibration of iOLab magnetometer
+Our first project will be exploring the field of permanent magnets, and getting comfortable with using the magnetometer to acquire data. You will use the magnetometer throughout this course.
+
+## 2. Get to know the magnetometer
 
 ### Materials needed:
--  iOLab
+- Your phone
+- A magnet
+- Steel screw
 
+The first thing you should do, is to make sure that you know exactly where in your phone the magnetometer is. It’s never in the center of the device, so you can’t make an accurate measurement just by moving a magnetic source toward or away from the face of your phone.  Usually the magnetometer is located somewhere at the edge of the phone, and its exact location depends on the brand and model.
 
+**For  experiments, an appropriate location may be a room with minimal electronic devices, or on top of a wooden/nonmetallic table. Be sure to remove any magnets and metals from the experiment area to minimize external fields.**
+####
+::: Question
+Why would metal interfere with the calculation of magnetic field?
+:::
+:::::: Exercise 
+Instructions for labs in this course will be in "exercise" boxes such as this one, with numbered steps to help you navigate the procedure. The easiest way to successfully complete these labs is to tackle each step in order, taking observational notes on each numbered step so that you have a record of what you've done for your final write-up.
 
-  
-In each experiment in this course, it's crucial to calibrate the iOLab magnetometer before making any measurements! 
+We will now describe the process you will  use to find the location of the magnetometer:
+1. Find a steel screw (or some other things that can be magnetized) and a magnet, magnetize the screw by rubbing it with the permanent magnet
+2. Put the magnet away from your experimental area
+3. Move the tip across the surface of your phone until you get a strong reading as it reaches the magnetometer.
+::::::
+ The magnetometer in your phone is extremely sensitive because it is designed to be used as a compass. It can easily resolve 50µT, but it also saturates at few mT.  If you are using a neodymium magnet, it might easily saturate the sensor due to its strong fields. Make sure that the magnet is either weak enough or far enough from the sensor so that the field strength stays below 2mT. Just check that if the magnet gets closer the readings can still increase.
+ 
+Now that we have found the location of the magnetometer, the next step would be to know its features. On phyphox, you can see the magnetometer has a *calibrated* and *uncalibrated* mode. Think about what mode should be used for the purpose of measuring the magnetic field strength of a magnet.
 
 ::: Question
 Define calibration in the context of a physics experiment. List a few reasons why calibration of all measuring devices is critical to *any* physics experiment.
 :::
+ 
+Since the magnetometer is very sensitive, any kind of unwanted magnetization will affect your measurements. Unfortunately, you phone is full of things that create magnetic fields and that can be easily magnetized. This is the reason why the magnetometer is usually at the edge - to stay far away from those things. 
+
+If your phone is exposed to a strong magnetic field, something might get magnetized and the compass would point in the wrong direction. As a result, every phone has some strategy to calibrate the magnetometer under these circumstances. You might trigger this when measuring the strength of a magnetic field. For your phone to make sure the compass is working, it will automatically subtract the component from the external field to get calibrated data. This could be a problem if you try to measure a higher magnetic field on purpose.
+
+:::::: Exercise 
+Now make a magnetometer measurement by putting the magnet around your phone. Make sure the absolute field strength is 100µT or more. Then you can rotate the phone about every axis while measuring, and at some point the readings will suddenly drop to around 50µT. 
 
 During calibration, the magnetometer will use the Earth's magnetic field in conjunction with its gyroscope to determine the relative orientation of its sensors. Since the $x, y$ and $z$ directions are mutually orthogonal, it will analyze how rotation along each of these axes affects the sensor measurement to determine how these axes are aligned relative to the device. 
-
-During this step, it is important that we find an open space, free of electric and magnetic fields -- these can skew the calibration step and ultimately affect your data.
-
-For calibration and experiments, an appropriate location may be a room with minimal electronic devices, or on top of a wooden/nonmetallic table. Be sure to remove any magnets and metals from the experiment area.
-
 ::: Question
-Why would metal interfere with the calculation of magnetic field?
+Why do you expect to see the change in readings?
 :::
-
-####
-:::::: Exercise 
-Instructions for labs in this course will be in "exercise" boxes such as this one, with numbered steps to help you navigate the procedure. The easiest way to successfully complete these labs is to tackle each step in order, taking observational notes on each numbered step so that you have a record of what you've done for your final write-up.
-
-We will now describe the process you will  use to calibrate the iOLab device via the software. If you have not installed the iOLab software, please do so now. The software can be downloaded from the iOLab [website](http://www.iolab.science/running-application.html). After you have installed the software, plugging in the USB dongle and pressing the power button on the iOLab should connect it to your computer.
-
-####
-
-**Calibration Procedure:**
-1. Open the software, click on the “setting” icon (![](imgs/settingicon.png) ), and highlight the "Calibration" menu. Select "Accel-magn-gyro" from the list and follow the instructions shown on the screen. 
-
-:::Figure:Figure
-   ![](imgs/calibration_step1.gif)
-:::
-
-2. Perform the calibration for the iOLab device’s $x, y, z$ axes separately. The image of the appropriate iOLab orientation is shown in the lower right corner of the Calibration window. Note that the longest side is the $y$-axis, the second longest side is the $x$-axis, and the shortest side is the $z$-axis, as shown in the center of the iOLab between the wheels. 
-3.  After calibrating the three axes, press the “save” button.
-####
-After completing the above steps, you must now verify your calibration. We will do this in two ways, to ensure high-quality data for the analysis portion of your lab:
-#### 
-**Steps for Verification 1:**
-
-Here we will check that the axes have been correctly identified, by rotating the device and viewing the response
-1. Select “magnetometer” from the list on the left, and you will see that $B_x$, $B_y$, and $B_z$ are checked. Uncheck $B_z$ and be prepared to rotate the iOLab along its centered $z$-axis (*i.e.*, spin it on the table with the front facing up). 
-2. Hit the “record” button to start recording, and rotate the iOLab for about three complete cycles (~360 degress for 3 times). You should see two trajectories with some repeated pattern on the plot. When you have three complete rotations, stop recording.
-
-::: Figure:Figure
-   ![](imgs/magverifyx.png)
-:::
-	 
-3. Go to the “parametric plot mode” icon ( ![](imgs/parametricplotmodebutton.png) ) located in the middle of the top panel. On the lower panel, select the whole range of the data with your cursor. The default is plotting magnetometer (y) vs. magnetometer (x). Note that $y$ vs. $x$ means that $y$ is plotted on the $y$-axis. 
-4. Click on the “tool bar” icon ( ![](imgs/toolbaricon.png) ) in the lower left region. Change the first setting to “$B_y$” and the second setting to “$B_x$”. Now you should see an elliptical trajectory on the plot. Make sure that 
-- - the ellipse is centered around (0, 0). Note that, despite appearances, the plot should be circular. The elliptical shape is an artifact of the $x$ and $y$ axes having different scales on your screen. 
-- - $\Delta x$ and $\Delta y$ (the width and height) are equal on the ellipse.
-5. If these two criteria are met, you may move on to the next step. Otherwise, make a note of your issue, return to the calibration procedure and recalibrate your device, being sure that the area is clear of metal and magnetic objects.
-
-::: Figure:Figure
-  ![](imgs/xverfiyplot.png)
-	
-	Does this calibration satisfy the verification requirements?
-:::
-#### 
-**Steps for Verification 2:**
-
-For the second verification of the calibration, we will repeat the same procedure with a different axis of rotation. 
-1. Click the “reset” button and go back to chart mode (  ![](imgs/chartmodebutton.png)). 
-2. This time, unselect $B_x$ and put the iOLab on its $x$-axis (*i.e.*, the front face of the iOLab should be perpendicular to the table, and the bottom should be pointing to the side).
-3. Hit the “record” button to start recording, and rotate the iOLab for about three complete cycles (~360 degress for 3 times). You should see two trajectories with some repeated pattern on the plot. When you have three complete rotations, stop recording.
-4. Go to the “parametric plot mode” icon ( ![](imgs/parametricplotmodebutton.png) ) located in the middle of the top panel. On the lower panel, select the whole range of the data with your cursor. 
-5. Click the “tool bar” icon ( ![](imgs/toolbaricon.png) ). Change the first setting to “$B_y$” and the second setting to “$B_z$”. You should see a similar ellipse to that in the previous verification.
-6. Check that the two criteria are satisfied. If not, return to the calibration procedure and recalibrate your device, being sure that the area is clear of metal and magnetic objects.
-
-::: Question
-(a) Why is verification an important step of calibration?
-
-(b) Assume the iOLab is functional. If the ellipse is off-center, what might be a possible reason?
-
-(c) Why do you think the ellipse is not perfectly "smooth" ? Give some possible explanations.
-:::
+Therefore, for the purpose of measuring the strength of a magnetic field, you should switch to the *uncalibrated* magnetometer. 
 ::::::
-
-####
-
-####
 
 ####
 
@@ -126,24 +78,19 @@ For the second verification of the calibration, we will repeat the same procedur
 ## 3. Measure direction and strength of a magnetic field using the magnetometer
 
 ### Materials needed:
--  iOLab
-- Neodymium magnet
+- Your phone
+- A magnet
 
-The neodymium magnets, composed of various neodymium alloys, are permanent rare-earth magnets that are very strong. In this lab, they will provide an external magnetic field. Our first task is to characterize the magnet by measuring the *direction* and *magnitude* of this field.
-
-
+In this lab, the magnet will provide an external magnetic field. Our first task is to characterize the magnet by measuring the *direction* of this field. Later, we will take care of the backgroud noise to measure the *magnitude*.
 
 :::::: Exercise
- To measure the direction of magnetic field from the Neodymium magnet we will use use the Magnetometer Probe located on the upper left corner of iOLab (next to the “M” label) and the Sensor in the software. 
-####
-
+Firstly, let's measure the direction of magnetic field from the  magnet.
 **Measurement steps:**
-
-1. Open the software and go to “chart mode”(  ![](imgs/chartmodebutton.png)). We can uncheck the $B_x$ and $B_y$ boxes on the plot, and keep only the $z-$component in this experiment.
-2.  Start recording. You should see a horizontal line on the plot. 
-3.  Hold the magnet above the "M" symbol, with one flat side facing up. Move it up and down above the magnetometer.
+1. Put your phone on the table and open the phyphox app and go to “magnetometer”. You can see there are three plots, representing $B_x$,  $B_y$ and $B_z$.
+2. Start recording. You should see some random fluctuations on the plot. 
+3. Hold the magnet above the magnetomer, with one flat side facing up. Move it up and down above the magnetometer.
 4.  Now flip the magnet over, and repeat the motion.
-5.  Stop recording to view the collected data. You may need to use the zoom feature or change the axis scaling to see all of the data.
+5.  Stop recording to view the collected data. 
 
 ::: Question
 (a)Why does $B_z$ change when you move the magnet vertically?
@@ -153,10 +100,7 @@ The neodymium magnets, composed of various neodymium alloys, are permanent rare-
 :::
 ####
 
-
-####
-
-By observing how $B_z$ changes with the vertical motion of the magnet, you should be able to identify the direction of the magnetic field. Mark one side with “⨂” to indicate that the magnetic field is going into that side, and the other side with “⨀” to indicate                that the field is coming out of this side. You will use these magnets for other labs this quarter.
+By observing how $B_z$ changes with the vertical motion of the magnet, you should be able to identify the direction of the magnetic field. Mark one side with “⨂” to indicate that the magnetic field is going into that side, and the other side with “⨀” to indicate that the field is coming out of this side. You will use these magnets for other labs this quarter.
 
 ::: Question
 (a) Explain how you determined the magnet's polarity from your data, *i.e.*, which sides represent the magnet's north (⨀) and south (⨂) poles. 
@@ -167,14 +111,14 @@ By observing how $B_z$ changes with the vertical motion of the magnet, you shoul
 
 ## 4. Measure the field around a magnetic source
 ### Materials needed:
--  iOLab
-- Neodymium magnet
-- Steel Screw
-- Ruler and Tape
+- Your phone
+- A magnet
+- Ruler
+- Steel screw
 
-In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the iOLab sensor. We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
+In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the magnetometer. We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
 
-::: Figure:Figure
+:::Figure:Figure
   ![](imgs/BarMagnetFieldFRONT.png)
 :::
 
@@ -190,42 +134,42 @@ However, despite the "dipole" (and higher order, e.g. "quadrupole") contribution
 :::
 
 
-
 :::::: Exercise
-As your final exercise in getting familiar with the iOLab, you will attempt to verify your prediction quantitatively. 
+As your final exercise in getting familiar with the magnetometer, you will attempt to verify your prediction quantitatively. It should be emphasized that since we are using the uncalibrated magnetometer, you have to **subtract the background** from the measurements. The background includes earth's magnetic field and local fields from nearby electronic devices and metals. 
 
-
-::: Figure:Figure
-  ![](imgs/magsetup.jpg)
-  ####
-	Example of Magnetic Field Measurement setup
-:::
+*Be careful, do not to move or rotate your phone between taking data, because this would change the background contribution.*
 ####
 
 **Magnetic Force and Distance steps:**
-1. Use the reset button to clear all measurements. On the magnetometer graph panel, uncheck all data except for $B_z$.
-2. Tape the ruler to the edge of a table, and align the iOLab, with the $x$-axis pointing up, such that the $M$ symbol is  aligned with the 0 cm mark. 
-3. Attach your magnet to the flat end of a steel screw to make handling easier. Align the magnet with the 1 cm mark on the ruler.
+1. Start a measurement without the magnet (put the magnet far away) and record the values. 
+2. Mark 0.5 cm, 1 cm, 2cm, and 4 cm on a piece of paper. Align the magnetometer with the 0 cm mark. 
+4. Attach your magnet to the flat end of a steel screw to make handling easier. Align the magnet with the 0.5 cm mark.
 5. Record about 1 second of data and stop.
-6. Double the distance to 2 cm, 4 cm and 8 cm, and record 1 second of data each.
-7. For each measurement made above, highlight the 1-second interval over which you took data, and record the average and the distance of the measurement in a table.
+6. Double the distance to 1 cm, 2 cm, 4 cm, and record 1 second of data each.
+7. Export the data. For each measurement made above, calculate the average of the 1-second interval, and record the average field strength and the distance of the measurement in a table.
+:::Figure:Figure
+![](imgs/setup.png)
+:::
 
-
-::: Question 
-For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$.  For example, calculate $B(2\:cm)/
-B(1\:cm)$
+:::Question 
+For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$. You should have three ratios for 4 data points.
 
 (a) Do the ratios match your expectations from Question 6c? 
 
 (b) Do some ratios match better than others?
 
-(c) Propose an explanation for part (b). Consider things such as the nature of the magnetic field (Should the measurement be more accurate closer to or farther from the device?) as well as experimental corrections like the exact location of the magnetometer (Is it exactly at the 'M' symbol? What effect might an offset have on your data? Can you estimate the offset? )
+(c) Propose an explanation for part (b). Consider things such as the nature of the magnetic field (Should the measurement be more accurate closer to or farther from the device?) as well as experimental corrections like the exact location of the magnetometer (Is it exactly at where you labeled? What effect might an offset have on your data?)
 :::
 ::::::
-
 # Write-up
  - For Part I, give a short summary of the iOLab device. 
  - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how this could be fixed in a future lab.
  - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
  - At the end of your write-up, please include the answers to all questions, clearly numbered. Show your work if applicable.
 
+## Alternative??
+## Part III: Lab report Format
+ - attach data/plots for measurements you make
+- explain possible errors or reasons if the experiment doesn’t match the theory/prediction
+- answer all questions with reasoning
+- Include a paragraph (~1/2 - 1 page if typed) at the end summarizing the key points of the lab (what are the concepts/theories, how the experiments are designed/performed, results, errors analysis etc)

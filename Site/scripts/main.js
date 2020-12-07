@@ -1,32 +1,27 @@
+
+
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+var linkfile = urlParams.get('linkfile')
+console.log(linkfile)
+if (linkfile == null){
+  linkfile=0
+}
+console.log(linkfile)
+
+
 var md = window.markdownit()
 md.set({ html: true})
 
+
 var container = window.markdownitContainer;
 
-// md.use('container' , 'Figure', {
-
-//   validate: function(params) {
-//     return params.trim().match(/^Figure\s+(.*)$/);
-//   },
-
-//   render: function (tokens, idx) {
-//     var m = tokens[idx].info.trim().match(/^Figure\s+(.*)$/);
-
-//     if (tokens[idx].nesting === 1) {
-//       // opening tag
-//       return '<details><summary>' + md.utils.escapeHtml(m[1]) + '</summary>\n';
-
-//     } else {
-//       // closing tag
-//       return '</details>\n';
-//     }
-//   }
-// });
-
-md.use(container , 'Equation',{
+md.use(container , 'Figure:Equation',{
  
   render: function (tokens, idx) {
-    var m = tokens[idx].info.trim().match(/^Equation+(.*)$/);
+    var m = tokens[idx].info.trim().match(/^Figure\:Equation\s*$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
       return '<div class="Equation w3-padding-large w3-padding-32 w3-center">';
@@ -38,10 +33,10 @@ md.use(container , 'Equation',{
 
 
 
-md.use(container , 'Figure',{
+md.use(container , 'Figure:Figure',{
 
   validate: function(params) {
-    return params.trim().match(/^Figure+(.*)$/);
+    return params.trim().match(/^Figure\:Figure+(.*)$/);
   },
 
   render: function (tokens, idx) {
@@ -57,61 +52,38 @@ md.use(container , 'Figure',{
 });
 md.use(container , 'Question');
 md.use(container , 'Exercise');
-md.use(container,'Simulation')
+md.use(container,'Figure:Simulation', {
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^Figure\:Simulation+(.*)$/);
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="Simulation w3-padding-large w3-padding-32 w3-center">';
 
-
-console.log(md.render(':::Figure click me\n*content*\n:::\n'));
-
-
-
-function doRendering(md_text){
-    
-    var markdown = md_text;
-    return md.render(markdown);
-  }
-
-function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain atrribute:*/
-      file = elmnt.getAttribute("w3-include-html");
-      if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = doRendering(this.responseText);}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("w3-include-html");
-            updateRoutine()
-            includeHTML()
-          }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        updateRoutine();
-        return;
-        
-      }
+    }else{
+      return '</div>'
     }
-  };
+  }
+})
+
+
+md.use(container,'Note')
+
+
+
   
-  function activeincludeHTML(file) {
+  function activeincludeHTML(filenum=linkfile) {
     var z, xhttp;
     /*loop through a collection of all HTML elements:*/
     z = document.getElementById("mdcontent");
+
+    file= "lab"+filenum+".md"
     
     if (file) {
       /*make an HTTP request using the attribute value as the file name:*/
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-          if (this.status == 200) {z.innerHTML = doRendering(this.responseText);}
+          if (this.status == 200) {z.innerHTML = doRendering(this.responseText) ;}
           if (this.status == 404) {z.innerHTML = "<h1>This lab is not available yet!</h1>";}
           updateRoutine();
           /*remove the attribute, and call this function once more:*/
@@ -128,13 +100,17 @@ function includeHTML() {
   };
 
   function changepage(file){
-
-
+    urlParams.set("linkfile", file);
     activeincludeHTML(file)
   }
+
+  function doRendering(md_text){
+    
+    var markdown = md_text;
+    return md.render(markdown);
+  }
+
   function updateRoutine(){
-    idheaders()
-    movefig()
     renderMathInElement(document.body, {
       delimiters:[
         {left: "$$", right: "$$", display: true},
@@ -142,10 +118,15 @@ function includeHTML() {
         {left: "\\(", right: "\\)", display: false},
         {left: "\\[", right: "\\]", display: true}
       ]})
-
+ 
+    idheaders()
+    tableOfContents('[data-toc]', '[data-content]')
+    movefig()
+    
   }
+    
 
-
+    
 
   function movefig() {
     var z, i, elmnt;
@@ -162,6 +143,7 @@ function includeHTML() {
   };
 
 
+
 function idheaders() {
   headers=document.getElementsByTagName("h1");
   for (i = 0; i < headers.length; i++) {
@@ -175,9 +157,6 @@ function idheaders() {
   }
 
 }
-
-
-75
 
 function romanize(num) {
   var lookup = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1},roman = '',i;
