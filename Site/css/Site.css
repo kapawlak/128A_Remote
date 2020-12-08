@@ -11,12 +11,23 @@ img{
 
 
 .roundbox{
-
   border-radius: 5px;
   padding: 10px;
-  max-width: 70%;
   margin:auto!important;
   margin-bottom: 50px!important;
+}
+
+@media (min-width:601px){
+  .roundbox{max-width: 95%;}
+}
+@media (min-width:993px){
+  .roundbox{max-width: 90%;}
+}
+@media(min-width:1405px){
+  .roundbox{max-width: 70%;}
+}
+.roundbox .roundbox{
+  max-width: 90%;
 }
 
 .Question{
@@ -37,7 +48,7 @@ img{
     font-family: "Segoe UI",Arial,sans-serif;
     background-color:#4fa199!important;
     position: relative;
-    left:-50%;
+    left:-48%;
     top:-5px;
     border-radius: 5px;
   }
@@ -111,8 +122,8 @@ h2{
 
 .Equation{
     background-color:#ccc!important;
-    font-weight: bolder;
-    font-size: larger;
+    font-weight: 900;
+    font-size: x-large;
     text-align: left;
     padding-top: 30px!important;
 }
@@ -141,27 +152,21 @@ h2{
 
 .Table:before{
   counter-increment: table;
-  content: "\A Table "  counter(table)": ";
+  content: "\A Table "  counter(table)": \A";
+  margin-bottom: 20px!important;
+  display: block;
+  font-weight: bold;
 }
-
-table, th, td {
-
- 
-
-}
-
-table{
+table {
   width:100%;
   margin:auto;
 }
-th,td{
-  
-  
-  padding:0px
+th, td {
+  padding:5px
 
 }
 th{
-  border: sienna 2px solid;
+  /* border: sienna 2px solid; */
   border-radius: 2px;
   font-size: normal;
   background-color: salmon;

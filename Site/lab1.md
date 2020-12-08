@@ -89,7 +89,7 @@ Most of us don't have access to beams of charged  particles in free space (or me
 
 In a wire, a current is carried by many electrons moving along its length due to the voltage difference between its ends -- recall that, in this case,
 
-:::Figure: Equation
+:::Figure:Equation
 $$
 \vec I = q_e n A\vec v 
 $$
