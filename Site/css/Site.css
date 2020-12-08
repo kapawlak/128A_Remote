@@ -204,7 +204,7 @@ td{
 
 h2{
     position: relative;
-    left:-10px;
+    /* left:-10px; */
 }
 
 .Note{
@@ -289,7 +289,7 @@ h2{
    max-height: 0px;
    overflow: hidden;
    flex-grow: 1;
-   background-color:;
+  
 
   }
 
