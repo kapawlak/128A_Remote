@@ -53,6 +53,7 @@ md.use(container , 'Figure:Figure',{
 });
 md.use(container , 'Question');
 md.use(container , 'Exercise');
+md.use(container , 'Figure:Table');
 md.use(container,'Figure:Simulation', {
   render: function (tokens, idx) {
     var m = tokens[idx].info.trim().match(/^Figure\:Simulation+(.*)$/);

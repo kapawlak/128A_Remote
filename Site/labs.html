@@ -67,26 +67,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-medium w3-theme-l5 w3-animate-left" id="mySidebar" style='width: 350px'>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
-  <div id="allnav">
+  <div id="allnav" height='100%'>
     <i class="fa fa-remove"></i>
   </a>
-  <!-- <h4 class="w3-bar-item"><b>Jump To</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#part1">Materials</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#part2">Introduction</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#part3">Exercises</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#part4">Write Up</a>-->
   <div data-content id="TOCprint"></div> 
 
-  <div id="chatscreen">
+<div id='chat-button'>
 <button type="button" id="collapsible"><b><h4>Toggle Chat</h4></b></button>
-<br>
-  <div id="content">
+</div>
+<div id="chatscreen">
    
-    <iframe width="98%" height="100%" frameborder="0" src="https://ucsb.nectir.io/channel/physics4l" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="microphone; camera" id="chatframe"></iframe>
-    <button class="btn btn-success" style="font-face: 'Source Sans Pro'; font-weight: bold; font-size: larger; background-color: #4fa199!important; border:0px; text-align: center;width:100%;" onclick=" window.open('https://ucsb.nectir.io/channel/physics4l')"> Go To Nectir Workspace</button>
-   <br>
+    <iframe width="100%" height="100%" frameborder="1" src="https://ucsb.nectir.io/channel/physics4l" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="microphone; camera" id="chatframe"></iframe>
+   
+
   </div>
-  </div>
+  <div id='nectirbut'> <button class="btn btn-success" style="font-face: 'Source Sans Pro'; font-weight: bold; font-size: larger; background-color: #4fa199!important; border:0px; text-align: center;width:100%; display: block;" onclick=" window.open('https://ucsb.nectir.io/channel/physics4l')"> Go To Nectir Workspace</button></div>
 </div>
 </nav>
 
@@ -145,27 +140,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 var coll = document.getElementById("collapsible");
-var content=document.getElementById("content")
 var toc = document.getElementById('TOCprint')
 var chatframe = document.getElementById('chatframe')
+var allnav = document.getElementById('allnav')
+
+allnav.style.height='100%'
+allnav.style.display='flex'
 toc.style.maxHeight= "100%"
+toc.style.height= "100%"
 
-
-  coll.onclick= function() {
-    console.log('clicked')
-    coll.classList.toggle("active");
-    toc.classList.toggle("active");
+coll.onclick= function() {
+  console.log('clicked')
+  
+  if (chatscreen.style.maxHeight){ //if chatscreen visible
+    chatscreen.style.maxHeight = null;
+    chatscreen.style.maxHeight = '0 px';
     
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-      toc.style.maxHeight= "100%"
-      
-    } else {
-      content.style.maxHeight = "none";
-      toc.style.maxHeight= "0px"
-      chatframe.style.height=document.getElementById('mySidebar').clientHeight-150+'px'
-    }
-  };
+    allnav.style.height='100%'
+    allnav.style.display='flex'
+
+     
+    toc.style.maxHeight= "100%"
+    toc.style.height= "100%"
+    
+  } else {
+    
+    toc.style.maxHeight= null;
+    toc.style.height='0px'
+  
+    allnav.style.height='100%'
+
+
+    chatscreen.style.maxHeight='100%';
+    chatscreen.style.height='100%';
+    chatframe.style.height= '100%'//document.getElementById('mySidebar').clientHeight-150+'px'
+    
+    
+  }
+};
 </script>
 
 
