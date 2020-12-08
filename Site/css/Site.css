@@ -1,8 +1,7 @@
 body {
-    counter-reset: question exercise figure equation;  
+    counter-reset: question exercise figure equation table;  
     font-size: medium;
 }
-
 
 img{
 
@@ -10,18 +9,24 @@ img{
     max-height: 400px;
 }
 
+
+.roundbox{
+
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 70%;
+  margin:auto!important;
+  margin-bottom: 50px!important;
+}
+
 .Question{
     background-color: #009688!important;
     color: white;
-
-    padding: 10px;
     width: 100%!important;
-    margin: auto;
-    margin-bottom: 10px;
-    border-radius: 2px;
     border: white thin;
     font-size: large;
 }
+
 .Question::before {
     padding: 15px;
     width: 100%;
@@ -31,19 +36,17 @@ img{
     font-size: larger;
     font-family: "Segoe UI",Arial,sans-serif;
     background-color:#4fa199!important;
-    margin-left: -20px;
-    margin-top:-10px;
+    position: relative;
+    left:-50%;
+    top:-5px;
     border-radius: 5px;
-
-
   }
-.Question p{
-  
-    padding: 10px;
-    text-align: justify;
-    text-justify: inter-word;
 
+.Question p{
+    padding: 10px;
+    text-align: left;
 }
+
 .Exercise::before {
     padding: 0px;
     counter-increment: exercise;
@@ -58,9 +61,10 @@ img{
 .Exercise{
     background-color:#f0f0f0 !important;
     color: rgb(0, 0, 0);
-    border-radius: 2px;
-
-    padding: 10px;
+    text-align: left!important;
+    max-width: 100%!important;
+    width: 100%;
+  
     
 }
 
@@ -75,16 +79,15 @@ h2{
 }
 
 .Figure{
-    background-color:white!important;
-    padding:10px!important;
-    border-radius: 2px!important;
+   
     border-style: solid;
-    border-width: 2px;
-    border-color: rgb(207, 195, 195);
-    margin: 20px;
+    border-color:#646464;
+    border-radius: 8px;
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
     font-weight: bold;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255,0)
 }
 
 
@@ -95,21 +98,19 @@ h2{
     font-weight: bolder;
     font-size: x-large;
     font-family: "Segoe UI",Arial,sans-serif;
-    background-color:#ffcdcd!important;
+    background-color:#646464!important;
     position: relative;
-    top:20px;
+    bottom:-50px;
     margin-bottom:-5px;
     margin-top: 5px;
     padding: 15px;
     border-radius: 5px;
+    color: white;
 
 }
 
 .Equation{
     background-color:#ccc!important;
-    padding:10px!important;
-    border-radius: 8px!important;
-    margin: 0px 20px 0px;
     font-weight: bolder;
     font-size: larger;
     text-align: left;
@@ -130,6 +131,46 @@ h2{
    
     padding: 15px;
 }
+
+.Table{
+  
+  
+  max-width: 100%!important;
+
+}
+
+.Table:before{
+  counter-increment: table;
+  content: "\A Table "  counter(table)": ";
+}
+
+table, th, td {
+
+ 
+
+}
+
+table{
+  width:100%;
+  margin:auto;
+}
+th,td{
+  
+  
+  padding:0px
+
+}
+th{
+  border: sienna 2px solid;
+  border-radius: 2px;
+  font-size: normal;
+  background-color: salmon;
+}
+td{
+  font-size: small;
+  background-color: rgb(187, 172, 170);
+}
+
 
 #part0{
     color:black!important;
@@ -155,11 +196,6 @@ h2{
     transform-origin: 0 0;
 }
 
-.Equation, .Question, .Figure {
-    max-width: 70%;
-    margin:auto;
-    margin-bottom: 35px;
-}
 
 h2{
     position: relative;
@@ -169,12 +205,10 @@ h2{
 .Note{
     background-color: #e9e49f!important;
     color: black;
-
-    padding: 10px;
+   
     width: 100%!important;
-    margin: auto;
-    margin-bottom: 10px;
-    border-radius: 2px;
+    margin-top: 50px!important;
+
     border: white thin;
     font-size: large;
 }
@@ -186,8 +220,9 @@ h2{
     font-size: larger;
     font-family: "Segoe UI",Arial,sans-serif;
     background-color:#e6dd66!important;
-    margin-left: calc(50%-20px);
-    margin-top:-10px;
+    position: relative; 
+    left:0;
+    top:-40px;
 
   }
 

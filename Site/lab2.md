@@ -73,9 +73,8 @@ As in Lab 0, we must subtract the background filed to ensure the accuracy of the
 
 ####
 
-:::Note
-
-**Note**: If the long wire you have is *enameled*, it must be scraped off at the contact points, else the circuit will **NOT** conduct. The safest way to do this is to grip the ends of each wire with the alligator clips (or something similar), squeeze them closed, and pull. Doing this a few times should scrape off enough enamel to allow sufficient conduction.
+::::::Note
+If the long wire you have is *enameled*, it must be scraped off at the contact points, else the circuit will **NOT** conduct. The safest way to do this is to grip the ends of each wire with the alligator clips (or something similar), squeeze them closed, and pull. Doing this a few times should scrape off enough enamel to allow sufficient conduction.
 
 :::Figure:Figure
 
@@ -84,7 +83,7 @@ As in Lab 0, we must subtract the background filed to ensure the accuracy of the
 :::
 
 
-:::
+::::::
 
 
 
@@ -97,7 +96,7 @@ As in Lab 0, we must subtract the background filed to ensure the accuracy of the
 - Paper and ruler
 
 
-:::::: Exercise
+::::::::: Exercise
 In this geometry, the wire is sitting flat on the desk, parallel to the side of your phone with the magnetometer. 
 ::: Question
 Assuming your phone has a small thickness, i.e., the height of the magnetometer is ignorable, what B component(s) do you expect to observe from the current carrying wire in this configuration?
@@ -122,21 +121,30 @@ Do the dip(s) match your prediction from question 1? Comment if the assumption c
 9. Repeat steps 5-8 for the remaining 9 measurement lines.
 ######
 
-**Note**: If you are doing the experiment on a desk with a steel frame or there are metals nearby, the baseline $B$ field will shift as the phone is moved over different regions of the desk (why?).  If you are unable to find an alternate location to perform the experiment, it is possible to correct for the error by measuring the $B$ field components both before and during each current pulse, and then finding the difference. This difference will be the field due to just the current. 
+:::Note
+ If you are doing the experiment on a desk with a steel frame or there are metals nearby, the baseline $B$ field will shift as the phone is moved over different regions of the desk (why?).  If you are unable to find an alternate location to perform the experiment, it is possible to correct for the error by measuring the $B$ field components both before and during each current pulse, and then finding the difference. This difference will be the field due to just the current. 
+ :::
 
 
-::: Question
+::::::Question
 Review your data and make a table like the one below with appropriate units.
 
-:::Figure:Table
 **Note**: whether you have $B_y$ component or not depends on your observations in question 1 & 2. If you do observe $B_y$, don't forget to consider the height of the magnetometer in your calculation of $R$!
 
-|Offset  $y$  | $\:R\:$ |$1/R$  |(maybe) Measured $B_y$  |Measured $B_z$  | Field strength $B$ |
+::::::
+:::Figure:Table
+
+
+|Offset  $y$  | $R$ |$1/R$  |(maybe) Measured $B_y$  |Measured $B_z$  | Field strength $B$ |
 | ------|------|------|------|------|------|
-|$\:$        |         |          |          |        |           |           
+|.   |      |      |      |      |      |           
 
 :::
-::::::
+
+
+
+
+:::::::::
 
 ::: Question
 (a) Plot B vs. 1/R. 
@@ -157,7 +165,7 @@ Review your data and make a table like the one below with appropriate units.
 (b) Estimate how much might it affect your results.
 :::
 
-:::
+
 
 ## 3. Loop of wire
 

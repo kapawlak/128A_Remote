@@ -25,7 +25,7 @@ md.use(container , 'Figure:Equation',{
     var m = tokens[idx].info.trim().match(/^Figure\:Equation\s*$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="Equation w3-padding-large w3-padding-32 w3-center">';
+      return '<div class="Equation roundbox w3-padding-large w3-padding-32 w3-center">';
 
     }else{
       return '</div>'
@@ -44,22 +44,59 @@ md.use(container , 'Figure:Figure',{
     var m = tokens[idx].info.trim().match(/^Figure+(.*)$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="Figure w3-padding-large w3-padding-32 w3-center">';
+      return '<div class="Figure roundbox w3-padding-large w3-padding-32 w3-center">';
 
     }else{
       return '</div>'
     }
   }
 });
-md.use(container , 'Question');
-md.use(container , 'Exercise');
-md.use(container , 'Figure:Table');
+md.use(container , 'Question',{
+
+  render: function (tokens, idx) {
+    if (tokens[idx].nesting === 1) {
+    // opening tag
+    return '<div class="Question roundbox w3-padding-large w3-padding-32 w3-center">';
+
+  }else{
+    return '</div>'
+  }
+}
+
+});
+md.use(container , 'Exercise',
+{
+
+  render: function (tokens, idx) {
+    if (tokens[idx].nesting === 1) {
+    // opening tag
+    return '<div class="Exercise roundbox w3-padding-large w3-padding-32 w3-center">';
+
+  }else{
+    return '</div>'
+  }
+}
+
+});
+md.use(container , 'Figure:Table',
+{
+  render: function (tokens, idx) {
+    if (tokens[idx].nesting === 1) {
+    // opening tag
+    return '<div class="Table roundbox w3-padding-large w3-padding-32 w3-center">';
+
+  }else{
+    return '</div>'
+  }
+}
+});
+
 md.use(container,'Figure:Simulation', {
   render: function (tokens, idx) {
     var m = tokens[idx].info.trim().match(/^Figure\:Simulation+(.*)$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="Simulation w3-padding-large w3-padding-32 w3-center">';
+      return '<div class="Simulation roundbox w3-padding-large w3-padding-32 w3-center">';
 
     }else{
       return '</div>'
@@ -68,7 +105,19 @@ md.use(container,'Figure:Simulation', {
 })
 
 
-md.use(container,'Note')
+md.use(container,'Note',{
+
+  render: function (tokens, idx) {
+    if (tokens[idx].nesting === 1) {
+    // opening tag
+    return '<div class="Note roundbox w3-padding-large w3-padding-32 w3-center">';
+
+  }else{
+    return '</div>'
+  }
+}
+
+})
 
 
 
