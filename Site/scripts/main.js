@@ -1,8 +1,5 @@
 
-
-
 const queryString = window.location.search;
-
 const urlParams = new URLSearchParams(queryString);
 
 var linkfile = urlParams.get('linkfile')
@@ -56,10 +53,10 @@ md.use(container , 'Question',{
   render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) {
     // opening tag
-    return '<div class="Question roundbox w3-padding-large w3-padding-32 w3-center">';
+    return '<div class="w3-row"><div class="Question roundbox w3-row w3-padding-large w3-padding-32 w3-center">';
 
   }else{
-    return '</div>'
+    return '</div></div>'
   }
 }
 
@@ -172,26 +169,13 @@ md.use(container,'Note',{
  
     idheaders()
     tableOfContents('[data-toc]', '[data-content]')
-    movefig()
+   
     
   }
     
 
     
 
-  function movefig() {
-    var z, i, elmnt;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByClassName("Figure");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-
-      elmnt.className = "Figure w3-padding-large w3-padding-32 w3-center";
-     
-    }
-
-    return
-  };
 
 
 
@@ -202,6 +186,7 @@ function idheaders() {
     if (i>0){
     elmnt.innerHTML= "Part " + romanize(i) +": "+elmnt.innerHTML
     }
+    //elmnt.classList.toggle('w3-row')
    
     elmnt.id = "part" +i ;
    

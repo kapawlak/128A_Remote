@@ -9,12 +9,17 @@
 ---
 
 # The Phyphox App
-In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/).
-Phyphox allows you to use the sensors in your phone to measure quantities such as frequency, acceleration, magnetic fields, etc. Data can be exported in many common formats for later analysis.
+
 
 :::Figure:Figure
 ![](imgs/phyphox.png)
 :::
+
+In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/). 
+
+Phyphox allows you to use the sensors in your phone to measure quantities such as frequency, acceleration, magnetic fields, etc. Data can be exported in many common formats for later analysis.
+
+
 
 ####
 
@@ -116,11 +121,15 @@ By observing how $B_z$ changes with the vertical motion of the magnet, you shoul
 - Ruler
 - Steel screw
 
-In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the magnetometer. We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
 
+
+In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the magnetometer. 
 :::Figure:Figure
   ![](imgs/BarMagnetFieldFRONT.png)
 :::
+We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
+
+
 
 However, despite the "dipole" (and higher order, e.g. "quadrupole") contributions to the field's shape, along the axis that runs through the poles of a magnet, the field field behaves much like a "monopole"--- similar to the electric field of a single electric charge. In this experiment, we will investigate how the magnetic field along the axis running through the center of your neodymium magnet disk behaves as a function of distance.
 

@@ -3,10 +3,10 @@ body {
     font-size: medium;
 }
 
-img{
+#mdcontent > .Figure  img{
 
     max-width: 100%;
-    max-height: 400px;
+    max-height: 250px;
 }
 
 
@@ -40,7 +40,7 @@ img{
 
 .Question::before {
     padding: 15px;
-    width: 100%;
+    width: auto;
     counter-increment: question;
     content: "\AQuestion "  counter(question)": ";
     font-weight: bolder;
@@ -48,7 +48,7 @@ img{
     font-family: "Segoe UI",Arial,sans-serif;
     background-color:#4fa199!important;
     position: relative;
-    left:-48%;
+    left:-10%;
     top:-5px;
     border-radius: 5px;
   }
@@ -98,8 +98,13 @@ h2{
     font-size: small;
     font-weight: bold;
     margin-bottom: 50px;
-    background-color: rgba(255, 255, 255,0)
+    background-color: rgba(255, 255, 255,0);
 }
+
+@media (min-width:993px){
+ #mdcontent > .Figure{ float: right;
+  margin-left: 20px!important;
+}}
 
 
 .Figure::after{
