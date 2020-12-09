@@ -10,7 +10,7 @@ body {
     cursor: pointer;
 }
 
-.Question img{
+.Question img, .Exercise img{
 
   max-width: 100%;
   max-height: 250px;
