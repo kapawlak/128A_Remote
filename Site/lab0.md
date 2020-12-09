@@ -12,7 +12,7 @@
 
 
 :::Figure:Figure
-![](imgs/phyphox.png)
+![The Phyphox Phone App in the iOS store](imgs/phyphox.png)
 :::
 
 In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/). 
@@ -125,7 +125,7 @@ By observing how $B_z$ changes with the vertical motion of the magnet, you shoul
 
 In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the magnetometer. 
 :::Figure:Figure
-  ![](imgs/BarMagnetFieldFRONT.png)
+  ![The magnetic field of a bar magnet has the characteristic of a 'dipole', where its strength falls off more slowly in the direction perpendicular to its polarized axis.](imgs/BarMagnetFieldFRONT.png)
 :::
 We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
 
