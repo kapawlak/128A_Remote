@@ -298,7 +298,21 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 /* *********************************** */
 /* Figure box formats */
 
-
+.WFigure{
+  width:100%!important;
+  max-width: none!important;
+  float: none!important;
+  display: flex;
+  margin:auto;
+  clear: both;
+  flex-wrap: wrap;
+}
+.WFigure .w3-row{
+  width:100%!important;
+}
+.WFigure img{
+max-width: 40%!important;
+}
 .Figure{   
     border-style: solid;
     border-color:#646464;

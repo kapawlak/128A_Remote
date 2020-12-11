@@ -80,6 +80,32 @@ md.use(container,'Note',{
 })
 
 
+
+// md.use(container , 'row',{
+
+//   render: function (tokens, idx) {
+//     if (tokens[idx].nesting === 1) {
+//       // opening tag
+//       return '<div class="w3-row">';
+
+//     }else{
+//       return '</div>'
+//     }
+//   }
+// });
+// md.use(container , 'column',{
+//   render: function (tokens, idx) {
+//     if (tokens[idx].nesting === 1) {
+//       // opening tag
+//       return '<div class="w3-col">';
+
+//     }else{
+//       return '</div>'
+//     }
+//   }
+// });
+
+
 md.use(container , 'Figure:Figure',{
 
   validate: function(params) {
@@ -90,7 +116,25 @@ md.use(container , 'Figure:Figure',{
     var m = tokens[idx].info.trim().match(/^Figure+(.*)$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="Figure roundbox  w3-center">';
+      return '<div class="Figure roundbox w3-center">';
+
+    }else{
+      return '</div>'
+    }
+  }
+});
+
+md.use(container , 'Figure:WFigure',{
+
+  validate: function(params) {
+    return params.trim().match(/^Figure\:WFigure+(.*)$/);
+  },
+
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^WFigure+(.*)$/);
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="WFigure Figure roundbox w3-center">';
 
     }else{
       return '</div>'
