@@ -232,12 +232,21 @@ Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{
 :::
 
 # Write-up
-### In this lab there were:
+---
+
+### In this lab, there were:
  @fa-question-circle qtotal w3-hover-shadow@ 
  @fa-pencil-square-o etotal w3-hover-shadow@
- - For Part I, give a short summary of the Biot-Savart Law, and describe how a current generates a magnetic field.
- - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results, and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how it could be fixed in a future lab.
- - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
- - At the end of your write-up, please include the answers to all questions, clearly numbered. Show your work if applicable.
 
+---
+###  **@fa-hand-o-right@  Instructions :**
+ #### **1. Answer all questions clearly, showing your work where appropriate.**
+ #### **2. Starting on a seperate page:** 
+  - Write a short summary (~1 page, single spaced) describing the Biot-Savart Law, how you tested it, and any important observations. 
+  - In this summary, be sure to **summarize your results** and **reasons why you believe your data are precise and accurate**. If you do not think your data are accurate, explain why, and how this could be fixed in a future lab.
+
+ #### **3. Additional Information:**
+ - You should attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
  
+
+

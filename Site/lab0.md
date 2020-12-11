@@ -182,19 +182,20 @@ For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$. You 
 :::
 ::::::
 # Write-up
-### In this lab there were:
+---
+
+### In this lab, there were:
  @fa-question-circle qtotal w3-hover-shadow@ 
  @fa-pencil-square-o etotal w3-hover-shadow@
 
- - For Part I, give a short summary of the iOLab device. 
- - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how this could be fixed in a future lab.
- - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
- - At the end of your write-up, please include the answers to all questions, clearly numbered. Show your work if applicable.
+---
+###  **@fa-hand-o-right@  Instructions :**
+ #### **1. Answer all questions clearly, showing your work where appropriate.**
+ #### **2. Starting on a seperate page:** 
+  - Write a short summary (~1 page, single spaced) describing the important concepts of the lab, what you did, and any important observations. 
+  - In this summary, be sure to **summarize your results** and **reasons why you believe your data are precise and accurate**. If you do not think your data are accurate, explain why, and how this could be fixed in a future lab.
 
-## Alternative??
-## Part III: Lab report Format
+ #### **3. Additional Information:**
+ - You should attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
+ 
 
- - attach data/plots for measurements you make
-- explain possible errors or reasons if the experiment doesn’t match the theory/prediction
-- answer all questions with reasoning
-- Include a paragraph (~1/2 - 1 page if typed) at the end summarizing the key points of the lab (what are the concepts/theories, how the experiments are designed/performed, results, errors analysis etc)

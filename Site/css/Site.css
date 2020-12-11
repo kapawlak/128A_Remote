@@ -41,6 +41,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   margin-top:50px;
   margin-right:20px;
   margin-left:20px;
+  max-width: 1200px;
 }
 
 @media (min-width:993px){
@@ -638,11 +639,13 @@ tbody > tr:nth-child(odd){background-color:#dadada!important}
   text-align: center;
   border-top: 1px #ccc solid;
 }
+/* footer */
+
+
 
 footer{
-  width:100%!important;
-  position: absolute;
-  left:350px;
+  position: relative;
+  left:0px;
   padding:0px;
  
  
@@ -650,17 +653,18 @@ footer{
 
 #ILGfooter{
   padding:0px;
-  text-align: left;
-  font-size: smaller;
-  background-color:#4fa199;
-  height:60px;
+  width: 100%;
+  text-align: right;
+  font-size: x-small;
+  background-color:#bbbbbb;
+
 }
 
 #ILGfooter p{
   vertical-align: center;
 }
 
-
+/* Totals for Q's and E's */
 .qtotal::after{
   content: counter(question) ' Questions';
   
