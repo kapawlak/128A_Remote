@@ -31,7 +31,7 @@ In this lab, we will explore the Biot-Savart law by indirectly determining *the 
 ### Long Straight Wire
 
 ::: Figure:Simulation
-`<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>`
+<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>
 :::
 
 Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right- hand rule:
@@ -50,7 +50,9 @@ where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&
 
 ### Loop of Wire
 ::: Figure:Simulation
-`<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>`
+
+<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>
+
 :::
 
 For a  loop of wire, the magnetic field looks very similar to that of a dipolar magnet. When the loop is large, the mangnetic field in the center of the loop looks approximately like a straight line piercing the loop, with a direction determined by the right hand rule. The strength of this field depends on the radius of the loop and the height, given by the relation:
