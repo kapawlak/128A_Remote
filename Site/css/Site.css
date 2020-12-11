@@ -52,9 +52,8 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 #mdcontent > p{
   text-indent: 1em;
-  text-align: justify;
-  text-justify: inter-word;
-  margin-left: 10px
+  text-align: left
+ 
 }
 
 /* Make sure figure images don't blow up */
@@ -168,7 +167,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 }
 
 .Question p{
-  text-align: justify;
+  text-align: center;
   margin: 35px 20px 25px 20px;
   max-width: 90%;
   line-height: 1.2;
@@ -176,9 +175,11 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 .Question ol{ 
   list-style-type: lower-alpha!important;
+  text-align: left;
 }
 .Question ol p{
-  margin-left:0px!important
+  margin-left:0px!important;
+  text-align: left;
 }
 
 /* *********************************** */
