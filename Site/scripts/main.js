@@ -78,7 +78,17 @@ md.use(container,'Note',{
     }
    }
 })
+md.use(container,'Video', {
+  render: function (tokens, idx) {
+    if (tokens[idx].nesting === 1) { 
+     // This places an opening tag
+     return '<div class="w3-row"> <div class=" Video roundbox w3-center">';
 
+   }else{
+     // This places a closing tag
+     return  '</div></div>'
+   }}
+})
 
 
 // md.use(container , 'row',{

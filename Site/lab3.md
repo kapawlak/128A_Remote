@@ -171,7 +171,7 @@ Make sure to take a picture of your sketch plots and include them in your report
 # Collecting the Data
 
 
-::: Exercise
+:::::: Exercise
 
 In this section we will look at different balls dropped from the sixth floor walkway of Broida Hall. The four balls dropped in Video 1 are of varying sizes and weights. Figure 7 shows the balls which are dropped. 
 
@@ -181,8 +181,8 @@ In this section we will look at different balls dropped from the sixth floor wal
 
 The pink dog ball is small but fairly weighty for its size. The basket ball is medium sized and also has decent weight to it. The volley ball is smaller than the basket ball and slightly lighter as well. The beach ball is by far the largest and the lightest. These four balls should give a wide range of masses and sizes for our data set. All four balls are dropped, however, you will only be taking data for the basket ball. The data on the other balls have been taken for you. We have annotated Video 1 for you with the height measurements and an embedded stopwatch. These will be useful tools for your data collection.
 
-:::Figure:Video
-!(https://www.youtube.com/watch?v=juYSrbM66b0)
+:::Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/juYSrbM66b0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 
@@ -192,7 +192,7 @@ The pink dog ball is small but fairly weighty for its size. The basket ball is m
 
 3. Place your recoded data point in a table with the headers "Time (s)" and "Y_Basket (m)."
 
-:::
+::::::
 
 You have now collected some data for a basketball falling from the sixth floor of Broida! As mentioned above, three other balls were dropped from the same point at Broida. Rather than have you repeat the same data collection we have collected data for you using a software called Tracker.
 
@@ -203,8 +203,8 @@ Tracker allows us to monitor the location of the ball at every frame of the vide
 
 Below is a short video demonstrating how the Tracker software was used to collect data for the four drops.
 
-:::Figure:Video
-!(https://www.youtube.com/watch?v=hvwjn3tAtqc)
+:::Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hvwjn3tAtqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 The data you will need is in Table 1 below, linked in a google sheet.
@@ -224,8 +224,8 @@ The data you will need is in Table 1 below, linked in a google sheet.
 1. Start by copying the data linked in Table 1 into separate spreadsheet. 
 2. Now you will insert your data you took for the basketball into the table and plot all four ball drops on one plot. For instructions on how to do this, watch the following video. 
 
-:::Figure:Video
-!(https://www.youtube.com/watch?v=PT6GM85ut4I)
+:::Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PT6GM85ut4I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 ::::::
 ####

@@ -1,6 +1,6 @@
 /* set counters and base font size */
 body {
-    counter-reset: question exercise figure equation table simulation;  
+    counter-reset: question exercise figure equation table simulation video;  
     font-size: large;
 }
 
@@ -294,10 +294,49 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   
 }
 
+/* *********************************** */
+/* Video box formats */
+.Video{
+  border: 3px  #009688 solid!important;
+  color: rgb(0, 0, 0);
+  text-align: left!important;
+  width: 80%;
+  
+  border: 0px solid rgb(80, 66, 66);
+  text-indent: 0em;
+  padding: 10px 5px;
+  height:auto;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  
+}
+
+.Video::before {
+  counter-increment: video;
+  content: "Video "  counter(video)": ";
+  color:white;
+  width:calc(100% + 20px);
+
+  background-color: #009688;
+  display: block;
+  margin-left: -10px;
+  margin-bottom: 10px;
+  padding: 0px 32px;
+  
+}
+.Video iframe{
+  margin: auto;
+  align-self: center;
+  display:block
+}
+
 
 /* *********************************** */
 /* Figure box formats */
 
+
+/* Wide figures */
 .WFigure{
   width:100%!important;
   max-width: none!important;
