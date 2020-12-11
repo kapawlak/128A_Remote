@@ -1,6 +1,6 @@
 # Lab 0: Learning to use iOLab
 ---
-### All Materials Needed:
+### All Materials Needed @fa-flag@ :
 - Your phone with the phyphox App installed
 - A magnet
 - Ruler
@@ -15,7 +15,7 @@
 ![The Phyphox Phone App in the iOS store](imgs/phyphox.png)
 :::
 
-In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/). 
+@fa-flag@ In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/). 
 
 Phyphox allows you to use the sensors in your phone to measure quantities such as frequency, acceleration, magnetic fields, etc. Data can be exported in many common formats for later analysis.
 
@@ -23,7 +23,7 @@ Phyphox allows you to use the sensors in your phone to measure quantities such a
 
 ####
 
-You are encouraged to play with phyphox,  explore its capabilities and experiment ideas on the website, and take creative license to your investigations throughout the course. The instructions provided in each lab can be seen as a "minimum" requirement -- the features of phyphox go far beyond these suggestions
+ You are encouraged to play with phyphox,  explore its capabilities and experiment ideas on the website, and take creative license to your investigations throughout the course. The instructions provided in each lab can be seen as a "minimum" requirement -- the features of phyphox go far beyond these suggestions
 
 # Experiments
 ## 1. Overview
@@ -182,6 +182,10 @@ For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$. You 
 :::
 ::::::
 # Write-up
+### In this lab there were:
+ @fa-question-circle qtotal w3-hover-shadow@ 
+ @fa-pencil-square-o etotal w3-hover-shadow@
+ 
  - For Part I, give a short summary of the iOLab device. 
  - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how this could be fixed in a future lab.
  - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
@@ -189,6 +193,7 @@ For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$. You 
 
 ## Alternative??
 ## Part III: Lab report Format
+
  - attach data/plots for measurements you make
 - explain possible errors or reasons if the experiment doesn’t match the theory/prediction
 - answer all questions with reasoning

@@ -69,6 +69,8 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   
 }
 
+
+
 /* Make the inner text of figures pretty */
 #mdcontent > .Figure  p{
   max-width: 100%;
@@ -108,7 +110,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 
 /* Garnish formats */
-.Equation::after, .Question::before, .Note::before, .Exercise::before, .Simulation::before {
+.Equation::after, .Question::before, .Note::before, .Exercise::before, .Simulation::before, .qtotal::after, .etotal::after {
   font-weight: bolder;
   font-size: larger;
   border-radius: 5px;
@@ -196,7 +198,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   background-color:#f0f0f0 !important;
   color: rgb(0, 0, 0);
   text-align: left!important;
-  padding: 0px;
+  padding: 0px 15px;
   border: 3px solid rgb(211, 211, 211);
   width: 100%;
   max-width: none;
@@ -212,8 +214,8 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     background-color: rgb(211, 211, 211);
     display: block;
     position: relative;
-    width: calc(100% + 20px)!important;
-    margin-left: -10px;
+    width: calc(100% + 50px)!important;
+    margin-left: -25px;
     margin-top: 10px;
     padding: 0px 16px;
     
@@ -225,10 +227,10 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     font-size: x-large;
     font-family: "Segoe UI",Arial,sans-serif;
     text-align: center;
-    width: calc(100% + 20px)!important;
+    width: calc(100% + 50px)!important;
     background-color: rgb(211, 211, 211);
     display: block;
-    margin-left: -10px;
+    margin-left: -25px;
     margin-bottom:10px;
     padding: 0px 16px;
   }
@@ -242,7 +244,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 /* *********************************** */
 /* Note box formats */
 .Note{
-  background-color: #e9e49f!important;
+  background-color:#e6dd66!important;
   color: black; 
   border: white thin;
   font-size: large;
@@ -250,9 +252,9 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 }
 .Note:before {
   
-  content: "Note: ";
-
-  background-color:#e6dd66!important;
+  content: "\f071  \f071  \f071";
+  font-family: FontAwesome;
+  background-color:#d6bb44!important;
   position: absolute; 
   left:calc(50% - 40px);
   top:-10px;
@@ -296,8 +298,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 /* Figure box formats */
 
 
-.Figure{
-   
+.Figure{   
     border-style: solid;
     border-color:#646464;
     border-radius: 8px;
@@ -306,7 +307,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     font-weight: bold;
     margin-bottom: 50px;
     background-color: rgba(255, 255, 255,0);
-
 }
 
 @media (min-width:993px){
@@ -344,20 +344,30 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 .Table{
   max-width: 100%!important;
   border-collapse:collapse;
-  padding-bottom: 50px;
+  padding:0px!important;
+  border: 2px solid rgb(155, 155, 155);
+  margin-bottom: 30px;
 }
 
 .Table:before{
   counter-increment: table;
-  content: "\A Table "  counter(table)": \A";
-  margin-bottom: 20px!important;
- 
+  content: "\A Table "  counter(table)": ";
+  margin-bottom: 0px!important;
+  font-family: Helvetica, sans-serif;
   display: block;
-  font-weight: bold;
+  
+  background-color: #c5c5c5;
+  color:rgb(0, 0, 0);
+ 
+  
 }
 table {
-  
+  width: 100%;
   margin:auto;
+  font-size: smaller;
+  overflow: scroll;
+  font-family: Helvetica, sans-serif;
+  
 }
 th, td {
   padding:5px
@@ -373,16 +383,17 @@ th{
 }
 
 thead > tr > th{
-  background-color: salmon;
+  background-color: rgb(255, 255, 255);
+  color: #041f1c;
 }
 td{
   font-size: small;
   /* background-color: rgb(187, 172, 170); */
 }
 
-tbody > tr:nth-child(even){background-color:#226194!important}
+tbody > tr:nth-child(even){background-color:#b0b8be!important}
 
-tbody > tr:nth-child(odd){background-color:#794f4f!important}
+tbody > tr:nth-child(odd){background-color:#dadada!important}
 
 
 /* *********************************** */
@@ -419,28 +430,28 @@ tbody > tr:nth-child(odd){background-color:#794f4f!important}
 
 
 #collapsible {
-    background-color: #009688;
-    color: white;
-    cursor: pointer;
-    padding: 5px;
-    width: 100%;
-    border: none;
-    text-align: center;
+  background-color: #009688;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: center;
 
-    font-size: 24px;
-    font-weight: bold;
-    height: 60px;
-    position: absolute;
-    bottom:0px;
-    z-index: 2;
-  }
+  font-size: 24px;
+  font-weight: bold;
+  height: 60px;
+  position: absolute;
+  bottom:0px;
+  z-index: 2;
+}
 
-  #collapsible:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
+#collapsible:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 
  
 
@@ -612,17 +623,64 @@ tbody > tr:nth-child(odd){background-color:#794f4f!important}
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
-.w3-bar{overflow: visible;}
+
 #lablist{
   z-index: 1;
-  width:100%;
+  width:100vw;
   display: block;
-  top:43px;
+  top:39px;
  
 }
 
 #lablist .w3-bar-item{
   z-index: 5;
   background-color: white;
-  text-align: right;
+  text-align: center;
+  border-top: 1px #ccc solid;
+}
+
+footer{
+  width:100%!important;
+  position: absolute;
+  left:350px;
+  padding:0px;
+ 
+ 
+}
+
+#ILGfooter{
+  padding:0px;
+  text-align: left;
+  font-size: smaller;
+  background-color:#4fa199;
+  height:60px;
+}
+
+#ILGfooter p{
+  vertical-align: center;
+}
+
+
+.qtotal::after{
+  content: counter(question) ' Questions';
+  
+}
+
+.etotal::after{
+  content: counter(exercise) ' Exercises';
+  }
+
+.qtotal, .etotal{
+  
+  border-radius: 10px;
+  font-size: larger;
+  padding:5px;
+  color:white;
+}
+
+.qtotal{
+  background-color: #009688;
+} 
+.etotal{
+  background-color: rgb(121, 121, 121)
 }

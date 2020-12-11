@@ -14,6 +14,7 @@ var container = window.markdownitContainer;
 
 //Markdownit Container special settings
 
+
 const preamble='<div class="w3-row" style="margin: 50px 0px;"><div class="w3-col l2 m2 s12 "> </div>'
 const postamble='</div><div class="w3-col l2 m2 s12 "></div>'
 
@@ -99,8 +100,6 @@ md.use(container , 'Figure:Figure',{
 
 
 
-
-
 md.use(container , 'Figure:Table',
 {
   render: function (tokens, idx) {
@@ -168,6 +167,7 @@ function updateRoutine(){
     ]})
 
   idheaders()
+  replace_icon()
   tableOfContents('[data-toc]', '[data-content]')
   setLightBox()
   document.getElementById('collapsible').style.bottom='0px'
@@ -252,4 +252,12 @@ function setLightBox(){
 
 
 
-
+function replace_icon(){
+  text=document.querySelectorAll('#mdcontent h3, #mdcontent h2, #mdcontent p, .Table td')
+  for(i=0;i<text.length;i++){
+    emojified=text[i].innerHTML.replaceAll(/(\@)(.*)(\@)/g, "<i class='fa $2'></i>")
+    console.log('emoji text= ', emojified)
+    console.log('current text= ', text[i].innerHTML)
+    text[i].innerHTML=emojified
+  }
+}

@@ -74,7 +74,7 @@ As in Lab 0, we must subtract the background filed to ensure the accuracy of the
 ####
 
 ::::::Note
-If the long wire you have is *enameled*, it must be scraped off at the contact points, else the circuit will **NOT** conduct. The safest way to do this is to grip the ends of each wire with the alligator clips (or something similar), squeeze them closed, and pull. Doing this a few times should scrape off enough enamel to allow sufficient conduction.
+ **Note:** If the long wire you have is *enameled*, it must be scraped off at the contact points, else the circuit will **NOT** conduct. The safest way to do this is to grip the ends of each wire with the alligator clips (or something similar), squeeze them closed, and pull. Doing this a few times should scrape off enough enamel to allow sufficient conduction.
 
 :::Figure:Figure
 
@@ -122,7 +122,7 @@ Do the dip(s) match your prediction from question 1? Comment if the assumption c
 ######
 
 :::Note
- If you are doing the experiment on a desk with a steel frame or there are metals nearby, the baseline $B$ field will shift as the phone is moved over different regions of the desk (why?).  If you are unable to find an alternate location to perform the experiment, it is possible to correct for the error by measuring the $B$ field components both before and during each current pulse, and then finding the difference. This difference will be the field due to just the current. 
+   **Note:**  If you are doing the experiment on a desk with a steel frame or there are metals nearby, the baseline $B$ field will shift as the phone is moved over different regions of the desk (why?).  If you are unable to find an alternate location to perform the experiment, it is possible to correct for the error by measuring the $B$ field components both before and during each current pulse, and then finding the difference. This difference will be the field due to just the current. 
  :::
 
 
@@ -135,12 +135,12 @@ Review your data and make a table like the one below with appropriate units.
 :::Figure:Table
 
 
-|Offset  $y$  | $R$ |$1/R$  |(maybe) Measured $B_y$  |Measured $B_z$  | Field strength $B$ |
+|Offset  $y$  | $R$ |$1/R$  | Measured $B_y$ *  |Measured $B_z$  | Field strength $B$ |
 |------|------|------|------|------|------|
-|.   |      |      |      |      |      |     
-|.   |      |      |      |      |      |   
-|.   |      |      |      |      |      |   
-|.   |      |      |      |      |      |        
+|@fa-pencil@    |      |      |      |      |      |     
+|@fa-pencil@   |      |      |      |      |      |   
+|@fa-pencil@    |      |      |      |      |      |   
+|@fa-pencil@   |      |      |      |      |      |        
 
 :::
 
@@ -196,27 +196,28 @@ We will now measure the magnetic field induced by a loop of current.
 
 ::: Question
 Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{(R^2+z^2)^{3/2}}$  , and the measured field strength in the $z$ direction, with appropriate units. 
-
+:::
 :::Figure:Table
  
 | $R$|$z$ | $r$ | $B_z$|
 | ------| ------| ------ |------| 
-|$\:$       |        |         |        |
-|$\:$       |        |         |        |
-|$\:$       |        |         |        |
-|$\:$       |        |         |        |
+|@fa-pencil@       |        |         |        |
+|@fa-pencil@     |        |         |        |
+|@fa-pencil@       |        |         |        |
+|@fa-pencil@      |        |         |        |
 
 :::
+
 ::::::
 
 ::: Question
-(a) Calculate the current for both heights using the formula for the magnetic field due to a loop of wire. Hint: don't forget to account for the external field from nearby sources.
+1. Calculate the current for both heights using the formula for the magnetic field due to a loop of wire. Hint: don't forget to account for the external field from nearby sources.
 
-(b) Do they agree? If yes, explain why you think this. If no, try to identify the cause of the *discrepancy*. 
-
-:::
+2. Do they agree? If yes, explain why you think this. If no, try to identify the cause of the *discrepancy*. 
 
 :::
+
+
 
 ::: Question
 (a) By how much do your results for the current differ between the two exercises? 
@@ -227,6 +228,9 @@ Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{
 :::
 
 # Write-up
+### In this lab there were:
+ @fa-question-circle qtotal w3-hover-shadow@ 
+ @fa-pencil-square-o etotal w3-hover-shadow@
  - For Part I, give a short summary of the Biot-Savart Law, and describe how a current generates a magnetic field.
  - For Part II, write a short paragraph describing the procedure taken and any important observations for each Exercise. Be sure to summarize your results, and reasons why you believe your data are precise and accurate. If you do not think your data are accurate, explain why, and how it could be fixed in a future lab.
  - You are encouraged to attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.

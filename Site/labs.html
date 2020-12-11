@@ -28,6 +28,7 @@
   <script src="scripts\markdown-it.js"></script>
   <script src="scripts\markdown-it-container.js"></script>
 
+
   <!-- Our CSS -->
   <link rel="stylesheet" href="css\Site.css">
 
@@ -67,19 +68,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a href="?linkfile=4" class="w3-bar-item w3-button w3-hover-white w3-hide-small" onclick="changepage()">Lab 4</a>
     <a href="?linkfile=5" class="w3-bar-item w3-button w3-hover-white w3-hide-small"  onclick="changepage()">Lab 5</a>
     <div class='w3-dropdown-click w3-hide-medium w3-hide-large w3-right'>
-      <button onclick="dropdownlab()" class="w3-button w3-right" width='100%'>Choose Lab</button> 
+      <a onclick="dropdownlab()" class="w3-bar-item w3-button w3-left w3-hover-white w3-large w3-theme-l1  w3-right" width='100%'><i class="fa fa-bookmark"></i></a> 
     </div> 
   </div>
-  <div id="lablist" class="w3-dropdown-content  w3-bar-block w3-border w3-hide">
-    <a href="index.html" class="w3-bar-item w3-button  w3-hover-white">Welcome</a>
-    <a href="courseinfo.html" class="w3-bar-item w3-button w3-hover-white">Course Information</a>
-    <a href="?linkfile=0" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 0</a>
-    <a href="?linkfile=1" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 1</a>
-    <a href="?linkfile=2" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 2</a>
-    <a href="?linkfile=3" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 3</a>
-    <a href="?linkfile=4" class="w3-bar-item w3-button w3-hover-white " onclick="changepage()">Lab 4</a>
-    <a href="?linkfile=5" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 5</a>
-  </div>
+  
 </div>
 
 
@@ -90,7 +82,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div data-content id="TOCprint"  class="w3-hide w3-show w3-col w3-bar-item"> </div>
   
-  <button type="button" id="collapsible" class='w3-bar-item w3-cell-bottom' onclick="sidebarFold()"><b>Toggle Chat</b></button>
+  <button type="button" id="collapsible" class='w3-bar-item w3-cell-bottom' onclick="sidebarFold()"><b>Toggle Chat <i class="fa fa-comments-o"></i></b></button>
 
 
   <div id="chatscreen" class="w3-hide w3-animate-slide w3-bar-item">
@@ -112,6 +104,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 <div class="w3-main" style="margin-left:375px; margin-right: 30px;">
   <div class="w3-row " >
+    <div id="lablist" class="w3-dropdown-content  w3-bar-block w3-border w3-hide">
+      <a href="index.html" class="w3-bar-item w3-button  w3-hover-white">Welcome</a>
+      <a href="courseinfo.html" class="w3-bar-item w3-button w3-hover-white">Course Information</a>
+      <a href="?linkfile=0" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 0</a>
+      <a href="?linkfile=1" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 1</a>
+      <a href="?linkfile=2" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 2</a>
+      <a href="?linkfile=3" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 3</a>
+      <a href="?linkfile=4" class="w3-bar-item w3-button w3-hover-white " onclick="changepage()">Lab 4</a>
+      <a href="?linkfile=5" class="w3-bar-item w3-button w3-hover-white "  onclick="changepage()">Lab 5</a>
+    </div>
     <!-- Modal Content -->
       <div class="image-modal-popup">
         <div class="wrapper">
@@ -128,11 +130,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
        </div>
   </div>
 <!-- END MAIN -->
-  <footer id="myFooter" >
-    <div class="w3-container  w3-padding-32" style ='width:100%!important;text-align: center;'>
+  <footer>
+    <div  id='ILGfooter'>
       
-      © 2020 ILG at the UCSB Physics Department, all rights reserved. <br>
-      Special thanks to Jiaoyue Yuan for content creation and editing.
+      <p>© 2020 ILG at the UCSB Physics Department, all rights reserved. 
+      Special thanks to Jiaoyue Yuan for content creation and editing.</p>
     </div>
 
   </footer>
@@ -186,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function dropdownlab() {
   var x = document.getElementById("lablist");
   if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
+    x.className += " w3-show";     
   } else { 
     x.className = x.className.replace(" w3-show", "");
   }
