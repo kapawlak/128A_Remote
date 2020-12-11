@@ -1,30 +1,100 @@
+/* set counters and base font size */
 body {
-    counter-reset: question exercise figure equation table;  
-    font-size: medium;
+    counter-reset: question exercise figure equation table simulation;  
+    font-size: large;
 }
 
-#mdcontent > .Figure  img{
+/* Stop images from running over sections */
+h1 {
+  clear: both;
+  color: #009688!important;
+  font-size: xxx-large;
+  padding: 20px 0px
+}
 
+h2{
+  color: black!important;
+  font-size: xx-large;
+  padding:10px 10px;
+  margin-left:-10px
+}
+/*fix links to sections */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  display: block;
+  content: " ";
+  height: 60px;
+  margin-top: -60px;
+  visibility: hidden;
+}
+/* Main header */
+#part0{
+  color:black!important;
+  font-size: 28pt;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* make the main paragraphs pretty */
+#mdcontent{
+  
+  margin-top:50px;
+  margin-right:20px;
+  margin-left:20px;
+}
+
+@media (min-width:993px){
+  #mdcontent{
+    margin-left:10px;
+    margin-right:10px
+  }
+}
+
+#mdcontent > p{
+  text-indent: 1em;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-left: 10px
+}
+
+/* Make sure figure images don't blow up */
+#mdcontent > .Figure  img{
     max-width: 100%;
-    max-height: 250px;
+    max-height: 300px;
     cursor: pointer;
+    height:auto;   
 }
 
 .Question img, .Exercise img{
-
   max-width: 100%;
-  max-height: 250px;
+  
+}
+
+/* Make the inner text of figures pretty */
+#mdcontent > .Figure  p{
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  padding: 0px;
+  margin:0px;
 }
 
 
+/* default style for all blurbs */
 .roundbox{
   border-radius: 5px;
-  padding: 10px;
-  margin:auto!important;
-  margin-bottom: 50px!important;
+  margin: auto;
+  max-width: 700px;
+  white-space: normal!important;
+  position: relative;
 }
 
-@media (min-width:601px){
+
+.w3-col{
+  white-space: pre;
+}
+
+/* @media (min-width:601px){
   .roundbox{max-width: 95%;}
 }
 @media (min-width:993px){
@@ -35,38 +105,84 @@ body {
 }
 .roundbox .roundbox{
   max-width: 90%;
+} */
+
+
+/* Garnish formats */
+.Equation::after, .Question::before, .Note::before {
+  font-weight: bolder;
+  font-size: larger;
+  border-radius: 5px;
+  font-family: "Segoe UI",Arial,sans-serif;
+  padding: 5px 15px;
+
 }
 
+
+/* *********************************** */
+/* Equation box formats */
+
+.Equation{
+  background-color:#ccc!important;
+  font-weight: 900;
+  font-size: large;
+  text-align: left;
+  padding-top: 30px!important;
+}
+
+.Equation::after{
+  counter-increment: equation;
+  content: "Equation " counter(equation);
+  background-color:#e7e7e7!important; 
+  position: relative;
+  top: 10px;
+  
+}
+
+@media (min-width:993px){
+  .Equation::after{
+    bottom:0px!important;
+    left: 200px;
+    }
+  }
+
+/* *********************************** */
+/* Question box formats */
+
+
 .Question{
-    background-color: #009688!important;
-    color: white;
-    width: 100%!important;
-    border: white thin;
-    font-size: large;
+  background-color: #009688!important;
+  color: white;
+  border: white thin;
+  font-size: large;
 }
 
 .Question::before {
-    padding: 5px 15px;
-   
-    counter-increment: question;
-    content: "\AQuestion "  counter(question)": ";
-    font-weight: bolder;
-    font-size: larger;
-    font-family: "Segoe UI",Arial,sans-serif;
-    background-color:#4fa199!important;
-    position: relative;
-    left:-50px;
-    border-radius: 5px;
-    width: auto;
-    margin-top: -25px;
-  }
-
-.Question p{
-    text-align: justify;
-    margin: auto;
+  counter-increment: question;
+  content: "Question "  counter(question)": ";
+  background-color:#4fa199!important;
+  position: absolute;
+  top: -1rem;
+  left:-20px;
+  
 }
 
+.Question p{
+  text-align: justify;
+  margin: 35px 20px 25px 20px;
+  max-width: 90%;
+  line-height: 1.2;
+}
 
+.Question ol{ 
+  list-style-type: lower-alpha!important;
+}
+.Question ol p{
+  margin-left:0px!important
+}
+
+/* *********************************** */
+/* Exercise box formats */
 
 .Exercise::before {
     counter-increment: exercise;
@@ -75,15 +191,13 @@ body {
     font-size: x-large;
     font-family: "Segoe UI",Arial,sans-serif;
     text-align: center;
-    width: calc(100% + 50px)!important;
+    width: calc(100% + 100px)!important;
     background-color: rgb(211, 211, 211);
     display: block;
-    margin-left: -25px;
-    margin-top: -26px;
+    margin-left: -50px;
+    margin-top: 10px;
     padding: 0px 16px;
     
-   
-
   }
   .Exercise::after {
     white-space: pre;
@@ -92,39 +206,91 @@ body {
     font-size: x-large;
     font-family: "Segoe UI",Arial,sans-serif;
     text-align: center;
-    width: calc(100% + 50px)!important;
+    width: calc(100% + 100px)!important;
     background-color: rgb(211, 211, 211);
     display: block;
-    margin-left: -25px;
-    margin-bottom: -26px;
+    margin-left: -50px;
+    margin-bottom:10px;
     padding: 0px 16px;
   }
-  @keyframes spin { 
-    100% { 
-      transform: rotateZ(360deg);
-    }
-  }
+
 
 .Exercise{
     background-color:#f0f0f0 !important;
     color: rgb(0, 0, 0);
     text-align: left!important;
-    max-width: 100%!important;
-    width: 100%;
+    padding: 0px 30px;
     border: 3px solid rgb(211, 211, 211);
     
 }
 
-
-h1{
-    color: #009688!important;
-    padding-top:50px;
+.Exercise{
+  background-color:#f0f0f0 !important;
+  color: rgb(0, 0, 0);
+  text-align: left!important;
+  max-width: 100%!important;
+  width: 100%;
+  border: 3px solid rgb(211, 211, 211);
+  text-indent: 0em;
 }
 
-h2{
-    color: black!important;
-    padding-top:40px;
+/* *********************************** */
+/* Note box formats */
+.Note{
+  background-color: #e9e49f!important;
+  color: black; 
+  border: white thin;
+  font-size: large;
+  padding: 20px 20px;
 }
+.Note:before {
+  
+  content: "Note: ";
+
+  background-color:#e6dd66!important;
+  position: absolute; 
+  left:calc(50% - 40px);
+  top:-10px;
+
+}
+
+
+/* *********************************** */
+/* Simulation box formats */
+.Simulation{
+  background-color:#907b7b !important;
+  color: rgb(0, 0, 0);
+  text-align: left!important;
+  max-width: 100%!important;
+  width: 100%;
+  border: 0px solid rgb(80, 66, 66);
+  text-indent: 0em;
+  padding: 10px 5px;
+  height:auto;
+  margin-bottom: 20px;
+  
+}
+
+.Simulation::before {
+  counter-increment: simulation;
+  content: "Simulation "  counter(simulation)": ";
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: "Segoe UI",Arial,sans-serif;
+  text-align: center;
+  width: calc(100% + 60px)!important;
+  background-color: rgb(109, 81, 81);
+  display: block;
+  margin-left: -30px;
+  margin-bottom: 10px;
+  padding: 0px 32px;
+  
+}
+
+
+/* *********************************** */
+/* Figure box formats */
+
 
 .Figure{
    
@@ -136,11 +302,16 @@ h2{
     font-weight: bold;
     margin-bottom: 50px;
     background-color: rgba(255, 255, 255,0);
+
 }
 
 @media (min-width:993px){
  #mdcontent > .Figure{ float: right;
-  margin-left: 20px!important;
+ 
+  margin-right: 10px !important;
+  margin-left: 20px !important;
+  margin-bottom: 50px!important;
+  margin-top:10px!important;
 }}
 
 
@@ -148,59 +319,35 @@ h2{
     counter-increment: figure;
     content: "Figure " counter(figure);
    
-    font-weight: bolder;
+    font-weight: bold;
     font-size: x-large;
     font-family: "Segoe UI",Arial,sans-serif;
     background-color:#646464!important;
     position: relative;
-    bottom:-50px;
-    margin-bottom:-5px;
-    margin-top: 5px;
-    padding: 15px;
+    bottom:-30px;
+ 
+
+    padding: 5px 15px;
     border-radius: 5px;
     color: white;
 
 }
 
-.Equation{
-    background-color:#ccc!important;
-    font-weight: 900;
-    font-size: large;
-    text-align: left;
-    padding-top: 30px!important;
-}
 
-.Equation::after{
-    counter-increment: equation;
-    content: "Equation " counter(equation);
-    border-radius: 5px;
-    font-weight: bolder;
-    font-size: larger;
-    font-family: "Segoe UI",Arial,sans-serif;
-    background-color:#e7e7e7!important;
-    position: relative;
-    bottom:-32px;
-    padding: 15px;
-}
-
-@media (min-width:993px){
-.Equation::after{
-  bottom:0px!important;
-  left: calc(50% - 30px);
-}
-}
+/* *********************************** */
+/* Table formats */
 
 .Table{
-  
-  
   max-width: 100%!important;
-
+  border-collapse:collapse;
+  padding-bottom: 50px;
 }
 
 .Table:before{
   counter-increment: table;
   content: "\A Table "  counter(table)": \A";
   margin-bottom: 20px!important;
+ 
   display: block;
   font-weight: bold;
 }
@@ -212,103 +359,60 @@ th, td {
   padding:5px
 
 }
+
 th{
   /* border: sienna 2px solid; */
   border-radius: 2px;
   font-size: normal;
+  /* background-color: salmon;
+} */
+}
+
+thead > tr > th{
   background-color: salmon;
 }
 td{
   font-size: small;
-  background-color: rgb(187, 172, 170);
+  /* background-color: rgb(187, 172, 170); */
 }
 
+tbody > tr:nth-child(even){background-color:#226194!important}
 
-#part0{
-    color:black!important;
-    font-size: 28pt;
-    font-weight: bolder;
-    font-family: 'Courier New', Courier, monospace;
+tbody > tr:nth-child(odd){background-color:#794f4f!important}
+
+
+/* *********************************** */
+/* Navbar */
+/* *********************************** */
+/* Table of contents */
+
+#mySidebar{
+  position: relative;
+  overflow-x:hidden;
 }
 
-.frame
-{
-
-
-    -ms-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -o-transform: scale(0.1);
-    -webkit-transform: scale(0.1);
-    transform: scale(0.1);
-
-    -ms-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
+#TOCprint > ul{
+  margin-left:0px;
+  padding: 0px;
 }
-
-
-h2{
-    position: relative;
-    /* left:-10px; */
+#TOCprint > ul ul{
+  margin-left:0px;
+  padding-left: 10px;
 }
-
-.Note{
-    background-color: #e9e49f!important;
-    color: black;
-   
-    width: 100%!important;
-    margin-top: 50px!important;
-
-    border: white thin;
-    font-size: large;
-}
-.Note:before {
-    padding: 15px;
-    width: 100%;
-    content: "\ANote: ";
-    font-weight: bolder;
-    font-size: larger;
-    font-family: "Segoe UI",Arial,sans-serif;
-    background-color:#e6dd66!important;
-    position: relative; 
-    left:0;
-    top:-40px;
-
-  }
-
-
-  #TOCprint > ul{
-    margin-left:0px;
-    padding: 0px;
-  }
-
-  #TOCprint > ul ul{
-    margin-left:0px;
-    padding-left: 10px;
-  }
-
-
-
-
-/* Style the button that is used to open and close the collapsible content */
-#allnav{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height:100%
-}
-
 
 #TOCprint{
   padding: 0 18px;
-  max-height: none ;
   
+  max-height: none;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
- 
 }
+
+/* Style the button that is used to open and close chat */
+
+
+
+
 
 #collapsible {
     background-color: #009688;
@@ -317,46 +421,70 @@ h2{
     padding: 5px;
     width: 100%;
     border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+    text-align: center;
+
+    font-size: 24px;
     font-weight: bold;
     height: 60px;
-   
- 
+    position: absolute;
+    bottom:0px;
+    z-index: 2;
+  }
+
+  #collapsible:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 
  
 
-  #chatscreen{
-  
-   width:100%;
-   background-color: #f0f0f0 !important;
-   height:0px;
-   max-height: 0px;
-   overflow: hidden;
-   flex-grow: 1;
-  
+#chatscreen{
 
-  }
+  width:100%;
+  height:calc(100% - 120px);
+  background-color: #f0f0f0 !important;
+  overflow: hidden;
+  position: absolute;
+  top:0px;
+  
+}
 
-  #nectirbut{
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+#nectirbut{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
  
   /* Style the collapsible content. Note: hidden by default */
 
 
 
     
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, #collapsible:hover {
+  /* Add a background color to the button if it is clicked on 
+  (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, #collapsible:hover{
     background-color: #ccc;
   }
 
 
-
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
 
 
 
@@ -465,3 +593,19 @@ h2{
     
     color: white;
   }
+
+
+  .frame{
+    -ms-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+

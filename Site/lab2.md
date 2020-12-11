@@ -136,8 +136,11 @@ Review your data and make a table like the one below with appropriate units.
 
 
 |Offset  $y$  | $R$ |$1/R$  |(maybe) Measured $B_y$  |Measured $B_z$  | Field strength $B$ |
-| ------|------|------|------|------|------|
-|.   |      |      |      |      |      |           
+|------|------|------|------|------|------|
+|.   |      |      |      |      |      |     
+|.   |      |      |      |      |      |   
+|.   |      |      |      |      |      |   
+|.   |      |      |      |      |      |        
 
 :::
 
@@ -198,6 +201,8 @@ Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{
  
 | $R$|$z$ | $r$ | $B_z$|
 | ------| ------| ------ |------| 
+|$\:$       |        |         |        |
+|$\:$       |        |         |        |
 |$\:$       |        |         |        |
 |$\:$       |        |         |        |
 

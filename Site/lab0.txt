@@ -14,7 +14,7 @@
 :::Figure:Figure
 ![The Phyphox Phone App in the iOS store](imgs/phyphox.png)
 :::
-
+#####
 In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/). 
 
 Phyphox allows you to use the sensors in your phone to measure quantities such as frequency, acceleration, magnetic fields, etc. Data can be exported in many common formats for later analysis.
@@ -37,12 +37,13 @@ Our first project will be exploring the field of permanent magnets, and getting 
 
 ### Materials needed:
 
----
+----
 - Your phone
 - A magnet
 - Steel screw
+----
 
----
+####
 
 The first thing you should do, is to make sure that you know exactly where in your phone the magnetometer is. It’s never in the center of the device, so you can’t make an accurate measurement just by moving a magnetic source toward or away from the face of your phone.  Usually the magnetometer is located somewhere at the edge of the phone, and its exact location depends on the brand and model.
 
@@ -104,9 +105,9 @@ Firstly, let's measure the direction of magnetic field from the  magnet.
 5.  Stop recording to view the collected data. 
 
 ::: Question
-1. Why does $B_z$ change when you move the magnet vertically?
+(a)Why does $B_z$ change when you move the magnet vertically?
 
-2. At the point where you flipped the magnet, describe the difference you observe, and give a possible explanation.
+(b) At the point where you flipped the magnet, describe the difference you observe, and give a possible explanation.
 
 :::
 ####
@@ -114,7 +115,7 @@ Firstly, let's measure the direction of magnetic field from the  magnet.
 By observing how $B_z$ changes with the vertical motion of the magnet, you should be able to identify the direction of the magnetic field. Mark one side with “⨂” to indicate that the magnetic field is going into that side, and the other side with “⨀” to indicate that the field is coming out of this side. You will use these magnets for other labs this quarter.
 
 ::: Question
- Explain how you determined the magnet's polarity from your data, *i.e.*, which sides represent the magnet's north (⨀) and south (⨂) poles. 
+(a) Explain how you determined the magnet's polarity from your data, *i.e.*, which sides represent the magnet's north (⨀) and south (⨂) poles. 
 :::
 
 
@@ -122,22 +123,18 @@ By observing how $B_z$ changes with the vertical motion of the magnet, you shoul
 
 ## 4. Measure the field around a magnetic source
 ### Materials needed:
-
 ---
 - Your phone
 - A magnet
 - Ruler
 - Steel screw
-
 ---
 
 
+In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the magnetometer. 
 :::Figure:Figure
   ![The magnetic field of a bar magnet has the characteristic of a 'dipole', where its strength falls off more slowly in the direction perpendicular to its polarized axis.](imgs/BarMagnetFieldFRONT.png)
 :::
-
-In the last exercise, we asked you to identify the poles of your permanent magnet and make some qualitative observations about how field strength behaves as you move the magnet above the magnetometer. 
-
 We will now make a more quantitative measurement of the field surrounding the magnet. Unlike electric charges, magnetic  charges (source) can never exist as "monopoles" with a spherically symmetric magnetic-field; the poles must always come in equal and opposite pairs, and the surrounding field is therefore changed. 
 
 
@@ -146,11 +143,11 @@ However, despite the "dipole" (and higher order, e.g. "quadrupole") contribution
 
 ::: Question
 
-1. Theoretically, how might the strength of the magnetic field (along your magnet's $z$-axis) depend on distance from the source? Your answer should be written as a proportionality $B(r)\propto...$  (you don't need to specify the proportionality constant) .
+(a) Theoretically, how might the strength of the magnetic field (along your magnet's $z$-axis) depend on distance from the source? Your answer should be written as a proportionality $B(r)\propto...$  (you don't need to specify the proportionality constant) .
 
-2. Devise a quick experiment that could verify this, and sketch a plot of the expected result. 
+(b) Devise a quick experiment that could verify this, and sketch a plot of the expected result. 
 
-3.  Based on the relationship between strength and distance proposed in (a), say that you doubled the distance from $r$ to $2 r$.  How would this change the resulting field strength?
+(c) Based on the relationship between strength and distance proposed in (a), say that you doubled the distance from $r$ to $2 r$.  How would this change the resulting field strength?
 :::
 
 
@@ -174,11 +171,11 @@ As your final exercise in getting familiar with the magnetometer, you will attem
 :::Question 
 For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$. You should have three ratios for 4 data points.
 
-1. Do the ratios match your expectations from Question 6c? 
+(a) Do the ratios match your expectations from Question 6c? 
 
-2. Do some ratios match better than others?
+(b) Do some ratios match better than others?
 
-3. Propose an explanation for part (b). Consider things such as the nature of the magnetic field (Should the measurement be more accurate closer to or farther from the device?) as well as experimental corrections like the exact location of the magnetometer (Is it exactly at where you labeled? What effect might an offset have on your data?)
+(c) Propose an explanation for part (b). Consider things such as the nature of the magnetic field (Should the measurement be more accurate closer to or farther from the device?) as well as experimental corrections like the exact location of the magnetometer (Is it exactly at where you labeled? What effect might an offset have on your data?)
 :::
 ::::::
 # Write-up

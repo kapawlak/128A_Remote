@@ -59,7 +59,7 @@ Vector equations, if they are new to you, take some getting used to. In plain En
 
 
 :::Figure:Simulation
-<embed src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html">
+<embed src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html" width='100%' height='800px'>
 :::
 
 
@@ -98,9 +98,9 @@ $$
 where $n$ is the number of electrons per unit volume, $q_e$ is the charge of an electron,  $A$ the cross sectional area of the wire, and $\vec v$ is the electron drift velocity. When a current-carrying wire is brought close to a magnetic field source, these electrons will be subject to the Lorentz force, whose magnitude and direction is determined by the electron velocities and the external magnetic field. In the following experiment, you will demonstrate and verify the Lorentz force by generating a current though a wire and observing the effect of a magnetic field. 
 
 :::Question
-(a) Sketch a picture of a simple wire with a voltage difference across its length, indicating the $+$ and $-$ ends explicitly.  Draw an arrow indicating the direction of the current.
+1. Sketch a picture of a simple wire with a voltage difference across its length, indicating the $+$ and $-$ ends explicitly.  Draw an arrow indicating the direction of the current.
 
-(b) What direction does the velocity vector, $\vec v$, point? Draw an arrow indicating this direction. (Recall the charge of the electron)
+2. What direction does the velocity vector, $\vec v$, point? Draw an arrow indicating this direction. (Recall the charge of the electron)
 :::
 
 
@@ -136,9 +136,9 @@ In this experiment, we will tape a strip of aluminum foil, which behaves as a &l
 **(! IF YOU HAVE NOT RECEIVED YOUR IOLAB YET AND DON'T KNOW THE ORIENTATION OF YOUR MAGNET FROM LAB 0, PLEASE LABEL THE MAGNET SIDES 'A' AND 'B' AND VERIFY AFTER YOUR DEVICE HAS ARRIVED !)**
 
 ::: Question
-(a) Are your observations consistent with the right hand rule?
+1. Are your observations consistent with the right hand rule?
 
-(b) How does the motion of the foil change after you switch the battery orientation? Why?
+2. How does the motion of the foil change after you switch the battery orientation? Why?
 :::
 
 
