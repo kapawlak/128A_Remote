@@ -108,12 +108,13 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 
 /* Garnish formats */
-.Equation::after, .Question::before, .Note::before {
+.Equation::after, .Question::before, .Note::before, .Exercise::before, .Simulation::before {
   font-weight: bolder;
   font-size: larger;
   border-radius: 5px;
   font-family: "Segoe UI",Arial,sans-serif;
   padding: 5px 15px;
+  text-align: center;
 
 }
 
@@ -162,9 +163,16 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   background-color:#4fa199!important;
   position: absolute;
   top: -1rem;
-  left:-20px;
+  left:calc(50% - 80px);
   
 }
+
+@media (min-width:993px){
+  .Question::before{
+    bottom:0px!important;
+    left: -20px;
+    }
+  }
 
 .Question p{
   text-align: center;
@@ -184,18 +192,26 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 /* *********************************** */
 /* Exercise box formats */
+.Exercise{
+  background-color:#f0f0f0 !important;
+  color: rgb(0, 0, 0);
+  text-align: left!important;
+  padding: 0px 30px;
+  border: 3px solid rgb(211, 211, 211);
+  
+}
+
 
 .Exercise::before {
     counter-increment: exercise;
     content: "Exercise "  counter(exercise)": ";
-    font-weight: bolder;
-    font-size: x-large;
-    font-family: "Segoe UI",Arial,sans-serif;
     text-align: center;
-    width: calc(100% + 100px)!important;
+    
     background-color: rgb(211, 211, 211);
     display: block;
-    margin-left: -50px;
+    position: relative;
+    width: calc(100% + 20px)!important;
+    margin-left: -10px;
     margin-top: 10px;
     padding: 0px 16px;
     
@@ -207,33 +223,17 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     font-size: x-large;
     font-family: "Segoe UI",Arial,sans-serif;
     text-align: center;
-    width: calc(100% + 100px)!important;
+    width: calc(100% + 20px)!important;
     background-color: rgb(211, 211, 211);
     display: block;
-    margin-left: -50px;
+    margin-left: -10px;
     margin-bottom:10px;
     padding: 0px 16px;
   }
 
 
-.Exercise{
-    background-color:#f0f0f0 !important;
-    color: rgb(0, 0, 0);
-    text-align: left!important;
-    padding: 0px 30px;
-    border: 3px solid rgb(211, 211, 211);
-    
-}
 
-.Exercise{
-  background-color:#f0f0f0 !important;
-  color: rgb(0, 0, 0);
-  text-align: left!important;
-  max-width: 100%!important;
-  width: 100%;
-  border: 3px solid rgb(211, 211, 211);
-  text-indent: 0em;
-}
+
 
 /* *********************************** */
 /* Note box formats */
@@ -269,20 +269,19 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   padding: 10px 5px;
   height:auto;
   margin-bottom: 20px;
+  position: relative;
   
 }
 
 .Simulation::before {
   counter-increment: simulation;
   content: "Simulation "  counter(simulation)": ";
-  font-weight: bolder;
-  font-size: x-large;
-  font-family: "Segoe UI",Arial,sans-serif;
-  text-align: center;
-  width: calc(100% + 60px)!important;
+  color:white;
+ 
+  width: calc(100% + 20px)!important;
   background-color: rgb(109, 81, 81);
   display: block;
-  margin-left: -30px;
+  margin-left: -10px;
   margin-bottom: 10px;
   padding: 0px 32px;
   
@@ -353,7 +352,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   font-weight: bold;
 }
 table {
-  width:100%;
+  
   margin:auto;
 }
 th, td {
