@@ -58,7 +58,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 /* Make sure figure images don't blow up */
 #mdcontent > .Figure  img{
-    max-width: 100%;
+    max-width: 350px;
     max-height: 300px;
     cursor: pointer;
     height:auto;   

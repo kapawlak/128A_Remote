@@ -34,11 +34,13 @@ In this lab, we will explore the Biot-Savart law by indirectly determining *the 
 <iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>
 :::
 
-Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right- hand rule:
-
 :::Figure:Figure
 ![](imgs/RHR.png)
 :::
+
+Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right- hand rule:
+
+
 Analyzing the integral of the Biot Savart Law,  it can be shown that the strength of the magnetic field at a distance $R$ from the wire is given by the equation:
 
 ::: Figure:Equation
@@ -152,22 +154,22 @@ Review your data and make a table like the one below with appropriate units.
 :::::::::
 
 ::: Question
-(a) Plot B vs. 1/R. 
+1. Plot B vs. 1/R. 
 
-(b) Why should the slope of this curve give you a measure of the current, I?
+2. Why should the slope of this curve give you a measure of the current, I?
 
-(c) Determine the current $I$ from this slope. Report it in the correct units and to a reasonable number of significant figures.
+3. Determine the current $I$ from this slope. Report it in the correct units and to a reasonable number of significant figures.
 
-(d) From Ohm&rsquo;s law and the voltage of your battery, estimate the resistance of your setup. 
+4. From Ohm&rsquo;s law and the voltage of your battery, estimate the resistance of your setup. 
 
-(e) Does it seem reasonable? Why or why not?
+5. Does it seem reasonable? Why or why not?
 :::
 
 
 ::: Question
-(a) Assuming that you performed the experiment correctly, what do you think is your largest source of *uncertainty*? 
+1. Assuming that you performed the experiment correctly, what do you think is your largest source of *uncertainty*? 
 
-(b) Estimate how much might it affect your results.
+2. Estimate how much might it affect your results.
 :::
 
 
@@ -222,11 +224,11 @@ Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{
 
 
 ::: Question
-(a) By how much do your results for the current differ between the two exercises? 
+1. By how much do your results for the current differ between the two exercises? 
 
-(b) Propose sources of the *discrepancy* between your measured values of the current in the previous question.
+2. Propose sources of the *discrepancy* between your measured values of the current in the previous question.
 
-(c) How could you improve these experiments to minimize the discrepancy in the future?
+3. How could you improve these experiments to minimize the discrepancy in the future?
 :::
 
 # Write-up
