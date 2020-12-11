@@ -43,11 +43,11 @@ Let's imagine that that at $t=0$, we have a ball at rest at a height $y_0= 25 m$
 Now we imagine that this ball is given an initial velocity $v_0 = + 10$ m/s by tossing it upwards, with no forces acting upon it (for example, in space).  Since no forces are acting on the ball, the *change* in the velocity must be zero, so $v(t) = v_0=10$m/s for all time.  Note that the time, $t$, does not appear in this equation!
 
 
-:::::::::Figure:WFigure
+:::Figure:WFigure
 
 ![](imgs/v10_pos.gif) ![](imgs/v10_vel.png)
-
-:::::::::
+####
+:::
 
 Since the velocity tells you how an object's *position* is changing in time, and we know that the velocity in the absence of force is constant, we can say that the position of the ball will increase by $10$ meters per second that passes. From this, we deduce that at $t=10$s, the ball is now at $y(10 s) = y_0 + v_0 t=  25$m $+ 10$ m/s $\times 10$s = $125$ m. 
 

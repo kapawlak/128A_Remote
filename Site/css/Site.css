@@ -341,10 +341,21 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   width:100%!important;
   max-width: none!important;
   float: none!important;
-  display: flex;
+
   margin:auto;
   clear: both;
-  flex-wrap: wrap;
+ padding-top: 20px;
+ }
+
+.WFigure::after{
+  
+  position: absolute;
+  bottom:0px;
+  max-height: 50px;
+ 
+}
+.WFigure p{
+  display: block;
 }
 .WFigure .w3-row{
   width:100%!important;
@@ -375,7 +386,7 @@ max-width: 40%!important;
 
 .Figure::after{
     counter-increment: figure;
-    content: "Figure " counter(figure);
+    content: "\A Figure " counter(figure);
    
     font-weight: bold;
     font-size: x-large;
