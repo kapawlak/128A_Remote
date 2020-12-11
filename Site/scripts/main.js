@@ -170,10 +170,8 @@ function updateRoutine(){
   idheaders()
   tableOfContents('[data-toc]', '[data-content]')
   setLightBox()
-  toc.classList.toggle("w3-show");
-  chatscreen.classList.toggle("w3-show")
-  toc.classList.toggle("w3-show");
-  chatscreen.classList.toggle("w3-show")
+  document.getElementById('collapsible').style.bottom='0px'
+ 
  
 
 

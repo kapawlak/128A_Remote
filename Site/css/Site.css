@@ -169,7 +169,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 @media (min-width:993px){
   .Question::before{
-    bottom:0px!important;
+    
     left: -20px;
     }
   }
@@ -196,8 +196,10 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   background-color:#f0f0f0 !important;
   color: rgb(0, 0, 0);
   text-align: left!important;
-  padding: 0px 30px;
+  padding: 0px;
   border: 3px solid rgb(211, 211, 211);
+  width: 100%;
+  max-width: none;
   
 }
 
@@ -230,7 +232,9 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     margin-bottom:10px;
     padding: 0px 16px;
   }
-
+  .Exercise p{
+    padding: 0px 20px;
+  }
 
 
 
@@ -608,4 +612,17 @@ tbody > tr:nth-child(odd){background-color:#794f4f!important}
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
+.w3-bar{overflow: visible;}
+#lablist{
+  z-index: 1;
+  width:100%;
+  display: block;
+  top:43px;
+ 
+}
 
+#lablist .w3-bar-item{
+  z-index: 5;
+  background-color: white;
+  text-align: right;
+}
