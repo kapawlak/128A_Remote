@@ -184,9 +184,19 @@ For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$. You 
 # Write-up
 ---
 
+
+
 ### In this lab, there were:
+
+::::::row
+:::col l6 m6 s12
  @fa-question-circle qtotal w3-hover-shadow@ 
+:::
+:::col l6 m6 s12
  @fa-pencil-square-o etotal w3-hover-shadow@
+:::
+::::::
+
 
 ---
 ###  **@fa-hand-o-right@  Instructions :**

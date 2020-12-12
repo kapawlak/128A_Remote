@@ -167,6 +167,8 @@ md.use(container , 'row',{
   }
 });
 
+md.use(container , 'Summary')
+
 
 
 md.use(container , 'Figure:Table',
@@ -235,11 +237,13 @@ function updateRoutine(){
       {left: "\\[", right: "\\]", display: true}
     ]})
 
-  idheaders()
+  htmltweaks()
   replace_icon()
   tableOfContents('[data-toc]', '[data-content]')
+
   setLightBox()
   document.getElementById('collapsible').style.bottom='0px'
+  navbar_close()
  
   }
     
@@ -249,7 +253,8 @@ function updateRoutine(){
 
 
 
-function idheaders() {
+function htmltweaks() {
+  //name headers
   headers=document.getElementsByTagName("h1");
   for (i = 0; i < headers.length; i++) {
     elmnt = headers[i];
@@ -261,16 +266,16 @@ function idheaders() {
     elmnt.id = "part" +i ;
    
   }
-  // headers=document.getElementsByTagName("h2");
-  // for (i = 0; i < headers.length; i++) {
-  //   elmnt = headers[i];
-  //   elmnt.classList.add('prettyhead') ;
-   
-  // }
-
-
 }
 
+function navbar_close(){
+  navlinks=document.querySelectorAll("#TOCprint a")
+  for(i=0;i<navlinks.length;i++){
+    navlinks[i].onclick= function (){
+      w3_close()
+  }
+}
+}
 function romanize(num) {
   var lookup = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1},roman = '',i;
   for ( i in lookup ) {
@@ -301,7 +306,6 @@ function setLightBox(){
   });
 
 
-
   // loops over each modal content img and adds click event functionality
   lightboxImages.forEach(img => {
     const data = img.dataset;
@@ -320,7 +324,7 @@ function setLightBox(){
 function replace_icon(){
   text=document.querySelectorAll('#mdcontent h3, #mdcontent h2, #mdcontent p, .Table td')
   for(i=0;i<text.length;i++){
-    emojified=text[i].innerHTML.replaceAll(/(\@)(.*)(\@)/g, "<i class='fa $2'></i>")
+    emojified=text[i].innerHTML.replaceAll(/(\@)(.*?)(\@)/g, "<i class='fa $2'></i>")
     text[i].innerHTML=emojified
   }
 }

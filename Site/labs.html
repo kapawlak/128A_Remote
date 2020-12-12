@@ -22,7 +22,9 @@
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <!-- Color Schemes -->
+  <link rel='stylesheet' href="https://www.w3schools.com/lib/w3-colors-flat.css">
+
   
   <!-- markdown rendering -->
   <script src="scripts\markdown-it.js"></script>
@@ -154,28 +156,24 @@ function sidebarFold() {
     chatscreen.classList.toggle("w3-show");
   }
 
-
 // Get the Sidebar
 var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
 
 // Toggle between showing and hiding the sidebar, and add overlay effect
 function w3_open() {
   if (mySidebar.style.display === 'block') {
     mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
   } else {
     mySidebar.style.display = 'block';
-    //overlayBg.style.display = "block";
   }
 }
 
 // Close the sidebar with the close button
 function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
+  console.log("called at ",screen.width )
+  if(screen.width<=993){
+   mySidebar.style.display = "none";
+  }
 }
 
 

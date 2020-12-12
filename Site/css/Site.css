@@ -359,7 +359,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 /* Regular full size figure */
 .Figure{
   width: auto;
-  margin:auto!important;
   clear: both;
   padding-top: 20px;
  }
@@ -433,7 +432,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   margin-top:10px!important;
 }
 
- .LFigure{ float: left;
+.LFigure{ float: left;
  
   margin-right: 20px !important;
   margin-left: 10px !important;
@@ -461,6 +460,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   padding:0px!important;
   border: 2px solid rgb(155, 155, 155);
   margin-bottom: 30px;
+  overflow-x: scroll;
 }
 
 .Table:before{
@@ -743,6 +743,7 @@ tbody > tr:nth-child(odd){background-color:#dadada!important}
   width:100vw;
   display: block;
   top:39px;
+  position: fixed;
  
 }
 
@@ -778,6 +779,10 @@ footer{
 }
 
 /* Totals for Q's and E's */
+
+.Summary{
+text-align: center;
+}
 .qtotal::after{
   content: counter(question) ' Questions';
   
@@ -797,7 +802,11 @@ footer{
 
 .qtotal{
   background-color: #009688;
+  margin:auto;
+  align-content: center;
 } 
 .etotal{
-  background-color: rgb(121, 121, 121)
+  background-color: rgb(121, 121, 121);
+  margin:auto;
+  align-content: center;
 }
