@@ -300,11 +300,11 @@ Equation 4 looks a lot like our kinematic equation for motion. Let's equate Equa
 ** This is a critical concept that you understand before moving forward. Below are three questions. Read them and spend a few minutes trying to answer them for yourself. When you think you have the answers, click the link at the bottom to take you to the answers. **
 
 
-a. For an ideal fall (one that falls exactly like the kinematic equation describes), what should the value of $a$ in your fit be?
+1. For an ideal fall (one that falls exactly like the kinematic equation describes), what should the value of $a$ in your fit be?
 
-b.  For drop like the ones in the video, where the ball is released from rest, what should the value of $b$ in your fit be?
+2.  For drop like the ones in the video, where the ball is released from rest, what should the value of $b$ in your fit be?
 
-c. When the origin is defined at the release point of the ball, like it is in the video, what should the value of $c$ in your fit be?
+3. When the origin is defined at the release point of the ball, like it is in the video, what should the value of $c$ in your fit be?
 
 [Answers](https://docs.google.com/document/d/1xuPutEV_pWWWZYYmi8oLKV-G9F3q-pMSDv9B48brLp0)
 
@@ -331,17 +331,17 @@ In this exercise we will be more quantitative about our analysis. We will perfor
 3. Calculate the percent discrepancy of the acceleration from ideal for each of the four drops. You can do this in a spreadhseet if you'd like but please show your work for **one** of the calculations. 
 
 :::Question 
-a. What is the cause of this systematic error in the measurement of $g$?
+1. What is the cause of this systematic error in the measurement of $g$?
 
-b. Based on the picture of the balls, and what you know about the balls generally, why do you think the systematic error is different for the different balls? 
+2. Based on the picture of the balls, and what you know about the balls generally, why do you think the systematic error is different for the different balls? 
 :::
 
 4. Now let's look more closely at the initial velocity and intital position for the different drops. Do you notice how as the drops getting further from ideal the initial velocity and the inital position get further from ideal as well?
 
 :::Question
-a. What is the percent difference in initial velocity of the beach ball and the basketball?
+1. What is the percent difference in initial velocity of the beach ball and the basketball?
 
-b. What is the percent difference in initial position of the beach ball and the basketball?
+2. What is the percent difference in initial position of the beach ball and the basketball?
 :::
 
 The lower percent error in the value of $g$ from the basketball indicates that it has less systematic error, or that it is a better representation of our model (objects falling under constant acceleration). The large percent difference the beach ball has in the initial velocity and initial position with the basketball, combined with the larger percent discrepancy in the value of $g$ for the beach ball, hints that the beach ball strongly doesn't follow the constant acceleration model.
@@ -354,9 +354,9 @@ If the beach ball isn't falling under constant acceleration, what model might it
 6. Perform a linear fit on this data.
 
 ::: Question
-a. What is the slope of the line?
+1. What is the slope of the line?
 
-b. What does the slope represent?
+2. What does the slope represent?
 :::
 
 
@@ -367,7 +367,7 @@ b. What does the slope represent?
  @fa-question-circle qtotal w3-hover-shadow@ 
  @fa-pencil-square-o etotal w3-hover-shadow@
 
- 
+
 :::Exercise
 Write a brief conclusion summarizing the important points of this lab.
 :::
