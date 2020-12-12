@@ -58,8 +58,8 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 }
 
 /* Make sure figure images don't blow up */
-#mdcontent > .Figure  img{
-    max-width: 350px;
+#mdcontent > .Figure  img, .RFigure img, .LFigure img{
+    max-width: 100%;
     max-height: 300px;
     cursor: pointer;
     height:auto;   
@@ -111,7 +111,11 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 
 /* Garnish formats */
-.Equation::after, .Question::before, .Note::before, .Exercise::before, .Simulation::before, .qtotal::after, .etotal::after {
+.Equation::after, .Question::before, 
+.Note::before, .Exercise::before,
+.Figure::after, .RFigure::after,.LFigure::after, 
+.Simulation::before, .qtotal::after, 
+.etotal::after {
   font-weight: bolder;
   font-size: larger;
   border-radius: 5px;
@@ -284,7 +288,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   counter-increment: simulation;
   content: "Simulation "  counter(simulation)": ";
   color:white;
- 
   width: calc(100% + 20px)!important;
   background-color: rgb(109, 81, 81);
   display: block;
@@ -338,70 +341,113 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 
 /* Wide figures */
-.WFigure{
-  width:100%!important;
-  max-width: none!important;
-  float: none!important;
 
-  margin:auto;
+.Fig{
+  border-color:#646464;
+  border-style: solid;
+  border-color:#646464;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom:50px!important;
+  text-align: center;
+}
+
+/* Regular full size figure */
+.Figure{
+  width: auto;
+  margin:auto!important;
   clear: both;
- padding-top: 20px;
+  padding-top: 20px;
  }
 
-.WFigure::after{
-  
+.Figure .w3-col{
+  padding: 0px 10px;
+  vertical-align: center;
+}
+.Figure .w3-col img{
+  vertical-align: center;
+ }
+
+ .Figure::after{
+  counter-increment: figure;
+  content: "\A Figure " counter(figure);
+  background-color:#646464!important;
+  position: relative;
+  bottom:-20px;
+  left:calc(50% - 50px);
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+.Figure p{
+  display: block;
+}
+
+
+
+
+/* Figure Float right */
+.RFigure::after{
+  counter-increment: figure;
+  content: "\A Figure " counter(figure);
+  background-color:#646464!important;
+  color: white;
   position: absolute;
-  bottom:0px;
+  bottom:-20px;
+  left:calc(50% - 60px);
   max-height: 50px;
  
 }
-.WFigure p{
-  display: block;
+
+
+
+/* Figure Float right/left */
+
+.RFigure, .LFigure{     
+  padding: 20px 10px;
 }
-.WFigure .w3-row{
-  width:100%!important;
-}
-.WFigure img{
-max-width: 40%!important;
-}
-.Figure{   
-    border-style: solid;
-    border-color:#646464;
-    border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: small;
-    font-weight: bold;
-    margin-bottom: 50px;
-    background-color: rgba(255, 255, 255,0);
+.RFigure::after, .LFigure::after{
+  counter-increment: figure;
+  content: "\A Figure " counter(figure);
+  background-color:#646464!important;
+  color: white;
+  position: absolute;
+  bottom:-20px;
+  left:calc(50% - 60px);
+  max-height: 50px;
+ 
 }
 
+
+
 @media (min-width:993px){
- #mdcontent > .Figure{ float: right;
+.RFigure{ float: right;
  
   margin-right: 10px !important;
   margin-left: 20px !important;
-  margin-bottom: 50px!important;
   margin-top:10px!important;
-}}
+}
 
-
-.Figure::after{
-    counter-increment: figure;
-    content: "\A Figure " counter(figure);
-   
-    font-weight: bold;
-    font-size: x-large;
-    font-family: "Segoe UI",Arial,sans-serif;
-    background-color:#646464!important;
-    position: relative;
-    bottom:-30px;
+ .LFigure{ float: left;
  
+  margin-right: 20px !important;
+  margin-left: 10px !important;
+  margin-top:10px!important;
+}
 
-    padding: 5px 15px;
-    border-radius: 5px;
-    color: white;
+.LFigure , .RFigure{
+  max-width: 350px;
+ 
+}
+
+
 
 }
+
+
 
 
 /* *********************************** */

@@ -91,42 +91,28 @@ md.use(container,'Video', {
 })
 
 
-// md.use(container , 'row',{
-
-//   render: function (tokens, idx) {
-//     if (tokens[idx].nesting === 1) {
-//       // opening tag
-//       return '<div class="w3-row">';
-
-//     }else{
-//       return '</div>'
-//     }
-//   }
-// });
-// md.use(container , 'column',{
-//   render: function (tokens, idx) {
-//     if (tokens[idx].nesting === 1) {
-//       // opening tag
-//       return '<div class="w3-col">';
-
-//     }else{
-//       return '</div>'
-//     }
-//   }
-// });
-
-
+// Full Width Figure
 md.use(container , 'Figure:Figure',{
+  render: function (tokens, idx) {
+    if (tokens[idx].nesting === 1) { 
+     // This places an opening tag
+     return '<div class="w3-row Figure Fig roundbox w3-center">';
 
-  validate: function(params) {
-    return params.trim().match(/^Figure\:Figure+(.*)$/);
-  },
+   }else{
+     // This places a closing tag
+     return  '</div>'
+   }}
+});
+
+// Right Float Figure
+md.use(container , 'Figure:RFigure',{
+
+
 
   render: function (tokens, idx) {
-    var m = tokens[idx].info.trim().match(/^Figure+(.*)$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="Figure roundbox w3-center">';
+      return '<div class="RFigure Fig roundbox">';
 
     }else{
       return '</div>'
@@ -134,17 +120,46 @@ md.use(container , 'Figure:Figure',{
   }
 });
 
-md.use(container , 'Figure:WFigure',{
-
-  validate: function(params) {
-    return params.trim().match(/^Figure\:WFigure+(.*)$/);
-  },
+//Left Float Figure
+md.use(container , 'Figure:LFigure',{
 
   render: function (tokens, idx) {
-    var m = tokens[idx].info.trim().match(/^WFigure+(.*)$/);
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="WFigure Figure roundbox w3-center">';
+      return '<div class="LFigure Fig roundbox w3-center">';
+
+    }else{
+      return '</div>'
+    }
+  }
+});
+
+// column
+md.use(container , 'col',{
+
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^col(.*)$/);
+    console.log(m)
+    if (tokens[idx].nesting === 1) {
+      console.log('regex', md.utils.escapeHtml(m[1]))
+      // opening tag
+      return '<div class="w3-col'+md.utils.escapeHtml(m[1])+'">';
+
+    }else{
+      return '</div>'
+    }
+  }
+});
+
+md.use(container , 'row',{
+
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^row(.*)$/);
+    console.log(m)
+    if (tokens[idx].nesting === 1) {
+      console.log('regex', md.utils.escapeHtml(m[1]))
+      // opening tag
+      return '<div class="w3-row '+md.utils.escapeHtml(m[1])+'">';
 
     }else{
       return '</div>'
@@ -226,10 +241,6 @@ function updateRoutine(){
   setLightBox()
   document.getElementById('collapsible').style.bottom='0px'
  
- 
-
-
-
   }
     
 
@@ -274,7 +285,7 @@ function romanize(num) {
 
 function setLightBox(){
   // all images inside the image modal content class
-  const lightboxImages = document.querySelectorAll('.Figure img');
+  const lightboxImages = document.querySelectorAll('.Fig img');
 
   // dynamically selects all elements inside modal popup
   const modalElement = element =>
@@ -310,8 +321,6 @@ function replace_icon(){
   text=document.querySelectorAll('#mdcontent h3, #mdcontent h2, #mdcontent p, .Table td')
   for(i=0;i<text.length;i++){
     emojified=text[i].innerHTML.replaceAll(/(\@)(.*)(\@)/g, "<i class='fa $2'></i>")
-    console.log('emoji text= ', emojified)
-    console.log('current text= ', text[i].innerHTML)
     text[i].innerHTML=emojified
   }
 }

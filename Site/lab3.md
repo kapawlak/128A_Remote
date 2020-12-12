@@ -31,23 +31,29 @@ These three variables are interrelated, as each quantity tells you about the *ch
 
 
 ## 1. Motion with No Forces
+
+:::Figure:RFigure
+![](imgs/nov_pos.gif)
+:::
 To make our discussion concrete, we should review some basic physics in the case that there are no forces acting on the body of interest. 
 
 
 Let's imagine that that at $t=0$, we have a ball at rest at a height $y_0= 25 m$. What is its position at $t=10$s? Since the ball is stationary --- otherwise, $v_0= 0$ m/s --- of course it will still be $y(10 s)=25 m$!
 
-:::Figure:Figure
-![](imgs/nov_pos.gif)
-:::
+
 
 Now we imagine that this ball is given an initial velocity $v_0 = + 10$ m/s by tossing it upwards, with no forces acting upon it (for example, in space).  Since no forces are acting on the ball, the *change* in the velocity must be zero, so $v(t) = v_0=10$m/s for all time.  Note that the time, $t$, does not appear in this equation!
 
 
-:::Figure:WFigure
-
-![](imgs/v10_pos.gif) ![](imgs/v10_vel.png)
-####
+::::::Figure:Figure
+:::col l5 m5 s12
+![](imgs/v10_pos.gif)
 :::
+:::col l7 m7 s12
+![](imgs/v10_vel.png)
+:::
+####
+::::::
 
 Since the velocity tells you how an object's *position* is changing in time, and we know that the velocity in the absence of force is constant, we can say that the position of the ball will increase by $10$ meters per second that passes. From this, we deduce that at $t=10$s, the ball is now at $y(10 s) = y_0 + v_0 t=  25$m $+ 10$ m/s $\times 10$s = $125$ m. 
 
@@ -69,14 +75,18 @@ $$
 v(t) = a t + v_0 
 $$
 
-:::Figure:Figure
+::::::Figure:Figure
+
+:::col l6 m6 s12
 ![](imgs/acc_pos.gif)
-
-
-
-![](imgs/acc_vel.png)
-
 :::
+
+
+:::col l6 m6 s12
+![](imgs/acc_vel.png)
+:::
+
+::::::
 
 So that at $t=10$, we can now calculate that our ball has a velocity of $v(10s) = -6$ m/s.
 
@@ -111,6 +121,18 @@ where y is the position, $v_{0y}$ the initial velocity, $a_{y}$ the acceleration
 
 ### General Properties of Motion Curves
 
+::::::Figure:RFigure
+
+![The relationship between x and t is constant](imgs/Constant.png)
+
+
+![The relationship between x and t is linear](imgs/Linear.png)
+
+![The relationship between x and t is quadratic](imgs/Quad.png)
+
+::::::
+
+
 Before you start the lab, we have one last theoretical discussion: given a plot of position versus time, how can we make quantitative and qualitative statements about the physics of a falling object? 
 
 To answer this, we have two important statements to make from the discussion above:
@@ -118,29 +140,36 @@ To answer this, we have two important statements to make from the discussion abo
 1. The velocity of an object at a certain time is the slope of the distance-time graph at that point.
 2. Similarly, the acceleration of an object at a certain point is the slope of the velocity-time graph at that point.
 
+
+
+
+
 Before discussing this, there are three plot shapes that are important to understand for this analysis: constant, linear, and curved. 
-
-:::Figure:WFigure
-
-![](imgs/Constant.png)
-![](imgs/Linear.png)
-![](imgs/Quad.png)
-
-:::
 
 Constant refers to a value that is not changing in time, a horizontal line, as can be seen in Figure 4 Part A. Linear refers to value that is changing with time but has a linear slope as seen in Figure 4 Part B. Curved refers to a value that is changing with time and is not linear as seen in Figure 4 Part C.
 
 The following figure from Hyperphysics shows the trajectory of a body whose acceleration is constant for each segment of time. Acceleration being constant for each segment is important for simplifying our plots.
 
-:::Figure:Figure
 
-![](imgs/HP_MotionGraphs_Download.png)
-
-![](imgs/HP_MotionGraphs_Annotated.png)
-
+:::row
+####
 :::
 
 Part A shows the three plots unobstructed. Please notice how the velocity corresponds to each section of the position plot. Whenever the position plot is linear, the velocity is constant. Whenever the position plot is curved, the velocity is linear. If the position is curving upwards, the velocity is positive, if the position is curving downwards, the velocity is negative. The Acceleration plot corresponds to the velocity plot exactly the same way the velocity plot corresponds to the position plot.
+
+::::::Figure:Figure
+
+:::col l6 m6 s12
+![Part A: Unobstructed view](imgs/HP_MotionGraphs_Download.png)
+Part A
+:::
+:::col l6 m6 s12
+![](imgs/HP_MotionGraphs_Annotated.png)
+Part B
+:::
+
+::::::
+
 
 Part B indicates points on the plots which correspond to the description of Part A. Please study the plots and notes in Part B to understand how they relate.
 
@@ -168,7 +197,7 @@ Make sure to take a picture of your sketch plots and include them in your report
 ::::::
 
 ---
-# Collecting the Data
+# colecting the Data
 
 
 :::::: Exercise
@@ -179,7 +208,7 @@ In this section we will look at different balls dropped from the sixth floor wal
 ![](imgs/Balls2.png)
 :::
 
-The pink dog ball is small but fairly weighty for its size. The basket ball is medium sized and also has decent weight to it. The volley ball is smaller than the basket ball and slightly lighter as well. The beach ball is by far the largest and the lightest. These four balls should give a wide range of masses and sizes for our data set. All four balls are dropped, however, you will only be taking data for the basket ball. The data on the other balls have been taken for you. We have annotated Video 1 for you with the height measurements and an embedded stopwatch. These will be useful tools for your data collection.
+The pink dog ball is small but fairly weighty for its size. The basket ball is medium sized and also has decent weight to it. The volley ball is smaller than the basket ball and slightly lighter as well. The beach ball is by far the largest and the lightest. These four balls should give a wide range of masses and sizes for our data set. All four balls are dropped, however, you will only be taking data for the basket ball. The data on the other balls have been taken for you. We have annotated Video 1 for you with the height measurements and an embedded stopwatch. These will be useful tools for your data colection.
 
 :::Video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/juYSrbM66b0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -194,14 +223,14 @@ The pink dog ball is small but fairly weighty for its size. The basket ball is m
 
 ::::::
 
-You have now collected some data for a basketball falling from the sixth floor of Broida! As mentioned above, three other balls were dropped from the same point at Broida. Rather than have you repeat the same data collection we have collected data for you using a software called Tracker.
+You have now colected some data for a basketball falling from the sixth floor of Broida! As mentioned above, three other balls were dropped from the same point at Broida. Rather than have you repeat the same data colection we have colected data for you using a software called Tracker.
 
 Tracker allows us to monitor the location of the ball at every frame of the video which happens once every 1/30 seconds. This method has two advantages. 
 
 1. We are able to more precisely identify the location of the ball.
-2. We are able to collect many more data points.
+2. We are able to colect many more data points.
 
-Below is a short video demonstrating how the Tracker software was used to collect data for the four drops.
+Below is a short video demonstrating how the Tracker software was used to colect data for the four drops.
 
 :::Video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hvwjn3tAtqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -333,8 +362,12 @@ b. What does the slope represent?
 
 ::::::
 
-## Conclusion
+# Conclusion
+### In this lab, there were:
+ @fa-question-circle qtotal w3-hover-shadow@ 
+ @fa-pencil-square-o etotal w3-hover-shadow@
 
+ 
 :::Exercise
 Write a brief conclusion summarizing the important points of this lab.
 :::
