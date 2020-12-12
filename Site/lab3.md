@@ -8,6 +8,7 @@
 
 ---
 
+### Getting Familiar 
 
 The Simulation 1 below demonstrates the free fall motion of a ball. The left hand side shows what the 
   scene looks like to an onlooker: a ball falling straight towards the ground at increasing speed. The right 
@@ -16,7 +17,7 @@ The Simulation 1 below demonstrates the free fall motion of a ball. The left han
   air resistance affects the shape of the graph! In this lab you will explore this phenomenon using your analytical and mathematical skills.
 	
 :::Figure:Simulation
-SIM1
+<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/FreeFall/freefall_multi.html" width= "100%" height="800" style="border:none;"> </iframe>
 :::
 
 # Introduction: Free fall in 1D
@@ -363,15 +364,17 @@ If the beach ball isn't falling under constant acceleration, what model might it
 ::::::
 
 # Conclusion
-### In this lab, there were:
- @fa-question-circle qtotal w3-hover-shadow@ 
- @fa-pencil-square-o etotal w3-hover-shadow@
-
 
 :::Exercise
 Write a brief conclusion summarizing the important points of this lab.
 :::
 
+
+### In this lab, there were:
+ @fa-question-circle qtotal w3-hover-shadow@ 
+ @fa-pencil-square-o etotal w3-hover-shadow@
+
+### **@fa-hand-o-right@ Please be sure to complete all questions and exercises**
 
 
 
