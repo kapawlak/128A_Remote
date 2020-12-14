@@ -1,7 +1,7 @@
 # Lab 2: Magnetic Field
 ---
 ### Materials needed for entire lab:
-- phyphox
+- Phyphox
 - A wire (~0.8-1 m)
 - AAA or AA battery
 - Some vertical support (e.g., a book)
@@ -16,15 +16,13 @@ As you may know, moving charges not only have electric fields, $\vec E$ associat
 
 It turns out, however, that a *line* of moving charges, such as a current-carrying wire, is much simpler to work with: the resulting magnetic field has a static and well-defined description in terms of the Biot-Savart Law:
 
-:::Figure:Equation
+:::Figure:Equation biot_law
 
 $$
 \vec B = -\frac{\mu_0 I}{4\pi} \int_C    \frac{\vec r \times d\vec\ell }{|\vec r|^3}
 $$
 
 :::
-
-
 
 In this lab, we will explore the Biot-Savart law by indirectly determining *the current* in a wire by *measuring the magnetic field*  it produces. We will focus on two simple setups, a long straight wire and a loop of current,  whose integrals result in a simple expression for the magnetic field.
 
@@ -34,16 +32,17 @@ In this lab, we will explore the Biot-Savart law by indirectly determining *the 
 <iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>
 :::
 
+
+
+Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right-hand rule [Eq](#biot_law):
+
 :::Figure:Figure
 ![](imgs/RHR.png)
 :::
 
-Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right- hand rule:
-
-
 Analyzing the integral of the Biot Savart Law,  it can be shown that the strength of the magnetic field at a distance $R$ from the wire is given by the equation:
 
-::: Figure:Equation
+::: Figure:Equation biot_wire
 $$
 B = \frac{\mu_0 I}{2 \pi R} 
 $$
@@ -59,7 +58,7 @@ where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&
 
 For a  loop of wire, the magnetic field looks very similar to that of a dipolar magnet. When the loop is large, the mangnetic field in the center of the loop looks approximately like a straight line piercing the loop, with a direction determined by the right hand rule. The strength of this field depends on the radius of the loop and the height, given by the relation:
 
-::: Figure:Equation
+::: Figure:Equation biot_loop
 $$
 B = \frac{\mu_0 I}{2} \frac{R^2}{(R^2+z^2)^{3/2}}
 $$
@@ -234,9 +233,16 @@ Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{
 # Write-up
 ---
 
-### In this lab, there were:
+::::::row w3-center w3-card-2 w3-flat-clouds
+### **In this lab, there were:**
+:::col l6 m6 s12
  @fa-question-circle qtotal w3-hover-shadow@ 
+:::
+:::col l6 m6 s12
  @fa-pencil-square-o etotal w3-hover-shadow@
+:::
+### **@fa-hand-o-right@ Please be sure to complete all questions and exercises @fa-hand-o-left@**
+::::::
 
 ---
 ###  **@fa-hand-o-right@  Instructions :**

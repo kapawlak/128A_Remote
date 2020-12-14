@@ -11,11 +11,11 @@
 # The Phyphox App
 
 
-:::Figure:Figure
+:::Figure:RFigure
 ![The Phyphox Phone App in the iOS store](imgs/phyphox.png)
 :::
 
-In this intro lab, we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/). 
+In this intro lab, [google](google.com) we will learn how to use the phyphox app to take useful data. You can download the app from their [website](https://phyphox.org/). 
 
 Phyphox allows you to use the sensors in your phone to measure quantities such as frequency, acceleration, magnetic fields, etc. Data can be exported in many common formats for later analysis.
 
@@ -186,17 +186,16 @@ For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r)$. You 
 
 
 
-### In this lab, there were:
-
-::::::row
+::::::row w3-center w3-card-2 w3-flat-clouds
+### **In this lab, there were:**
 :::col l6 m6 s12
  @fa-question-circle qtotal w3-hover-shadow@ 
 :::
 :::col l6 m6 s12
  @fa-pencil-square-o etotal w3-hover-shadow@
 :::
+### **@fa-hand-o-right@ Please be sure to complete all questions and exercises @fa-hand-o-left@**
 ::::::
-
 
 ---
 ###  **@fa-hand-o-right@  Instructions :**

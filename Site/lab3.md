@@ -126,7 +126,6 @@ where y is the position, $v_{0y}$ the initial velocity, $a_{y}$ the acceleration
 
 ![The relationship between x and t is constant](imgs/Constant.png)
 
-
 ![The relationship between x and t is linear](imgs/Linear.png)
 
 ![The relationship between x and t is quadratic](imgs/Quad.png)

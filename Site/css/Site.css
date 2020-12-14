@@ -1,20 +1,30 @@
 /* set counters and base font size */
 body {
     counter-reset: question exercise figure equation table simulation video;  
-    font-size: large;
+    font-size: medium;
+}
+
+@media (max-width:601px){
+  body {font-size: small!important;}
+}
+@media (min-width:601px){
+  body{font-size: medium;}
+}
+@media (min-width:992px){
+  body{font-size: large!important;}
 }
 
 /* Stop images from running over sections */
 h1 {
   clear: both;
   color: #009688!important;
-  font-size: xxx-large;
+  font-size: 225%;
   padding: 20px 0px
 }
 
 h2{
   color: black!important;
-  font-size: xx-large;
+  font-size: 175%;
   padding:10px 10px;
   margin-left:-10px
 }
@@ -29,7 +39,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 /* Main header */
 #part0{
   color:black!important;
-  font-size: 28pt;
+  font-size: 400%;
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -53,7 +63,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 #mdcontent > p{
   text-indent: 1em;
-  text-align: left
+  text-align: left;
  
 }
 
@@ -67,47 +77,35 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 .Question img, .Exercise img{
   max-width: 100%;
-  
 }
 
 
 
 /* Make the inner text of figures pretty */
-#mdcontent > .Figure  p{
-  max-width: 100%;
-  max-height: 100%;
-  cursor: pointer;
-  padding: 0px;
-  margin:0px;
+#mdcontent > .Fig  p{
+
+  padding:10px;
+  white-space: normal;
 }
 
 
 /* default style for all blurbs */
 .roundbox{
   border-radius: 5px;
-  margin: auto;
   max-width: 700px;
   white-space: normal!important;
   position: relative;
+  font-size: larger;
+  padding: 0px 15px;
+  margin: 30px auto;
 }
+
 
 
 .w3-col{
   white-space: pre;
 }
 
-/* @media (min-width:601px){
-  .roundbox{max-width: 95%;}
-}
-@media (min-width:993px){
-  .roundbox{max-width: 90%;}
-}
-@media(min-width:1405px){
-  .roundbox{max-width: 70%;}
-}
-.roundbox .roundbox{
-  max-width: 90%;
-} */
 
 
 /* Garnish formats */
@@ -132,7 +130,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 .Equation{
   background-color:#ccc!important;
   font-weight: 900;
-  font-size: large;
   text-align: left;
   padding-top: 30px!important;
 }
@@ -150,8 +147,8 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   .Equation::after{
     bottom:0px!important;
     left: 200px;
-    }
   }
+}
 
 /* *********************************** */
 /* Question box formats */
@@ -161,7 +158,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   background-color: #009688!important;
   color: white;
   border: white thin;
-  font-size: large;
 }
 
 .Question::before {
@@ -186,11 +182,13 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   margin: 35px 20px 25px 20px;
   max-width: 90%;
   line-height: 1.2;
+  padding-top: 20px;
 }
 
 .Question ol{ 
   list-style-type: lower-alpha!important;
   text-align: left;
+  padding-top: 20px;
 }
 .Question ol p{
   margin-left:0px!important;
@@ -208,6 +206,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   width: 100%;
   max-width: none;
   margin-bottom: 50px;
+  font-size: 100%;
   
 }
 
@@ -215,15 +214,13 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 .Exercise::before {
     counter-increment: exercise;
     content: "Exercise "  counter(exercise)": ";
-    text-align: center;
-    
+    text-align: center;   
     background-color: rgb(211, 211, 211);
     display: block;
     position: relative;
     width: calc(100% + 50px)!important;
     margin-left: -25px;
     margin-top: 10px;
-    
     padding: 0px 16px;
     
   }
@@ -350,7 +347,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   border-color:#646464;
   border-radius: 8px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: large;
+  font-size: 100%;
   font-weight: bold;
   margin-bottom:50px!important;
   text-align: center;
@@ -491,7 +488,7 @@ th, td {
 th{
   /* border: sienna 2px solid; */
   border-radius: 2px;
-  font-size: normal;
+  font-size: 100%;
   /* background-color: salmon;
 } */
 }
@@ -501,7 +498,7 @@ thead > tr > th{
   color: #041f1c;
 }
 td{
-  font-size: small;
+  font-size: smaller;
   /* background-color: rgb(187, 172, 170); */
 }
 
@@ -552,7 +549,7 @@ tbody > tr:nth-child(odd){background-color:#dadada!important}
   border: none;
   text-align: center;
 
-  font-size: 24px;
+  font-size: larger;
   font-weight: bold;
   height: 60px;
   position: absolute;
@@ -809,4 +806,26 @@ text-align: center;
   background-color: rgb(121, 121, 121);
   margin:auto;
   align-content: center;
+}
+
+#mdcontent pre{
+  background-color:#ccc;
+  padding:20px;
+  border:rgb(121, 121, 121) solid 2px;
+  white-space: pre-wrap;
+  font-size: smaller;
+  width:80%;
+  margin:auto;
+}
+
+#mdcontent pre::before{
+  content: 'Example Code\A';
+  font-size: larger;
+  font-weight: bolder;
+  overflow: visible;
+}
+
+#mdcontent code{
+  background-color:#ccc;
+  
 }
