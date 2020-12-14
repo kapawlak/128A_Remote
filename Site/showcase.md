@@ -45,7 +45,7 @@ Figures generally contain images and have three types. The simplest will generat
 :::
 ``` 
 ::: Figure:Figure  
-![This is an image](/imgs/Balls2.png)
+![This is an image](imgs/Balls2.png)
 :::
 
 To improve visual variety you can also make right and left floating figures, respectively. These will float to the right(left) of any text that *follows* it.
