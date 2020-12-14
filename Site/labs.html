@@ -145,58 +145,60 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 
 
-<script>
 
-var toc = document.getElementById('TOCprint')
-var chatframe = document.getElementById('chatframe')
-var chatscreen = document.getElementById('chatscreen')
-
-
-function sidebarFold() {   
-    toc.classList.toggle("w3-show");
-    chatscreen.classList.toggle("w3-show");
-  }
-
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-  console.log("called at ",screen.width )
-  if(screen.width<=993){
-   mySidebar.style.display = "none";
-  }
-}
-
-
-activeincludeHTML(linkfile);
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  renderMathInElement(document.body);
-});
-
-function dropdownlab() {
-  var x = document.getElementById("lablist");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";     
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-</script>
 
 
 </body>
+
+<script>
+
+  var toc = document.getElementById('TOCprint')
+  var chatframe = document.getElementById('chatframe')
+  var chatscreen = document.getElementById('chatscreen')
+  
+  
+  function sidebarFold() {   
+      toc.classList.toggle("w3-show");
+      chatscreen.classList.toggle("w3-show");
+    }
+  
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
+  
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+    console.log("called at ",screen.width )
+    if(screen.width<=993){
+     mySidebar.style.display = "none";
+    }
+  }
+  
+  
+  activeincludeHTML(linkfile);
+  
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body);
+  });
+  
+  function dropdownlab() {
+    var x = document.getElementById("lablist");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";     
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  </script>
 </html>
 

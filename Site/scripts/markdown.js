@@ -4,8 +4,8 @@ md.set({ html: true})
 var container = window.markdownitContainer;
 
 //Markdownit Container special settings
-const preamble='<div class="w3-row" style="margin: 50px 0px;"><div class="w3-col l2 m2 s12 "> </div>'
-const postamble='</div><div class="w3-col l2 m2 s12 "> </div>'
+const preamble='<div class="w3-row" style="margin: 50px 0px;"><div class="w3-col l2 m2 s12 placehold "> </div>'
+const postamble='</div><div class="w3-col placehold l2 m2 s12 "> </div>'
 var unset_id=0
 
 function embed_div(name, type){
@@ -14,7 +14,7 @@ function embed_div(name, type){
         unset_id++;
     }
     var LTR=type.charAt(0) + type.charAt(1)
-    return '<div class="w3-row" id= '+ name + '></div>' +preamble+'<div class="w3-col ' + type + ' roundbox s12 m8 l8 w3-center"' +' id="'+LTR+'_'+name+'">'
+    return '<div class="w3-row" id= '+ name + '></div>' +preamble+'<div class="w3-col ' + type + ' roundbox s12 m8 l8 w3-container"' +' id="'+LTR+'_'+name+'">'
 }
 
 md.use(container , 'Figure:Equation',{
@@ -164,7 +164,18 @@ render: function (tokens, idx) {
 }
 });
 
-md.use(container , 'Summary')
+md.use(container , 'Materials',{
+    render: function (tokens, idx) {
+        if (tokens[idx].nesting === 1) {
+        
+        // opening tag
+        return '<div class="Materials w3-card-2"><header class="w3-container w3-blue"><h3>Materials Needed: </h3></header><div class="w3-container">';
+
+        }else{
+        return '</div></div>'
+        }
+    }
+})
 
 
 

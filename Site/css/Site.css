@@ -29,7 +29,7 @@ h2{
   margin-left:-10px
 }
 /*fix links to sections */
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+h1::before, h2::before {
   display: block;
   content: " ";
   height: 60px;
@@ -102,8 +102,8 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 
 
-.w3-col{
-  white-space: pre;
+.placehold{
+  white-space: pre!important;
 }
 
 
@@ -123,6 +123,13 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 }
 
+
+/* *********************************** */
+/* Material box formats */
+.Materials{
+
+  margin: 30px;
+}
 
 /* *********************************** */
 /* Equation box formats */

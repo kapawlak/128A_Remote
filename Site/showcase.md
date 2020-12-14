@@ -36,7 +36,7 @@ and beyond will not generate a link, so they should be used to draw attention to
 
 # Special Elements
 
-## Figures
+## @fa-line-chart@ Figures
 
 Figures generally contain images and have three types. The simplest will generate a full length figure.
 ``` 
@@ -139,7 +139,7 @@ C10
 :::col l1 w3-theme-l1
 C11
 :::
-:::col l1 
+:::col l1 w3-theme-l2
 C12
 :::
 
@@ -176,7 +176,7 @@ Part B:This figure takes up 6 of 12 rows
 :::
 ::::::
 
-## Equations
+## @fa-superscript@ Equations
 
 Just as important as figures, equations get their own box. Each equation is automatically numbered. Moreover, equations can be named and linked to later (see linking Section). 
 
@@ -197,7 +197,7 @@ $$
 
 Equation markup uses standard KaTeX. For less important equations, KaTeX may be rendered in-line with single dollar signs `$a=\tfrac{1}{2}\pi r^2$`, e.g. : For our purposes [Eq](#gbt) can be reduced to the more familiar $a=\tfrac{1}{2}\pi r^2$
 
-## Questions
+## @fa-question-circle@ Questions
 
 Question boxes contain graded action items for students, and are brightly colored to draw attention to them. They are automatically numbered and may be linked to.
 
@@ -225,9 +225,9 @@ Questions with multiple subparts are automatically labeled with lower-case lette
 2. How would this result change if $M$ was a manifold of genus 2? Discuss
 :::
 
-## Exercises
+## @fa-sitemap@ Exercises
 
-Exercises are another important call-to action for students. They act as a stand alone prompt with step-by-step instructions for completing part of a lab. They are automatically numbered and occur in full-width boxes so that any figures within have sufficient readability.
+Exercises are another important call-to-action for students. They act as a stand alone prompt with step-by-step instructions for completing part of a lab. They are automatically numbered and occur in full-width boxes so that any figures or questions within have sufficient readability.
 
 ```
 :::::: Exercise
@@ -260,5 +260,23 @@ Firstly, let's measure the direction of magnetic field from the  magnet.
 2. At the point where you flipped the magnet, describe the difference you observe, and give a possible explanation.
 :::
 ::::::
+
+
+## @fa-video-camera@ Videos
+
+## @fa-space-shuttle@ Simulations
+
+## @fa-warning@ Notes, Warnings, Expanded Info
+
+# Other Features
+
+## Linking
+
+## Nested Elements
+
+## Iconography
+
+## HTML
+
 
 
