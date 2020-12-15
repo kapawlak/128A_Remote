@@ -101,7 +101,7 @@ md.use(container,'Warning',{
     
         }else{
         // This places a closing tag
-        return postamble + '</div>'
+        return '<h5 class="clickwarning">Click to Acknowledge</h3>'+ postamble + '</div>'
         }
         }
     })
@@ -222,4 +222,13 @@ function doRendering(md_text){
   
   
       
-  
+
+warnings=document.getElementsByClassName('Warning')
+for(i=0;i<length.warnings;i++){
+    warnings[i].onclick=function(){
+        warnings[i].querySelector('h5').innerHTML='Saftey First'
+        warnings[i].style.animationIterationCount = 1;
+        
+       
+    }
+}

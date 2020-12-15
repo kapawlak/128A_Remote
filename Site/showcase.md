@@ -294,7 +294,7 @@ Pay attention to how many colons you use in your markdown container!
 :::
 
 ### Warnings
-Warnings are like notes, but indicate possible *danger* to the student
+Warnings are like notes, but indicate possible *danger* to the student. To make sure they are seen, they are colored obnoxiously and shake until clicked on
 
 ```
 ::: Warning
@@ -405,5 +405,20 @@ You can use any icons from [Font Awesome 4.7](https://fontawesome.com/v4.7.0/ico
 ## HTML
 
 HTML is enabled in this markdown compiler, so if you need to include something beyond the scope of what is provided, you can directly code it in.
+
+
+# Conclusion
+
+
+::::::row w3-center w3-card-2 w3-flat-clouds
+### **In this lab, there were:**
+:::col l6 m6 s12
+ @fa-question-circle qtotal w3-hover-shadow@ 
+:::
+:::col l6 m6 s12
+ @fa-pencil-square-o etotal w3-hover-shadow@
+:::
+### **@fa-hand-o-right@ Please be sure to complete all questions and exercises @fa-hand-o-left@**
+::::::
 
 

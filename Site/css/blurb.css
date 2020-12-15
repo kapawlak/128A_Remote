@@ -197,9 +197,11 @@
     content: " \f08d ";
     font-family: FontAwesome!important;
     /* background-color:#d6bb44!important; */
-    left:calc(50% - 2rem);
+    left:calc(50% - 3rem);
     top:-55px;
     font-size: xxx-large;
+    transform: rotate(340deg);
+    text-shadow: 1px 3px 5px #7a7850;
   }
 
 /*********************************************************************************/
@@ -224,6 +226,39 @@
   }
 
 
+  .Warning{
+    
+    animation: shake2 1.82s cubic-bezier(.16,.17,.19,.37) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    animation-iteration-count: infinite;
+
+  }
+
+  .Warning:hover{
+
+    animation-iteration-count: 0;
+    
+  }
+
+  @keyframes shake2 {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-3px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(3px, 0, 0);
+    }
+  }
 
 
 /*********************************************************************************/
