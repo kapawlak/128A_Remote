@@ -378,12 +378,13 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 100%;
   font-weight: bolder;
-  margin: 30px auto;
+  margin: 50px auto;
   text-align: center;
   position: relative;
   padding: 2rem 1rem;
   display: inline-block;
   max-width: 100%;
+
 }
 
 
@@ -437,8 +438,16 @@
 
 .RFigure, .LFigure{     
   padding: 20px 10px;
-  display: block;
+  display: inline-block;
+  margin: auto;
+  width: 100%!important; 
 }
+
+.RFigure img, .LFigure img{
+  vertical-align: middle;
+  max-height:400px;
+ }
+
 .RFigure::after, .LFigure::after{
   counter-increment: figure;
   content: "\A Figure " counter(figure);
@@ -459,6 +468,7 @@
   margin-right: 10px !important;
   margin-left: 20px !important;
   margin-top:10px!important;
+ 
 }
 
 .LFigure{ float: left;
@@ -466,12 +476,18 @@
   margin-right: 20px !important;
   margin-left: 10px !important;
   margin-top:10px!important;
+ 
 }
 
 .LFigure , .RFigure{
   max-width: 350px;
  
 }
+
+.RFigure img, .LFigure img{
+  vertical-align: middle;
+  margin:auto
+ }
 
 
 

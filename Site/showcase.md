@@ -37,7 +37,7 @@ Third Level Headers and beyond will not generate a link, so they should be used 
 
 ## @fa-line-chart@ Figures
 
-Figures generally contain images and have three types. The simplest will generate a full length figure.
+Figures generally contain images and have three types. The simplest will generate a full figure which breaks the text. The individual image inside is limited to be 400px tall.
 ``` 
 ::: Figure:Figure  optional-name
 ![This is an image](imgs/Balls2.png)

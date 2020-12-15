@@ -138,7 +138,7 @@ md.use(container , 'Figure:RFigure',{
 render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) {
     // opening tag
-    return '<div class="RFigure Fig ">';
+    return '<div class="RFigure Fig w3center">';
 
     }else{
     return '</div>'
