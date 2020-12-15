@@ -17,6 +17,7 @@ function embed_div(name, type){
     return '<div class="w3-row" id= '+ name + '></div>' +preamble+'<div class="w3-col ' + type + ' roundbox s12 m8 l8 w3-container"' +' id="'+LTR+'_'+name+'">'
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
 md.use(container , 'Figure:Equation',{
     render: function (tokens, idx) {
        var m = tokens[idx].info.trim().match(/^Figure:Equation(.*)$/);
@@ -46,7 +47,7 @@ md.use(container , 'Exercise',
     render: function (tokens, idx) {
         if (tokens[idx].nesting === 1) { 
         // This places an opening tag
-        return  '<div class="w3-row"><div class="w3-col Exercise roundbox s12 m12 l12 w3-center">'
+        return  '<div class="w3-row"><div class="w3-col Exercise roundboxL s12 m12 l12 w3-container">'
 
         }else{
         // This places a closing tag
@@ -58,18 +59,33 @@ md.use(container,'Figure:Simulation', {
 render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) { 
     // This places an opening tag
-    return '<div class="w3-row"> <div class="w3-col Simulation roundbox s12 m12 l12 w3-center">';
+    return '<div class="w3-row"> <div class="w3-col Simulation roundboxL s12 m12 l12 w3-container w3-center">';
 
     }else{
     // This places a closing tag
     return  '</div></div>'
     }}
 })
+
+md.use(container,'Video', {
+    render: function (tokens, idx) {
+        if (tokens[idx].nesting === 1) { 
+        // This places an opening tag
+        return '<div class="w3-row"> <div class= "w3-col Video s12 m12 l12"><br>';
+    
+        }else{
+        // This places a closing tag
+        return  '</div></div>'
+        }}
+    })
+
+
+///Notes
 md.use(container,'Note',{
 render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) { 
     // This places an opening tag
-    return  preamble+'<div class="w3-col Note roundbox  s12 m8 l8 w3-center">'
+    return  preamble+'<div class="w3-col Note roundbox  s12 m8 l8 w3-center"> <h3> Note:</h3>'
 
     }else{
     // This places a closing tag
@@ -77,17 +93,24 @@ render: function (tokens, idx) {
     }
     }
 })
-md.use(container,'Video', {
-render: function (tokens, idx) {
-    if (tokens[idx].nesting === 1) { 
-    // This places an opening tag
-    return '<div class="w3-row"> <div class=" Video roundbox w3-center">';
+md.use(container,'Warning',{
+    render: function (tokens, idx) {
+        if (tokens[idx].nesting === 1) { 
+        // This places an opening tag
+        return  preamble+'<div class="w3-col Warning roundbox  s12 m8 l8 w3-center"> <h3> Warning!</h3>'
+    
+        }else{
+        // This places a closing tag
+        return postamble + '</div>'
+        }
+        }
+    })
 
-    }else{
-    // This places a closing tag
-    return  '</div></div>'
-    }}
-})
+
+
+
+
+
 
 
 // Full Width Figure
@@ -95,7 +118,7 @@ md.use(container , 'Figure:Figure',{
 render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) { 
     // This places an opening tag
-    return '<div class="w3-row Figure Fig roundbox w3-center">';
+    return '<div class=" Figure Fig  ">';
 
     }else{
     // This places a closing tag
@@ -109,7 +132,7 @@ md.use(container , 'Figure:RFigure',{
 render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) {
     // opening tag
-    return '<div class="RFigure Fig roundbox">';
+    return '<div class="RFigure Fig ">';
 
     }else{
     return '</div>'
@@ -123,7 +146,7 @@ md.use(container , 'Figure:LFigure',{
 render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) {
     // opening tag
-    return '<div class="LFigure Fig roundbox ">';
+    return '<div class="LFigure Fig ">';
 
     }else{
     return '</div>'
@@ -169,7 +192,7 @@ md.use(container , 'Materials',{
         if (tokens[idx].nesting === 1) {
         
         // opening tag
-        return '<div class="Materials w3-card-2"><header class="w3-container w3-blue"><h3>Materials Needed: </h3></header><div class="w3-container">';
+        return '<div class="Materials w3-card-2"><header class="w3-container w3-teal"><h3>Materials Needed: </h3></header><div class="w3-container">';
 
         }else{
         return '</div></div>'

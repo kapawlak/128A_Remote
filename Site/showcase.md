@@ -264,19 +264,146 @@ Firstly, let's measure the direction of magnetic field from the  magnet.
 
 ## @fa-video-camera@ Videos
 
+Videos can be added directly via iframe since html is enabled. Use the Video container to keep them labeled
+
+```
+:::Video
+<iframe  src="https://www.youtube.com/embed/PT6GM85ut4I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+```
+:::Video
+<iframe  src="https://www.youtube.com/embed/PT6GM85ut4I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
 ## @fa-space-shuttle@ Simulations
 
 ## @fa-warning@ Notes, Warnings, Expanded Info
 
+### Notes
+Notes are small blurbs meant to call students' attention to a potential pitfall, or a subtly they might otherwise miss
+
+```
+::: Note
+Pay attention to how many colons you use in your markdown container!
+:::
+```
+
+::: Note
+Pay attention to how many colons you use in your markdown container!
+:::
+
+### Warnings
+Warnings are like notes, but indicate possible *danger* to the student
+
+```
+::: Warning
+Knives are sharp and not a toy!
+:::
+```
+
+::: Warning
+Knives are sharp and not a toy!
+:::
+
+### Tables
+
+Tables are as usual, and will fill the entire width available. If the width is not long enough to display the table, the table will become scrollable 
+
+```
+:::Figure:Table
+|Offset  $y$  | $R$ |$1/R$  | Measured $B_y$   |Measured $B_z$  | Field strength $B$ |
+|------|------|------|------|------|------|
+|@fa-pencil@    |      |      |      |      |      |     
+|@fa-pencil@   |      |      |      |      |      |   
+|@fa-pencil@    |      |      |      |      |      |   
+|@fa-pencil@   |      |      |      |      |      |        
+:::
+```
+
+:::Figure:Table
+|Offset  $y$  | $R$ |$1/R$  | Measured $B_y$   |Measured $B_z$  | Field strength $B$ |
+|------|------|------|------|------|------|
+|@fa-pencil@    |      |      |      |      |      |     
+|@fa-pencil@   |      |      |      |      |      |   
+|@fa-pencil@    |      |      |      |      |      |   
+|@fa-pencil@   |      |      |      |      |      |        
+:::
+
 # Other Features
 
-## Linking
+## Linking (WIP)
+
+Linking allows you to reference previous named material, autogenerating a link to the place on the page it is located and the correct description of the item. 
+
+```
+[Eq](#gbt) is a link to the Gauss-Bonnet Theorem
+
+``` 
+
+[Eq](#gbt) is a link to the Gauss-Bonnet Theorem.
+
+To name an equation, simply provide a name directly after the Equation declaration (on the same line)
+
+Eventually you will be able to link to any special element.
 
 ## Nested Elements
 
+To nest elements, you must include additional colons for each level of nesting within the element
+
+```
+:::::::::Exercise
+In this exercise, you will do stuff.
+
+::: Figure:Figure
+![explanatory image](imgs/calibration.gif)
+:::
+
+::::::Question
+Look at the image below and write the first word that comes to mind
+
+:::Figure:Figure
+![it dips](dip_gif.gif)
+:::
+::::::
+:::::::::
+```
+
+:::::::::Exercise
+In this exercise, you will do stuff.
+
+::: Figure:Figure
+![explanatory image](imgs/calibration.gif)
+:::
+
+::::::Question
+Look at the image below and write the first word that comes to mind
+
+:::Figure:Figure
+![it dips](imgs/dip_gif.gif)
+:::
+::::::
+:::::::::
+
 ## Iconography
+
+You can use any icons from [Font Awesome 4.7](https://fontawesome.com/v4.7.0/icons/) by sandwiching the icon name with @ symbols
+```
+@fa-thumbs-up@
+@fa-area-chart@
+@fa-briefcase@
+@fa-check@
+@fa-gear@
+```
+
+@fa-thumbs-up@
+@fa-area-chart@
+@fa-briefcase@
+@fa-check@
+@fa-gear@
 
 ## HTML
 
+HTML is enabled in this markdown compiler, so if you need to include something beyond the scope of what is provided, you can directly code it in.
 
 

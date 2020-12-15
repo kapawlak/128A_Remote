@@ -211,7 +211,11 @@ In this section we will look at different balls dropped from the sixth floor wal
 The pink dog ball is small but fairly weighty for its size. The basket ball is medium sized and also has decent weight to it. The volley ball is smaller than the basket ball and slightly lighter as well. The beach ball is by far the largest and the lightest. These four balls should give a wide range of masses and sizes for our data set. All four balls are dropped, however, you will only be taking data for the basket ball. The data on the other balls have been taken for you. We have annotated Video 1 for you with the height measurements and an embedded stopwatch. These will be useful tools for your data colection.
 
 :::Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/juYSrbM66b0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<iframe src="https://www.youtube.com/embed/juYSrbM66b0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 :::
 
 
@@ -233,7 +237,7 @@ Tracker allows us to monitor the location of the ball at every frame of the vide
 Below is a short video demonstrating how the Tracker software was used to colect data for the four drops.
 
 :::Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hvwjn3tAtqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/hvwjn3tAtqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 The data you will need is in Table 1 below, linked in a google sheet.
@@ -254,7 +258,8 @@ The data you will need is in Table 1 below, linked in a google sheet.
 2. Now you will insert your data you took for the basketball into the table and plot all four ball drops on one plot. For instructions on how to do this, watch the following video. 
 
 :::Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PT6GM85ut4I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe  src="https://www.youtube.com/embed/PT6GM85ut4I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 :::
 ::::::
 ####

@@ -159,7 +159,6 @@ function replace_icon(){
   }
 
   var links = document.querySelectorAll('#mdcontent a')
-
   for (i = 0; i < links.length; i++) {
       if(links[i].innerText=='Eq'){
       eqnum=EqList.findIndex( function findTitle (eq) {
