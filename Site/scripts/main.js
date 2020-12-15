@@ -94,6 +94,10 @@ function htmltweaks() {
     EqList[i]=eqlist[i].id
     console.log(EqList)
   }
+
+ 
+
+
   
 
 }
@@ -167,4 +171,17 @@ function replace_icon(){
       links[i].innerHTML = 'Equation ' + eqnum
     }
   }
+
+  warnings=document.getElementsByClassName('Warning')
+  for(i=0;i<length.warnings;i++){
+    warnings[i].addEventListener("click",function stopit(){
+      warnings[i].classList.toggle('shaker') ;
+      warnings[i].querySelector('h5').innerHTML = 'Saftey First';
+
+    })
+
+      
+
+    
+}
 }

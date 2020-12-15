@@ -51,9 +51,7 @@
 .Figure::after, .RFigure::after,.LFigure::after, 
 .Simulation::before, .qtotal::after, 
 .etotal::after  */
-.roundbox::before, .roundbox::after, .roundboxL::before, .roundboxL::after,
-.qtotal::after, 
-.etotal::after {
+.roundbox::before, .roundbox::after, .roundboxL::before, .roundboxL::after{
   font-weight: bolder;
   font-size: larger;
   border-radius: 5px;
@@ -226,7 +224,7 @@
   }
 
 
-  .Warning{
+  .shaker{
     
     animation: shake2 1.82s cubic-bezier(.16,.17,.19,.37) both;
     transform: translate3d(0, 0, 0);
@@ -236,7 +234,7 @@
 
   }
 
-  .Warning:hover{
+  .shaker:hover{
 
     animation-iteration-count: 0;
     

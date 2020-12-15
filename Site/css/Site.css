@@ -400,6 +400,19 @@ text-align: center;
   align-content: center;
 }
 
+
+.qtotal::after, 
+.etotal::after {
+  font-weight: bolder;
+  font-size: larger;
+  border-radius: 5px;
+  font-family: "Segoe UI",Arial,sans-serif;
+  padding: 5px 15px;
+  text-align: center;
+
+
+}
+
 #mdcontent pre{
   background-color:#ccc;
   padding:20px;

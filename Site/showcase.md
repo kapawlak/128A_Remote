@@ -156,10 +156,12 @@ Within this, we can designate how many columns each part of the figure should ta
 ::::::Figure:Figure
 :::col l6
 ![Part A: Unobstructed view](imgs/HP_MotionGraphs_Download.png)
+
 Part A: This figure takes up 6 of 12 rows
 :::
 :::col l6 
 ![](imgs/HP_MotionGraphs_Annotated.png)
+
 Part B:This figure takes up 6 of 12 rows
 :::
 ::::::
@@ -167,10 +169,12 @@ Part B:This figure takes up 6 of 12 rows
 ::::::Figure:Figure
 :::col l6
 ![Part A: Unobstructed view](imgs/HP_MotionGraphs_Download.png)
+
 Part A: This figure takes up 6 of 12 rows
 :::
 :::col l6 
 ![](imgs/HP_MotionGraphs_Annotated.png)
+
 Part B:This figure takes up 6 of 12 rows
 :::
 ::::::

@@ -17,6 +17,12 @@ function embed_div(name, type){
     return '<div class="w3-row" id= '+ name + '></div>' +preamble+'<div class="w3-col ' + type + ' roundbox s12 m8 l8 w3-container"' +' id="'+LTR+'_'+name+'">'
 }
 
+function quitshake(){
+    console.log('quit')
+    self.style.animationIterationCount = 0
+    console.log('quit?')
+  }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 md.use(container , 'Figure:Equation',{
     render: function (tokens, idx) {
@@ -97,7 +103,7 @@ md.use(container,'Warning',{
     render: function (tokens, idx) {
         if (tokens[idx].nesting === 1) { 
         // This places an opening tag
-        return  preamble+'<div class="w3-col Warning roundbox  s12 m8 l8 w3-center"> <h3> Warning!</h3>'
+        return  preamble+'<div class="w3-col Warning roundbox  s12 m8 l8 w3-center shaker"> <h3> Warning!</h3>'
     
         }else{
         // This places a closing tag
@@ -223,12 +229,3 @@ function doRendering(md_text){
   
       
 
-warnings=document.getElementsByClassName('Warning')
-for(i=0;i<length.warnings;i++){
-    warnings[i].onclick=function(){
-        warnings[i].querySelector('h5').innerHTML='Saftey First'
-        warnings[i].style.animationIterationCount = 1;
-        
-       
-    }
-}
