@@ -124,11 +124,11 @@ md.use(container , 'Figure:Figure',{
 render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) { 
     // This places an opening tag
-    return '<div class=" Figure Fig  ">';
+    return '<div class="w3-center"><div class=" Figure Fig ">';
 
     }else{
     // This places a closing tag
-    return  '</div>'
+    return  '</div></div>'
     }}
 });
 

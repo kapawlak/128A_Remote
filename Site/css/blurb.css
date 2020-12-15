@@ -80,8 +80,12 @@
 /* Material box formats */
 .Materials{
     margin: 30px;
+    border-radius: 5px!important;
  }
-
+ .Materials header{
+  
+  border-radius: 5px!important;
+}
 /*********************************************************************************/
 /* Equation box formats */
 .Equation{
@@ -373,19 +377,21 @@
   border-radius: 8px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 100%;
-  margin: 30px 0px;
+  font-weight: bolder;
+  margin: 30px auto;
   text-align: center;
   position: relative;
   padding: 2rem 1rem;
-  
+  display: inline-block;
+  max-width: 100%;
 }
 
 
 
 .Fig:after{
   clear: both!important;
-  font-weight: bolder;
-  font-size: larger;
+   font-size: larger;
+
   border-radius: 5px;
   font-family: "Segoe UI",Arial,sans-serif;
   padding: 5px 15px;
@@ -401,16 +407,17 @@
 .Figure{
   clear: both;
   padding-top: 20px;
-  clear: both!important;
-  display: block!important;
+  /* display: block!important; */
    }
 
 .Figure .w3-col{
   padding: 0px 10px;
   vertical-align: middle;
 }
-.Figure .w3-col img{
+.Figure img{
   vertical-align: middle;
+  max-width: 70%;
+  max-height:300px;
  }
 
 
@@ -425,14 +432,12 @@
  
 }
 
-.Figure p{
-  display: block;
-}
 
 /* Figure Float right/left */
 
 .RFigure, .LFigure{     
   padding: 20px 10px;
+  display: block;
 }
 .RFigure::after, .LFigure::after{
   counter-increment: figure;
