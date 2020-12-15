@@ -19,21 +19,23 @@ h1 {
   clear: both;
   color: #009688!important;
   font-size: 225%;
-  padding: 20px 0px
+  padding: 20px 0px;
+  border-bottom: rgb(202, 201, 201) solid 1px;
 }
 
 h2{
   color: black!important;
   font-size: 175%;
   padding:10px 10px;
-  margin-left:-10px
+  margin-left:-10px;
+ 
 }
 /*fix links to sections */
 h1::before, h2::before {
   display: block;
   content: " ";
   height: 60px;
-  margin-top: -60px;
+  margin-top: 60px;
   visibility: hidden;
 }
 /* Main header */
@@ -42,13 +44,16 @@ h1::before, h2::before {
   font-size: 400%;
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;
+  border: 0px!important;
+  margin-top: 20px!important;
+  padding-top: 0px;
 }
 
 
 /* make the main paragraphs pretty */
 #mdcontent{
   
-  margin-top:50px;
+  margin-top:20px;
   margin-right:20px;
   margin-left:20px;
   max-width: 1200px;
@@ -64,7 +69,7 @@ h1::before, h2::before {
 #mdcontent > p{
   text-indent: 1em;
   text-align: left;
- 
+  text-rendering: optimizeSpeed;
 }
 
 /* Make sure figure images don't blow up */
@@ -122,6 +127,8 @@ h1::before, h2::before {
   text-align: center;
 
 }
+
+
 
 
 /* *********************************** */
@@ -530,7 +537,8 @@ tbody > tr:nth-child(odd){background-color:#dadada!important}
 }
 #TOCprint > ul ul{
   margin-left:0px;
-  padding-left: 10px;
+  padding-left: 20px;
+  font-size: smaller;
 }
 
 #TOCprint{

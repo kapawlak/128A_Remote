@@ -78,7 +78,7 @@ function updateRoutine(){
 
 function htmltweaks() {
   //name headers
-  headers=document.querySelectorAll("mdcontent > h1");
+  headers=document.querySelectorAll("#mdcontent > h1");
   for (i = 0; i < headers.length; i++) {
     elmnt = headers[i];
     if (i>0){
