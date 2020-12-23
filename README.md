@@ -1,4 +1,4 @@
 # physics4l-manual
 
-[Launch](https://ilg-physics-ucsb.github.io/physics4l-manual/Site/index.html)
+[Launch](https://ilg-physics-ucsb.github.io/physics4l-manual/4LSite/index.html)
 
