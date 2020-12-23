@@ -13,7 +13,7 @@
 
 
 :::RFigure Phyphox s
-![The Phyphox Phone App in the iOS store](../imgs/Phyphox.png)
+![The Phyphox Phone App in the iOS store](../imgs/phyphox.png)
 :::
 
 In this intro lab, we will learn how to use the Phyphox App to aquire data that we will later analyze. You can download the app from their [website](https://Phyphox.org/) or find it in the iOS/Google Play store. 
