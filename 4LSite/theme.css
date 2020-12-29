@@ -88,13 +88,30 @@ body {
 }
 
 /* Maincontent background is transparent */
-#mdcontent{
-    background-color: rgba(255, 255, 255, 0.75);
+#mdcontent {
+    background-color: rgba(255, 255, 255, 0.85);
 }
+
+#mdcontent p{
+
+    line-height:1.8!important;
+
+}
+
+#mdcontent > ol{
+
+   margin-inline-start: 5em;
+   margin-inline-end: 5em;
+   line-height: 1;
+
+}
+
+.tab { text-indent:40px }
 /* Materials */
 
 .Materials{
     background-color: white;
+    float:none!important;
 }
 .Materials header{  
     background-color: var(--primary);

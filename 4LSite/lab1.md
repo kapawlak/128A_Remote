@@ -1,15 +1,15 @@
 # Lab 1: Magnetic Force
----
-### All Materials Needed:
+
+::: Materials
 - A magnet
-- 1 Wire  
+- A short wire  
 - One AA battery
 - One screw
 - Aluminum foil
 - Tape 
 - Paper towel tube or similar
+:::
 
----
 
 # The Lorentz Force
 
@@ -34,47 +34,61 @@ $$
 $$
 :::
 
-:::Figure:Figure
-![](imgs/crossproduct.png)
-:::
+This equation gives us two independent and important pieces of information, namely the *direction* and *magnitude* of the resulting force. 
 
-This equation gives us two separate and important pieces of information, namely the *direction* and *magnitude* of the resulting force. The direction can be determined by using the so called &ldquo;right-hand rule:&rdquo; if you extend your index and middle finger in the directions of these vectors, in order, your thumb will point in the resultant direction.
+:::LFigure rhr xs
+![](../imgs/crossproduct.png)
+::: 
+The direction can be determined by using the so called "right-hand rule", shown in [Fi](#Fi-rhr). The right-hand-rule is a mnemonic device for quickly working out the direction of a cross-product: If you extend your index and middle finger in the directions of your first and second vectors in the product, respectively, your thumb will point in the resultant direction.
 
-:::Question
-What happens if you reverse the order of the product?
-:::
 
-The magnitude of the product depends on the angle between the two vectors:
+Aside from the *direction*, we also need to know about the *strength*. The magnitude of the product depends, of course, on the magnitudes of your original vectors, but also on the *angle* between the two vectors:
 
 :::Figure:Equation
 $$
-|F|= q |v||B|\sin(\theta)
+F(\theta)= q |v||B|\sin(\theta)
 $$
 :::
 
-When they are completely perpendicular, the result is simply $|F| = q |v||B|$.
-
-Vector equations, if they are new to you, take some getting used to. In plain English, the Lorentz force  law tells us the following: A charged particle moving with a velocity $\vec v$ perpendicular to a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to both of these vectors, and has a magnitude proportional to their product. So you can get a feeling for how this works, the simulation below shows the motion of a charged particle in the $xy-$plane when  subjected to a magnetic field along the $z-$axis
+When they are completely perpendicular, the result is simply $F(\pi/2) = q |v||B|$, and when they are aligned in the exact same direction we have $F(0)=0$.
 
 
-
-:::Simulation
+:::Simulation LF
 <embed src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html" width='100%' height='800px'>
 :::
+
+Vector equations, if they are new to you, take some getting used to. In plain English, the Lorentz force  law tells us the following: A charged particle moving with a velocity $\vec v$ perpendicular to a magnetic field $\vec B$ will experience a force in a direction that is perpendicular to both of these vectors, and has a magnitude proportional to their product. So you can get a feeling for how this works, [Si](#Si-LF) shows the motion of a charged particle in the $xy-$plane when  subjected to a magnetic field along the $z-$axis
+
+
+
+
+
+:::Question
+Look at [Fi](#Fi-rhr) and answer the following short questions. 
+1. What happens to the direction of the resultant vector if you accidentally reverse the fingers associated with $\vec a$ and $\vec b$? 
+2. What happens to the direction of the resultant vector if you use your left hand instead? 
+3. What is the difference in *magnitude* of $\vec a \times \vec b$ and $\vec b \times \vec a$ ?
+4. What is the difference in *sign* of $\vec a \times \vec b$ and $\vec b \times \vec a$ ?
+:::
+
 
 
 # Experiments
 ## 1. Overview
 This week we will study the force experienced by moving electrons in a magnetic field. We have the following goals:
- - Use the right-hand rule to determine the direction of the magnetic force due to the presence of a magnetic field. 
- - Match the predictions of the magnetic force direction to observations.
- -  Demonstrate that the Lorenz force can be converted into mechanical work by constructing a simple motor
+
+   1. Use the right-hand rule to determine the direction of the magnetic force due to the presence of a magnetic field. 
+
+   2. Match the predictions of the magnetic force direction to observations.
+
+   3. Demonstrate that the Lorenz force can be converted into mechanical work by constructing a simple motor
+
 
 
 
 
 ## 2. Force on current-carrying &ldquo;wire&rdquo; near a magnet
-### Materials needed:
+:::Materials
 - A magnet
 - 1 Wire 
 - One AA battery
@@ -83,7 +97,7 @@ This week we will study the force experienced by moving electrons in a magnetic 
 - Tape
 - Paper towel roll or similar, cut into a 1-in and 2-in section
 - Piece of paper (optional)
-
+:::
 
 Most of us don't have access to beams of charged  particles in free space (or methods to observe them easily), making a demonstration of Lorentz's force law similar to the simulation above quite impossible. Luckily for us, the force law is ubiquitous, and equally applies to the moving electrons in *materials* -- such as current-carrying wires. 
 
@@ -111,7 +125,7 @@ where $n$ is the number of electrons per unit volume, $q_e$ is the charge of an 
 :::::: Exercise
 In this experiment, we will tape a strip of aluminum foil, which behaves as a &ldquo;wire,&rdquo;  so that it runs perpendicular to the field generated by our magnet. When you connect the foil to the terminals of a battery, such that a current is generated, you will observe and record the effects of the Lorentz force, and explain if it matches your expectations based on the &ldquo;right hand rule.&rdquo; The reason for using foil is its thickness -- it is much easier to observe &ldquo;bending&rdquo; in foil vs. stiffer wire. 
 :::Figure:Figure
-  ![](imgs/foilsetup.png)
+  ![](../imgs/foilsetup.png)
 :::
 ***Foil Circuit:***
 1. Tape the aluminum foil strip to the 1-in roll section so that it runs across the diameter, leaving a small amount of slack. The foil shouldn’t be so taught that it can&rsquo;t bend slightly.
@@ -122,7 +136,7 @@ In this experiment, we will tape a strip of aluminum foil, which behaves as a &l
 6. Hold the battery on the exposed foil, and briefly touch the opposite terminal with the wire to close the circuit.
 7. Note the orientation of the magnet and the direction of current and record these and the direction of motion of the foil. (See the next step.)
 8. Repeat this experiment for all four combinations of magnet orientation and battery orientation. Make a table similar to the following to record your results for each magnet and battery orientation, the prediction for the force direction given by the right hand rule and the observed direction of foil movement:
-:::Figure:Table
+:::Table
 | Magnet Orientation | Battery Orientation | RHR |Foil Direction |
 | --------  | --------      | --------     |--------     |
 | (N/S) toward foil  |    (+/-) up   |  (up/down)    |           (up/down)    |               
@@ -150,11 +164,12 @@ The Lorentz force acts on the electrons in the foil. Try to explain why the *ent
 
 
 ## 3. The Rotating Motor
-### Materials needed:
+::: Materials
 - A magnet
 - Wire Leads (stripped)
 - One AA battery
 - One screw
+:::
 
 In this setup, we will be creating a simple homopolar motor. Homopolar motors, first constructed by Michael Faraday in 1821, prior to the discovery of electromagnetism, operate based on the Lorenz force: A conductor with a current flowing through it, when placed in a magnetic field that is perpendicular to the current, feels a force in the direction perpendicular to both the magnetic field and the current. This force provides a torque around the axis of rotation.
 
@@ -163,7 +178,7 @@ In this setup, we will be creating a simple homopolar motor. Homopolar motors, f
 In this exercise we will construct this direct current (DC) motor using a battery as our voltage source and our neodymium magnet as the conductor and perpendicular field source. The magnet will be connected with the battery by means of a screw, whose sharp point has minimal friction and allows for free rotation. When wire leads are used to close the circuit, the current running from the magnet’s outer surface to the screw at its center, in conjunction with the magnetic field, will result in a force on the moving *electrons* inside the magnet, causing it to rotate rapidly!
 
 :::Question
-![](imgs/Currentdisk.png)
+![](../imgs/Currentdisk.png)
 
 The above image shows a disk with a conductive surface (inside is non-conducting) connected to a circuit with current $I$. Sketch the path that electrons might take, including the path on or inside the disk, with arrows indicating the direction of the velocity.
 :::
@@ -184,7 +199,7 @@ With the knowledge of the magnet&rsquo;s orientation from the previous lab, we w
 6. If you do this correctly, the screw should rotate.
 
 ::: Figure:Figure
-![motor](imgs/1.png)
+![motor](../imgs/1.png)
 :::
 ######
 
@@ -211,20 +226,7 @@ Sketch schematic diagrams showing each of the 4 possibilities. Include arrows to
 ::::::
 
 # Write-up
----
 
-::::::row w3-center w3-card-2 w3-flat-clouds
-### **In this lab, there were:**
-:::col l6 m6 s12
- @fa-question-circle qtotal w3-hover-shadow@ 
-:::
-:::col l6 m6 s12
- @fa-pencil-square-o etotal w3-hover-shadow@
-:::
-### **@fa-hand-o-right@ Please be sure to complete all questions and exercises @fa-hand-o-left@**
-::::::
-
----
 ###  **@fa-hand-o-right@  Instructions :**
  #### **1. Answer all questions clearly, showing your work where appropriate.**
  #### **2. Starting on a seperate page:** 
@@ -234,4 +236,6 @@ Sketch schematic diagrams showing each of the 4 possibilities. Include arrows to
  #### **3. Additional Information:**
  - You should attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
  
+ :::Summary
+ :::
 

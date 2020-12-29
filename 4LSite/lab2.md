@@ -83,11 +83,8 @@ As in Lab 0, we must subtract the background filed to ensure the accuracy of the
 ::::::Note
  If the long wire you have is *enameled*, it must be scraped off at the contact points, else the circuit will **NOT** conduct. The safest way to do this is to grip the ends of each wire with the alligator clips (or something similar), squeeze them closed, and pull. Doing this a few times should scrape off enough enamel to allow sufficient conduction.
 
-:::Figure:Figure
 
 ![iOLab](../imgs/stripwire_small.gif)
-
-:::
 
 
 ::::::
