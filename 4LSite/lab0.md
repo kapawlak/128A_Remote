@@ -27,7 +27,7 @@ You are encouraged to play with Phyphox,  explore its capabilities and experimen
 We will get familiar with the Phyphox app by investigating the external magnetic field of a magnet using your phone's magnetometer.
 However, we actually need to know where the magnetometer even is! [Fi](#Fi-typical-phone) shows and image of a "typical" phone with a multitude of sensors. Unfortunately this layout changes between device brands, models and even *versions* as increasinly innovative integrated circuit boards are manufactured.
 
-::: LFigure typical-phone s
+::: LFigure typical-phone xs
 ![A Typical Phone with a vast array of sensors](../imgs/typicalphone.png)
 :::
 
@@ -222,6 +222,6 @@ For each doubling, calculate the ratio of the magnetic field $B(2r)/BF(r).$ You 
 
 :::Summary
 
-A template for this lab, as well as the rubric, can be found in the Google Assignment turn-in link on Gauchospace
+<iframe id="contentframe" height="300px" width="90%" src="https://gauchospace.ucsb.edu/courses/mod/lti/launch.php?id=5612137&triggerview=0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="height: 300px;"></iframe>
 :::
 

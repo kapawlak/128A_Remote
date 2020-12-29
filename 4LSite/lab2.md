@@ -28,8 +28,8 @@ In this lab, we will explore the Biot-Savart law by indirectly determining *the 
 
 ### Long Straight Wire
 
-::: Figure:Simulation
-<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>
+::: Simulation
+<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="800" style="border:none;"></iframe>
 :::
 
 
@@ -52,7 +52,7 @@ where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&
 ### Loop of Wire
 ::: Figure:Simulation
 
-<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="650" style="border:none;"></iframe>
+<iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="800" style="border:none;"></iframe>
 
 :::
 

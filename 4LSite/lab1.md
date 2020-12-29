@@ -58,7 +58,7 @@ Vector equations, if they are new to you, take some getting used to. In plain En
 
 
 
-:::Figure:Simulation
+:::Simulation
 <embed src="https://kapawlak.github.io/PhDemoJS/Apps/LorentzForce/LorentzForce.html" width='100%' height='800px'>
 :::
 
