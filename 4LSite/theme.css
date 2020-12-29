@@ -247,7 +247,12 @@ body {
 /* Tables */
 
 .Table{
-    font-family: var(--table-font) 
+    font-family: var(--table-font);
+    min-width:300px; 
+}
+
+.Table table{
+    min-width:300px; 
 }
 
 .Table header{

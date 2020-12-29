@@ -1,18 +1,18 @@
 # Lab 2: Magnetic Field
----
-### Materials needed for entire lab:
-- Phyphox
-- A wire (~0.8-1 m)
-- AAA or AA battery
-- Some vertical support (e.g., a book)
-- Paper and ruler
 
----
+::: Materials
+- Your Phone with Phyphox
+- A long wire (~0.8-1 m)
+- Electronics kit 3.3V power block
+- Some vertical support (e.g. a book)
+- Paper and ruler
+:::
+
 # The Biot-Savart Law
 
-In the previous lab, we looked at how moving electric charges feel force in the presence of external electric and magnetic fields. Continuing with the theme of electrodynamics, we will look at the fields and forces caused by moving charges *themselves*.
+In the previous lab, we looked at how moving electric charges feel force in the presence of external electric and magnetic fields. Continuing with the theme of electrodynamics, we will look at the fields and forces *caused* by moving charges *themselves*.
 
-As you may know, moving charges not only have electric fields, $\vec E$ associated with them, but also produce magnetic fields, $\vec B$ in directions tangent to their velocity. The characterization of such $\vec B$ fields for a single moving charged particle is actually trickier than you would expect -- the motion of the point-like charged particle and constant generation of a magnetic field at every point in time requires relativity to describe correctly -- and will be dealt with in a more advanced course.
+As you may know, moving charges not only have electric fields, $\vec E$,  associated with them, but also produce magnetic fields, $\vec B$, in directions tangent to their velocity. The characterization of such $\vec B$ fields for a single moving charged particle is actually trickier than you would expect -- the motion of the point-like charged particle and constant generation of a magnetic field at every point in time requires relativity to describe correctly -- and will be dealt with in a more advanced course.
 
 It turns out, however, that a *line* of moving charges, such as a current-carrying wire, is much simpler to work with: the resulting magnetic field has a static and well-defined description in terms of the Biot-Savart Law:
 
@@ -24,23 +24,25 @@ $$
 
 :::
 
-In this lab, we will explore the Biot-Savart law by indirectly determining *the current* in a wire by *measuring the magnetic field*  it produces. We will focus on two simple setups, a long straight wire and a loop of current,  whose integrals result in a simple expression for the magnetic field.
+In this lab, we will explore the Biot-Savart law by indirectly determining *the current* in a wire by *measuring the magnetic field*  it produces. We will focus on two simple setups, a long straight wire and a loop of current, whose integrals result in a simple expression for the magnetic field.
 
-### Long Straight Wire
+## Long Straight Wire
 
-::: Simulation
+::: Simulation long-straight
 <iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Line/Biot_Savart.html" width= "100%" height="800" style="border:none;"></iframe>
 :::
 
 
 
-Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right-hand rule [Eq](#biot_law):
 
-::: Figure
+
+::: RFigure RHR xs
 ![](../imgs/RHR.png)
 :::
 
-Analyzing the integral of the Biot Savart Law,  it can be shown that the strength of the magnetic field at a distance $R$ from the wire is given by the equation:
+For a long straight wire carrying a current, the magnetic field wraps around the line of current according to the right-hand rule, as shown in [Fi](#Fi-RHR). The stength of the measured field will depend on the *current* passing through the wire and the *distance* from the wire you take a measurement. A qualitative, interactive example of this is given in [Si](#Si-long-straight).
+
+To get a quantitative picture, we must apply some calculus. Analyzing the integral of the [Eq](#Eq-biot_law) for a straight line geometry,  it can be shown that the strength of the magnetic field at a distance $R$ from the wire is given by:
 
 ::: Equation biot_wire
 $$
@@ -49,14 +51,16 @@ $$
 :::
 where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&middot;kg/A
 
-### Loop of Wire
-::: Simulation
+## Loop of Wire
+::: Simulation loop
 
 <iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="800" style="border:none;"></iframe>
 
 :::
 
-For a  loop of wire, the magnetic field looks very similar to that of a dipolar magnet. When the loop is large, the mangnetic field in the center of the loop looks approximately like a straight line piercing the loop, with a direction determined by the right hand rule. The strength of this field depends on the radius of the loop and the height, given by the relation:
+For a  loop of current, the magnetic field looks very similar to that of a dipolar magnet. When the loop is large, the mangnetic field in the center of the loop looks approximately like a straight line piercing the loop, with a direction determined by the right hand rule. This is demonstrated above in [Si](#Si-loop). 
+
+Again solving the integral in [Eq](#Eq-biot_law), but now for a loop geometry, the strength of this field depends on the radius of the loop and the height, given by the relation:
 
 ::: Equation biot_loop
 $$
@@ -92,12 +96,18 @@ As in Lab 0, we must subtract the background filed to ensure the accuracy of the
 
 ## 2. Long straight wire
 
-### Materials needed:
-- phyphox
-- A wire (~0.8-1 m)
-- AAA or AA battery
+::: Materials
+- Your phone with Phyphox
+- A long wire (~0.8-1 m)
+- Power Block
 - Paper and ruler
+:::
 
+####
+
+<br>
+
+The following exericise will walk you though a quantitative experiment that characterizes the magnetic field of a straight wire. Be sure to collect all the needed materials before starting this lab.
 
 ::::::::: Exercise
 In this geometry, the wire is sitting flat on the desk, parallel to the side of your phone with the magnetometer. 
@@ -175,11 +185,12 @@ Review your data and make a table like the one below with appropriate units.
 
 ## 3. Loop of wire
 
-### Materials needed:
-- phyphox
-- A wire (~0.8-1 m)
-- AAA or AA battery
+::: Materials
+- Your Phone with Phyphox
+- A long wire (~0.8-1 m)
+- Power Block
 - Some vertical support (e.g., a book)
+:::
 
 :::::: Exercise
 We will now measure the magnetic field induced by a loop of current.
@@ -200,9 +211,10 @@ We will now measure the magnetic field induced by a loop of current.
 ::: Question
 Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{(R^2+z^2)^{3/2}}$  , and the measured field strength in the $z$ direction, with appropriate units. 
 :::
-:::Figure:Table
+
+:::Table
  
-| $R$|$z$ | $r$ | $B_z$|
+| $R$|$z$ | $r$ | Measured $B_z$|
 | ------| ------| ------ |------| 
 |@fa-pencil@       |        |         |        |
 |@fa-pencil@     |        |         |        |
@@ -231,20 +243,7 @@ Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{
 :::
 
 # Write-up
----
 
-::::::row w3-center w3-card-2 w3-flat-clouds
-### **In this lab, there were:**
-:::col l6 m6 s12
- @fa-question-circle qtotal w3-hover-shadow@ 
-:::
-:::col l6 m6 s12
- @fa-pencil-square-o etotal w3-hover-shadow@
-:::
-### **@fa-hand-o-right@ Please be sure to complete all questions and exercises @fa-hand-o-left@**
-::::::
-
----
 ###  **@fa-hand-o-right@  Instructions :**
  #### **1. Answer all questions clearly, showing your work where appropriate.**
  #### **2. Starting on a seperate page:** 
@@ -253,6 +252,15 @@ Make a table with the loop radius $R$ , magnetometer height $z$ , $r=\frac{R^2}{
 
  #### **3. Additional Information:**
  - You should attach images of your plots,  data, and setup -- doing so may allow you to regain partial or full credit even if your experiment fails.
+
+ :::  Summary
+
+ :::
  
 
+
+
+# To do:
+ - Add phone setup images
+ -verify powerblock is safe to use
 
