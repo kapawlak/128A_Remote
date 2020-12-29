@@ -36,13 +36,13 @@ In this lab, we will explore the Biot-Savart law by indirectly determining *the 
 
 Recall that for a long straight wire, the magnetic field wraps around the line of current according to the right-hand rule [Eq](#biot_law):
 
-:::Figure:Figure
-![](imgs/RHR.png)
+::: Figure
+![](../imgs/RHR.png)
 :::
 
 Analyzing the integral of the Biot Savart Law,  it can be shown that the strength of the magnetic field at a distance $R$ from the wire is given by the equation:
 
-::: Figure:Equation biot_wire
+::: Equation biot_wire
 $$
 B = \frac{\mu_0 I}{2 \pi R} 
 $$
@@ -50,7 +50,7 @@ $$
 where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&middot;kg/A
 
 ### Loop of Wire
-::: Figure:Simulation
+::: Simulation
 
 <iframe src="https://kapawlak.github.io/PhDemoJS/Apps/BiotSavart_Current_Loop/Biot_Savart.html" width= "100%" height="800" style="border:none;"></iframe>
 
@@ -58,7 +58,7 @@ where the magnetic permeability of free space is $\mu_0 = 4\pi\times 10^{-7}$ T&
 
 For a  loop of wire, the magnetic field looks very similar to that of a dipolar magnet. When the loop is large, the mangnetic field in the center of the loop looks approximately like a straight line piercing the loop, with a direction determined by the right hand rule. The strength of this field depends on the radius of the loop and the height, given by the relation:
 
-::: Figure:Equation biot_loop
+::: Equation biot_loop
 $$
 B = \frac{\mu_0 I}{2} \frac{R^2}{(R^2+z^2)^{3/2}}
 $$
@@ -81,7 +81,7 @@ As in Lab 0, we must subtract the background filed to ensure the accuracy of the
 
 :::Figure:Figure
 
-![iOLab](imgs/stripwire_small.gif)
+![iOLab](../imgs/stripwire_small.gif)
 
 :::
 
@@ -106,7 +106,7 @@ Assuming your phone has a small thickness, i.e., the height of the magnetometer 
 :::
 
 ::: Figure:Figure
-![geometry#1-1](imgs/setup1.png)
+![geometry#1-1](../imgs/setup1.png)
 :::
 
 1. On a piece of paper, draw 10 locations spaced 1 cm apart. These will be the locations you will measure the $B$ field strength. Note that it is easier to align the phone and correct your distances for the magnetometer offset after collecting data -- the correction will be the same for each distance measurement.  Once everything is set up correctly, as shown, you may begin taking data. 
@@ -184,7 +184,7 @@ Review your data and make a table like the one below with appropriate units.
 :::::: Exercise
 We will now measure the magnetic field induced by a loop of current.
 ::: Figure:Figure
-![geometry#2](imgs/setup2.png)
+![geometry#2](../imgs/setup2.png)
 :::
 
 1. Tape your long wire to a table so that it forms a closed loop. Try to make the loop as circular as possible. Record the radius of the loop.
