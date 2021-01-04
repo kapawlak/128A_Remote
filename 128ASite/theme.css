@@ -4,11 +4,12 @@
 body{
 
     /* Change the color theme by picking a color and its light and dark variants */
-    --primary:#009688;
+    --primary:#54151C;
     --primary-font:#fff;
-    --primary-light:#c0e7df;
+    --primary-light:#9C2D3A;
     --primary-light-font:#000;
-    --primary-dark:#326964;
+    --primary-med:#4F1D23;
+    --primary-dark:#400A10;
     --primary-dark-font:#fff;
 
     /* Change the major, minor and Table fonts */
@@ -86,7 +87,22 @@ body {
     background-color: #eee;
     background-attachment: fixed;
 }
+/*sidebar buttons*/
+#collapsible {
+    background-color:var(--primary)!important;
+}
 
+/*headers*/
+h1 {
+    color: var(--primary)!important;
+    font-size: 225%;
+    border-bottom: rgb(202, 201, 201) solid 1px;
+  }
+h2{
+    color: black!important;
+    font-size: 175%;
+  }
+  
 /* Maincontent background is transparent */
 #mdcontent {
     background-color: rgba(255, 255, 255, 0.85);
@@ -142,7 +158,17 @@ body {
 .Equation::after{
     background-color:var(--l3-bg)!important;
     color:var(--l3-font);   
-} 
+}
+
+.Question{
+    background-color:var(--primary)!important;
+    color:var(--primary-font);
+}
+
+.Question:before{
+    background-color:var(--primary-med)!important;
+    color:var(--primary-font);
+}
 
 /*********************************************************************************/
 /* Card Settings */

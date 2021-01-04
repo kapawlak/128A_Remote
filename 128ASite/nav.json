@@ -5,38 +5,13 @@
         "showSmall": "false"
     },
     {
-        "name": "Lab 0",
-        "file": "lab0",
+        "name": "COVID",
+        "file": "covid",
         "showSmall": "true"
     },
     {
-        "name": "Lab 1",
+        "name": "Particles",
         "file": "lab1",
         "showSmall": "true"
-    },
-    {
-        "name": "Lab 2",
-        "file": "lab2",
-        "showSmall": "true"
-    },
-    {
-        "name": "Lab 3",
-        "file": "lab3",
-        "showSmall": "true"
-    },
-    {
-        "name": "Lab 4",
-        "file": "lab4",
-        "showSmall": "true"
-    },
-    {
-        "name": "Lab 5",
-        "file": "lab5",
-        "showSmall": "true"
-    },
-    {
-        "name": "Showcase",
-        "file": "showcase",
-        "showSmall": "false"
     }
 ]
