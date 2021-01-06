@@ -71,24 +71,24 @@ In the case of a highly transimissible virus like COVID19, the exponential growt
 
 ## The SIR Model
 
-We start with a simple picture of an isolated town where, somehow, one person becomes infected with an extremly contagious virus. We will assume that, on average, each infected person comes into sufficiently close contact to transmit the virus to 3 new individual per day.
+We start with a simple picture of an isolated town where, somehow, one person becomes infected with an extremly contagious virus. We will assume that, on average, each infected person comes into sufficiently close contact to transmit the virus to k new individuals per day.
 
 
 ### Infected
 
-Let's define $I(t)$ as the number of infections at time $t$, where $t$ is in units of days. In the beginng ($t=0$ days), there is a single infected individual, $I(0) = 1$. We know that each day, infected indivuals pass the virus along to 3 others on average. We can express this rule in continous time as:
+Let's define $I(t)$ as the number of infections at time $t$, where $t$ is in units of days. In the beginng ($t=0$ days), there is a single infected individual, $I(0) = 1$. We know that each day, infected indivuals pass the virus along to k others on average. We can express this rule in continous time as:
 
 ::: Equation
 
 $$
 \begin{aligned}
-\frac{d I(t)}{dt} &= 3 \times I(t) \\\\ &= k I(t)
+\frac{d I(t)}{dt} &= k I(t)
 \end{aligned}
 $$
 
 :::
 
-Where the constant $ k= 3 \frac{\text{new infections}}{\text{infected}\times \text{day}} $. Note the units here, as they are *extremely* important: the constant $k$ is a **rate**, and it is telling you how many new infections result per infected individual *per day* [fn]If we expressed $k$ as a weekly rate instead, we would have $ k = 21 \frac{\text{infections}}{\text{infected} \times \text{week}} $ ![/fn].
+Where the constant $k$ has units which are *extremely* important: the proportionality constant $k$ is a **rate**, and it is telling you how many new infections result per infected individual *per day* [fn]If we expressed $k$ as a weekly rate instead, we would have $ k_w = 7*k \frac{\text{infections}}{\text{infected} \times \text{week}} $ ![/fn].
 
 You're probably familiar with this equation from an ODE class -- we can easily integrate it to obtain an expression:
 
@@ -104,13 +104,13 @@ This expression, however, is incredibly wrong under comparison to reality. This 
 
 Returning to our scenerio, we now consider how many people in the town are *susceptible* to the virus at a given time, which will be defined as $S(t)$. We go ahead and define someone as being susceptible if they don't already have it. E.g. if the town has a total population of $N$, then on day 0, $S(0)=N-1$ people are capable of becoming infected. Since the number of people in the town is assumed to be constant, we can simply write $S(t)  = N - I(t)$ 
 
-We now need to think about what being susceptible means in our model. We have made the assumption that each infected person comes into sufficiently close contact to transmit the virus to 1 new individual per day. HOWEVER, now we have to consider if this contact is susceptible. If an infected person comes into contact with someone in the town chosen at random, the probability they are susceptible is $S(t)/N$. This enters our differential equation
+We now need to think about what being susceptible means in our model. We have made the assumption that each infected person comes into sufficiently close contact to transmit the virus to 1 new individual per day. **However**, now we have to consider if this contact is susceptible. If an infected person comes into contact with someone in the town chosen at random, the probability they are susceptible is $S(t)/N$. This enters our differential equation
  
 ::: Equation simodel
 
 $$
 \begin{aligned}
-\frac{d I(t)}{dt} &=  3\times \frac{S(t)}{N} I(t) \\\\
+\frac{d I(t)}{dt}
                   &=  k \frac{S(t)}{N} I(t) 
 \end{aligned}
 $$
@@ -137,7 +137,7 @@ $$
 :::
 
 
-With all this work, we might hope that our new equation bears semblance to reality. While improved, it is still wrong! We are missing one final core feature, which is *removal* from the infectious pool: we have to account for the fact that individuals *do not* remain indefinitely infectious, and either recover or pass. 
+With all this work, we might hope that our new equation bears semblance to reality. While improved, it is still wrong! We are missing one final core feature, which is *removal* from the infectious pool: we have to account for the fact that individuals *do not* remain indefinitely infectious, and either recover or pass away. This means that they have a *finite* amount of time to infect others.
 
 ### Removed
 
