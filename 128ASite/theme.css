@@ -153,6 +153,7 @@ h2{
 .Equation{
     background-color:var(--l4-bg)!important;
     color:var(--l4-font);
+    text-align: center;
   }
 
 .Equation::after{

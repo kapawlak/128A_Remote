@@ -20,7 +20,9 @@ This project is very open ended: Students are strongly encouraged to ask questio
 
 This is a placeholder for background on history
 
-# The Statistical Physics of Epidemics
+# Building Models from Scratch
+
+## The Statistical Physics of Epidemics
 
 In Statsistical Physics, one is concerned with the study of parametrically large numbers of "particles", and the behavior of these under different internal and external conditions. The qualifier "parametrically large numbers" is critical here -- while the classical mechanics equations for few body systems are a woefully inadequet framework here, large numbers of particles allow us to apply the principles of *statistics* to look at average behavior with high levels of confidence.
  
@@ -37,13 +39,11 @@ In your courses, you have likely encountered **Thermodynamics**, which focuses o
 In this project, we will be taking the Statistical Mechanics route to develop our epidemic models: From a microscopic picture of how disease is transmitted between individuals, we will generate macroscopic equations that should capture the essential features of COVID19 progression in populations. There is a catch, however: unlike thermodyanmics, our system is *out-of-equilibrium*, and hence constantly evolving in time. This means our equations will appear, naturally, in the form of time-dependent differential equations. 
 
 
-# Building Models from Scratch
+## The Life Cycle of a Virus
 
 We will now start framing the problem quantitatively. To set the stage for mathematics, we first have to think really hard about disease spread and how to characterize it.
 
 Disease spread is an exponential process. In fact, the current pandemic began with a single virus, in a single cell, in a single animal somewhere, sometime in 2019. It's worth while to understand how and why this wirus was able to spread so rapidly across the entire planet.
-
-## The Life Cycle of a Virus
 
 Viruses are inanimate, and passively move about in gases and liquids until encountering a suitable cell. On contact, a COVID19 virus infects a cell by attaching to and penetrating its membrane with a spike protein. Within the membrane, the cell's enzymes mistakenly disolve the viral protein coating, releasing large amounts of RNA material. This RNA (and mRNA) material is essentially a set of instructions that reprogram the structures of the call to start *manufacturing* new viruses using the host's resources. The cell will continue constructing and leaching copies of the virus  for the remainder of its life [fn]many times until it becomes so full that it literally *bursts*[/fn], releasing about 10000 new viruses. This entire process takes about 8-10 hours once a virus has entered the host.
 
@@ -141,10 +141,27 @@ With all this work, we might hope that our new equation bears semblance to reali
 
 
 ::: Question
-Show that the result given in [Eq](Eq-sisolution) obeys the conservation law $N= S(t) + I(t)$
+Show that the result given in [Eq](#Eq-sisolution) obeys the conservation law $N= S(t) + I(t)$ for any time $t$.
 :::
 
 ### Removed
+
+We again have to define a new variable, $R(t)$, to represent our removed population. 
+
+::: Equation SIR
+
+$$
+\begin{aligned}
+\frac{d S(t)}{dt} &= - k\frac{S(t)}{N} I(t) \\\\
+\frac{d I(t)}{dt}
+                  &=  k \frac{S(t)}{N} I(t)  - g I(t)\\\\
+\frac{d R(t)}{dt}
+                  &=  g I(t)
+\end{aligned}
+$$
+
+:::
+
 
 ## Markov Model
 
