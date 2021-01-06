@@ -120,7 +120,7 @@ $$
 
 This equation is slightly less trivial to integrate, and is left as a excercise. We use the fact that the total population in the town remains constant, hence $S(t) = N - I(t)$, in [Eq](#Eq-simodel) to obtain a nonlinear differential equation in $I(t)$, which can be solved to obtain:
 
-::: Equation
+::: Equation sisolution
 
 $$
 I(t) = \frac{I_0 N}{I_0+ S_0 e^{-kt}}
@@ -138,6 +138,11 @@ $$
 
 
 With all this work, we might hope that our new equation bears semblance to reality. While improved, it is still wrong! We are missing one final core feature, which is *removal* from the infectious pool: we have to account for the fact that individuals *do not* remain indefinitely infectious, and either recover or pass away. This means that they have a *finite* amount of time to infect others.
+
+
+::: Question
+Show that the result given in [Eq](Eq-sisolution) obeys the conservation law $N= S(t) + I(t)$
+:::
 
 ### Removed
 
