@@ -32,7 +32,7 @@ Though developed for the study of particulate matter, the techniques of Statisti
 
 **Imagine the following scenerio.** Working in a lab, you are handed a table of data documenting the number of COVID19 infections, hospitalizations and deaths by date in NYC and are asked to quantiatively report on the projected need for hospital beds. Intuitively, you know that describing the health information (age, sex, conditions), daily routines, and number of contacts of every individual would be a fruitless undertaking; not only would this cost you many lifetimes of tabulation and measurement, but also the information you ultimately collect would be so large and complex that it wouldn't be *useful* for predicticting trends. Instead, your first instinct is likely to make a few *macroscopic* calculations: the number infected per day, the day-to-day change in infection rates, broad age ranges, the degree of social distancing in the city, and/or population densities. From these, you know that you can apply mathematical models to estimate the infection trajectory, the average infectiousness, and predict how the trends will react to vaccination programs and distancing orders.
 
-## Macroscopic v.s. Microscopic
+### Macroscopic v.s. Microscopic
 
 In your courses, you have likely encountered **Thermodynamics**, which focuses on the *equations of state* (e.g. $PV=NRT$ ) governing *macroscopic variables* that describe bulk matter in *equilibrium*. You may have found the topic boring, if not an excercise in memorization [fn]Even as a Ph.D. in statistical physics, I certainly did![/fn]. Thermodynamics is, ultimately, a byproduct of the far richer field of **Statistical Mechanics**, where one uses their knowledge of the "microscopic rules" governing individual particles, along with statistical principles, to develop models and equations for their collective behavior from the ground up.
 
@@ -43,7 +43,7 @@ After understanding the SIR model, we will look at an Statistical-Mechanics like
 
 
 
-## The Life Cycle of a Virus
+### The Life Cycle of a Virus
 
 We will now start framing the problem quantitatively. To set the stage for mathematics, we first have to think really hard about disease spread and how to characterize it.
 
@@ -154,7 +154,7 @@ Show that the result given in [Eq](#Eq-sisolution) obeys the conservation law $N
 
 ### Removed
 
-We again have to define a new variable, $R(t)$, to represent our removed population. 
+We again have to define a new variable, $R(t)$, to represent our removed population. We now assert that each infected person remains infectious for $1/g$ days on average.
 
 ::: Equation SIR
 
@@ -175,11 +175,161 @@ $$
 
 # Simulating Models
 
+## SIR ODEs
+
+```
+import numpy as np
+import odeint
+
+code
+
+```
+
+## Continous Time Markov Model
+
+
+### Simple Exponential Growth
+:::Hider Simple Exponential Growth Code
+```
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+
+## Declare Constants
+N=1000
+tmax = 100 # days
+k = 3/14 ## new infections per infected per day
+
+## Data arrays
+
+I = [1]  #initial infected
+t = [0]  # start on day 0
+
+while t[-1]<tmax:
+    k_t= k*I[-1] #update infection probability based on number currently infected
+    
+    r= random.random() #draw uniform random number between 0 and 1
+    t_next = - np.log(1.0-r)/k_t # calculate next time an infection happens
+    
+    
+    t.append(t[-1]+t_next) #record infection time
+    I.append(I[-1]+1) #record new infection
+    
+    if I[-1]==N:
+        break ##stop sim if everyone is infected
+
+plt.plot(t,I)
+
+
+```
+:::
+
+### SI Model
+
+::: Hider SI Model Code
+```
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+
+
+## Declare Constants
+N=1000
+tmax = 100 # days
+k = 3/14 ## new infections per infected per day
+
+## Data arrays
+
+I = [1]  #initial infected
+S = [N-I[-1]]  #initial susceptible 
+t = [0]  # start on day 0
+
+while t[-1]<tmax:
+    k_t= k*I[-1]*S[-1]/N #update infection probability based on number currently infected ANd susceptible
+    
+    r= random.random() #draw uniform random number between 0 and 1
+    t_next = - np.log(1.0-r)/k_t # calculate next time an infection happens
+    
+    
+    t.append(t[-1]+t_next) #record infection time
+    I.append(I[-1]+1) #record new infection
+    S.append(S[-1]-1)
+    
+    if S[-1]==0:
+        break ##stop sim if everyone is infected
+
+plt.plot(t,I)
+
+
+```
+:::
+
+### Full SIR Model
+
+
+:::Hider SIR Model Code
+```
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+
+## Declare Constants
+N=1000
+tmax = 200 # days
+k = 3/14 ## new infections per infected per day
+g = 1/14 ## recoveries per person per day
+
+## Data arrays
+
+# Note: if I_0 is a small number there is a chance that the infections will all recover before an epidemic
+# happens. This is one of the important reasons stochastic modelling is actually more accurate in small pops!
+I = [2]  #initial infected 
+
+
+S = [N-I[-1]]  #initial susceptible 
+R = [0]  #initial recovered
+t = [0]  # start on day 0
+
+while t[-1]<tmax:
+    # The probability that something happens now considers either an infection *or* a recovery
+    k_t= k*I[-1]*S[-1]/N + g*I[-1]
+    
+    r= random.random() #draw uniform random number between 0 and 1
+    t_next = - np.log(1.0-r)/k_t # calculate next time an infection happens
+    
+    
+    t.append(t[-1]+t_next) #record event time
+    
+    ## We now have to "flip a coin" to figure out what happens 
+    event_r = random.random()
+    
+    prob_inf= (k*I[-1]*S[-1]/N)/(g*I[-1]+(k*I[-1]*S[-1]/N))
+ 
+    ## If land on infection
+    if event_r < prob_inf:
+        I.append(I[-1]+1) #record new infection
+        S.append(S[-1]-1)
+        R.append(R[-1])
+    else:
+        I.append(I[-1]-1) #record new recovery
+        S.append(S[-1])
+        R.append(R[-1]+1)
+                                 
+    
+    if I[-1]==0:
+        break ##stop sim if infections end
+
+plt.plot(t,I)
+
+
+```
+:::
+
 # Fitting models to data
 
-## Getting k
+## Early Data: Getting $k$
 
-## Getting r
+## Why $g$ should be found and not fit
 
 # Extensions
 
