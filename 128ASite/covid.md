@@ -104,7 +104,7 @@ This expression, however, is incredibly wrong under comparison to reality. This 
 
 Returning to our scenerio, we now consider how many people in the town are *susceptible* to the virus at a given time, which will be defined as $S(t)$. We go ahead and define someone as being susceptible if they don't already have it. E.g. if the town has a total population of $N$, then on day 0, $S(0)=N-1$ people are capable of becoming infected. Since the number of people in the town is assumed to be constant, we can simply write $S(t)  = N - I(t)$ 
 
-We now need to think about what being susceptible means in our model. We have made the assumption that each infected person comes into sufficiently close contact to transmit the virus to 1 new individual per day. **However**, now we have to consider if this contact is susceptible. If an infected person comes into contact with someone in the town chosen at random, the probability they are susceptible is $S(t)/N$. This enters our differential equation
+We now need to think about what being susceptible means in our model. We have made the assumption that each infected person comes into sufficiently close contact to transmit the virus to k new individuals per day. **However**, now we have to consider if these contacts are susceptible. If an infected person comes into contact with someone in the town chosen at random, the probability they are susceptible is $S(t)/N$. This means that each encounter now only has a probability of successful transmission of $S(t)/N$. This enters our differential equation:
  
 ::: Equation simodel
 
@@ -116,7 +116,11 @@ $$
 $$
 
 :::
- 
+
+::: Question
+Derive the differential equation for the susceptible group --i.e. what is $\frac{d S(t)}{dt}$?
+
+:::
 
 This equation is slightly less trivial to integrate, and is left as a excercise. We use the fact that the total population in the town remains constant, hence $S(t) = N - I(t)$, in [Eq](#Eq-simodel) to obtain a nonlinear differential equation in $I(t)$, which can be solved to obtain:
 
@@ -130,8 +134,8 @@ and
 
 $$
 \begin{aligned}
-S(t) &= N - I(t) \\\\
-&= \frac{S_0 N}{I_0+ S_0 e^{-kt}}
+S(t) 
+&= \frac{S_0 N e^{-kt}}{I_0+ S_0 e^{-kt}}
 \end{aligned}
 $$
 :::
