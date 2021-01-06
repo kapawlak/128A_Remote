@@ -226,7 +226,7 @@ plt.plot(t,I)
 
 ### SI Model
 
-::: Hider SI Model Code
+:::Hider SI Model Code
 ```
 import numpy as np
 import random
