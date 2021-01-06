@@ -169,6 +169,8 @@ $$
 
 ## Markov Model
 
+# Simulating Models
+
 # Fitting models to data
 
 ## Getting k
