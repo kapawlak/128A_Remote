@@ -36,7 +36,11 @@ Though developed for the study of particulate matter, the techniques of Statisti
 
 In your courses, you have likely encountered **Thermodynamics**, which focuses on the *equations of state* (e.g. $PV=NRT$ ) governing *macroscopic variables* that describe bulk matter in *equilibrium*. You may have found the topic boring, if not an excercise in memorization [fn]Even as a Ph.D. in statistical physics, I certainly did![/fn]. Thermodynamics is, ultimately, a byproduct of the far richer field of **Statistical Mechanics**, where one uses their knowledge of the "microscopic rules" governing individual particles, along with statistical principles, to develop models and equations for their collective behavior from the ground up.
 
-In this project, we will be taking the Statistical Mechanics route to develop our epidemic models: From a microscopic picture of how disease is transmitted between individuals, we will generate macroscopic equations that should capture the essential features of COVID19 progression in populations. There is a catch, however: unlike thermodyanmics, our system is *out-of-equilibrium*, and hence constantly evolving in time. This means our equations will appear, naturally, in the form of time-dependent differential equations. 
+In this project, we will be working to develop our epidemic models: In the SIR approach, we will consider the *average* behavior of individuals to generate macroscopic equations that should capture the essential features of COVID19 progression in populations. Like thermodyanimics, our model will focus on general equations that describe average characteristics of a given population. There is a catch, however: unlike thermodyanmics, our system is *out-of-equilibrium*, and hence constantly evolving in time. This means our equations will appear, naturally, in the form of time-dependent differential equations. 
+
+After understanding the SIR model, we will look at an Statistical-Mechanics like approach that goes beyond the average behaviors of individuals, and can algorithmically provide a more complete characterization of an epidemic. In this Markov Model approach, we will learn how to generate Master Equations that ascribe probablities to all possible histories of an outbreak based on the microscopic transimission events that may or may not occur. This extremely powerful technique, very similar in nature to Quantum Field Theory, is used in fields ranging from nuclear physics to data science. 
+
+
 
 
 ## The Life Cycle of a Virus
