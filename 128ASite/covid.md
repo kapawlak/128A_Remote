@@ -120,10 +120,10 @@ $$
 $$
 
 :::
+In plain English, the above sentence says that "The change in the number of infectious indivduals is proportional to the contact rate, $k$, times the number of infected individuals making contact, further multiplied by the *probability* the new contact is susceptible to infection".
 
 ::: Question
 Derive the differential equation for the susceptible group --i.e. what is $\frac{d S(t)}{dt}$?
-
 :::
 
 This equation is slightly less trivial to integrate, and is left as a excercise. We use the fact that the total population in the town remains constant, hence $S(t) = N - I(t)$, in [Eq](#Eq-simodel) to obtain a nonlinear differential equation in $I(t)$, which can be solved to obtain:
@@ -145,16 +145,29 @@ $$
 :::
 
 
-With all this work, we might hope that our new equation bears semblance to reality. While improved, it is still wrong! We are missing one final core feature, which is *removal* from the infectious pool: we have to account for the fact that individuals *do not* remain indefinitely infectious, and either recover or pass away. This means that they have a *finite* amount of time to infect others.
+With all this work, we might hope that our new equation bares semblance to reality. While improved, it is still wrong! We are missing one final core feature, which is *removal* from the infectious pool: we have to account for the fact that individuals *do not* remain indefinitely infectious, and either recover or pass away. This means that they have a *finite* amount of time to infect others.
 
 
 ::: Question
-Show that the result given in [Eq](#Eq-sisolution) obeys the conservation law $N= S(t) + I(t)$ for any time $t$.
+Show that the expressions given in the solution [Eq](#Eq-sisolution) obey the conservation law $N= S(t) + I(t)$ for any time $t$.
 :::
 
 ### Removed
 
-We again have to define a new variable, $R(t)$, to represent our removed population. We now assert that each infected person remains infectious for $1/g$ days on average.
+We again have to define a new variable, $R(t)$, to keep track of our removed population. We now assert that each infected person remains infectious for $\tau$ days on average. This means that the removal *rate* from the infectious pool is $g\equiv 1/\tau$. Our equation for $\dot I(t)$ is modified as:
+
+::: Equation
+$$
+\begin{aligned}
+\frac{d I(t)}{dt}
+                  &=  k \frac{S(t)}{N} I(t)  - g I(t)
+\end{aligned}
+$$
+:::
+
+In plain English, the new addition says that "The change in the number of infectious indivduals reduced by the indivdual rate of recovery or death, times the number of actively infectious individuals".
+
+The dynamics of $R(t)$ are equal an opposite, meaning that our final set of differential equations are given by:
 
 ::: Equation SIR
 
@@ -170,8 +183,37 @@ $$
 
 :::
 
+[Eq](#Eq-SIR) defines what is known as the [SIR Model](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model_2). Unlike the previous examples, the inherit nonlinearity of these equations does not allow us to find general analytical solutions-- in order to extract useful information from these equations in the general case, they must be *simulated* numerically. 
+
+::: Question
+
+Show that the conservation law $N= S(t) + I(t) +R(t)$ holds for all times in the SIR model.
+
+:::
+
+### Important Features
+
+The SIR model is uniquely specified by two constants, $k$ and $g$, each of which is a rate: $k$ is the number of new infections per current infection per day, whereas, $g$ is the number of recoveries per current infection day. Consider their ratio
+
+:::Equation R0
+$$
+R_0 \equiv \frac{k}{g}
+$$
+:::
+
+The units of $R_0$ defined above become new infections per recovery, and a little thought about this tells us why epidemiologists are so interested in its value.
+
+::: Question
+Using the definition and units of $R_0$ given in [Eq](#Eq-R0), give arguments for the following questions:
+1. What happens to an epidemic if $R_0 < 1$?
+2. What happens to an epidemic if $R_0 >1$?
+3. What happens to an epidemic if $R_0 =1$?
+
+:::
 
 ## Markov Model
+
+
 
 # Simulating Models
 
