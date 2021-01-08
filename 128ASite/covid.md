@@ -211,8 +211,16 @@ Using the definition and units of $R_0$ given in [Eq](#Eq-R0), give arguments fo
 
 :::
 
-## Markov Model
+## Markov Models
 
+
+### What is a Markov Model?
+
+### Infected
+
+### Susceptible
+
+### Removed
 
 
 # Simulating Models
@@ -227,43 +235,18 @@ code
 
 ```
 
+## Error Analysis
+
+
+
+
+
 ## Continous Time Markov Model
 
 
 ### Simple Exponential Growth
-:::Hider Simple Exponential Growth Code
-```
-import numpy as np
-import random
-import matplotlib.pyplot as plt
-
-## Declare Constants
-N=1000
-tmax = 100 # days
-k = 3/14 ## new infections per infected per day
-
-## Data arrays
-
-I = [1]  #initial infected
-t = [0]  # start on day 0
-
-while t[-1]<tmax:
-    k_t= k*I[-1] #update infection probability based on number currently infected
-    
-    r= random.random() #draw uniform random number between 0 and 1
-    t_next = - np.log(1.0-r)/k_t # calculate next time an infection happens
-    
-    
-    t.append(t[-1]+t_next) #record infection time
-    I.append(I[-1]+1) #record new infection
-    
-    if I[-1]==N:
-        break ##stop sim if everyone is infected
-
-plt.plot(t,I)
-
-
-```
+:::Hider Simple Exponential Growth
+<iframe src="../MC_expgrowth.html" width="100%" height="550px"></iframe>
 :::
 
 ### SI Model
@@ -366,6 +349,8 @@ plt.plot(t,I)
 
 ```
 :::
+
+## Error Analysis
 
 # Fitting models to data
 
