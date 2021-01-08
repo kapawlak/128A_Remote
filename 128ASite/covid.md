@@ -252,102 +252,14 @@ code
 ### SI Model
 
 :::Hider SI Model Code
-```
-import numpy as np
-import random
-import matplotlib.pyplot as plt
-
-
-## Declare Constants
-N=1000
-tmax = 100 # days
-k = 3/14 ## new infections per infected per day
-
-## Data arrays
-
-I = [1]  #initial infected
-S = [N-I[-1]]  #initial susceptible 
-t = [0]  # start on day 0
-
-while t[-1]<tmax:
-    k_t= k*I[-1]*S[-1]/N #update infection probability based on number currently infected ANd susceptible
-    
-    r= random.random() #draw uniform random number between 0 and 1
-    t_next = - np.log(1.0-r)/k_t # calculate next time an infection happens
-    
-    
-    t.append(t[-1]+t_next) #record infection time
-    I.append(I[-1]+1) #record new infection
-    S.append(S[-1]-1)
-    
-    if S[-1]==0:
-        break ##stop sim if everyone is infected
-
-plt.plot(t,I)
-
-
-```
+<iframe src="../MC_si.html" width="100%" height="550px"></iframe>
 :::
 
 ### Full SIR Model
 
 
 :::Hider SIR Model Code
-```
-import numpy as np
-import random
-import matplotlib.pyplot as plt
-
-## Declare Constants
-N=1000
-tmax = 200 # days
-k = 3/14 ## new infections per infected per day
-g = 1/14 ## recoveries per person per day
-
-## Data arrays
-
-# Note: if I_0 is a small number there is a chance that the infections will all recover before an epidemic
-# happens. This is one of the important reasons stochastic modelling is actually more accurate in small pops!
-I = [2]  #initial infected 
-
-
-S = [N-I[-1]]  #initial susceptible 
-R = [0]  #initial recovered
-t = [0]  # start on day 0
-
-while t[-1]<tmax:
-    # The probability that something happens now considers either an infection *or* a recovery
-    k_t= k*I[-1]*S[-1]/N + g*I[-1]
-    
-    r= random.random() #draw uniform random number between 0 and 1
-    t_next = - np.log(1.0-r)/k_t # calculate next time an infection happens
-    
-    
-    t.append(t[-1]+t_next) #record event time
-    
-    ## We now have to "flip a coin" to figure out what happens 
-    event_r = random.random()
-    
-    prob_inf= (k*I[-1]*S[-1]/N)/(g*I[-1]+(k*I[-1]*S[-1]/N))
- 
-    ## If land on infection
-    if event_r < prob_inf:
-        I.append(I[-1]+1) #record new infection
-        S.append(S[-1]-1)
-        R.append(R[-1])
-    else:
-        I.append(I[-1]-1) #record new recovery
-        S.append(S[-1])
-        R.append(R[-1]+1)
-                                 
-    
-    if I[-1]==0:
-        break ##stop sim if infections end
-
-plt.plot(t,I)
-
-
-```
+<iframe src="../MC_sir.html" width="100%" height="550px"></iframe>
 :::
 
 ## Error Analysis
