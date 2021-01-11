@@ -224,19 +224,90 @@ Using the definition and units of $R_0$ given in [Eq](#Eq-R0), give arguments fo
 
 
 # Simulating Models
+In this part, we will look at basic numerical implementations of the models discussed. The code snippets presented are strictly an optional *starting point* for your project, and are provided for students who are unfamiliar with programming. The examples are given in Python 3, a universal scripting language which is easy to learn and is supported by Google Colab, making it easy to play with. If you intend to continue with a Python implementation, please be sure to install it on your machine (we also reccomend using Jupyter notebook for live compilation of your code).  
+
 
 ## SIR ODEs
+The ODE model of the SIR equations can be approached using most standard ODE techniques. While Scipy has an "odeint" package, it behaves like a blackbox, and we introduce it only as a simple method to get started. For you project, we reccomend deriving and implementing either the [Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) or an [Exponential Integrator](https://en.wikipedia.org/wiki/Exponential_integrator) to ensure you have full control over your results.
+
+### Getting Started with odeint
+
+To set your expecations for how the simulation should behave, we will now take a look at the odeint method from the Scipy package. The method may be imported by adding the following code to the top of your Python notebook:
 
 ```
-import numpy as np
-import odeint
-
-code
+from scipy.integrate import odeint
 
 ```
+
+The odeint package allows you to define a set of differential equations with fairly simple syntax. The first thing you want to do is define your system of equations.
+
+```
+def odes(eqs, t):
+     s, i, r = eqs
+```
+The line of code above is telling python that the variable named 'eqns' is the vector [s, i, r], and these are the values of interest. Next, we need to tell Python what our evolution rule is, by adding the following lines:
+
+```
+...
+dsdt = -k*s*i/N
+didt = k*s*i/N - g*i
+drdt = g*i
+
+```
+
+These lines tell how changes in [s, i, r] are processed at each time step. You will notice that they are simply the expressions for the differential equations derived previously! How simple! Finally, we need to actually assign these chages to the variables [s, i , r] by *returning* them in a vector of the same order:
+
+```
+...
+return [dsdt, didt, drdt]
+```
+
+On returning, the method will add the differential changes to the current values of [s, i, r]. Finally we need to call the method and save the results to a new variable.
+
+```
+sol = odeint(odes, [S0,I0,R0], times)
+
+```
+
+The syntax above is as follows:
+
+- `sol` is our variable which will store the results of our simulation
+- `odeint` is the call to initiate the simulation
+    - The first argument `odes` is a refrence to the method you defined above
+    - The second argument is a vector which gives the initial conditions for [s, i, r]
+    - The third argument is an array of times that the simulation should record the results. A quick way to construct this is using `np.linspace(start, end, number_of_samples)`
+
+
+After running the code, all you have to do is print the results to a plot.  The example below gives a minimum working example of the code. Feel free to open it on Colab (ctrl+click on the icon) and save your own version to play with.
+
+:::Hider SIR model with odeint
+<iframe src="../ODE_sir.html" width="100%" height="550px"></iframe>
+:::
+
+After getting familiar with the behavior of simulations, you should start constructing your own method from scratch. The problem with odeint is that a lot of things are happening behind the scenes: it's hard to tell if things like time-step size or precision limits are adversely affecting your results, and this will become even more true as you consider increasingly complex models -- the source code for the package is written in a combination of C++ and Machine Code, so what you are interacting with is 'port' to Python (called a 'wrapper'). 
+ 
+
+### Runge-Kutta
+
+The [4th Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) method is probably the most popular step-wise method for solving differential equations numerically. Roughly, the idea is that given the current state of the system, one should be able to compute the slopes, $dy/dt$, of the variables of interest and approximate the values of the variables at the end of some short time interval. There are many online guides for writing this algorithm in Python. 
+
+The error in this method is going to primarly come from the discitization of time, meaning your solution will *change* depending on how large the steps you take are. If you choose this method, be sure to show that your solutions are stable against changing the step size.
+
+### Exponential Integrators
+
+The [Exponential Integrator Method](https://en.wikipedia.org/wiki/Exponential_integrator) is a continous-time simulation that circumvents the step-size issue in the Runge-Kutta Method. Rather than approximate evolution via instantaneous slopes, one converts the set of differential equations into integral equations. Sometimes these integral equations can be manipuated into simpler expressions before numerical evaluation. The trade off here is whether or not the integrals to be evaluated can be done precisely. 
 
 ## Error Analysis
 
+In the ODE version of the SIR model, there is no natural way to analyze e.g. variance -- the ODE method presupposes you are working with average behaviors and doesn't account for fluctuations about the mean. 
+
+For this project, there is a 'hacky' solution to the problem: Say you have determined that $k$ lies in the 1-$sigma$ confidence interval ($k_-$, $k_+$). Then you can approximate the 1-$sigma$ region of your simulation by running it for these upper and lower bounds.
+
+:::Hider Approximating Errors
+<iframe src="../ODE_sir_err.html" width="100%" height="550px"></iframe>
+:::
+
+The combinatorics of this get a bit messy when you start working with too many variables. 
 
 
 
