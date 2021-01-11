@@ -343,8 +343,8 @@ Before citing materials on some more complicated methods of finding $k$ from rea
 ::: Equation sir_approx
 $$
 \begin{aligned}
-\frac{d I(t)}{dt} &= k \big(\frac{S(t)}{N}\big) I(t) - g I(t) \\\\
-&\approx = k I(t) - g I(t)
+\frac{d I(t)}{dt} &= k \Big(\frac{S(t)}{N}\Big) I(t) - g I(t) \\\\
+&\approx  k I(t) - g I(t)
 \end{aligned}
 $$
 :::
@@ -354,7 +354,7 @@ $$
 ::: Equation sir_approx2
 $$
 \begin{aligned}
-\frac{d I(t)}{dt} &\approx = k I(t)
+\frac{d I(t)}{dt} &\approx  k I(t)
 \end{aligned}
 $$
 :::
