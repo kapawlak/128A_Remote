@@ -337,7 +337,9 @@ tbody > tr:nth-child(odd){background-color:var(--l3-bg)!important}
     color: var(--primary-font);
     font-size: 100%!important;
   }
-
+.Hider li{
+    text-align: left;
+}
 /*********************************************************************************/
 /* Animation -- set iteration to 0 to disable */
 
