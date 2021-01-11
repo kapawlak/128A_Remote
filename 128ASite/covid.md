@@ -301,13 +301,13 @@ The [Exponential Integrator Method](https://en.wikipedia.org/wiki/Exponential_in
 
 In the ODE version of the SIR model, there is no natural way to analyze e.g. variance -- the ODE method presupposes you are working with average behaviors and doesn't account for fluctuations about the mean. 
 
-For this project, there is a 'hacky' solution to the problem: Say you have determined that $k$ lies in the 1-$sigma$ confidence interval ($k_-$, $k_+$). Then you can approximate the 1-$sigma$ region of your simulation by running it for these upper and lower bounds.
+For this project, there is a 'hacky' solution to the problem: Say you have determined that $k$ lies in the 1-$sigma$ confidence interval ($k_-$, $k_+$). Then you can approximate the 1-$\sigma$ region of your simulation by running it for these upper and lower bounds.
 
 :::Hider Approximating Errors
 <iframe src="../ODE_sir_err.html" width="100%" height="550px"></iframe>
 :::
 
-The combinatorics of this get a bit messy when you start working with too many variables. 
+Not only do the approximations degrade when you start working with too many variables, since the composition of 1-$\sigma$ regions do not result in a total 1-$\sigma$ region, but also the combinatorics of this get a bit messy necessitating a for-loop to look at all extremal cases. 
 
 
 
@@ -338,11 +338,85 @@ The combinatorics of this get a bit messy when you start working with too many v
 # Fitting models to data
 
 ## Early Data: Getting $k$
+Before citing materials on some more complicated methods of finding $k$ from real data, let's look at some simple ways of approximating it from early reporting. Recall the SIR equations given in [Eq][#Eq-SIR], and consider their behavior *very early in the pandemic*. At the outset, we know that the number of infected individuals will be small, and hence, $S \approx N$. If we make this substitution in our model, we will find that the equation for $I(t)$ *decouples* from $S(t)$:
+
+::: Equation sir_approx
+$$
+\begin{aligned}
+\frac{d I(t)}{dt} &= k \big(\frac{S(t)}{N}\big) I(t) - g I(t) \\\\
+&\approx = k I(t) - g I(t)
+\end{aligned}
+$$
+:::
+
+ Furthermore, if we look at only a short time interval so we can mostly ignore "recveries", we find that
+
+::: Equation sir_approx2
+$$
+\begin{aligned}
+\frac{d I(t)}{dt} &\approx = k I(t)
+\end{aligned}
+$$
+:::
+
+which is simply the exponential growth equation that can be integrated to $I(t) = I_0 e^{kt}$. This means, for selectively chosen data early on in a regions' epidemic, we can take the $\log$ of the infections and use the slope of the line of best fit to approximate $k$. 
+
+::: Note
+Be careful! A common pitfall that students fall into is working with the data for **cummulative infections** rather than current infections. Cumulative infections actually reflect the quantity $N- S(t)$! You will need to pretreat your data for most uses. In this case, since we are looking at the behavior for a sufficiently small, sufficiently early sample, we would expect cummulative infections and current infections to be roughly the same.
+:::
+
+
+Being picky about the data that this method is applied to is important. Take a look at the figure below showing NZ's data on the logarithmic scale and answer the questions that follow.
+
+:::::::::Figure testingskew m
+::::::row
+:::col l6
+![How the logarithmic plot might appear](../imgs/testingbad.png)
+
+a. How your logarithmic plot will likely appear.
+:::
+:::col l6
+![What causes the deviations?](../imgs/testingbad2.png)
+:::
+b. Pay attention to features, and think about what their causes are!
+::::::
+:::::::::
+
+
+
+
+:::Question
+Consider the logarithmic plot of NZ's data in [Fi](#Fi-testingskew) a, where there are two regions that break the expected linearity. 
+1. The first anomaly is a sudden jump in cases very early on. What caused this in the data? Hint: COVID19 did not suddenly become less infectious 😉, this is an aritfact of our observational methods. 
+2. The second is a gradual relaxation of the slope to a new value. What factors likely contributed to this?
+3. Between what dates should you apply the approximation for $k$ discussed above?
+4. What facts about the data set might you need to argue about your approimation's validity?
+:::
+
 
 ## Why $g$ should be found and not fit
 
+Too many free parameters is bad. All epidemiologists rely on clinical profiles of the [Serial Interval](https://en.wikipedia.org/wiki/Serial_interval), which gives you the average time between primary infection and secondary infection onsets. 
+
+## Methods for Fitting Complex models.
+
+## Data Sources
+
 # Extensions
 
+After getting a handle on applying the basic SIR models, you are expected to choose an 'Extension' of the model that allows you to quantitatively analyze some feature of the pandemic. You are free to come up with your own creative questions to investigate! If you are not interested in this direction, here are some ideas on what can be done:
+
+:::Hider Common Extensions
+- Any of the known [Compartmental Models in Epidemiology](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology)
+- Modelling Vaccine Distribution Rate v.s. Total Number Infected at Herd Immunity point
+- Predicting hospital surge capacity.
+:::
+
+:::Hider Creative Extensions
+- Modelling the efficacy of Social-Distancing: promote $k$ to a time dependent function.
+- Age Classes: Estimating $k$ within and between groups, predicting outcomes
+- Estimating the COVID19 incubation period
+:::
 # Write-Up
 
 
