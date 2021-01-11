@@ -417,6 +417,17 @@ After getting a handle on applying the basic SIR models, you are expected to cho
 - Age Classes: Estimating $k$ within and between groups, predicting outcomes
 - Estimating the COVID19 incubation period
 :::
-# Write-Up
 
+# Project and Write-Up
+
+Your project is the following: For a Country, State or City of you choosing, construct an extended model that quantitatively analyzes the COVID19 outbreak. This model should rely on parameters that are extracted from fitting that region's data, and make at least one predictive projection. 
+
+The write up should contain the following elements in addition to the basic lab report requirements:
+
+- A demonstration that the Basic SIR model (no extension) fits at-least some of the data
+- A demonstration of your Extended SIR model that highlights improvements to the basic model.
+- Review of all fit parameters and their error bounds
+- Plots demonstrating your model's predictions with error-bounds
+- At least one signifigant prediction (e.g. Peak time, Herd Immunity time, Total Infections or Deaths expected), with error bounds and clear arguments for the validity of your result based on the data and your model. If you do not think your result is valid, you must explictly discuss why and how you would correct this in the future
+- Comparison of your prediction with a published model if applicable, otherwise a demonstration that your result is reasonable on past data.
 
