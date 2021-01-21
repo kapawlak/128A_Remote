@@ -309,6 +309,32 @@ For this project, there is a 'hacky' solution to the problem: Say you have deter
 
 Not only do the approximations degrade when you start working with too many variables, since the composition of 1-$\sigma$ regions do not result in a total 1-$\sigma$ region, but also the combinatorics of this get a bit messy necessitating a for-loop to look at all extremal cases. 
 
+
+
+
+## Continuous Time Markov Model
+
+
+### Simple Exponential Growth
+:::Hider Simple Exponential Growth
+<iframe src="../MC_expgrowth.html" width="100%" height="550px"></iframe>
+:::
+
+### SI Model
+
+:::Hider SI Model Code
+<iframe src="../MC_si.html" width="100%" height="550px"></iframe>
+:::
+
+### Full SIR Model
+
+
+:::Hider SIR Model Code
+<iframe src="../MC_sir.html" width="100%" height="550px"></iframe>
+:::
+
+## Error Analysis
+
 # Fitting models to data
 
 ## Early Data: Getting $k$
