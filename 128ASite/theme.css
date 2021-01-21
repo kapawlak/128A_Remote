@@ -340,6 +340,11 @@ tbody > tr:nth-child(odd){background-color:var(--l3-bg)!important}
 .Hider li{
     text-align: left;
 }
+
+li{
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
 /*********************************************************************************/
 /* Animation -- set iteration to 0 to disable */
 
