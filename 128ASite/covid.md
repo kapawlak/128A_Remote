@@ -1,27 +1,32 @@
 # COVID 19 Data Analysis Project
 
+<center>TAs: Ari Kaplan, Rebecca Zhang </center>
 
-:::Materials 
-- Computer
-- Your programming language of choice
+## Overview
+
+In this project, you will construct an SIR model to quatitatively simulate the progression of the COVID19 pandemic in a Country, State, or City of choice. You will begin by first drafting code to simulate the "basic" SIR model, which is the starting point of most epidemiological work. 
+
+Your first job is to demonstrate that your code runs as expected and generates reasonable data for arbitrary parameters. Following this, you will extract parameters from *real data* and compare your SIR model results.
+
+After understanding the basic process, you will be tasked with *extending* the SIR model in order to answer a specific question of interest to you (e.g. 'How many vaccines need to be distributed in order to reach herd immunity in CA by Fall?' , 'How effective is lockdown in reducing $R_0$ in urban v.s. rural areas?'). A list of common extensions, such as the SEIR model, are listed in Part V, but you are encouraged to develop your own ideas. 
+
+
+:::Hider Schedule Overview
+|| Week 1 | Week 2 | Week 3 |
+| ------- | ------ | ------ | ------ |
+| **Early in Week**  | Start Working on SIR Code | Decide on SIR Model extension to pursue and add to model code | Groups give presentation of work |
+| **Late in Week** | Present working code progress, Find data sources, start fitting parameters | Run SIR + Extension with parameters fit from data | Report due at 11:59 pm |
+
 :::
-
 # Introduction to Epidemics
 
 The 2020 SARSCov2 pandemic has resulted in mandatory remote instruction of all courses at UCSB until at least June 2021, including all instructional physics laboratories. The educational silver-lining of this event is the opportunity to learn about both Statistical Physics and Biophysics!
 
 While generally considered to be within the field of biology, epidemiology depends on the pillars of statistical physics and employs many of the same techniques, mathematics and analysis strategies. In fact, many of the early and best performing models for COVID19 spread were published by Physicists[fn]See, for example, [Covid19 Scenerios](https://covid19-scenarios.org/) run by the Neher Lab in Basel and also [work](https://arxiv.org/abs/2006.02036) by renowned Statistical Physicist Nigel Goldenfeld[/fn]. 
 
-Students who choose this project will learn about various modeling frameworks to understand epidemics.  They will use real data to initialize and evaluate models, investigate the meaning of vocabulary such as “curve flattening”, and the feasibility of approaches like "herd immunity"
+Students who choose this project will learn about the mean-field modeling framework in the context of epidemics.  They will use real data to initialize and evaluate models, investigate the meaning of vocabulary such as “curve flattening”, and the feasibility of approaches like "herd immunity"
 
 This project is very open ended: Students are strongly encouraged to ask questions they are interested in! 
-
-## COVID19: History
-
-This is a placeholder for background on history
-
-# Building Models from Scratch
-
 ## The Statistical Physics of Epidemics
 
 In Statistical Physics, one is concerned with the study of parametrically large numbers of "particles", and the behavior of these under different internal and external conditions. The qualifier "parametrically large numbers" is critical here -- while the classical mechanics equations for few body systems are a woefully inadequate framework here, large numbers of particles allow us to apply the principles of *statistics* to look at average behavior with high levels of confidence.
@@ -36,14 +41,15 @@ Though developed for the study of particulate matter, the techniques of Statisti
 
 In your courses, you have likely encountered **Thermodynamics**, which focuses on the *equations of state* (e.g. $PV=NRT$ ) governing *macroscopic variables* that describe bulk matter in *equilibrium*. You may have found the topic boring, if not an exercise in memorization [fn]Even as a Ph.D. in statistical physics, I certainly did![/fn]. Thermodynamics is, ultimately, a byproduct of the far richer field of **Statistical Mechanics**, where one uses their knowledge of the "microscopic rules" governing individual particles, along with statistical principles, to develop models and equations for their collective behavior from the ground up.
 
-In this project, we will be working to develop our epidemic models: In the SIR approach, we will consider the *average* behavior of individuals to generate macroscopic equations that should capture the essential features of COVID19 progression in populations. Like thermodynamics, our model will focus on general equations that describe average characteristics of a given population. There is a catch, however: unlike thermodynamics, our system is *out-of-equilibrium*, and hence constantly evolving in time. This means our equations will appear, naturally, in the form of time-dependent differential equations. 
-
-After understanding the SIR model, we will look at an Statistical-Mechanics like approach that goes beyond the average behaviors of individuals, and can algorithmically provide a more complete characterization of an epidemic. In this Markov Model approach, we will learn how to generate Master Equations that ascribe probabilities to all possible histories of an outbreak based on the microscopic transmission events that may or may not occur. This extremely powerful technique, very similar in nature to Quantum Field Theory, is used in fields ranging from nuclear physics to data science. 
+In this project, we will be working to develop our epidemic models from first principles: We will start by discussing the way that infections spread on a *microscopic*, i.e. individual, level and then use our intuition suppose how we can apply this to large numbers of individuals. This will lead us to probabilistic rules governing the *average* behavior of individuals, and eventually macroscopic equations that should capture the essential features of COVID19 progression in *large* populations. Like thermodynamics, our final model will focus on general equations that describe average characteristics of a given population. There is a catch, however: unlike thermodynamics, our system is *out-of-equilibrium*, and hence constantly evolving in time. This means our "state equations" will appear, naturally, in the form of time-dependent differential equations. 
 
 
 
+# Building Models from Scratch
 
-### The Life Cycle of a Virus
+We start this section with a short description of how viral infections spread, starting at the *molecular level*. We will see that all scales of a viral outbreak are governed by *exponential* behavior: A single virus that is only about 200nm wide managed to replicate exponentially and infect a large fraction of humans on Earth! 
+
+## The Life Cycle of a Virus
 
 We will now start framing the problem quantitatively. To set the stage for mathematics, we first have to think really hard about disease spread and how to characterize it.
 
@@ -201,7 +207,7 @@ R_0 \equiv \frac{k}{g}
 $$
 :::
 
-The units of $R_0$ defined above become new infections per recovery, and a little thought about this tells us why epidemiologists are so interested in its value.
+The units of $R_0$, called the **basic reproduction number**, defined above become new infections per recovery, and a little thought about this tells us why epidemiologists are so interested in its value.
 
 ::: Question
 Using the definition and units of $R_0$ given in [Eq](#Eq-R0), give arguments for the following questions:
@@ -211,26 +217,16 @@ Using the definition and units of $R_0$ given in [Eq](#Eq-R0), give arguments fo
 
 :::
 
-## Markov Models
+
+# Simulating the SIR Model
+In this part, we will look at basic numerical implementations of the SIR model. The code snippets presented are strictly an optional *starting point* for your project, and are provided for students who are unfamiliar with programming. The examples are given in Python 3, a universal scripting language which is easy to learn and is supported by Google Colab, making it easy to play with. If you intend to continue with a Python implementation, please be sure to install it on your machine (we also recommend using Jupyter notebook for live compilation of your code).  
 
 
-### What is a Markov Model?
+The ODE model of the SIR equations can be approached using most standard ODE techniques. While Scipy has an "odeint" package, it behaves like a blackbox, and we introduce it only as a simple method to get started. 
 
-### Infected
+**For your project, we recommend deriving and implementing either the [Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) or an [Exponential Integrator](https://en.wikipedia.org/wiki/Exponential_integrator) to ensure you have full control over your results**.
 
-### Susceptible
-
-### Removed
-
-
-# Simulating Models
-In this part, we will look at basic numerical implementations of the models discussed. The code snippets presented are strictly an optional *starting point* for your project, and are provided for students who are unfamiliar with programming. The examples are given in Python 3, a universal scripting language which is easy to learn and is supported by Google Colab, making it easy to play with. If you intend to continue with a Python implementation, please be sure to install it on your machine (we also recommend using Jupyter notebook for live compilation of your code).  
-
-
-## SIR ODEs
-The ODE model of the SIR equations can be approached using most standard ODE techniques. While Scipy has an "odeint" package, it behaves like a blackbox, and we introduce it only as a simple method to get started. For you project, we recommend deriving and implementing either the [Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) or an [Exponential Integrator](https://en.wikipedia.org/wiki/Exponential_integrator) to ensure you have full control over your results.
-
-### Getting Started with odeint
+## Quick Start with odeint
 
 To set your expectations for how the simulation should behave, we will now take a look at the odeint method from the Scipy package. The method may be imported by adding the following code to the top of your Python notebook:
 
@@ -287,13 +283,13 @@ After running the code, all you have to do is print the results to a plot.  The 
 After getting familiar with the behavior of simulations, you should start constructing your own method from scratch. The problem with odeint is that a lot of things are happening behind the scenes: it's hard to tell if things like time-step size or precision limits are adversely affecting your results, and this will become even more true as you consider increasingly complex models -- the source code for the package is written in a combination of C++ and Machine Code, so what you are interacting with is 'port' to Python (called a 'wrapper'). 
  
 
-### Runge-Kutta
+## Runge-Kutta
 
 The [4th Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) method is probably the most popular step-wise method for solving differential equations numerically. Roughly, the idea is that given the current state of the system, one should be able to compute the slopes, $dy/dt$, of the variables of interest and approximate the values of the variables at the end of some short time interval. There are many online guides for writing this algorithm in Python. 
 
 The error in this method is going to primarily come from the discretization of time, meaning your solution will *change* depending on how large the steps you take are. If you choose this method, be sure to show that your solutions are stable against changing the step size.
 
-### Exponential Integrators
+## Exponential Integrators
 
 The [Exponential Integrator Method](https://en.wikipedia.org/wiki/Exponential_integrator) is a continuous-time simulation that circumvents the step-size issue in the Runge-Kutta Method. Rather than approximate evolution via instantaneous slopes, one converts the set of differential equations into integral equations. Sometimes these integral equations can be manipulated into simpler expressions before numerical evaluation. The trade off here is whether or not the integrals to be evaluated can be done precisely. 
 
@@ -370,9 +366,30 @@ Consider the logarithmic plot of NZ's data in [Fi](#Fi-testingskew) a, where the
 
 ## Why $g$ should be found and not fit
 
-Too many free parameters is bad. All epidemiologists rely on clinical profiles of the [Serial Interval](https://en.wikipedia.org/wiki/Serial_interval), which gives you the average time between primary infection and secondary infection onsets. 
+Your first instinct for determining $g$ is likely to sum up the deaths and recoveries together, and then fit $R(t)$ of your SIR model to these numbers while simultaneously fitting $I(t)$ to the infection data. While it is the most intuitive approach, there are a couple reasons why this is not necessarily the most correct or most accurate.
+
+First, let us return to our previous discussion on the "Removed" class. We claimed that this class pulls individuals from the Infected class, $I(t)$, at a rate $g$. This means that $g$ represents a total rate that considers recovery, death, *as well as* self-isolation and any other process that would permanently end an individual's ability to transmit the virus. Accurately fitting this value would require us to have data that details these events.  Moreover, if we consider the data that *is* collected, we realize that this data will have extreme **sampling bias** -- the infections and respective outcomes reported are likely going to reflect the parameters associated with *illness severe enough to seek medical attention* (e.g. older groups), rather than the nature of transmission in the general public. With so many asymptomatic and unreported cases, and the huge variety of behavioral responses individuals have to becoming ill, it is really impossible to obtain meaningful data to this end. 
+
+Secondly, consider a practical reason for not fitting $g$: In a good model, one seeks to limit the number of free parameters. On the mathematical end, the reason why is quite obvious -- more parameters gives you a better fit but does **not** necessarily improve its predictive capacity[fn]See famous complaints about parameter fixing in the Standard Model and the absurd number of parameters needed to specify SUSY models[/fn]. If you give me $N$ data points, I can always hand you a function with $N-1$ parameters that fits that data exactly, but my fit will have *no predictive power* for the $N+1$th point. From a numerical perspective, consider that you will be adding additional parameters to your model in the course of this project -- the complexity and computational time of your fitting algorithm will inevitably grow. As the number of parameters in a simulation grows, so does the likelihood of falling into "false minima" or complex parts of parameter space that result in poor fits. In the end, you want to keep your number of parameters as low as possible (no more than 4 for a single fit) to obtain meaningful, efficient results.
+
+All epidemiologists rely on clinical profiles of the [Serial Interval](https://en.wikipedia.org/wiki/Serial_interval), which gives you the average time between primary infection and secondary infection onsets. 
 
 ## Methods for Fitting Complex models.
+
+The basic estimates above serve as a decent starting point for analysis, but will almost certainly fail you once you start expanding your model to consider additional terms. In this section, we have provided some links to external tutorials focused on parameter fitting methods. The methods each of you will employ will vary depending on the question you are trying to ask, and the particular augmentations to the model that you have made.
+
+### Least Squares with ```lmfit```
+[This tutorial on Towards Data Science](https://towardsdatascience.com/infectious-disease-modelling-fit-your-model-to-coronavirus-data-2568e672dbc7) walks users through using the ```lmfit``` package in python to fit a set of differential equations to data. The method essentially runs your simulation many times, slightly changing parameters each time, to search for the least-squares minimum. This method will struggle in simulations with too many parameters or a model that behaves erratically.
+
+### Analytic Parameter Calculations
+[This lecture note](https://www.math.unm.edu/~sulsky/mathcamp/ApplyData.pdf) covers some useful analytic methods for extracting parameters for a given model. For more complex models, it might be useful to apply some of the ideas in this document to estimate some parameters by hand so you can apply an algorithm on the rest.
+
+
+### Other Resources Students Like
+ - [Kaggle Tutorial](https://www.kaggle.com/lisphilar/covid-19-data-with-sir-model)
+ - [Example of a Professionally Built COVID19 Model](https://covid19-scenarios.org/) used to predict Hospital Surge Capacity. Many students have found the [explanation of their modelling methods](https://covid19-scenarios.org/about) very helpful
+
+
 
 ## Data Sources
 
@@ -383,13 +400,22 @@ After getting a handle on applying the basic SIR models, you are expected to cho
 :::Hider Common Extensions
 - Any of the known [Compartmental Models in Epidemiology](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology)
 - Modelling Vaccine Distribution Rate v.s. Total Number Infected at Herd Immunity point
-- Predicting hospital surge capacity.
+    - In this exploratory project, you would modify your SIR equations to include a term that accounts for the effect of vaccination (e.g. removing individuals from the susceptible compartment). You could evaluate your model for different vaccine distribution rates, vaccine effectiveness, numbers of 'antivaxxers', and project how long a vaccine drive would need to go on before general immunity halts the pandemic. 
+- Seasonal Forcing
+    - We have seen, first hand, that the transmissibility of COVID19 is highly seasonal: many of the epidemics world-wide quieted down in the summer months, only to return with vigor at the end of Fall. In this project, you would promote $k$ to be a time-dependent sinusoidal function that peaks in winter and bottoms out in summer. After fitting the parameters that define $k(t)$, you would use your model to make inferences and predictions.
 :::
 
 :::Hider Creative Extensions
-- Modelling the efficacy of Social-Distancing: promote $k$ to a time dependent function.
-- Age Classes: Estimating $k$ within and between groups, predicting outcomes
+- Modelling the efficacy of Social-Distancing
+ - Country, state and city-wide lock downs have had varying success in the current pandemic. In order to quantify this success, we can look at how lock-downs have changed $R_0$ over time. In this variety of project, you would promote $k$ to a time dependent function and try to infer its shape by a least-squares fitting of data that spans a time before and after a lockdown was mandated. A common assumption made for this kind of analysis is that $k(t)$ should have the shape of a sigmoid.
+- Age Classes
+    - Different age classes have different social behaviors. By using data that separates infections by age classes, you can fit a $k$ parameter for each age class and for inter-class interactions.   
 - Estimating the COVID19 incubation period
+    - One great feature of SEIR models is that they accommodate a so-called "incubation period", which is an interval of time after exposure to the virus where a person is not actively infected and capable of transmitting it to a new host. This additional waiting time actually changes the overall *shape* of the infection curve. By fitting the SEIR model to real data, varying the average time one incubates the virus, you can obtain an estimate of the average incubation time.
+:::
+
+::: Other Vague Ideas
+- Predicting hospital surge capacity.
 :::
 
 # Project and Write-Up
