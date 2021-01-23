@@ -3,7 +3,7 @@
 --------
 
 
-**Main Contact: Carl Padgett (cpadgett@ucsb.edu)**
+<center><b>TA: Carl Padgett (cpadgett@ucsb.edu)</b></center>
 
 # Introduction
 This project consists of simulating the passage of muons through the earth’s atmosphere. You will create two side-by-side models, one that simulates this process for a flat earth and one that does the same for a spherical earth. Each model will use a random number generator to generate “data” in the form of muons counted per zenith angle. The goal of the project is to distinguish between the results of the two models by finding a statistically significant difference between the muon flux rates for the round earth model and the flat earth model. If this is accomplished, we will claim that we can prove that the earth is round!

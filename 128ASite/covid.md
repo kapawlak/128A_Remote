@@ -1,6 +1,6 @@
 # COVID 19 Data Analysis Project
 
-<center>TAs: Ari Kaplan, Rebecca Zhang </center>
+<center>TAs: Ari Kaplan (arikaplan@ucsb.edu), Rebecca Zhang (manxuanzhang@ucsb.edu) </center>
 
 ## Overview
 
@@ -407,14 +407,14 @@ After getting a handle on applying the basic SIR models, you are expected to cho
 
 :::Hider Creative Extensions
 - Modelling the efficacy of Social-Distancing
- - Country, state and city-wide lock downs have had varying success in the current pandemic. In order to quantify this success, we can look at how lock-downs have changed $R_0$ over time. In this variety of project, you would promote $k$ to a time dependent function and try to infer its shape by a least-squares fitting of data that spans a time before and after a lockdown was mandated. A common assumption made for this kind of analysis is that $k(t)$ should have the shape of a sigmoid.
+    - Country, state and city-wide lock downs have had varying success in the current pandemic. In order to quantify this success, we can look at how lock-downs have changed $R_0$ over time. In this variety of project, you would promote $k$ to a time dependent function and try to infer its shape by a least-squares fitting of data that spans a time before and after a lockdown was mandated. A common assumption made for this kind of analysis is that $k(t)$ should have the shape of a sigmoid.
 - Age Classes
     - Different age classes have different social behaviors. By using data that separates infections by age classes, you can fit a $k$ parameter for each age class and for inter-class interactions.   
 - Estimating the COVID19 incubation period
     - One great feature of SEIR models is that they accommodate a so-called "incubation period", which is an interval of time after exposure to the virus where a person is not actively infected and capable of transmitting it to a new host. This additional waiting time actually changes the overall *shape* of the infection curve. By fitting the SEIR model to real data, varying the average time one incubates the virus, you can obtain an estimate of the average incubation time.
 :::
 
-::: Other Vague but Cool Ideas
+:::Hider Other Vague but Cool Ideas
 - Predicting hospital surge capacity.
 - Investigating the spread of mutants (beware, cool but tricky!)
 - Endemics: If immunity is temporary (due to mutations or human biology), will COVID19 stay around like the flu?

@@ -1,17 +1,53 @@
 [
     {
-        "name": "Course Info",
+        "name": "Info",
         "file": "courseinfo",
-        "showSmall": "false"
+        "showSmall": "true"
     },
     {
         "name": "COVID",
         "file": "covid",
-        "showSmall": "true"
+        "showSmall": "false"
     },
     {
         "name": "Muon",
         "file": "muon",
-        "showSmall": "true"
+        "showSmall": "false"
+    },
+    {
+        "name": "Hubble",
+        "file": "hubble",
+        "showSmall": "false"
+    },
+    {
+        "name": "NuTeV",
+        "file": "nutev",
+        "showSmall": "false"
+    },
+    {
+        "name": "Spectrometer",
+        "file": "spectrom",
+        "showSmall": "false"
+    },
+    {
+        "name": "Chua",
+        "file": "chua",
+        "showSmall": "false"
+    },
+   
+    {
+        "name": "Rotation",
+        "file": "gyro",
+        "showSmall": "false"
+    }, 
+    {
+        "name": "Interferometer",
+        "file": "michaelson",
+        "showSmall": "false"
+    },
+    {
+        "name": "Planck",
+        "file": "planck",
+        "showSmall": "false"
     }
 ]
