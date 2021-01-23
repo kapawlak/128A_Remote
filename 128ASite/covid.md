@@ -102,13 +102,18 @@ Where the constant $k$ has units which are *extremely* important: the proportion
 
 You're probably familiar with this equation from an ODE class -- we can easily integrate it to obtain an expression:
 
-:::Equation
+:::Equation Isol
 $$
 I(t) = I_0 e^{k t}
 $$
 :::
 
 This expression, however, is incredibly wrong under comparison to reality. This equation predicts that after 10 days, the number of people infected would exceed the total population of earth! This isn't surprising, since we didn't include this information anywhere, however, the fundamental error made is not superficial. The root of the problem is that we forgot to consider how many people in the population are *susceptible*, or otherwise able to contract the virus, and how this changes over time.
+
+:::Question
+1. Plot the $I(t)$ v.s. $t$ curve in [Eq](#Eq-Isol) with your choice of parameters $I_0$ and $k$
+2. Now plot $\ln I(t)$. What is the slope of this line?
+:::
 
 ### Susceptible
 
@@ -158,6 +163,9 @@ With all this work, we might hope that our new equation bares semblance to reali
 Show that the expressions given in the solution [Eq](#Eq-sisolution) obey the conservation law $N= S(t) + I(t)$ for any time $t$.
 :::
 
+:::Question
+ Plot the solution given in [Eq](#Eq-sisolution) using your choice of parameters. 
+:::
 ### Removed
 
 We again have to define a new variable, $R(t)$, to keep track of our removed population. We now assert that each infected person remains infectious for $\tau$ days on average. This means that the removal *rate* from the infectious pool is $g\equiv 1/\tau$. Our equation for $\dot I(t)$ is modified as:
