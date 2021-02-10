@@ -1,5 +1,15 @@
 # DIY Spectrometer
 
+
+:::Materials
+ - Diffraction Grating
+ - Pi Camera
+ - Something to construct a slit
+ - Spectrometer Enclosure
+ - ImageJ software
+:::
+
+# Introduction
 There are multiple resources online for building DIY spectrometer. Here we will summarize the overall goals of the build and ways of making each component.
 
 

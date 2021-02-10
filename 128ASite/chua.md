@@ -1,10 +1,31 @@
 # Chua's Circuit
 
-The best resource for building Chua’s Oscillator is the [instructional paper](https://people.eecs.berkeley.edu/~chua/papers/Chua93.pdf) written by Chua himself! In addition to making an experimental measurement of the [Feigenbaum Constant](https://en.wikipedia.org/wiki/Feigenbaum_constants#The_first_constant), we recommend reproducing one of the measurements suggested in this paper.  Another great resource is [http://www.chuacircuits.com/](http://www.chuacircuits.com/) , which gives a slower walkthrough of the building and tuning process, but does not discuss the chaos measurements in the depth needed to write a report. Furthermore, this [excellent pdf](https://ai.berkeley.edu/~ee129/fa07/handouts/ChuasCircuitForHighSchoolStudents-PREPRINT.pdf) includes step-by-step build instructions, breadboard diagrams and descriptions, where to purchase components, as well as a way to utilize your 3mm audio jack as an oscilloscope. 
+:::Materials
+- Circuit Kit
+    - 2k 10-turn potentiometer
+    - (2) 220 Ohm Resistors
+    - 2.2 kOhm Resistor
+    - (2) 22k Ohm Resistors
+    - 3.3 kOhm Resistor
+    - 100 nF NONCERAMIC capacitor
+    - (2) 5 nF NONCERAMIC capacitor
+    - 12 mH Inductor with less than 30 Ohm resistance 
+    - (2) LF411 Op-amp 
+- 9V Battery
+- Picoscope
+:::
+# Introduction 
+
+Chua's Circuit is a special non-linear circuit who's Lissajous curve takes on a chaotic trajectory for certain parameter values. In this lab, you will simulate and construct this circuit. After a working setup is obtained, you will then investigate some of the features of its phase space. In particular, you should use your circuit to experimentally measure [Feigenbaum's Constant](https://en.wikipedia.org/wiki/Feigenbaum_constants#The_first_constant), which is a universal number that relates the parameter distances between bifurcation points in single-parameter Chaotic systems.
 
 :::Figure
 ![](../imgs/Chua/chaos.gif)
 :::
+
+
+## Selected Resources
+The best resource for building Chua’s Oscillator is the [instructional paper](https://people.eecs.berkeley.edu/~chua/papers/Chua93.pdf) written by Chua himself! In addition to making an experimental measurement of the Feigenbaum Constant, we recommend reproducing one of the measurements suggested in this paper.  Another great resource is [http://www.chuacircuits.com/](http://www.chuacircuits.com/) , which gives a slower walkthrough of the building and tuning process, but does not discuss the chaos measurements in the depth needed to write a report. Furthermore, this [excellent pdf](https://ai.berkeley.edu/~ee129/fa07/handouts/ChuasCircuitForHighSchoolStudents-PREPRINT.pdf) includes step-by-step build instructions, breadboard diagrams and descriptions, where to purchase components, as well as a way to utilize your 3mm audio jack as an oscilloscope. 
+
 
 In this manual, we will briefly summarize the basic build and list some component options. We also provide the equations for simulating Chua’s oscillator for convenience. 
 
@@ -43,8 +64,11 @@ Chua’s oscillator will require a few electronics components, which can either 
 
 ## Circuit Design 
 Recommended (tested by us): We recommend using the circuit design on chuascircuit.com, but replacing the “gyrator” with a 12mH inductor. Our working test models used the following components, which we will be able to lend to you if needed (contact us ASAP):
-- Breadboard +wires
-- 9V Batteries
+
+:::Hider Recommended Build Materials
+- Breadboard + wires
+- (2) 9V Batteries*
+- Picoscope
 - 2k 10-turn potentiometer
 - (2) 220 Ohm Resistors
 - 2.2 kOhm Resistor
@@ -53,8 +77,10 @@ Recommended (tested by us): We recommend using the circuit design on chuascircui
 - 100 nF NONCERAMIC capacitor
 - (2) 5 nF NONCERAMIC capacitor
 - 12 mH Inductor with less than 30 Ohm resistance 
-- (2) LF Opamp 
+- (2) LF411 Op-amp 
 
+*Due to mailing restrictions, we cannot ship these to you so you must purchase them yourself. 
+:::
 
 :::Figure
 ![](../imgs/Chua/circuit.png)
