@@ -80,7 +80,7 @@ This phenomenon, which is the reverse process of the photoelectric effect, is us
 LEDs are semiconductor devices. Nearly all such devices are constructed from arrangements of doped semiconductor materials. It is the geometry and electronic structure of these doped regions that gives a particular device its operational characteristics. In the case of an LED, P-type and N-type semiconductors are arranged as shown in [Fi](#Fi-semiconductor).
 
 :::RFigure semiconductor s
-![PN-junction](../imgs/LED/semiconductor.png)
+![PN-junction](../imgs/planck/semiconductor.png)
 :::
 
 An N-type semiconductor is doped with atoms with more valence electrons than the undoped material. A P-type semiconductor is doped with atoms with fewer valence electrons than the undoped material. For example, if silicon is doped with aluminum you
