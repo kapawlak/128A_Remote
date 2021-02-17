@@ -1,7 +1,7 @@
 # Chua's Circuit
 
 :::Materials
-- Circuit Kit
+- Circuit Kit @fa-wrench@
     - 2k 10-turn potentiometer
     - (2) 220 Ohm Resistors
     - 2.2 kOhm Resistor
@@ -12,8 +12,10 @@
     - 12 mH Inductor with less than 30 Ohm resistance 
     - (2) LF411 Op-amp 
 - 9V Batteries
-- PicoScope
-- Various Circuit Components
+- PicoScope @fa-wrench@
+- Various Circuit Components @fa-wrench@
+
+ @fa-wrench@: Included in kit
 :::
 # Introduction 
 

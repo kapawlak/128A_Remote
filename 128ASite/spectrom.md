@@ -30,15 +30,20 @@ $$
 Here, d is the distance between grating lines,  is the angle of transmission, and  is the order of the maximum (you will want to observe , which is the brightest).
 
 :::Figure
- ![Basic Spectrometer Scheme](../imgs/Spec/basicspec.png)
+ ![ Generic set-up for a simple 4-component spectrometer
+](../imgs/Spec/basicspec.png)
+
+ Generic set-up for a simple 4-component spectrometer
 :::
 
 ## Components
 A simple spectrometer has four important components: the enclosure, slit, diffraction grating and a detection screen or camera. Here we will briefly comment on each component and its effect on the spectrum quality.
 
 ### Enclosure 
-:::RFigure
-![](../imgs/Spec/enclosure.jpg)
+:::RFigure enclosure s
+![The 3D printed enclosure that will be sent in a package. Built for Rainbow Symphony grating cards and Arducam](../imgs/Spec/enclosure.jpg)
+
+The 3D printed enclosure that will be sent in a package. Built for Rainbow Symphony grating cards and Arducam
 :::
 The enclosure is the base of your spectrometer. It should do several things:
 1. Block external light from entering the spectrometer entirely, to ensure you can obtain clean spectrum with limited background noise.
@@ -106,7 +111,9 @@ For this project, we will be shipping out the aforementioned [Rainbow Symphony 1
 
 
 :::Figure align m
-![](../imgs/Spec/gratingcam.jpg)
+![The grating and camera fit snuggly into the printed enclosure. I added extra tape to secure the camera on this prototype build.](../imgs/Spec/gratingcam.jpg)
+
+The grating and camera fit snuggly into the printed enclosure. I added extra tape to secure the camera on this prototype build.
 :::
 
 ### Detection Screen (Camera)
