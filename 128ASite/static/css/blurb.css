@@ -496,27 +496,27 @@ ul, ol {
   display: block;
 }
 
- .xs img{
+ .xs img, .xs p{
   max-width:10em;
   max-height:10em;
  }
  
-.s img{
+.s img, .s p{
   max-width:15em;
   max-height:15em;
   }
 
-.m img{
+.m img, .m p{
   max-width:20em;
   max-height:20em;
 }
 
-.l img{
+.l img, .l p{
   max-width:25em;
   max-height:25em;
 }
 
-.xl img{
+.xl img, .xl p{
   max-width:40em;
   max-height:40em;
 }
