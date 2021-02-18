@@ -18,7 +18,7 @@ E = h \nu
 $$
 :::
 
-which directly relates the frequency of a photon to its energy. In this project, we will attempt to measure the value of $h$ using simple electronics components. One of these devices will be the light emitting diode or LED, which directly converts energy carried by electrons into photons in a controlled way. 
+which directly relates the frequency of a photon, $\nu$, to its energy, $E$. In this project, we will attempt to measure the value of $h$ using simple electronics components. One of these devices will be the light emitting diode or LED, which directly converts energy carried by electrons into photons in a controlled way. 
 
 
 The experiment has a fairly simple set up, but many factors involving the components can introduce error into your measurement. This experiment is a creative endeavor where you should push the limits of simple electronics and your knowledge of error analysis to refine results. Your goal in this experiment is simply to obtain **the most precise and accurate measurement of $h$ possible**.
@@ -77,38 +77,16 @@ This phenomenon, which is the reverse process of the photoelectric effect, is us
 
 
 ## LEDs
-LEDs are semiconductor devices. Nearly all such devices are constructed from arrangements of doped semiconductor materials. It is the geometry and electronic structure of these doped regions that gives a particular device its operational characteristics. In the case of an LED, P-type and N-type semiconductors are arranged as shown in [Fi](#Fi-semiconductor).
+LEDs (Light Emitting Diodes) are semiconductor devices with specially engineered energy bands that are able to produce a narrow band of photons. Nearly all such devices are constructed from arrangements of doped semiconductor materials. Like the reservoir discussed in the previous section, each semiconductor region has its own energy levels and chemical potentials. By combining two materials with ideally located energy bands, one can force electrons to jump between states and emit photons by applying a voltage across the junction. 
 
-:::RFigure semiconductor s
-![PN-junction](../imgs/planck/semiconductor.png)
+A basic picture of how LEDs work is as follows: 
+
+:::Figure LEDproc
+![](../imgs/planck/LEDProcess.png)
+
+The above image presents a very rough cartoon of how LEDs function. When the voltage is lower than the band gap energy, electrons in the N-type region cannot pass to the higher energy state in the P-type region. Once the voltage across the LED is tuned high enough, the valence electrons can jump to the nearby state in the P-type region. After some time, the electrons naturally decay to combine with one of the holes, since this is more energetically favorable. The difference in energy is emitted in the form of a photon. This process continues as long as the voltage is high enough to allow transport across the junction depletion region. 
 :::
 
-An N-type semiconductor is doped with atoms with more valence electrons than the undoped material. A P-type semiconductor is doped with atoms with fewer valence electrons than the undoped material. For example, if silicon is doped with aluminum you
-get a p-type semiconductor. If silicon is doped with phosphorous you get N-type. N-type semiconductors are “electron rich”, while p-type semiconductors are “hole rich”. Holes are simply empty orbitals. It is the movement of electrons (and holes) that is controlled by a semiconductor device.
-
-
-There are two ways you can hook up a diode: forward biased or reverse biased. In the reverse bias configuration the p-type side is connected to negative voltage and the N-type side to positive.
-
-When reverse biased the electrons in the N-type region are attracted to the positive potential away from the junction while the holes are attracted by the negative potential away from the junction
-
-In the forward biased configuration the P-type side is connected to positive voltage and the N-type side to negative. When forward biased the electrons in the N-type region are repelled from by the negative potential towards the junction while the holes are repelled by the positive potential towards the junction. At the junction the holes and electrons meet and current flows. In certain cases the energy of this recombination of electrons and holes is released as light energy. Then you have a light emitting diode.
-
-### Gap Energy
-
-So, how much energy is released/does it take to recombine these electrons and holes? Well, one way to measure it is by Eq. 1; measure the frequency/wavelength of the photons and multiply by h to get E. But the purpose of this experiment is to measure h; so Eq. 1 in a sense has two unknowns: E and h.
-When we have two unknowns we need two equations. Therefore we need another relationship here. That relationship is the band gap. The property that gives semiconductors their name is their band gap. The band gap is essentially the energy difference between the highest occupied orbital, AKA the valence band, (where the electrons live) and the lowest unoccupied orbital, AKA the conduction band (the holes). In a conductor the band gap is very small/zero; electrons move through the conduction band freely. In an insulator the band gap is very large; it takes a lot of energy (i.e., voltage difference) to put electrons up in the conduction band. A semiconductor has a small band gap.
-
-With an LED we can measure the band gap. It is related to the minimum voltage required to
-produce light, i.e., get the electrons and holes together. Different color LEDs have different band
-gaps and there for have different minimum voltages before they “turn on”. If one measures this
-threshold voltage, the band gap is then given by:
-
-:::Equation
-$$
-E = e  V_{th} 
-$$
-:::
-where $e$ is the charge on an electron and $V_{th}$ is the threshold voltage. We can now wave our hands a bit more than we have already and equate Eq. 1 and Eq. 2. By measuring $\nu$ (practically speaking $\lambda_{max}$, which is related simply to $\nu$ by $\lambda\nu = c$) and $V_{th}$ , and plugging in the appropriate value for $e$, our only unknown is $h$. Therefore, we can use a set of LEDs to measure Planck’s constant.
 
 
 # General Experiment
@@ -124,3 +102,14 @@ For this experiment, you should set up a simple circuit that lights up an LED wi
 
 A rudimentary first approach to calculating $h$ would be to slowly increase the voltage until the LED begins to turn on. You can then measure the voltage across the LED and record this for your calculation of $h$. A value obtained this way will likely have significant error: your eye's ability to detect photons, the IV characteristics of the LED, the internal resistance of your voltmeter, among other issues. Your project begins here: you should investigate, refine and improve your set up in any way you see fit. You are encouraged to research (and cite) online references, component datasheets, papers, etc in the process of improving your experiment.  
 
+# Useful References
+
+1. [All about Diodes](https://learn.sparkfun.com/tutorials/diodes?_ga=2.235408962.25460028.1613608956-2087921779.1613608956)
+
+2. [All about LEDs and reading their datasheets](https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds?_ga=2.266063436.25460028.1613608956-2087921779.1613608956)
+
+3. [Another resource on LEDs](https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Semiconductors/Light_Emitting_Diodes)
+
+4. [A simple lab that you can improve on](http://web2.physics.fsu.edu/~2016-YSP/experiments/LEDPlanckExpt.pdf)
+
+5. [Review of PN junctions](https://www.electronics-tutorials.ws/diode/diode_2.html)
