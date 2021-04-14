@@ -15,39 +15,29 @@
         "showSmall": "false"
     },
     {
-        "name": "Hubble",
-        "file": "hubble",
-        "showSmall": "false"
-    },
-    {
-        "name": "NuTeV",
-        "file": "nutev",
-        "showSmall": "false"
-    },
-    {
         "name": "Spectrometer",
-        "file": "spectrom",
+        "file": "spectromx",
         "showSmall": "false"
     },
     {
         "name": "Chua",
-        "file": "chua",
+        "file": "chuax",
         "showSmall": "false"
     },
    
     {
         "name": "Rotation",
-        "file": "gyro",
+        "file": "gyrox",
         "showSmall": "false"
     }, 
     {
         "name": "Interferometer",
-        "file": "michaelson",
+        "file": "michaelsonx",
         "showSmall": "false"
     },
     {
         "name": "Planck",
-        "file": "planck",
+        "file": "planckx",
         "showSmall": "false"
     }
 ]

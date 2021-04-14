@@ -327,21 +327,39 @@ tbody > tr:nth-child(odd){background-color:var(--l3-bg)!important}
 
 
 /*Hiders*/
-.Hider > header {
+.Hider > .ac-label {
     background-color: var(--primary-dark);
     color: var(--primary-font);
     font-size: 100%!important;
-    border-bottom: 1px solid white!important;
+    font-weight: lighter;
   }
 
-  .Hider > footer {
-    background-color: var(--primary-dark);
-    color: var(--primary-font);
-    font-size: 100%!important;
-  }
-.Hider li{
+
+  .Hider > .ac-text, .Exercise .ac-sub-text {
+    opacity: 0.2;
+    max-height: 1px ;
+    
+}
+
+.Hider li, .Hider ol{
     text-align: left;
 }
+
+.Hider ul > li > ul > li::before{
+    content: '\f054   ';
+    font-family: FontAwesome!important;
+    font-size: 80%!important;
+  }
+.Hider  ul > li{
+    list-style-type: none;
+    font-size: 100%!important;
+  }
+
+.Hider  ul > li > ul{
+    list-style-type: none;
+    font-size: 80%!important;
+    line-height: 2;
+  }
 
 li{
     margin-bottom: 10px;

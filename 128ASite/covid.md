@@ -1,6 +1,6 @@
 # COVID 19 Data Analysis Project
 
-<center>TAs: Ari Kaplan (arikaplan@ucsb.edu), Rebecca Zhang (manxuanzhang@ucsb.edu) </center>
+<center>TA: Diandian Wang  (diandian@ucsb.edu) </center>
 
 ## Overview
 
@@ -355,8 +355,9 @@ a. How your logarithmic plot will likely appear.
 :::
 :::col l6
 ![What causes the deviations?](../imgs/testingbad2.png)
-:::
 b. Pay attention to features, and think about what their causes are!
+:::
+
 ::::::
 :::::::::
 
