@@ -29,7 +29,7 @@ The experiment has a fairly simple set up, but many factors involving the compon
 
 
 :::RFigure fl s
-![](../imgs/planck/fermilevels.png)
+![](imgs/planck/fermilevels.png)
 :::
 The basic theoretical element at play in this experiment is the concept of Fermilevels. As fermions, electrons are incapable of occupying the same state due to the Pauli Principle. If we have an isolated system with a set of discrete energy levels, as we add electrons, they will tend to fill them up starting with the lowest energy. 
 
@@ -37,7 +37,7 @@ The basic theoretical element at play in this experiment is the concept of Fermi
 We can image such a system as a reservoir connected to a conducting wire that carries the electrons. When we apply a voltage to the wire, electrons will flow into the system until the energy required to fill the next state is greater than the energy of the electron in the electric potential. We call this limiting value the **chemical potential**, $\mu$.
 
 :::Figure fl m
-![](../imgs/planck/fermilevelsfill.png)
+![](imgs/planck/fermilevelsfill.png)
 :::
 
 In general, at zero temperature, the electrons will fill all available energy levels below $\mu$, with the highest energy level occupied called the Fermilevel (or fermisurface in solid-state systems). At finite temperature, the average occupation of a level is given by the Fermi-Dirac distribution:
@@ -47,7 +47,7 @@ In general, at zero temperature, the electrons will fill all available energy le
 ::::::col l2
 :::Figure fd xs
 ![
-Average occupation curve at different temperatures](../imgs/planck/FD.png)
+Average occupation curve at different temperatures](imgs/planck/FD.png)
 
 :::
 ::::::
@@ -68,7 +68,7 @@ $$
 
 Imagine now that we promote an electron to an energy level higher than the chemical potential.
 :::RFigure fl l
-![](../imgs/planck/decay.png)
+![](imgs/planck/decay.png)
 ::: 
 This can be done, for example, by stimulation with a photon. After some amount of time, that electron will *decay* down to a lower energy state by releasing a photon equal to the difference in energy between the starting and final states.
 
@@ -82,7 +82,7 @@ LEDs (Light Emitting Diodes) are semiconductor devices with specially engineered
 A basic picture of how LEDs work is as follows: 
 
 :::Figure LEDproc
-![](../imgs/planck/LEDProcess.png)
+![](imgs/planck/LEDProcess.png)
 
 The above image presents a very rough cartoon of how LEDs function. When the voltage is lower than the band gap energy, electrons in the N-type region cannot pass to the higher energy state in the P-type region. Once the voltage across the LED is tuned high enough, the valence electrons can jump to the nearby state in the P-type region. After some time, the electrons naturally decay to combine with one of the holes, since this is more energetically favorable. The difference in energy is emitted in the form of a photon. This process continues as long as the voltage is high enough to allow transport across the junction depletion region. 
 :::
@@ -92,7 +92,7 @@ The above image presents a very rough cartoon of how LEDs function. When the vol
 # General Experiment
 
 :::LFigure simple l
-![](../imgs/planck/SimpleSetup.jpg)
+![](imgs/planck/SimpleSetup.jpg)
 
 A simple set up used to test the threshold voltage of four colored LEDs
 :::

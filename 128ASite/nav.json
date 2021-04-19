@@ -16,28 +16,22 @@
     },
     {
         "name": "Spectrometer",
-        "file": "spectromx",
+        "file": "spectrom",
         "showSmall": "false"
     },
     {
         "name": "Chua",
-        "file": "chuax",
-        "showSmall": "false"
-    },
-   
-    {
-        "name": "Rotation",
-        "file": "gyrox",
+        "file": "chua",
         "showSmall": "false"
     }, 
     {
         "name": "Interferometer",
-        "file": "michaelsonx",
+        "file": "michaelson",
         "showSmall": "false"
     },
     {
         "name": "Planck",
-        "file": "planckx",
+        "file": "planck",
         "showSmall": "false"
     }
 ]

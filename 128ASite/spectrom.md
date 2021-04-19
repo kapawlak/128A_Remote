@@ -31,7 +31,7 @@ Here, d is the distance between grating lines,  is the angle of transmission, an
 
 :::Figure
  ![ Generic set-up for a simple 4-component spectrometer
-](../imgs/Spec/basicspec.png)
+](imgs/Spec/basicspec.png)
 
  Generic set-up for a simple 4-component spectrometer
 :::
@@ -41,7 +41,7 @@ A simple spectrometer has four important components: the enclosure, slit, diffra
 
 ### Enclosure 
 :::RFigure enclosure s
-![The 3D printed enclosure that will be sent in a package. Built for Rainbow Symphony grating cards and Arducam](../imgs/Spec/enclosure.jpg)
+![The 3D printed enclosure that will be sent in a package. Built for Rainbow Symphony grating cards and Arducam](imgs/Spec/enclosure.jpg)
 
 The 3D printed enclosure that will be sent in a package. Built for Rainbow Symphony grating cards and Arducam
 :::
@@ -111,7 +111,7 @@ For this project, we will be shipping out the aforementioned [Rainbow Symphony 1
 
 
 :::Figure align m
-![The grating and camera fit snuggly into the printed enclosure. I added extra tape to secure the camera on this prototype build.](../imgs/Spec/gratingcam.jpg)
+![The grating and camera fit snuggly into the printed enclosure. I added extra tape to secure the camera on this prototype build.](imgs/Spec/gratingcam.jpg)
 
 The grating and camera fit snuggly into the printed enclosure. I added extra tape to secure the camera on this prototype build.
 :::
@@ -141,7 +141,7 @@ The resolution of your set up depends crucially on the following factors:
 
 
 :::Figure
-![](../imgs/Spec/explainer.png)
+![](imgs/Spec/explainer.png)
 :::
 
 4. Camera Focus: The shipped cameras have lenses to focus incident light onto the CCD screen. You are encouraged to unscrew this lens and inspect how the internal optical components work. When calibrating your device you will need to carefully adjust the camera's focal length to give the sharpest image of the spectral lines possible. For cameras with digital focus, please refer to the documentation for how to adjust it manually.
@@ -165,7 +165,7 @@ Students with access to lenses and mirrors are encouraged to experiment with the
 # Calibration
 
 ::: RFigure cal l
-![](../imgs/Spec/calibratehg.jpg)
+![](imgs/Spec/calibratehg.jpg)
 
 Calibration image from a mercury lamp. LCD, LED, or fluorescent lamps work just as well. Be sure to look up the peak locations and widths for which ever calibration source you choose. Note the appearance of second-order maxima on the left side of the image.
 
@@ -180,19 +180,19 @@ Unless your build is extremely sturdy and your camera is fixed, you will need a 
 We suggest using ImageJ to analyze your spectra, but you can use any tool that you are comfortable with. In ImageJ, to convert your image to a spectrum, follow these steps:
 1. Select the line tool
 
- <img src="../imgs/Spec/linetool.png" width="60%">
+ <img src="imgs/Spec/linetool.png" width="60%">
 
 2. Draw a line perpendicular to your spectral lines (note: try to be as precise as possible!)
 
- <img src="../imgs/Spec/drawline.png" width="60%">
+ <img src="imgs/Spec/drawline.png" width="60%">
 
 3. Double click the line tool and increase the width to sample along your line
 
- <img src="../imgs/Spec/linewidth.png" width="60%">
+ <img src="imgs/Spec/linewidth.png" width="60%">
 
 4. Next go to analyze $\rightarrow$ Plot Profile
 
- <img src="../imgs/Spec/analyze.png" width="60%">
+ <img src="imgs/Spec/analyze.png" width="60%">
 
 
 5. You should use the known spectrum to identify the locations of nm marks in pixels, as well as determine your nm/pixel scale.
@@ -201,7 +201,7 @@ We suggest using ImageJ to analyze your spectra, but you can use any tool that y
 
 :::Figure
 
- ![](../imgs/Spec/speccomp.gif)
+ ![](imgs/Spec/speccomp.gif)
 
  Calibration image from a fluorescent lamp using a junk standard definition webcam. I obtained about 2.5 nm/pixel, but with a resolution not quite good enough to resolve the cluster of peaks around the 600nm line, nor the doublet at 550 nm
  
@@ -215,8 +215,8 @@ Note my colors don’t line up because I imported images from two different runs
 
 :::Figure result xl
 
-![](../imgs/Spec/myspec.png)
-![](../imgs/Spec/refspec.gif)
+![](imgs/Spec/myspec.png)
+![](imgs/Spec/refspec.gif)
 
 ####
 

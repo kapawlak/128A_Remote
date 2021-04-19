@@ -285,7 +285,7 @@ The syntax above is as follows:
 After running the code, all you have to do is print the results to a plot.  The example below gives a minimum working example of the code. Feel free to open it on Colab (ctrl+click on the icon) and save your own version to play with.
 
 :::Hider SIR model with odeint
-<iframe src="../ODE_sir.html" width="100%" height="550px"></iframe>
+<iframe src="ODE_sir.html" width="100%" height="550px"></iframe>
 :::
 
 After getting familiar with the behavior of simulations, you should start constructing your own method from scratch. The problem with odeint is that a lot of things are happening behind the scenes: it's hard to tell if things like time-step size or precision limits are adversely affecting your results, and this will become even more true as you consider increasingly complex models -- the source code for the package is written in a combination of C++ and Machine Code, so what you are interacting with is 'port' to Python (called a 'wrapper'). 
@@ -308,7 +308,7 @@ In the ODE version of the SIR model, there is no natural way to analyze e.g. var
 For this project, there is a 'hacky' solution to the problem: Say you have determined that $k$ lies in the 1-$sigma$ confidence interval ($k_-$, $k_+$). Then you can approximate the 1-$\sigma$ region of your simulation by running it for these upper and lower bounds.
 
 :::Hider Approximating Errors
-<iframe src="../ODE_sir_err.html" width="100%" height="550px"></iframe>
+<iframe src="ODE_sir_err.html" width="100%" height="550px"></iframe>
 :::
 
 Not only do the approximations degrade when you start working with too many variables, since the composition of 1-$\sigma$ regions do not result in a total 1-$\sigma$ region, but also the combinatorics of this get a bit messy necessitating a for-loop to look at all extremal cases. 

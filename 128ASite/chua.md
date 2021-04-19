@@ -20,7 +20,7 @@
 # Introduction 
 
 :::RFigure dscroll m
-![The Double Scroll Attractor on an Oscilliscope](../imgs/Chua/chaos.gif)
+![The Double Scroll Attractor on an Oscilliscope](imgs/Chua/chaos.gif)
 :::
 
 Chua's Circuit is a special non-linear circuit that exhibits chaotic behavior for a closed range of parameter values. It is one of the few easily constructed examples of [Chaos theory](https://en.wikipedia.org/wiki/Chaos_theory), and is therefore an important experiment for students interested in many of the field's  results and applications.
@@ -39,13 +39,13 @@ The best resource for building Chua’s Oscillator is the [instructional paper](
 
 ## Circuit Overview
 :::LFigure chuaall s
-![](../imgs/Chua/chuacircuit.png)
+![](imgs/Chua/chuacircuit.png)
 :::
 Chua’s oscillator is an ordinary circuit that can be built on a breadboard. The general circuit diagram is shown in [Fi](#Fi-chuaall). In this experiment our resistor, $R$, will be a potentiometer that will allow us to vary the current. The secondary resistance, $R_0$ has been added to account for the fact that our inductor, $L$, is not an ideal inductor and has some internal resistance.  
 
 
 :::RFigure nl s
-![](../imgs/Chua/nonlinear.png)
+![](imgs/Chua/nonlinear.png)
 :::
 The chaotic behavior of the circuit comes from Chua’s Diode ($v_R$ in the diagram), which has the unusual property of being a negative nonlinear resistor (NNR). 
 
@@ -59,7 +59,7 @@ When properly connected, the NNR produces the IV characteristic given in in [Fi]
 
 
 :::Figure ivc m
-![](../imgs/Chua/nlcharacteristic.png)
+![](imgs/Chua/nlcharacteristic.png)
 :::
 
 ## Equations
@@ -108,7 +108,7 @@ In order to compare your experiment to data, as well as trouble shoot various is
 *Due to mailing restrictions, we cannot ship these to you so you must purchase them yourself. 
 
 :::Figure exchua l
-![](../imgs/Chua/circuit.png)
+![](imgs/Chua/circuit.png)
 :::
 ::::::
 
@@ -121,7 +121,7 @@ In order to compare your experiment to data, as well as trouble shoot various is
 Along with your kit, you will receive a PicoScope 2000. Please download the appropriate software and follow the instructions for setup. You will likely have to play around with the settings to get a clear image. It is possible, however, to get fairly accurate and precise logging: In [Fi](#Fi-demo), you can see the period-doubling behavior as we tune the resistance across the first and second Hopf Bifurcation points. Here you will notice that I am also viewing the frequency spectrum of my curve to watch for the appearance of the associated peak. 
 
 :::Figure demo
-![Demonstration of two period doubling transitions on the picoscope as the resistance is lowered](../imgs/Chua/picochua.gif)
+![Demonstration of two period doubling transitions on the picoscope as the resistance is lowered](imgs/Chua/picochua.gif)
 :::
 
 
